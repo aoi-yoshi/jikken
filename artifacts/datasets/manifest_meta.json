@@ -1,0 +1,13 @@
+{
+  "mean_alert_sec": 17.93922,
+  "mean_event_sec": 19.518886666666667,
+  "frames_per_sample": 8,
+  "use_num_frames": 4,
+  "use_frame_slice": "last",
+  "frame_interval_sec": 0.5,
+  "frame_max_side": 480,
+  "sampling": "event_window",
+  "weather_filter": "Clear",
+  "max_videos_per_class": 150,
+  "num_classes": 2
+}

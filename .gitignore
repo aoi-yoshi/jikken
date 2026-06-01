@@ -1,0 +1,25 @@
+# Python / tooling
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+*.egg-info/
+dist/
+build/
+
+# Local logs
+_smoke.log
+*.log
+
+# Generated dataset frames (rebuild: scripts/step02_nexar_or_synthetic.py)
+artifacts/datasets/frames/
+
+# Model weights & training outputs (too large for GitHub)
+artifacts/checkpoints/
+artifacts/runs/
+
+# Optional: synthetic data if created under project root
+data/synthetic/

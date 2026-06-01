@@ -1,0 +1,56 @@
+Thesis local pipeline (Qwen2.5-VL-3B) — project root: c:\Python\実験_修正
+
+This project uses conda env `flvl` (Python 3.10) per the experiment plan.
+Env path: C:\Users\aoi7y\miniconda3\envs\flvl
+
+0) One-time setup (already done)
+   - Miniconda installed via winget (Anaconda.Miniconda3).
+   - conda env created with conda-forge only:
+       conda create -y -n flvl -c conda-forge --override-channels python=3.10
+       conda install -y -n flvl -c conda-forge --override-channels pip
+   - PyTorch (Blackwell sm_120 / RTX 5050 needs cu128):
+       pip install --index-url https://download.pytorch.org/whl/cu128 torch torchvision torchaudio
+   - Other libs:
+       pip install transformers accelerate peft datasets safetensors PyYAML tqdm \
+                   scikit-learn pandas "fsspec>=2023.1.0,<=2026.2.0" flwr protobuf opencv-python
+
+   avalanche-lib is intentionally NOT installed yet. On Windows it pulls qpsolvers/proxsuite
+   which requires CMake+MSVC to build from source. We add it later when Step 6 (continual
+   learning) is actually needed. The local Step 7 logic (forgetting log) does not require it.
+
+1) Always run scripts with the flvl python (full path is safest)
+   PY=C:\Users\aoi7y\miniconda3\envs\flvl\python.exe
+   & $PY scripts\step00_env_check.py
+
+2) Step0–2 (data under artifacts/ and data/)
+   & $PY scripts\step00_env_check.py
+   & $PY scripts\step01_qwen_infer.py
+   & $PY scripts\step02_nexar_or_synthetic.py
+   Put real NEXAR mp4 files under data/nexar_raw/videos/ to override synthetic videos.
+
+3) Step3–4 (single-GPU training)
+   & $PY scripts\step03_baseline_probe.py
+   & $PY scripts\step04_lora_train.py
+
+4) Step5–6 (Flower on one PC)
+   Terminal A: & $PY scripts\step05_flower_server.py
+   Terminal B: $env:THESIS_CLIENT_ID="0"; & $PY scripts\step06_flower_client.py
+   Terminal C: $env:THESIS_CLIENT_ID="1"; & $PY scripts\step06_flower_client.py
+
+5) Step7 (continual / forgetting logs; pure PyTorch, no avalanche dependency)
+   & $PY scripts\step07_continual_forgetting.py
+
+6) Step8 (three ablations; metrics in artifacts\runs\step08_ablation_*)
+   & $PY scripts\step08_ablation_modes.py --mode lpred
+   & $PY scripts\step08_ablation_modes.py --mode lpred_grad
+   & $PY scripts\step08_ablation_modes.py --mode lpred_post
+
+Notes
+- HF model cache: default at $env:USERPROFILE\.cache\huggingface (override with $env:HF_HOME).
+- Logs: artifacts\runs\... (CSV/JSONL/summary.json).
+- The earlier .venv\ in this folder is no longer used. You may delete it:
+    Remove-Item -Recurse -Force .\.venv
+
+GPU sanity
+- & $PY -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+- Expected: True NVIDIA GeForce RTX 5050 Laptop GPU
