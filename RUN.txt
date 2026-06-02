@@ -33,9 +33,29 @@ Env path: C:\Users\aoi7y\miniconda3\envs\flvl
    & $PY scripts\step04_lora_train.py
 
 4) Step5–6 (Flower on one PC)
-   Terminal A: & $PY scripts\step05_flower_server.py
-   Terminal B: $env:THESIS_CLIENT_ID="0"; & $PY scripts\step06_flower_client.py
-   Terminal C: $env:THESIS_CLIENT_ID="1"; & $PY scripts\step06_flower_client.py
+   Shared run id (same on server and both clients):
+   $RUN_ID = "run_YYYYMMDD_HHMMSS"
+
+   Terminal A (server; shared init on CPU, saves global LoRA after last round):
+   & $PY scripts\step05_flower_server.py --run-id $RUN_ID
+
+   Terminal B (client 0, GPU):
+   $env:THESIS_FL_RUN_ID=$RUN_ID; $env:THESIS_CLIENT_ID="0"
+   & $PY scripts\step06_flower_client.py
+
+   Terminal C (client 1; on 8GB GPU set CPU to avoid OOM):
+   $env:THESIS_FL_RUN_ID=$RUN_ID; $env:THESIS_CLIENT_ID="1"; $env:THESIS_FORCE_CPU="1"
+   & $PY scripts\step06_flower_client.py
+
+   Post-FL eval of aggregated LoRA:
+   & $PY scripts\step06_fl_post_eval.py --run-id $RUN_ID
+
+   Automated smoke E2E (1 round, 40 samples):
+   & $PY scripts\run_fl_e2e_smoke.py
+
+   Logs: artifacts\runs\step06_fl\<run_id>\
+   Global checkpoint: artifacts\checkpoints\step06_fedavg_global.pt
+   Progress meeting: docs\progress_meeting_20260604.md
 
 5) Step7 (continual / forgetting logs; pure PyTorch, no avalanche dependency)
    & $PY scripts\step07_continual_forgetting.py
