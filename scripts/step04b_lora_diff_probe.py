@@ -11,8 +11,7 @@ import json
 import random
 import shutil
 import sys
-import time           # [追加] 実行時間の計測用
-import subprocess     # [追加] nvidia-smi の呼び出し用
+import time
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List
@@ -40,30 +39,11 @@ from src.diff_probe import (
 from src.experiment_record import save_config_snapshot, write_experiment_report
 from src.logging_utils import RunLogger
 from src.metrics import evaluate_classifier, set_seed
+from src.resource_metrics import get_gpu_utilization, get_max_vram_gb, reset_peak_memory_stats
 from src.paths import ensure_dirs
 from src.peft_setup import attach_dual_lora, lora_params_for_adapter
 from src.train_common import device_or_auto, load_samples, rows_for_step
 from src.vl_model import build_model, logits_loss, unfreeze_backbone
-
-
-# [追加] GPUの平均利用率を取得するヘルパー関数
-def get_gpu_utilization() -> float:
-    try:
-        res = subprocess.check_output(
-            ["nvidia-smi", "--query-gpu=utilization.gpu", "--format=csv,noheader,nounits"],
-            encoding="utf-8",
-            stderr=subprocess.DEVNULL
-        )
-        utils = [float(x.strip()) for x in res.strip().split('\n') if x.strip()]
-        return utils[0] if utils else 0.0
-    except Exception:
-        return 0.0
-
-# [追加] 最大VRAM使用量（GB）を取得するヘルパー関数
-def get_max_vram_gb() -> float:
-    if torch.cuda.is_available():
-        return torch.cuda.max_memory_allocated() / (1024 ** 3)
-    return 0.0
 
 
 def _make_run_id(suffix: str = "") -> str:
@@ -390,7 +370,7 @@ def main() -> None:
     global_step = 0
     for epoch in range(1, num_epochs + 1):
         if torch.cuda.is_available():
-            torch.cuda.reset_peak_memory_stats()
+            reset_peak_memory_stats()
             
         model.train()
         epoch_loss_sum = 0.0

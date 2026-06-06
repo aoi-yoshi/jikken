@@ -1,6 +1,8 @@
 from __future__ import annotations
 
-from typing import Dict, List, Tuple
+import json
+from pathlib import Path
+from typing import Any, Dict, List, Tuple
 
 import numpy as np
 import torch
@@ -44,3 +46,49 @@ def fedavg_weights(weights: List[Tuple[List[str], np.ndarray]]) -> Tuple[List[st
     stacked = np.stack([w for _, w in weights], axis=0)
     avg = np.mean(stacked, axis=0)
     return names, avg
+
+
+def save_fl_checkpoint(
+    path: Path,
+    *,
+    names: List[str],
+    vector: np.ndarray,
+    meta: Dict[str, Any] | None = None,
+) -> Path:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload: Dict[str, Any] = {
+        "names": names,
+        "vector": vector,
+        "meta": meta or {},
+    }
+    torch.save(payload, path)
+    names_path = path.with_suffix(".names.json")
+    with names_path.open("w", encoding="utf-8") as f:
+        json.dump(names, f, ensure_ascii=False, indent=2)
+    return path
+
+
+def load_fl_checkpoint(path: Path) -> Tuple[List[str], np.ndarray, Dict[str, Any]]:
+    payload = torch.load(path, map_location="cpu", weights_only=False)
+    names = list(payload["names"])
+    vec = np.asarray(payload["vector"], dtype=np.float32)
+    meta = dict(payload.get("meta", {}))
+    return names, vec, meta
+
+
+def build_initial_fl_state(cfg: Dict[str, Any], device: torch.device) -> Tuple[List[str], np.ndarray]:
+    """共有初期パラメータ（classifier + client LoRA）を生成する。"""
+    from src.metrics import set_seed
+    from src.peft_setup import attach_dual_lora
+    from src.vl_model import build_model, unfreeze_backbone
+
+    set_seed(int(cfg["train"]["seed"]))
+    model, _ = build_model(cfg, device)
+    unfreeze_backbone(model)
+    model.backbone = attach_dual_lora(model.backbone, cfg, client="client", surrogate="surrogate")
+    model.backbone.set_adapter("client")
+    names, vec = trainable_state_vector(model)
+    del model
+    if device.type == "cuda":
+        torch.cuda.empty_cache()
+    return names, vec
