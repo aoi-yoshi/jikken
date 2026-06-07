@@ -83,8 +83,8 @@ python scripts/plot_step04b_epoch_history.py --run-dir artifacts/runs/step04b_di
 **実装済み（今回）**
 
 - [step05_flower_server.py](../scripts/step05_flower_server.py): 共有初期パラメータ、FedAvg、ラウンドログ、グローバル checkpoint 保存
-- [step06_flower_client.py](../scripts/step06_flower_client.py): 同一 seed 初期化、evaluate() 実装、リソースログ
-- [step06_fl_post_eval.py](../scripts/step06_fl_post_eval.py): 集約後モデルの eval
+- [step05_flower_client.py](../scripts/step05_flower_client.py): 同一 seed 初期化、evaluate() 実装、リソースログ
+- [step05_fl_post_eval.py](../scripts/step05_fl_post_eval.py): 集約後モデルの eval
 - [src/resource_metrics.py](../src/resource_metrics.py): GPU/Adapter 計測の共通化
 - [verify_fl_pipeline.py](../scripts/verify_fl_pipeline.py): FedAvg/checkpoint 単体テスト（**PASS**）
 - [fl_local_fedavg_sim.py](../scripts/fl_local_fedavg_sim.py): Flower なし 2-client 集約シミュレーション
@@ -93,9 +93,9 @@ python scripts/plot_step04b_epoch_history.py --run-dir artifacts/runs/step04b_di
 **成功条件（Flower gRPC 本番 — 手動実行）**
 
 - [ ] 2 clients × N rounds 完走
-- [ ] `artifacts/checkpoints/step06_fedavg_global.pt` 保存
+- [ ] `artifacts/checkpoints/step05_fedavg_global.pt` 保存
 - [ ] 集約後 eval accuracy 記録
-- [ ] `artifacts/runs/step06_fl/<run_id>/` に server/client ログ
+- [ ] `artifacts/runs/step05_fl/<run_id>/` に server/client ログ
 
 **実行手順（3 ターミナル）**
 
@@ -108,14 +108,14 @@ $RUN_ID = "run_YYYYMMDD_HHMMSS"
 
 # Terminal B
 $env:THESIS_FL_RUN_ID=$RUN_ID; $env:THESIS_CLIENT_ID="0"
-& $PY scripts/step06_flower_client.py
+& $PY scripts/step05_flower_client.py
 
 # Terminal C（GPU 1枚の場合は CPU 推奨）
 $env:THESIS_FL_RUN_ID=$RUN_ID; $env:THESIS_CLIENT_ID="1"; $env:THESIS_FORCE_CPU="1"
-& $PY scripts/step06_flower_client.py
+& $PY scripts/step05_flower_client.py
 
 # 事後 eval
-& $PY scripts/step06_fl_post_eval.py --run-id $RUN_ID
+& $PY scripts/step05_fl_post_eval.py --run-id $RUN_ID
 ```
 
 ---

@@ -17,17 +17,19 @@ from torch.amp import autocast
 from tqdm import tqdm
 
 from src.config_loader import merged_config
-from src.dataset_manifest import load_sample_row, read_manifest_filtered, stratified_subset
-from src.logging_utils import RunLogger
+from src.dataset_manifest import read_manifest_filtered, split_train_eval_rows, stratified_subset
 from src.metrics import evaluate_classifier, set_seed
 from src.paths import ensure_dirs
-from src.train_common import device_or_auto, iter_row_chunks, load_samples, rows_for_step
+from src.run_context import init_run
+from src.train_common import device_or_auto, iter_row_chunks, load_samples
 from src.vl_model import build_model, freeze_backbone, logits_loss
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--config", default="config/default.yaml")
+    ap.add_argument("--run-id", default=None)
+    ap.add_argument("--run-suffix", default="")
+    ap.add_argument("--eval-max", type=int, default=None)
     args = ap.parse_args()
     cfg = merged_config()
     set_seed(int(cfg["train"]["seed"]))
@@ -35,19 +37,21 @@ def main() -> None:
     dcfg = cfg["data"]
     tcfg = cfg["train"]
     art = cfg["artifacts"]
-    run_dir = Path(art["runs"]) / "step03_baseline"
-    ensure_dirs(run_dir, Path(art["checkpoints"]))
-    log = RunLogger(run_dir, name="train")
-    log.log_meta({"step": 3, "mode": "linear_probe"})
+    eval_max = args.eval_max if args.eval_max is not None else int(tcfg.get("eval_max", 20))
+
+    run_id, run_dir, log, env = init_run(
+        cfg, step="3", step_dir="step03_baseline", log_name="train", run_id=args.run_id, run_suffix=args.run_suffix, cli=vars(args)
+    )
+    ensure_dirs(Path(art["checkpoints"]))
 
     manifest = Path(dcfg["manifest_path"])
     if not manifest.is_absolute():
         manifest = _ROOT / manifest
     rows = read_manifest_filtered(manifest, dcfg)
     rows = stratified_subset(rows, int(tcfg.get("max_train_samples", 200)), int(cfg["train"]["seed"]))
-    n_train = int(len(rows) * float(dcfg.get("train_ratio", 0.8)))
-    train_rows = rows[:n_train]
-    eval_rows = rows[n_train:]
+    train_rows, eval_rows = split_train_eval_rows(
+        rows, train_ratio=float(dcfg.get("train_ratio", 0.8)), eval_max=eval_max
+    )
 
     model, processor = build_model(cfg, device)
     freeze_backbone(model)
@@ -98,12 +102,13 @@ def main() -> None:
     torch.save(
         {
             "classifier": model.classifier.state_dict(),
-            "meta": {"manifest": str(manifest), "rows": len(rows)},
+            "meta": {"manifest": str(manifest), "rows": len(rows), "run_id": run_id},
         },
         ckpt,
     )
-    log.save_summary({"checkpoint": str(ckpt), "eval": metrics})
-    print("Saved:", ckpt, "eval:", metrics)
+    log.save_summary({"run_id": run_id, "run_dir": str(run_dir), "environment": env, "checkpoint": str(ckpt), "eval": metrics})
+    log.log_meta({"status": "completed"})
+    print("Saved:", run_dir, ckpt, "eval:", metrics)
 
 
 if __name__ == "__main__":

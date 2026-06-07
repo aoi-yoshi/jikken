@@ -1,5 +1,5 @@
 """
-Step 7: 擬似継続学習（タスク分割 + 直前タスク精度の変化＝forgetting ログ）。
+Step 6: 擬似継続学習（タスク分割 + 直前タスク精度の変化＝forgetting ログ）。
 Avalanche 本体は必須にせず、まずは同一パイプラインで計測可能にする。
 """
 from __future__ import annotations
@@ -56,10 +56,10 @@ def main() -> None:
     dcfg = cfg["data"]
     tcfg = cfg["train"]
     art = cfg["artifacts"]
-    run_dir = Path(art["runs"]) / "step07_continual"
+    run_dir = Path(art["runs"]) / "step06_continual"
     ensure_dirs(run_dir)
     log = RunLogger(run_dir, name="continual")
-    log.log_meta({"step": 7, "tasks": int(args.tasks)})
+    log.log_meta({"step": 6, "tasks": int(args.tasks)})
 
     manifest = Path(dcfg["manifest_path"])
     if not manifest.is_absolute():

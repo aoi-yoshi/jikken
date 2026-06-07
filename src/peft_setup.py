@@ -21,6 +21,14 @@ def attach_dual_lora(backbone: nn.Module, cfg: dict, *, client: str, surrogate: 
     return peft_model
 
 
+def ensure_client_trainable(model: nn.Module, peft_model: nn.Module, *, client: str = "client") -> None:
+    """PEFT の set_adapter 後も client LoRA + 分類頭が学習対象になるよう requires_grad を立てる。"""
+    for p in model.classifier.parameters():
+        p.requires_grad_(True)
+    for p in lora_params_for_adapter(peft_model, client):
+        p.requires_grad_(True)
+
+
 def lora_params_for_adapter(peft_model: nn.Module, adapter: str) -> List[nn.Parameter]:
     out: List[nn.Parameter] = []
     needle = f".{adapter}."

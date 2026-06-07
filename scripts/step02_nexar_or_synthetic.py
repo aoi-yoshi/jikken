@@ -38,6 +38,7 @@ from tqdm import tqdm
 from src.config_loader import merged_config
 from src.dataset_manifest import write_manifest
 from src.paths import ensure_dirs
+from src.run_context import init_run
 from src.video_frames import (
     clamp_times_to_duration,
     extract_frames,
@@ -312,9 +313,13 @@ def write_split(
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--config", default="config/default.yaml")
+    ap.add_argument("--run-id", default=None)
+    ap.add_argument("--run-suffix", default="")
     args = ap.parse_args()
     cfg = merged_config()
+    run_id, run_dir, log, env = init_run(
+        cfg, step="2", step_dir="step02_data", log_name="prepare", run_id=args.run_id, run_suffix=args.run_suffix, cli=vars(args)
+    )
     dcfg = cfg["data"]
     art = cfg["artifacts"]
     seed = int(cfg["train"]["seed"])
@@ -393,6 +398,17 @@ def main() -> None:
     (train_manifest.parent / "manifest_meta.json").write_text(
         json.dumps(meta_summary, ensure_ascii=False, indent=2), encoding="utf-8"
     )
+    log.save_summary(
+        {
+            "run_id": run_id,
+            "run_dir": str(run_dir),
+            "environment": env,
+            "train_manifest": str(train_manifest),
+            "test_manifest": str(test_manifest),
+            "meta": meta_summary,
+        }
+    )
+    log.log_meta({"status": "completed"})
 
 
 if __name__ == "__main__":

@@ -16,7 +16,7 @@ Env path: C:\Users\aoi7y\miniconda3\envs\flvl
 
    avalanche-lib is intentionally NOT installed yet. On Windows it pulls qpsolvers/proxsuite
    which requires CMake+MSVC to build from source. We add it later when Step 6 (continual
-   learning) is actually needed. The local Step 7 logic (forgetting log) does not require it.
+   learning) is actually needed. The local Step 6 logic (forgetting log) does not require it.
 
 1) Always run scripts with the flvl python (full path is safest)
    PY=C:\Users\aoi7y\miniconda3\envs\flvl\python.exe
@@ -32,42 +32,65 @@ Env path: C:\Users\aoi7y\miniconda3\envs\flvl
    & $PY scripts\step03_baseline_probe.py
    & $PY scripts\step04_lora_train.py
 
-4) Step5–6 (Flower on one PC)
-   Shared run id (same on server and both clients):
-   $RUN_ID = "run_YYYYMMDD_HHMMSS"
+4) Step5 (Flower FL on one PC)
+   default.yaml: fl.gpu_serialize=true (1 GPU なら必須。client 0/1 が GPU を順番使用)
+   マルチ PC（各 client が別 GPU）なら fl.gpu_serialize=false
 
-   Terminal A (server; shared init on CPU, saves global LoRA after last round):
-   & $PY scripts\step05_flower_server.py --run-id $RUN_ID
+   Terminal A (server):
+   C:\Users\aoi7y\miniconda3\envs\flvl\python.exe scripts\step05_flower_server.py
 
-   Terminal B (client 0, GPU):
-   $env:THESIS_FL_RUN_ID=$RUN_ID; $env:THESIS_CLIENT_ID="0"
-   & $PY scripts\step06_flower_client.py
+   Terminal B (client 0):
+   $env:THESIS_CLIENT_ID="0"
+   C:\Users\aoi7y\miniconda3\envs\flvl\python.exe scripts\step05_flower_client.py
 
-   Terminal C (client 1; on 8GB GPU set CPU to avoid OOM):
-   $env:THESIS_FL_RUN_ID=$RUN_ID; $env:THESIS_CLIENT_ID="1"; $env:THESIS_FORCE_CPU="1"
-   & $PY scripts\step06_flower_client.py
+   Terminal C (client 1; gpu_serialize 有効なら GPU のままで可):
+   $env:THESIS_CLIENT_ID="1"
+   C:\Users\aoi7y\miniconda3\envs\flvl\python.exe scripts\step05_flower_client.py
+
+   run_id は省略可（サーバが LATEST_RUN_ID に書き、client が読む）
 
    Post-FL eval of aggregated LoRA:
-   & $PY scripts\step06_fl_post_eval.py --run-id $RUN_ID
+   & $PY scripts\step05_fl_post_eval.py --run-id $RUN_ID
+
+   Minimal metrics test (1 sample/client, 2 clients, 1 round; local FedAvg):
+   & $PY scripts\run_fl_minimal.py
 
    Automated smoke E2E (1 round, 40 samples):
    & $PY scripts\run_fl_e2e_smoke.py
 
-   Logs: artifacts\runs\step06_fl\<run_id>\
-   Global checkpoint: artifacts\checkpoints\step06_fedavg_global.pt
-   Progress meeting: docs\progress_meeting_20260604.md
+   Logs: artifacts\runs\step05_fl\<run_id>\
+   Global checkpoint: artifacts\checkpoints\step05_fedavg_global.pt
+   FL details: docs\fl_experiments.md
 
-5) Step7 (continual / forgetting logs; pure PyTorch, no avalanche dependency)
-   & $PY scripts\step07_continual_forgetting.py
+   Preview partitions (optional):
+   & $PY scripts\fl_prepare_partitions.py --run-id my_run
+   Non-IID example:
+   & $PY scripts\fl_prepare_partitions.py --run-id my_run --partition-mode label_skew_dirichlet --label-skew-alpha 0.2
+   Scene skew: --partition-mode key_skew  (key_field: scene in default.yaml)
 
-6) Step8 (three ablations; metrics in artifacts\runs\step08_ablation_*)
-   & $PY scripts\step08_ablation_modes.py --mode lpred
-   & $PY scripts\step08_ablation_modes.py --mode lpred_grad
-   & $PY scripts\step08_ablation_modes.py --mode lpred_post
+5) Step6 (continual learning / forgetting; pure PyTorch, Avalanche later)
+   & $PY scripts\step06_continual_forgetting.py
+
+6) Step7 (ablations; metrics in artifacts\runs\step07_ablation_*)
+   & $PY scripts\step07_ablation_modes.py --mode lpred
+   & $PY scripts\step07_ablation_modes.py --mode lpred_grad
+   & $PY scripts\step07_ablation_modes.py --mode lpred_post
 
 Notes
 - HF model cache: default at $env:USERPROFILE\.cache\huggingface (override with $env:HF_HOME).
-- Logs: artifacts\runs\... (CSV/JSONL/summary.json).
+- Config: config\default.yaml のみ（LoRA 比較もここを一時編集）。
+- GPU 計測: src\resource_metrics.py（実験時は自動ログ）。手動確認は step00 または python -m src.resource_metrics
+
+Where to look (迷ったらここ)
+- 設定 .............. config\default.yaml
+- Step 4b 結果 ...... artifacts\runs\step04b_diff_probe\<run_id>\summary.json, epoch_history.jsonl
+- Step 5 FL .......... artifacts\runs\step05_fl\<run_id>\
+- グローバル LoRA .... artifacts\checkpoints\step05_fedavg_global.pt
+- 構成マップ .......... docs\project_map.md
+- Step5 進捗会資料 .... docs\step05_flower_report.md
+- FL 手順 ............. docs\fl_experiments.md
+- GPU 計測コード .... src\resource_metrics.py（1 ファイルに集約）
+
 - The earlier .venv\ in this folder is no longer used. You may delete it:
     Remove-Item -Recurse -Force .\.venv
 
