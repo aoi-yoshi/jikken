@@ -92,7 +92,8 @@ def build_flower_strategy_class(cfg: Dict[str, Any]) -> Type:
                     if key in metrics:
                         round_metrics[f"agg_{key}"] = metrics[key]
             if aggregated is not None:
-                ndarrays = parameters_to_ndarrays(aggregated.parameters)
+                params = aggregated.parameters if hasattr(aggregated, "parameters") else aggregated
+                ndarrays = parameters_to_ndarrays(params)
                 vec = ndarrays[0] if ndarrays else self.init_vec
                 round_metrics["param_norm"] = float(np.linalg.norm(vec))
                 if server_round >= self.total_rounds:
@@ -109,6 +110,9 @@ def build_flower_strategy_class(cfg: Dict[str, Any]) -> Type:
                             "trainable_vector_dim": int(vec.size),
                         },
                     )
+                    latest = self.checkpoint_path.parent.parent / "LATEST_CHECKPOINT"
+                    latest.parent.mkdir(parents=True, exist_ok=True)
+                    latest.write_text(str(self.checkpoint_path.resolve()), encoding="utf-8")
                     round_metrics["global_checkpoint"] = str(self.checkpoint_path)
             self.logger.log(round_metrics)
             return aggregated, metrics

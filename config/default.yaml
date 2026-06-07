@@ -90,7 +90,8 @@ fl:
   min_available_clients: 2
   num_clients: 2
   gpu_serialize: true              # 1台1GPU: Flower client 同時接続でも GPU 区間を順番実行（マルチPCなら false）
-  checkpoint_name: "step05_fedavg_global.pt"
+  checkpoint_name: "step05_fedavg_global.pt"   # ファイル名（保存先は checkpoint_subdir/<run_id>/ 以下）
+  checkpoint_subdir: "step05_fl"               # artifacts/checkpoints/step05_fl/<run_id>/
   partition:
     mode: "iid_shuffle"           # iid_shuffle | label_skew_dirichlet | label_skew_extreme | key_skew
     seed: 42                      # 未指定時は train.seed

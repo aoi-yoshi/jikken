@@ -84,7 +84,8 @@ artifacts/runs/step05_fl/<run_id>/
 └── client_1/
     └── （同上）
 
-artifacts/checkpoints/step05_fedavg_global.pt  … 最終 FedAvg LoRA
+artifacts/checkpoints/step05_fl/<run_id>/step05_fedavg_global.pt  … 最終 FedAvg LoRA（run ごとに保存）
+artifacts/checkpoints/step05_fl/LATEST_CHECKPOINT  … 直近 checkpoint のパス
 ```
 
 ### ラウンド指標（`fl_client.jsonl` の `fl_round_metrics`）
