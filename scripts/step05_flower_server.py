@@ -18,7 +18,7 @@ from src.config_loader import merged_config
 from src.fl_data import apply_fl_cli_overrides, build_fl_dataset, save_partition_artifact
 from src.fl_flower_config import build_fl_flower_settings_full
 from src.fl_strategy import build_flower_strategy_class, fl_strategy_name, is_fedprox
-from src.fl_utils import build_initial_fl_state
+from src.fl_utils import build_initial_fl_state, fl_checkpoint_path
 from src.paths import ensure_dirs
 from src.run_context import init_run, make_run_id
 from src.resource_metrics import build_environment_block
@@ -90,8 +90,7 @@ def main() -> None:
     init_device = torch.device(device_or_auto(prefer_cuda=False))
     print(f"[server] Building shared initial parameters on {init_device}...", flush=True)
     param_names, init_vec = build_initial_fl_state(cfg, init_device)
-    ckpt_name = str(fcfg.get("checkpoint_name", "step05_fedavg_global.pt"))
-    ckpt_path = Path(art["checkpoints"]) / ckpt_name
+    ckpt_path = fl_checkpoint_path(cfg, run_id, _ROOT)
 
     addr = f"{args.host}:{args.port}"
     flower_settings = build_fl_flower_settings_full(
@@ -143,6 +142,7 @@ def main() -> None:
         f"mode={part_meta['partition_mode']} addr={addr}",
         flush=True,
     )
+    print(f"[server] checkpoint will save to {ckpt_path}", flush=True)
     print(f"[server] Clients: set THESIS_FL_RUN_ID={run_id}", flush=True)
 
     fl.server.start_server(

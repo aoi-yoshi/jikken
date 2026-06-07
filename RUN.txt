@@ -59,7 +59,8 @@ Env path: C:\Users\aoi7y\miniconda3\envs\flvl
    & $PY scripts\run_fl_e2e_smoke.py
 
    Logs: artifacts\runs\step05_fl\<run_id>\
-   Global checkpoint: artifacts\checkpoints\step05_fedavg_global.pt
+   Global checkpoint: artifacts\checkpoints\step05_fl\<run_id>\step05_fedavg_global.pt
+   Latest pointer:     artifacts\checkpoints\step05_fl\LATEST_CHECKPOINT
    FL details: docs\fl_experiments.md
 
    Preview partitions (optional):
@@ -85,7 +86,7 @@ Where to look (迷ったらここ)
 - 設定 .............. config\default.yaml
 - Step 4b 結果 ...... artifacts\runs\step04b_diff_probe\<run_id>\summary.json, epoch_history.jsonl
 - Step 5 FL .......... artifacts\runs\step05_fl\<run_id>\
-- グローバル LoRA .... artifacts\checkpoints\step05_fedavg_global.pt
+- グローバル LoRA .... artifacts\checkpoints\step05_fl\<run_id>\（LATEST_CHECKPOINT で最新パス）
 - 構成マップ .......... docs\project_map.md
 - Step5 進捗会資料 .... docs\step05_flower_report.md
 - FL 手順 ............. docs\fl_experiments.md

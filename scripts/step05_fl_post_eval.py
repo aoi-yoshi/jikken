@@ -17,7 +17,7 @@ import torch
 from src.config_loader import merged_config
 from src.fl_data import apply_fl_cli_overrides, build_fl_dataset
 from src.fl_flower_config import build_fl_flower_settings_full
-from src.fl_utils import load_fl_checkpoint, vector_to_trainable_state
+from src.fl_utils import fl_checkpoint_path, load_fl_checkpoint, resolve_latest_checkpoint, vector_to_trainable_state
 from src.logging_utils import RunLogger
 from src.metrics import evaluate_classifier, set_seed
 from src.paths import ensure_dirs
@@ -32,8 +32,8 @@ def main() -> None:
     ap.add_argument("--config", default="config/default.yaml")
     ap.add_argument(
         "--checkpoint",
-        default="artifacts/checkpoints/step05_fedavg_global.pt",
-        help="step05 が保存した FedAvg グローバル LoRA",
+        default=None,
+        help="FedAvg グローバル LoRA（省略時: LATEST_CHECKPOINT または --run-id から解決）",
     )
     ap.add_argument("--run-id", default=None)
     ap.add_argument("--eval-max", type=int, default=None)
@@ -47,9 +47,21 @@ def main() -> None:
     tcfg = cfg["train"]
     art = cfg["artifacts"]
 
-    ckpt_path = Path(args.checkpoint)
-    if not ckpt_path.is_absolute():
-        ckpt_path = _ROOT / ckpt_path
+    if args.checkpoint:
+        ckpt_path = Path(args.checkpoint)
+        if not ckpt_path.is_absolute():
+            ckpt_path = _ROOT / ckpt_path
+    elif args.run_id:
+        ckpt_path = fl_checkpoint_path(cfg, args.run_id, _ROOT)
+    else:
+        resolved = resolve_latest_checkpoint(cfg, _ROOT)
+        if resolved is None:
+            raise FileNotFoundError(
+                "checkpoint not found: specify --checkpoint or --run-id, or run FL first"
+            )
+        ckpt_path = resolved
+    if not ckpt_path.is_file():
+        raise FileNotFoundError(f"checkpoint not found: {ckpt_path}")
     names, vec, meta = load_fl_checkpoint(ckpt_path)
 
     _pool, eval_rows, _client_parts, part_meta = build_fl_dataset(cfg, root=_ROOT)

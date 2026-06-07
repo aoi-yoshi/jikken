@@ -2,11 +2,53 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Mapping, Tuple
 
 import numpy as np
 import torch
 import torch.nn as nn
+
+
+def fl_checkpoint_dir(cfg: Mapping[str, Any], root: Path) -> Path:
+    """artifacts/checkpoints/step05_fl/ 等（run_id 別サブフォルダの親）。"""
+    art = dict(cfg.get("artifacts", {}))
+    fcfg = dict(cfg.get("fl", {}))
+    base = Path(str(art.get("checkpoints", "artifacts/checkpoints")))
+    sub = str(fcfg.get("checkpoint_subdir", "step05_fl"))
+    path = base / sub
+    if not path.is_absolute():
+        path = root / path
+    return path
+
+
+def fl_checkpoint_path(cfg: Mapping[str, Any], run_id: str, root: Path) -> Path:
+    """run ごと: artifacts/checkpoints/step05_fl/<run_id>/step05_fedavg_global.pt"""
+    fcfg = dict(cfg.get("fl", {}))
+    name = str(fcfg.get("checkpoint_name", "step05_fedavg_global.pt"))
+    return fl_checkpoint_dir(cfg, root) / run_id / name
+
+
+def write_latest_checkpoint_pointer(checkpoint_path: Path, cfg: Mapping[str, Any], root: Path) -> Path:
+    ptr = fl_checkpoint_dir(cfg, root) / "LATEST_CHECKPOINT"
+    ptr.parent.mkdir(parents=True, exist_ok=True)
+    ptr.write_text(str(Path(checkpoint_path).resolve()), encoding="utf-8")
+    return ptr
+
+
+def resolve_latest_checkpoint(cfg: Mapping[str, Any], root: Path) -> Path | None:
+    ptr = fl_checkpoint_dir(cfg, root) / "LATEST_CHECKPOINT"
+    if ptr.is_file():
+        p = Path(ptr.read_text(encoding="utf-8").strip())
+        if p.is_file():
+            return p
+    art = dict(cfg.get("artifacts", {}))
+    fcfg = dict(cfg.get("fl", {}))
+    legacy = Path(str(art.get("checkpoints", "artifacts/checkpoints"))) / str(
+        fcfg.get("checkpoint_name", "step05_fedavg_global.pt")
+    )
+    if not legacy.is_absolute():
+        legacy = root / legacy
+    return legacy if legacy.is_file() else None
 
 
 def trainable_state_vector(model: nn.Module) -> Tuple[List[str], np.ndarray]:

@@ -31,7 +31,14 @@ from src.fl_metrics import (
     proximal_penalty,
 )
 from src.fl_strategy import fl_strategy_name, is_fedprox
-from src.fl_utils import fedavg_weights, save_fl_checkpoint, trainable_state_vector, vector_to_trainable_state
+from src.fl_utils import (
+    fedavg_weights,
+    fl_checkpoint_path,
+    save_fl_checkpoint,
+    trainable_state_vector,
+    vector_to_trainable_state,
+    write_latest_checkpoint_pointer,
+)
 from src.logging_utils import RunLogger
 from src.metrics import evaluate_classifier, set_seed
 from src.paths import ensure_dirs
@@ -310,8 +317,7 @@ def main() -> None:
             }
         )
 
-    ckpt_name = str(cfg["fl"].get("checkpoint_name", "step05_fedavg_global.pt"))
-    ckpt = Path(art["checkpoints"]) / ckpt_name
+    ckpt = fl_checkpoint_path(cfg, run_id, _ROOT)
     save_fl_checkpoint(
         ckpt,
         names=global_names,
@@ -324,6 +330,7 @@ def main() -> None:
             "flower_settings": flower_settings,
         },
     )
+    write_latest_checkpoint_pointer(ckpt, cfg, _ROOT)
 
     model, processor = build_model(cfg, device)
     unfreeze_backbone(model)

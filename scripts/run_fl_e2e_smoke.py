@@ -85,9 +85,12 @@ def main() -> int:
         check=False,
     )
 
-    ckpt = _ROOT / "artifacts" / "checkpoints" / "step05_fedavg_global.pt"
-    ok = ckpt.is_file() and client_rc == 0 and server_rc == 0
-    print(f"[e2e] checkpoint_exists={ckpt.is_file()} ok={ok}", flush=True)
+    from src.config_loader import merged_config
+    from src.fl_utils import resolve_latest_checkpoint
+
+    ckpt = resolve_latest_checkpoint(merged_config(), _ROOT)
+    ok = ckpt is not None and ckpt.is_file() and client_rc == 0 and server_rc == 0
+    print(f"[e2e] checkpoint_exists={ckpt is not None and ckpt.is_file()} path={ckpt}", flush=True)
     return 0 if ok else 1
 
 
