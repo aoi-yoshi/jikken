@@ -1,6 +1,6 @@
 """
-Step 8: Ablation（Lpred / Lpred+Lgrad / Lpred+Lpost）。
-各実行は artifacts/runs/step08_ablation_<mode>/ にメトリクスを保存する。
+Step 7: Ablation（Lpred / Lpred+Lgrad / Lpred+Lpost）。
+各実行は artifacts/runs/step07_ablation_<mode>/ にメトリクスを保存する。
 """
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ from tqdm import tqdm
 
 from src.adaptation_losses import AdaptationLosses
 from src.config_loader import merged_config
-from src.dataset_manifest import load_sample_row, read_manifest_filtered, stratified_subset
+from src.dataset_manifest import load_sample_row, read_manifest_filtered, split_train_eval_rows, stratified_subset
 from src.logging_utils import RunLogger
 from src.metrics import evaluate_classifier, set_seed
 from src.paths import ensure_dirs
@@ -45,19 +45,20 @@ def main() -> None:
     tcfg = cfg["train"]
     ccfg = cfg["consistency"]
     art = cfg["artifacts"]
-    run_dir = Path(art["runs"]) / f"step08_ablation_{args.mode}"
+    run_dir = Path(art["runs"]) / f"step07_ablation_{args.mode}"
     ensure_dirs(run_dir, Path(art["checkpoints"]))
     log = RunLogger(run_dir, name="train")
-    log.log_meta({"step": 8, "mode": args.mode})
+    log.log_meta({"step": 7, "mode": args.mode})
 
     manifest = Path(dcfg["manifest_path"])
     if not manifest.is_absolute():
         manifest = _ROOT / manifest
     rows = read_manifest_filtered(manifest, dcfg)
     rows = stratified_subset(rows, int(tcfg.get("max_train_samples", 200)), int(cfg["train"]["seed"]))
-    n_train = int(len(rows) * float(dcfg.get("train_ratio", 0.8)))
-    train_rows = rows[:n_train]
-    eval_rows = rows[n_train:]
+    eval_max = int(tcfg.get("eval_max", 20))
+    train_rows, eval_rows = split_train_eval_rows(
+        rows, train_ratio=float(dcfg.get("train_ratio", 0.8)), eval_max=eval_max
+    )
 
     model, processor = build_model(cfg, device)
     unfreeze_backbone(model)
@@ -138,7 +139,7 @@ def main() -> None:
         )
         log.log({"epoch": ep, **{f"eval_{k}": v for k, v in metrics.items()}})
 
-    ckpt = Path(art["checkpoints"]) / f"step08_{args.mode}.pt"
+    ckpt = Path(art["checkpoints"]) / f"step07_{args.mode}.pt"
     torch.save(
         {
             "classifier": model.classifier.state_dict(),

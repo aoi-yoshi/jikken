@@ -20,13 +20,18 @@ data:
   frame_max_side: 480               # 抽出 JPEG の長辺上限（8 枚入力時の VRAM 対策）
   frame_sampling: "event_window"    # "event_window" | "alert_event" | "uniform"
   negative_time_mode: "random_start"  # event_window 時: negative はランダム始点
-  fallback_alert_sec: 18.5          # metadata 取得失敗時のフォールバック
+  # step02 フレーム抽出: NEXAR metadata に時刻が無いときの代替秒数
+  #   positive: time_of_alert / time_of_event の欠損時
+  #   negative (alert_event モード): データセット平均時刻の代わり
+  fallback_alert_sec: 18.5
   fallback_event_sec: 19.7
-  train_ratio: 0.8
+  # train/eval 分割（step03/04/05 共通）
+  #   train_ratio < 1.0: 先頭 ratio 分が学習プール、続く eval_max が eval
+  #   train_ratio >= 1.0: 全件から末尾 eval_max を eval、残りが学習プール（無駄なし）
+  train_ratio: 1.0
   max_videos_per_class: 150         # train: negative/positive 各 150 → 計 300 本
   max_test_videos_per_class: 20
-  max_train_samples: 300
-  max_eval_samples: 80
+  max_eval_samples: 80              # test_manifest 用（学習パイプラインでは train.eval_max を使用）
   use_num_frames: 4                 # 0 = 全フレーム; 8 枚保存の末尾 4 枚をモデル入力に使う
   use_frame_slice: "last"           # "last" | "first"
   weather_filter: "Clear"           # 空文字なら天候フィルタなし
@@ -35,9 +40,12 @@ data:
 train:
   seed: 42
   batch_size: 1                 # step04b probe 結果 (RTX 5050 8GB): max=2
-  train_count: 100       # 学習に使うデータ数
-  steps: 1000            # 学習するステップ数
-  eval_max: 20          # 評価（テスト）に使うデータ数
+  # --- 以下が step03/04/05(FL) で実際に参照される学習・評価設定 ---
+  max_train_samples: 60           # クラス別上限（×2クラス=120件抽出→学習100+eval20、各client50）
+  eval_max: 20                    # 共通 eval 本数（train_ratio>=1 時は抽出120件のうち末尾20）
+  # --- 以下は step04b 専用（FL は client 分割の全サンプル × fl.local_epochs）---
+  train_count: 100                # step04b: probe 除外後に学習に使う件数
+  steps: 1000                     # step04b: 学習ステップ上限
   lr: 1.0e-4
   weight_decay: 0.01
   max_length: 256
@@ -48,6 +56,8 @@ train:
   probe_idx: 0          # プローブに使うデータのインデックス番号
 
 lora:
+  # 本番設定（教授・実験計画）: r=8, q_proj + v_proj
+  # LoRA 比較する場合は r / target_modules を一時編集（別 YAML は不要）
   r: 8
   lora_alpha: 16
   lora_dropout: 0.0
@@ -63,12 +73,30 @@ consistency:
   surrogate_ema: 1.0       # 1.0 = surrogate keeps initial state (LoRA contribution ~ 0 → ≈ foundation F)
   sync_surrogate_at_epoch: false  # false なら surrogate を client にコピーしない (F as base reference)
 
+# Flower（step05）— 設定はこのファイルのみ。切替は fl.partition.mode 等を編集。
+# スモーク: num_rounds=1, train.max_train_samples を小さく（例: 8）
+# IID本番: partition.mode=iid_shuffle, num_rounds=3, train.eval_max=40
+# Non-IID: partition.mode=label_skew_dirichlet, label_skew_alpha=0.2
+#          または label_skew_extreme / key_skew（key_field: scene）
 fl:
-  num_rounds: 2
-  local_epochs: 1
+  # ラウンド指標: post_redistribution_*, local_adaptation_*, foundation_generalization_*,
+  # weight_divergence_*, round_timing（フェーズ別所要時間）
+  strategy: "FedAvg"                 # FedAvg | FedProx
+  fedprox_mu: 0.01                   # FedProx 時の proximal 係数 μ
+  num_rounds: 3
+  local_epochs: 2
   sample_fraction: 1.0
   min_fit_clients: 2
   min_available_clients: 2
+  num_clients: 2
+  gpu_serialize: true              # 1台1GPU: Flower client 同時接続でも GPU 区間を順番実行（マルチPCなら false）
+  checkpoint_name: "step05_fedavg_global.pt"
+  partition:
+    mode: "iid_shuffle"           # iid_shuffle | label_skew_dirichlet | label_skew_extreme | key_skew
+    seed: 42                      # 未指定時は train.seed
+    label_skew_alpha: 0.2         # label_skew_dirichlet 時（小さいほど偏り強）
+    key_field: "scene"            # key_skew 時
+    max_samples_per_client: null  # 整数で各 client 上限（null=制限なし）
 
 artifacts:
   root: "artifacts"

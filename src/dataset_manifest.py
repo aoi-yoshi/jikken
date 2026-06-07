@@ -91,6 +91,25 @@ def load_sample_row(row: Dict[str, Any], dcfg: Mapping[str, Any] | None = None) 
     )
 
 
+def split_train_eval_rows(
+    rows: Sequence[Dict[str, Any]],
+    *,
+    train_ratio: float,
+    eval_max: int,
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    """train pool と eval を分割。train_ratio>=1.0 なら eval_max を末尾に確保。"""
+    eval_max = max(0, int(eval_max))
+    ratio = float(train_ratio)
+    if ratio >= 1.0:
+        n_train = max(0, len(rows) - eval_max)
+    else:
+        n_train = int(len(rows) * ratio)
+    n_train = min(n_train, len(rows))
+    pool = list(rows[:n_train])
+    eval_rows = list(rows[n_train : n_train + eval_max])
+    return pool, eval_rows
+
+
 def stratified_subset(
     rows: List[Dict[str, Any]],
     max_per_class: Optional[int],

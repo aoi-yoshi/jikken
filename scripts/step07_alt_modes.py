@@ -1,5 +1,5 @@
 """
-Step 8 Alternating Self-Distillation:
+Step 7 Alternating Self-Distillation:
   Phase A: LoRA-1 をラベル損失のみで学習（teacher 役を仕込む）
   Phase B: LoRA-2 を整合損失付きで学習。teacher = LoRA-1
            --mode lpred       : L_task + w_pred * L_pred
@@ -8,7 +8,7 @@ Step 8 Alternating Self-Distillation:
   プラン:  A -> B -> C -> A -> B   （2 サイクル、最後の C なし）
 
 Phase A 終了時は LoRA-1 を、Phase B 終了時は LoRA-2 をそれぞれ eval する。
-ログは artifacts/runs/step08_alt_<mode>/ に保存され、各行に phase / cycle /
+ログは artifacts/runs/step07_alt_<mode>/ に保存され、各行に phase / cycle /
 epoch_in_phase を付けて、フェーズ毎の loss と acc 推移が追えるようにする。
 """
 from __future__ import annotations
@@ -253,7 +253,7 @@ def main() -> None:
     art = cfg["artifacts"]
 
     suffix = f"_{args.run_suffix}" if args.run_suffix else ""
-    run_dir = Path(art["runs"]) / f"step08_alt_self_distill_{args.mode}{suffix}"
+    run_dir = Path(art["runs"]) / f"step07_alt_self_distill_{args.mode}{suffix}"
     ensure_dirs(run_dir, Path(art["checkpoints"]))
     log = RunLogger(run_dir, name="train")
     cycles = max(1, int(args.cycles))
@@ -265,7 +265,7 @@ def main() -> None:
     )
     log.log_meta(
         {
-            "step": 8,
+            "step": 7,
             "scheme": "alt_self_distill",
             "mode": args.mode,
             "train_per_class": args.train_per_class,
@@ -462,7 +462,7 @@ def main() -> None:
             )
             print(f"[cycle {cycle} phase C] copied lora2 -> lora1")
 
-    ckpt = Path(art["checkpoints"]) / f"step08_alt_self_distill_{args.mode}.pt"
+    ckpt = Path(art["checkpoints"]) / f"step07_alt_self_distill_{args.mode}.pt"
     torch.save(
         {
             "classifier": model.classifier.state_dict(),

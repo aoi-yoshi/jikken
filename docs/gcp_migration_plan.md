@@ -7,8 +7,8 @@
 
 ## Phase A — ローカル FL 完走（GCP 前）
 
-- [ ] `step05` / `step06` で 2 rounds × 2 clients 完走
-- [ ] `step06_fedavg_global.pt` 保存・post eval 確認
+- [ ] `step05`（server + client）で 2 rounds × 2 clients 完走
+- [ ] `step05_fedavg_global.pt` 保存・post eval 確認
 - [ ] 統一ログ（accuracy, loss, adapter_size_mb, max_vram_gb, step_time）の run 間比較
 
 ---
@@ -44,7 +44,7 @@
 
 1. IID FedAvg baseline（3B clients → 3B server）
 2. Non-IID 分割（天候・時間帯・クラス偏り）
-3. Step 8 Ablation vs L_task only
+3. Step 7 Ablation vs L_task only
 4. 通信効率レポート（Adapter MB × rounds × clients）
 
 ---
@@ -61,6 +61,6 @@
 ## 参考パス（ローカル）
 
 - FL server: [scripts/step05_flower_server.py](../scripts/step05_flower_server.py)
-- FL client: [scripts/step06_flower_client.py](../scripts/step06_flower_client.py)
-- グローバル eval: [scripts/step06_fl_post_eval.py](../scripts/step06_fl_post_eval.py)
-- チェックポイント: `artifacts/checkpoints/step06_fedavg_global.pt`
+- FL client: [scripts/step05_flower_client.py](../scripts/step05_flower_client.py)
+- グローバル eval: [scripts/step05_fl_post_eval.py](../scripts/step05_fl_post_eval.py)
+- チェックポイント: `artifacts/checkpoints/step05_fedavg_global.pt`

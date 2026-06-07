@@ -18,23 +18,25 @@ from PIL import Image
 from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 
 from src.config_loader import merged_config
-from src.logging_utils import RunLogger
 from src.paths import ensure_dirs
+from src.run_context import init_run
 from src.train_common import device_or_auto
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--config", default="config/default.yaml")
     ap.add_argument("--image", default="", help="Optional image path; default random noise image")
+    ap.add_argument("--run-id", default=None)
+    ap.add_argument("--run-suffix", default="")
     args = ap.parse_args()
     cfg = merged_config()
     mcfg = cfg["model"]
     art = cfg["artifacts"]
     ensure_dirs(Path(art["runs"]))
 
-    run = RunLogger(Path(art["runs"]) / "step01_infer", name="events")
-    run.log_meta({"step": 1, "model_id": mcfg["id"]})
+    run_id, run_dir, log, env = init_run(
+        cfg, step="1", step_dir="step01_infer", log_name="events", run_id=args.run_id, run_suffix=args.run_suffix, cli=vars(args)
+    )
 
     device = torch.device(device_or_auto(True))
     dtype = torch.bfloat16 if device.type == "cuda" else torch.float32
@@ -54,8 +56,7 @@ def main() -> None:
         arr = (np.random.rand(512, 512, 3) * 255).astype("uint8")
         img = Image.fromarray(arr)
 
-    demo_path = Path(art["runs"]) / "step01_infer" / "demo_input.png"
-    demo_path.parent.mkdir(parents=True, exist_ok=True)
+    demo_path = run_dir / "demo_input.png"
     img.save(demo_path)
 
     messages = [
@@ -81,8 +82,17 @@ def main() -> None:
     trimmed = out_ids[:, inputs["input_ids"].shape[1] :]
     text = processor.batch_decode(trimmed, skip_special_tokens=True)[0]
     print("Generated:\n", text)
-    run.log({"device": str(device), "dtype": str(dtype), "output_chars": len(text)})
-    run.save_summary({"demo_input": str(demo_path), "output": text})
+    log.log({"device": str(device), "dtype": str(dtype), "output_chars": len(text)})
+    log.save_summary(
+        {
+            "run_id": run_id,
+            "run_dir": str(run_dir),
+            "environment": env,
+            "demo_input": str(demo_path),
+            "output": text,
+        }
+    )
+    log.log_meta({"status": "completed"})
 
 
 if __name__ == "__main__":

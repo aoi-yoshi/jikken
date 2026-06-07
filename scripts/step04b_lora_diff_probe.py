@@ -9,7 +9,6 @@ from __future__ import annotations
 import argparse
 import json
 import random
-import shutil
 import sys
 import time
 from datetime import datetime
@@ -25,7 +24,13 @@ from torch.amp import autocast
 from tqdm import tqdm
 
 from src.config_loader import merged_config
-from src.dataset_manifest import frame_paths_for_model, load_sample_row, read_manifest_filtered, stratified_subset
+from src.dataset_manifest import (
+    frame_paths_for_model,
+    load_sample_row,
+    read_manifest_filtered,
+    split_train_eval_rows,
+    stratified_subset,
+)
 from src.diff_probe import (
     grad_probe,
     lora_delta_norm,
@@ -39,7 +44,13 @@ from src.diff_probe import (
 from src.experiment_record import save_config_snapshot, write_experiment_report
 from src.logging_utils import RunLogger
 from src.metrics import evaluate_classifier, set_seed
-from src.resource_metrics import get_gpu_utilization, get_max_vram_gb, reset_peak_memory_stats
+from src.resource_metrics import (
+    GpuUtilTracker,
+    build_environment_block,
+    build_training_hardware_snapshot,
+    quantization_info,
+    reset_peak_memory_stats,
+)
 from src.paths import ensure_dirs
 from src.peft_setup import attach_dual_lora, lora_params_for_adapter
 from src.train_common import device_or_auto, load_samples, rows_for_step
@@ -198,7 +209,7 @@ def _print_summary(summary: Dict[str, Any]) -> None:
         norm = f"{h.get('client_delta', 0.0):.4f}"
         
         hw = h.get("hardware_metrics", {})
-        vram = f"{hw.get('max_vram_gb', 0.0):.1f}G"
+        vram = f"{hw.get('max_memory_allocated_gb', hw.get('max_vram_gb', 0.0)):.1f}G"
         t_time = f"{hw.get('train_time_sec', 0.0):.1f}s"
         
         print(f"  {ep:5d} | {loss_str:>10} | {acc:>8} | {kl:>10} | {norm:>6} | {vram:>8} | {t_time:>10}")
@@ -216,11 +227,13 @@ def _build_experiment_design(cfg: dict, manifest_total: int, train_pool: int, tr
     mcfg = cfg["model"]
     r = int(lora["r"])
     alpha = int(lora["lora_alpha"])
+    qinfo = quantization_info(cfg)
     return {
         "cuda_available": torch.cuda.is_available(),
         "gpu_name": torch.cuda.get_device_name(0) if torch.cuda.is_available() else "CPU",
         "trainable_parameters": trainable_params,
         "adapter_size_mb": adapter_size_mb,
+        **qinfo,
         "model_id": mcfg["id"],
         "attn_implementation": mcfg.get("attn_implementation", "sdpa"),
         "num_classes": int(dcfg["num_classes"]),
@@ -262,7 +275,6 @@ def _build_experiment_design(cfg: dict, manifest_total: int, train_pool: int, tr
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Step 4b: エポック毎のLoRA/出力/勾配差分の記録")
-    ap.add_argument("--config", default="config/default.yaml")
     ap.add_argument("--steps", type=int, default=None)
     ap.add_argument("--train-count", type=int, default=None)
     ap.add_argument("--probe-idx", type=int, default=None)
@@ -271,7 +283,7 @@ def main() -> None:
     args = ap.parse_args()
 
     cfg = merged_config()
-    
+
     steps = args.steps if args.steps is not None else int(cfg["train"].get("steps", 10))
     train_count = args.train_count if args.train_count is not None else int(cfg["train"].get("train_count", 20))
     probe_idx = args.probe_idx if args.probe_idx is not None else int(cfg["train"].get("probe_idx", 0))
@@ -286,11 +298,15 @@ def main() -> None:
     run_id = _make_run_id(str(args.run_suffix))
     run_dir = Path(art["runs"]) / "step04b_diff_probe" / run_id
     ensure_dirs(run_dir)
-    shutil.copy(args.config, run_dir / "used_config.yaml")
+    import yaml
+
+    with (run_dir / "used_config.yaml").open("w", encoding="utf-8") as f:
+        yaml.safe_dump(cfg, f, allow_unicode=True, sort_keys=False)
 
     log = RunLogger(run_dir, name="probe")
     train_log_path = run_dir / "epoch_history.jsonl"
-    log.log_meta({"step": "4b", "run_id": run_id, "status": "started", "cli": vars(args)})
+    env_block = build_environment_block(cfg)
+    log.log_meta({"step": "4b", "run_id": run_id, "status": "started", "cli": vars(args), "environment": env_block})
 
     manifest = Path(dcfg["manifest_path"])
     if not manifest.is_absolute():
@@ -299,9 +315,9 @@ def main() -> None:
     manifest_total = len(rows)
     rows = stratified_subset(rows, int(tcfg.get("max_train_samples", 200)), int(cfg["train"]["seed"]))
     
-    n_train = int(len(rows) * float(dcfg.get("train_ratio", 0.8)))
-    train_pool = rows[:n_train]
-    eval_rows = rows[n_train : n_train + eval_max]
+    train_pool, eval_rows = split_train_eval_rows(
+        rows, train_ratio=float(dcfg.get("train_ratio", 0.8)), eval_max=eval_max
+    )
 
     prompt = str(dcfg.get("image_prompt", ""))
     max_length = int(tcfg.get("max_length", 256))
@@ -376,7 +392,7 @@ def main() -> None:
         epoch_loss_sum = 0.0
         
         epoch_start_time = time.time()
-        gpu_utils = []
+        gpu_tracker = GpuUtilTracker(device_index=0 if device.type == "cuda" else 0)
 
         print(f"\n[Epoch {epoch}/{num_epochs}] Training...")
         pbar = tqdm(range(steps_per_epoch), desc=f"Epoch {epoch}")
@@ -401,13 +417,9 @@ def main() -> None:
             global_step += 1
             pbar.set_postfix(loss=loss_val)
             
-            if global_step % 5 == 0:
-                gpu_utils.append(get_gpu_utilization())
+            gpu_tracker.maybe_sample()
 
         train_time = time.time() - epoch_start_time
-        avg_step_time = train_time / steps_per_epoch
-        avg_gpu_util = sum(gpu_utils) / len(gpu_utils) if gpu_utils else get_gpu_utilization()
-        max_vram = get_max_vram_gb()
 
         avg_train_loss = epoch_loss_sum / steps_per_epoch
         
@@ -428,20 +440,21 @@ def main() -> None:
         )
         
         eval_time = time.time() - eval_start_time
-        
+        hw = build_training_hardware_snapshot(
+            elapsed_sec=train_time,
+            steps=steps_per_epoch,
+            gpu_tracker=gpu_tracker,
+            device=device,
+            eval_time_sec=eval_time,
+        )
+
         ep_record = {
             "epoch": epoch,
             "train_loss": avg_train_loss,
             "probe": ep_probe,
             "eval": ep_eval,
             "client_delta": current_delta,
-            "hardware_metrics": {
-                "train_time_sec": train_time,
-                "avg_step_time_sec": avg_step_time,
-                "eval_time_sec": eval_time,
-                "max_vram_gb": max_vram,
-                "avg_gpu_util_percent": avg_gpu_util
-            }
+            "hardware_metrics": hw,
         }
         history_log.append(ep_record)
         with train_log_path.open("a", encoding="utf-8") as f:
@@ -478,13 +491,16 @@ def main() -> None:
         trainable_params=trainable_params, adapter_size_mb=adapter_size_mb
     )
     
+    hw_epochs = [h["hardware_metrics"] for h in history_log if h.get("hardware_metrics")]
     summary: Dict[str, Any] = {
         "run_id": run_id,
         "run_dir": str(run_dir),
         "manifest": str(manifest),
+        "environment": env_block,
         "experiment_design": experiment_design,
         "lora_inventory": {"client": inv_client, "surrogate": inv_surrogate},
         "history": history_log,
+        "hardware_profile": hw_epochs[-1] if hw_epochs else {},
     }
     
     log.save_summary(summary)
