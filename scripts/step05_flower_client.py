@@ -203,14 +203,20 @@ def main() -> None:
         else:
             yield
 
+    def export_fl_parameters() -> tuple[list[str], np.ndarray]:
+        """foundation eval 後も client LoRA を含めて Flower に返す。"""
+        model.backbone.set_adapter("client")
+        ensure_client_trainable(model, model.backbone)
+        return trainable_state_vector(model)
+
     class Client(fl.client.NumPyClient):
         def __init__(self) -> None:
-            names, _ = trainable_state_vector(model)
+            names, _ = export_fl_parameters()
             self._names = names
             self._round = 0
 
         def get_parameters(self, config):
-            names, vec = trainable_state_vector(model)
+            names, vec = export_fl_parameters()
             self._names = names
             return [vec]
 
@@ -328,7 +334,7 @@ def main() -> None:
             foundation_eval_sec = time.perf_counter() - t0
 
             t0 = time.perf_counter()
-            names, vec = trainable_state_vector(model)
+            names, vec = export_fl_parameters()
             self._names = names
             client_lora = lora_params_for_adapter(model.backbone, "client")
             w_div = compute_weight_divergence(

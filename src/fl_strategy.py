@@ -59,9 +59,7 @@ def build_flower_strategy_class(cfg: Dict[str, Any]) -> Type:
         def aggregate_fit(self, server_round, results, failures):
             import time
 
-            from flwr.common import parameters_to_ndarrays
-
-            from .fl_utils import save_fl_checkpoint
+            from .fl_utils import flower_parameters_to_vector, save_fl_checkpoint
 
             t0 = time.perf_counter()
             aggregated, metrics = super().aggregate_fit(server_round, results, failures)
@@ -92,9 +90,13 @@ def build_flower_strategy_class(cfg: Dict[str, Any]) -> Type:
                     if key in metrics:
                         round_metrics[f"agg_{key}"] = metrics[key]
             if aggregated is not None:
-                params = aggregated.parameters if hasattr(aggregated, "parameters") else aggregated
-                ndarrays = parameters_to_ndarrays(params)
-                vec = ndarrays[0] if ndarrays else self.init_vec
+                try:
+                    vec = flower_parameters_to_vector(
+                        aggregated, expected_size=int(self.init_vec.size)
+                    )
+                except ValueError as exc:
+                    round_metrics["checkpoint_error"] = str(exc)
+                    vec = self.init_vec
                 round_metrics["param_norm"] = float(np.linalg.norm(vec))
                 if server_round >= self.total_rounds:
                     save_fl_checkpoint(

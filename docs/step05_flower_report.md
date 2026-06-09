@@ -147,17 +147,23 @@ $PY = C:\Users\aoi7y\miniconda3\envs\flvl\python.exe
 $RUN_ID = "run_YYYYMMDD_HHMMSS"
 
 # Terminal A — サーバ
-& $PY scripts\step05_flower_server.py --run-id $RUN_ID
+cd C:\Python\実験_修正
+C:\Users\aoi7y\miniconda3\envs\flvl\python.exe scripts\step05_flower_server.py
 
 # Terminal B — client 0 (GPU)
-$env:THESIS_FL_RUN_ID=$RUN_ID; $env:THESIS_CLIENT_ID="0"
-& $PY scripts\step05_flower_client.py
+cd C:\Python\実験_修正
+$env:THESIS_CLIENT_ID="0"
+C:\Users\aoi7y\miniconda3\envs\flvl\python.exe scripts\step05_flower_client.py
 
 # Terminal C — client 1 (CPU 推奨)
-$env:THESIS_FL_RUN_ID=$RUN_ID; $env:THESIS_CLIENT_ID="1"; $env:THESIS_FORCE_CPU="1"
-& $PY scripts\step05_flower_client.py
+cd C:\Python\実験_修正
+$env:THESIS_CLIENT_ID="1"
+C:\Users\aoi7y\miniconda3\envs\flvl\python.exe scripts\step05_flower_client.py
 
 # 集約後 eval
+cd C:\Python\実験_修正
+C:\Users\aoi7y\miniconda3\envs\flvl\python.exe scripts\step05_fl_post_eval.py
+or
 & $PY scripts\step05_fl_post_eval.py --run-id $RUN_ID
 ```
 

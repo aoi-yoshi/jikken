@@ -67,6 +67,32 @@ def trainable_state_vector(model: nn.Module) -> Tuple[List[str], np.ndarray]:
     return names, vec
 
 
+def flower_parameters_to_vector(
+    parameters: Any,
+    *,
+    expected_size: int | None = None,
+) -> np.ndarray:
+    """Flower Parameters / FitRes を学習可能ベクトル（1 本の float32）に戻す。"""
+    from flwr.common import parameters_to_ndarrays
+
+    params = parameters.parameters if hasattr(parameters, "parameters") else parameters
+    ndarrays = parameters_to_ndarrays(params)
+    if not ndarrays:
+        raise ValueError("empty Flower parameters")
+    if len(ndarrays) == 1:
+        vec = np.asarray(ndarrays[0], dtype=np.float32).reshape(-1)
+    else:
+        vec = np.concatenate(
+            [np.asarray(a, dtype=np.float32).reshape(-1) for a in ndarrays],
+            axis=0,
+        )
+    if expected_size is not None and vec.size != expected_size:
+        raise ValueError(
+            f"checkpoint vector size mismatch: got {vec.size}, expected {expected_size}"
+        )
+    return vec
+
+
 def vector_to_trainable_state(model: nn.Module, names: List[str], vec: np.ndarray) -> None:
     if not names:
         return

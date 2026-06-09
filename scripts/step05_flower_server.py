@@ -27,20 +27,49 @@ from src.train_common import device_or_auto
 
 def main() -> None:
     ap = argparse.ArgumentParser()
+    # --config: 設定 YAML のパス（慣例上の指定）。実際の読み込みは merged_config() が
+    #   config/default.yaml 固定。値は init_run(cli=vars(args)) 経由で run_meta に記録のみ。
     ap.add_argument("--config", default="config/default.yaml")
+    # --host: Flower gRPC サーバの待ち受け IP。fl.server.start_server(server_address) および
+    #   build_fl_flower_settings_full(server_host=...) の記録に使用。クライアントは同じ host:port へ接続。
     ap.add_argument("--host", default="127.0.0.1")
+    # --port: Flower gRPC サーバの待ち受けポート。--host と合わせて server_address を構成。
     ap.add_argument("--port", default="8080")
+    # --run-id: サーバ・クライアント間で共有する実験 ID。未指定時は --run-suffix 付きで自動生成。
+    #   artifacts/runs/step05_fl/LATEST_RUN_ID の更新、run_dir・checkpoint パス、ログの run_id に使用。
+    #   クライアントは THESIS_FL_RUN_ID 環境変数（または LATEST_RUN_ID 参照）で同じ値を指定する。
     ap.add_argument("--run-id", default=None, help="共有 run_id（クライアントも同じ値を指定）")
+    # --run-suffix: --run-id 未指定時の run_id 接尾辞（例: run_20260607_200402 + suffix）。
     ap.add_argument("--run-suffix", default="", help="run_id suffix")
+    # --num-rounds: 連合学習ラウンド数。apply_fl_cli_overrides で fl.num_rounds を上書きし、
+    #   ServerConfig.num_rounds・Strategy.total_rounds・summary に反映。default.yaml の fl.num_rounds を置換。
     ap.add_argument("--num-rounds", type=int, default=None)
+    # --partition-mode: クライアントへのデータ分割方式。apply_fl_cli_overrides で fl.partition.mode を上書き。
+    #   iid_shuffle | label_skew_dirichlet | label_skew_extreme | key_skew 等。build_fl_dataset の分割結果に直結。
     ap.add_argument("--partition-mode", default=None)
+    # --label-skew-alpha: label_skew_dirichlet 時の Dirichlet 分布 α。小さいほどラベル偏りが強い。
+    #   apply_fl_cli_overrides で fl.partition.label_skew_alpha を上書き。
     ap.add_argument("--label-skew-alpha", type=float, default=None)
+    # --eval-max: 共通 eval 用サンプル数上限。apply_fl_cli_overrides で train.eval_max を上書き。
+    #   学習プールから切り出す eval 件数（全クライアント共通の評価セット規模）。
     ap.add_argument("--eval-max", type=int, default=None)
+    # --max-train-samples: クラスあたりの学習サンプル上限。apply_fl_cli_overrides で
+    #   train.max_train_samples を上書き。データ抽出・各 client への分配規模を変更。
     ap.add_argument("--max-train-samples", type=int, default=None)
+    # --train-ratio: train/eval 分割比率。apply_fl_cli_overrides で data.train_ratio を上書き。
+    #   <1.0: 先頭 ratio 分が学習プール、続く eval_max が eval。>=1.0: 全件から末尾 eval_max を eval。
     ap.add_argument("--train-ratio", type=float, default=None)
+    # --max-samples-per-client: 各クライアントに割り当てるサンプル数の上限。
+    #   apply_fl_cli_overrides で fl.partition.max_samples_per_client を上書き（null=制限なし）。
     ap.add_argument("--max-samples-per-client", type=int, default=None)
+    # --num-clients: 連合学習クライアント数。apply_fl_cli_overrides で fl.num_clients および
+    #   min_fit_clients / min_available_clients を同値に上書き。分割数と Flower の最小参加数に影響。
     ap.add_argument("--num-clients", type=int, default=None)
+    # --strategy: 集約アルゴリズム FedAvg | FedProx。apply_fl_cli_overrides で fl.strategy を上書き。
+    #   build_flower_strategy_class の Strategy クラス選択（FedProx 時は proximal 正則化項を有効化）。
     ap.add_argument("--strategy", default=None, help="FedAvg | FedProx（default.yaml 上書き）")
+    # --fedprox-mu: FedProx の proximal 係数 μ。apply_fl_cli_overrides で fl.fedprox_mu を上書き。
+    #   strategy=FedProx かつ is_fedprox(cfg) のとき strategy_kwargs["proximal_mu"] に渡される。
     ap.add_argument("--fedprox-mu", type=float, default=None)
     args = ap.parse_args()
 
