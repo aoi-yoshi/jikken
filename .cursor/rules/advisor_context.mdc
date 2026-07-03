@@ -1,0 +1,34 @@
+---
+description: 先生との方針・会話コンテキスト。実験の優先順位と報告要件。
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# 研究コンテキスト（notes/advisor）
+
+## このフォルダの意味
+
+`notes/advisor/` は **ユーザー（吉村）の意図と先生（絶津）の方針を Cursor が読むため** のローカル専用フォルダ。GitHub には載せない。
+
+## 作業開始時
+
+実験・Step 5/7・報告書・Slack 返信など **研究進行に関わる依頼** では、まず `notes/advisor/context.md` を読む。
+
+## 会話の追記
+
+ユーザーが Slack 等の会話を貼ったら:
+
+1. **`notes/advisor/context.md` のみ** を更新する（日付別ファイルは作らない）
+2. 「現在の方針」「進行中のアクション」を会話内容で **上書き・整合** させる
+3. 原文は「会話ログ」セクションの **先頭（新しい順）** に追記する
+4. 返信下書きは「返信・下書き（一時）」に置く。送信済みなら削除または「済」
+
+## 実験判断で守ること（context と矛盾しない）
+
+- **最優先:** Step 7（Adaptation Consistency）。Step 6（Avalanche）は Step 7 基本動作確認後
+- **Step 7 順序:** ローカル 3B/3B で Lpred/Lgrad/Lpost + 安定性 → FL 統合 → GCP（7B サーバ + 3B クライアント）
+- **報告:** 結果と **実験設定（レシピ）をセット**（LoRA r/alpha/modules, LR, batch, フレーム数, データ数, 量子化, AMP/GC, run_id）
+- **計測:** Profiler 内訳より fit 時間・VRAM・nvidia-smi の確実な取得を優先
+
+用語は `terminology.mdc` / `docs/terminology.md` に従う。

@@ -124,6 +124,56 @@ class AdaptationLosses:
         )
         return logits
 
+    def compute(
+        self,
+        mode: str,
+        pil_images,
+        labels: torch.Tensor,
+        teacher_logits: torch.Tensor | None = None,
+    ) -> Tuple[torch.Tensor, Dict[str, float], Dict[str, float]]:
+        """mode: lpred | lpred_grad | lpred_post. teacher_logits 指定時は Lpred に注入。"""
+        if mode == "lpred":
+            if teacher_logits is not None:
+                total, stats = self.lpred_from_teacher_logits(pil_images, labels, teacher_logits)
+            else:
+                total, stats = self.lpred_only(pil_images, labels)
+            return total, stats, {}
+        if mode == "lpred_grad":
+            total, stats = self.lpred_lgrad(pil_images, labels)
+            return total, stats, {}
+        if mode == "lpred_post":
+            total, stats, extra = self.lpred_lpost(pil_images, labels)
+            return total, stats, extra
+        raise ValueError(f"unknown adaptation mode: {mode}")
+
+    def lpred_from_teacher_logits(
+        self,
+        pil_images,
+        labels: torch.Tensor,
+        teacher_logits: torch.Tensor,
+    ) -> Tuple[torch.Tensor, Dict[str, float]]:
+        """Stage 1: 送信 logits を teacher として Lpred（基盤 LoRA = client_adapter を更新）。"""
+        self._set_adapter(self.client_adapter)
+        logits_c, _ = self.model.forward_batch(
+            self.processor,
+            pil_images,
+            self.prompt,
+            self.max_length,
+            output_hidden_states=True,
+        )
+        l_task = logits_loss(logits_c, labels)
+        l_pred = self._kl(student=logits_c, teacher=teacher_logits.detach())
+        total = l_task + self.w_pred * l_pred
+        stats = {
+            "loss_total": float(total.detach().cpu()),
+            "loss_task": float(l_task.detach().cpu()),
+            "loss_pred": float(l_pred.detach().cpu()),
+            "loss_grad": 0.0,
+            "loss_post": 0.0,
+            "teacher_source": "transmitted",
+        }
+        return total, stats
+
     def lpred_only(
         self,
         pil_images,
@@ -148,6 +198,7 @@ class AdaptationLosses:
             "loss_pred": float(l_pred.detach().cpu()),
             "loss_grad": 0.0,
             "loss_post": 0.0,
+            "teacher_source": "recompute",
         }
         return total, stats
 

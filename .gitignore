@@ -23,3 +23,7 @@ artifacts/runs/
 
 # Optional: synthetic data if created under project root
 data/synthetic/
+
+# Advisor context for Cursor (local only — README is tracked)
+notes/advisor/*
+!notes/advisor/README.md

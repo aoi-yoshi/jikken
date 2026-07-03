@@ -161,5 +161,10 @@ def flower_fit_metrics_from_record(record: Dict[str, Any]) -> Dict[str, float]:
         "foundation_generalization_eval_sec",
         "weight_divergence_sec",
         "round_overhead_sec",
+        "avg_train_loss",
+        "avg_loss_task",
+        "avg_loss_pred",
+        "avg_loss_grad",
+        "avg_loss_post",
     )
     return {k: float(record[k]) for k in keys if k in record}

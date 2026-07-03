@@ -1,0 +1,37 @@
+---
+description: 実験・連合学習・Step 7 の用語。研究提案 PDF・実験計画 PDF に沿う。
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# 文章ルール
+
+- 主語・目的語・場所を省略しない（「読まない」「載せる」「片側」単体禁止）。
+- 操作は「**何のファイル** → **どの重み** → **どのスクリプト**」まで書く。
+
+# 用語（必ずこの言葉で書く）
+
+- **基盤モデル（F）** = クラウド側の大規模モデル（研究提案の Foundation model）。本番構成では 7B。
+- **surrogate モデル（S）** = エッジ側の小型モデル（研究提案の Surrogate model）。本番構成では 3B。
+- **基盤 LoRA** = 基盤モデル側 PEFT（コード: `surrogate` アダプタ）。会話で surrogate と書かない。
+- **クライアント LoRA** = 各クライアントが学習・送信する LoRA（コード: `client` アダプタ）。
+- **FedAvg 後の重み** = 複数クライアントの **クライアント LoRA + 分類ヘッド** を FedAvg した結果（ファイル: `step05_fedavg_global.pt`）。**第3の LoRA 種別ではない**。
+- **配布** = サーバが次ラウンド用重みをクライアントに送ること。
+
+# 使わない
+
+- **集約 LoRA** — 研究提案・実験計画 PDF にない **プロジェクト独自語**。上記 **FedAvg 後の重み** またはファイル名を使う。
+- F / S（単独略称）、AC（単独）、surrogate（ユーザー向け説明）、代理 LoRA
+- global / global checkpoint（曖昧）— **`step05_fedavg_global.pt`** または **FedAvg 後の重み**
+
+# Step 5 の事実
+
+- FedAvg するのは **分類ヘッド + クライアント LoRA**。**基盤 LoRA は FedAvg に含めない**。
+- 現状の配布は **FedAvg 後の重みを、クライアント LoRA + 分類ヘッドに書き込んで** 次ラウンドに渡す（`step05_fedavg_global.pt`）。
+
+# Step 7 の目的
+
+- Step 5 の **FedAvg 後の重みをそのまま配布する代わりに**、**FedAvg 後の重み** と **基盤 LoRA** を **整合損失** で揃え、**更新した基盤 LoRA をクライアントに配布**する。
+
+詳細: `docs/terminology.md`

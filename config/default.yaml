@@ -70,6 +70,7 @@ consistency:
   w_post: 0.5
   inner_lr: 1.0e-4
   temperature: 2.0
+  teacher_source: recompute   # recompute | transmitted（Stage 1: transmitted）
   surrogate_ema: 1.0       # 1.0 = surrogate keeps initial state (LoRA contribution ~ 0 → ≈ foundation F)
   sync_surrogate_at_epoch: false  # false なら surrogate を client にコピーしない (F as base reference)
 
@@ -81,6 +82,7 @@ consistency:
 fl:
   # ラウンド指標: post_redistribution_*, local_adaptation_*, foundation_generalization_*,
   # weight_divergence_*, round_timing（フェーズ別所要時間）
+  consistency_mode: "none"           # none | lpred | lpred_grad | lpred_post（Step 7 AC 損失）
   strategy: "FedAvg"                 # FedAvg | FedProx
   fedprox_mu: 0.01                   # FedProx 時の proximal 係数 μ
   num_rounds: 3
