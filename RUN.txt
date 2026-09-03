@@ -70,12 +70,43 @@ Env path: C:\Users\aoi7y\miniconda3\envs\flvl
    Scene skew: --partition-mode key_skew  (key_field: scene in default.yaml)
 
 5) Step6 (continual learning / forgetting; pure PyTorch, Avalanche later)
+   教授指示により一時スキップ。Step 7 を優先。
    & $PY scripts\step06_continual_forgetting.py
 
-6) Step7 (ablations; metrics in artifacts\runs\step07_ablation_*)
-   & $PY scripts\step07_ablation_modes.py --mode lpred
-   & $PY scripts\step07_ablation_modes.py --mode lpred_grad
-   & $PY scripts\step07_ablation_modes.py --mode lpred_post
+6) Step7 Adaptation Consistency（プロトタイプ）
+   1-batch 診断（Lpred/Lgrad/Lpost 計算確認）:
+   & $PY scripts\step07_loss_probe.py
+
+   スモーク（10 step）:
+   & $PY scripts\step07_ablation_modes.py --mode lpred --max-steps 10 --max-train-samples 20 --eval-max 4 --run-suffix _smoke
+   & $PY scripts\step07_ablation_modes.py --mode lpred_grad --max-steps 10 --max-train-samples 20 --eval-max 4 --run-suffix _smoke
+   & $PY scripts\step07_ablation_modes.py --mode lpred_post --max-steps 10 --max-train-samples 20 --eval-max 4 --run-suffix _smoke
+
+   短縮本番（100 step、Step 4b/5 同等データ規模）:
+   & $PY scripts\step07_ablation_modes.py --mode lpred --max-steps 100 --run-suffix _short
+   & $PY scripts\step07_ablation_modes.py --mode lpred_grad --max-steps 100 --run-suffix _short
+   & $PY scripts\step07_ablation_modes.py --mode lpred_post --max-steps 100 --run-suffix _short
+
+   本番 ablation（全 train 行 × epoch）:
+   & $PY scripts\step07_ablation_modes.py --mode lpred --epochs 1
+   & $PY scripts\step07_ablation_modes.py --mode lpred_grad --epochs 1
+   & $PY scripts\step07_ablation_modes.py --mode lpred_post --epochs 1
+
+   Logs: artifacts\runs\step07_ablation_<mode>\<run_id>\
+
+7) Step5 + Step7 FL 統合（fl.consistency_mode）
+   default.yaml: fl.consistency_mode = none | lpred | lpred_grad | lpred_post
+   または CLI: --consistency-mode lpred
+
+   Terminal A (server):
+   & $PY scripts\step05_flower_server.py
+
+   Terminal B/C (clients):
+   $env:THESIS_CLIENT_ID="0"
+   & $PY scripts\step05_flower_client.py --consistency-mode lpred
+
+   AC FL スモーク（1 round, 小データ）:
+   & $PY scripts\run_step07_fl_smoke.py --consistency-mode lpred
 
 Notes
 - HF model cache: default at $env:USERPROFILE\.cache\huggingface (override with $env:HF_HOME).
@@ -83,7 +114,10 @@ Notes
 - GPU 計測: src\resource_metrics.py（実験時は自動ログ）。手動確認は step00 または python -m src.resource_metrics
 
 Where to look (迷ったらここ)
+- docs 目次 .......... docs\README.md
 - 設定 .............. config\default.yaml
+- runs の読み方 ..... docs\runs_layout.md
+- 進捗・ファイル方針 . docs\code_organization.md
 - Step 4b 結果 ...... artifacts\runs\step04b_diff_probe\<run_id>\summary.json, epoch_history.jsonl
 - Step 5 FL .......... artifacts\runs\step05_fl\<run_id>\
 - グローバル LoRA .... artifacts\checkpoints\step05_fl\<run_id>\（LATEST_CHECKPOINT で最新パス）

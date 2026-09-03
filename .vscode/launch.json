@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: flvl（現在のファイル）",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "python": "C:\\Users\\aoi7y\\miniconda3\\envs\\flvl\\python.exe",
+      "justMyCode": true
+    }
+  ]
+}

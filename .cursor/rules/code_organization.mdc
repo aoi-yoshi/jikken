@@ -1,0 +1,54 @@
+---
+description: scripts/src のファイル数抑制と統合方針。大規模リネーム禁止。
+globs:
+  - "scripts/**"
+  - "src/**"
+alwaysApply: false
+---
+
+# コード構成ルール
+
+## 目的
+
+`scripts/` と `src/` のファイル数を増やしすぎない。  
+詳細マップ: `docs/code_organization.md` / run 命名: `docs/runs_layout.md`
+
+## 新規ファイルを作る前に
+
+1. **既存ファイルに関数・CLI サブコマンド・`--mode` を足せないか** 検討する
+2. 同種の処理（smoke / probe / plot / export / FL 補助）が既にあれば **そこに統合** する
+3. Step 本体ロジックが 200 行超える場合のみ `src/` に切り出す（新 src ファイルは最後の手段）
+
+## 統合の優先対象（将来・任意）
+
+「統合」= **同じような役割の script を、将来 1 ファイル + サブコマンドにまとめる** こと。  
+**今すぐファイルを削除・結合する作業ではない。** 旧パスはラッパーで残す。
+
+| 種別 | 現状のファイル数 | 方針 |
+|------|----------------|------|
+| FL 短時間テスト・補助 | 6（`run_fl_*`, `fl_local_*`, `verify_*` 等） | 新規は追加しない。詳細は `docs/code_organization.md` §3-B |
+| batch probe | 2 | 将来 1 ファイル + `--profile` |
+| plot / export | 5 | 将来 1 エントリ + `--step` |
+| Step 5 FL 内部（src） | 6 | 当面維持 |
+
+## Step 入口の維持
+
+- 実験計画 Step 0–9 に対応する **メイン入口** は `scripts/stepNN_*.py` 形式を維持
+- 補助・スモーク・plot は `stepNN_` プレフィックスを **付けない**（本体と混同しない）
+
+## 禁止・要ユーザー確認
+
+- 既存 run フォルダのリネーム
+- `scripts/step05_flower_server.py` 等の **パス変更のみ**（互換ラッパーなし）
+- 実験計画 Step 0–9 フォルダへの **一括移行**（情報欠落リスク）
+- 使われている src モジュールの削除・統合（import 全件 grep してから）
+
+## runs 命名（新規 run のみ）
+
+- `src/run_context.make_run_id()` + `--run-suffix`（`_smoke` / `_short` / `_full`）
+- run_id なしの新 Step ディレクトリは作らない
+- legacy（`step06_fl/`, `step07_alt_*`）は触らない
+
+## 実験優先順位
+
+`notes/advisor/context.md` と矛盾しない: Step 7 最優先 → GCP → Step 6。

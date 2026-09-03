@@ -1,0 +1,17 @@
+{
+  "python.defaultInterpreterPath": "C:\\Users\\aoi7y\\miniconda3\\envs\\flvl\\python.exe",
+  "python.condaPath": "C:\\Users\\aoi7y\\miniconda3\\Scripts\\conda.exe",
+  "python.venvPath": "C:\\Users\\aoi7y\\miniconda3\\envs",
+  "python.terminal.activateEnvironment": false,
+  "python.interpreter.infoVisibility": "always",
+  "code-runner.runInTerminal": true,
+  "code-runner.pythonPath": "C:\\Users\\aoi7y\\miniconda3\\envs\\flvl\\python.exe",
+  "code-runner.executorMap": {
+    "python": "C:\\Users\\aoi7y\\miniconda3\\envs\\flvl\\python.exe -u"
+  },
+  "code-runner.executorMapByFileExtension": {
+    ".py": "C:\\Users\\aoi7y\\miniconda3\\envs\\flvl\\python.exe -u"
+  },
+  "editor.fontSize": 18,
+  "markdown.preview.fontSize": 20
+}

@@ -217,3 +217,102 @@ def write_experiment_report(run_dir: Path, summary: Mapping[str, Any]) -> Path:
     path = run_dir / "experiment_report.md"
     path.write_text("\n".join(lines), encoding="utf-8")
     return path
+
+
+def write_step07_experiment_report(run_dir: Path, summary: Mapping[str, Any]) -> Path:
+    """Step 7 Adaptation Consistency 用の Markdown レポート。"""
+    d = summary.get("experiment_design", {})
+    env = summary.get("environment", {})
+    hw = summary.get("hardware_profile", {})
+    history = summary.get("history", [])
+    ev = summary.get("eval", {})
+    loss_stats = summary.get("loss_summary", {})
+    mode = summary.get("mode", "n/a")
+
+    lines = [
+        "# Step 7 実験レポート（Adaptation Consistency）",
+        "",
+        f"- 生成時刻: {_now_iso()}",
+        f"- Run ID: `{summary.get('run_id', 'n/a')}`",
+        f"- モード: `{mode}`",
+        "",
+        "## 1. 実験目的",
+        "",
+        "Qwen-3B 上で Lpred / Lgrad / Lpost が同一データセット上で計算可能であり、",
+        "学習が安定して動作することを確認する（Adaptation Consistency プロトタイプ）。",
+        "",
+        "## 2. モデル・LoRA 設計",
+        "",
+        "| 項目 | 値 |",
+        "|------|-----|",
+        f"| ベースモデル | {d.get('model_id', 'n/a')} |",
+        f"| LoRA rank (r) | {d.get('lora_r', 'n/a')} |",
+        f"| LoRA target_modules | {d.get('lora_target_modules', 'n/a')} |",
+        f"| w_pred | {d.get('w_pred', 'n/a')} |",
+        f"| w_grad | {d.get('w_grad', 'n/a')} |",
+        f"| w_post | {d.get('w_post', 'n/a')} |",
+        f"| surrogate_ema | {d.get('surrogate_ema', 'n/a')} |",
+        "",
+        "## 3. データ・学習設定",
+        "",
+        "| 項目 | 値 |",
+        "|------|-----|",
+        f"| データセット | {d.get('dataset', 'n/a')} |",
+        f"| train サンプル数 | {d.get('train_samples', 'n/a')} |",
+        f"| eval サンプル数 | {d.get('eval_samples', 'n/a')} |",
+        f"| 学習ステップ数 | {d.get('total_steps', 'n/a')} |",
+        f"| lr | {d.get('lr', 'n/a')} |",
+        f"| batch_size | {d.get('batch_size', 'n/a')} |",
+        "",
+        "## 4. GPU / 性能",
+        "",
+        f"| Peak VRAM [GB] | {hw.get('max_memory_allocated_gb', hw.get('max_vram_gb', 'n/a'))} |",
+        f"| 1 step 平均 [s] | {hw.get('avg_step_time_sec', 'n/a')} |",
+        f"| GPU 利用率 [%] | {hw.get('avg_gpu_util_percent', 'n/a')} |",
+        "",
+        "## 5. 損失サマリ（最終ステップ付近）",
+        "",
+        f"| 損失 | 値 |",
+        f"|------|-----|",
+        f"| loss_total | {loss_stats.get('loss_total', 'n/a')} |",
+        f"| loss_task | {loss_stats.get('loss_task', 'n/a')} |",
+        f"| loss_pred | {loss_stats.get('loss_pred', 'n/a')} |",
+        f"| loss_grad | {loss_stats.get('loss_grad', 'n/a')} |",
+        f"| loss_post | {loss_stats.get('loss_post', 'n/a')} |",
+        "",
+        "## 6. 精度（eval）",
+        "",
+        f"- accuracy: **{ev.get('accuracy_before', 'n/a')} → {ev.get('accuracy_after', 'n/a')}**",
+        f"- F1 macro: **{ev.get('f1_before', 'n/a')} → {ev.get('f1_after', 'n/a')}**",
+        "",
+    ]
+    if history:
+        lines.extend([
+            "## 7. 学習推移",
+            "",
+            "| Epoch | loss_total | loss_pred | loss_grad | loss_post | Acc | Peak VRAM [GB] |",
+            "|-------|------------|-----------|-----------|-----------|-----|----------------|",
+        ])
+        for h in history:
+            hm = h.get("hardware_metrics") or {}
+            ls = h.get("loss", {})
+            acc = h.get("eval", {}).get("accuracy", 0)
+            lines.append(
+                f"| {h.get('epoch')} | {ls.get('loss_total', '—')} | {ls.get('loss_pred', '—')} | "
+                f"{ls.get('loss_grad', '—')} | {ls.get('loss_post', '—')} | {acc:.2f} | "
+                f"{hm.get('max_memory_allocated_gb', '—')} |"
+            )
+        lines.append("")
+
+    lines.extend([
+        "## 8. 出力ファイル",
+        "",
+        "- `used_config.yaml`, `run_meta.json`, `summary.json`",
+        "- `train.jsonl` — ステップごとの損失",
+        "- `epoch_history.jsonl` — epoch ごとの eval / hardware",
+        "- `experiment_report.md` — 本ファイル",
+        "",
+    ])
+    path = run_dir / "experiment_report.md"
+    path.write_text("\n".join(lines), encoding="utf-8")
+    return path

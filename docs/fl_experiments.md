@@ -127,4 +127,4 @@ $env:THESIS_FL_RUN_ID=$RUN_ID; $env:THESIS_CLIENT_ID="1"; $env:THESIS_FORCE_CPU=
 |---------|------|
 | `artifacts/runs/step05_fl/<run_id>/used_config.yaml` | 実行時にコピーした設定（step04b と同様） |
 | `artifacts/runs/step05_fl/<run_id>/fl_partition.json` | 分割統計 |
-| `artifacts/checkpoints/step05_fedavg_global.pt` | 集約 LoRA |
+| `artifacts/checkpoints/step05_fedavg_global.pt` | FedAvg 後の重み（クライアント LoRA + 分類ヘッド） |

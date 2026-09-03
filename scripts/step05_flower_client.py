@@ -20,6 +20,7 @@ if str(_ROOT) not in sys.path:
 import torch
 from torch.amp import autocast
 
+from src.adaptation_losses import AdaptationLosses
 from src.config_loader import merged_config
 from src.fl_data import apply_fl_cli_overrides, build_fl_dataset, get_client_train_rows, save_partition_artifact
 from src.fl_flower_config import build_fl_flower_settings_full
@@ -40,7 +41,7 @@ from src.logging_utils import RunLogger
 from src.metrics import evaluate_classifier, set_seed
 from src.paths import ensure_dirs
 from src.diff_probe import snapshot_lora
-from src.peft_setup import attach_dual_lora, ensure_client_trainable, lora_params_for_adapter
+from src.peft_setup import attach_dual_lora, ema_surrogate_from_client, ensure_client_trainable, lora_params_for_adapter
 from src.resource_metrics import (
     adapter_size_mb,
     build_environment_block,
@@ -73,6 +74,7 @@ def main() -> None:
     ap.add_argument("--train-ratio", type=float, default=None)
     ap.add_argument("--max-samples-per-client", type=int, default=None)
     ap.add_argument("--num-clients", type=int, default=None)
+    ap.add_argument("--consistency-mode", default=None, help="none | lpred | lpred_grad | lpred_post")
     args = ap.parse_args()
 
     cfg = merged_config()
@@ -188,6 +190,27 @@ def main() -> None:
     )
 
     fcfg = cfg["fl"]
+    ccfg = cfg["consistency"]
+    consistency_mode = str(fcfg.get("consistency_mode", "none")).lower()
+    ac_losses: AdaptationLosses | None = None
+    if consistency_mode != "none":
+        ac_losses = AdaptationLosses(
+            model,
+            processor,
+            w_pred=float(ccfg.get("w_pred", 0.5)),
+            w_grad=float(ccfg.get("w_grad", 0.1)),
+            w_post=float(ccfg.get("w_post", 0.5)),
+            inner_lr=float(ccfg.get("inner_lr", 1e-4)),
+            max_length=max_length,
+            prompt=prompt,
+            client_adapter="client",
+            surrogate_adapter="surrogate",
+            client_lora_params=client_lora,
+            surrogate_lora_params=surrogate_lora,
+            temperature=float(ccfg.get("temperature", 2.0)),
+        )
+    log.log({"event": "consistency_config", "consistency_mode": consistency_mode})
+
     gpu_serialize = bool(fcfg.get("gpu_serialize", False)) or os.environ.get("THESIS_GPU_SERIALIZE") == "1"
     gpu_lock_path = Path(art["root"]) / ".fl_gpu.lock"
     if not gpu_lock_path.is_absolute():
@@ -264,15 +287,20 @@ def main() -> None:
             fit_t0 = time.perf_counter()
             steps = 0
             loss_sum = 0.0
+            loss_task_sum = 0.0
+            loss_pred_sum = 0.0
+            loss_grad_sum = 0.0
+            loss_post_sum = 0.0
             profiler_result = None
             gpu_tracker = GpuUtilTracker(device_index=0 if device.type == "cuda" else 0)
+            surrogate_ema = float(ccfg.get("surrogate_ema", 1.0))
             for _ in range(local_epochs):
                 for chunk in iter_row_chunks(train_rows, bs):
                     samples = load_samples(chunk, dcfg)
-                    y = torch.tensor([s.label for s in samples], device=device, dtype=torch.long)
-                    frames_batch = [s.frames for s in samples]
 
-                    def _train_step() -> None:
+                    def _train_step_task_only() -> None:
+                        y = torch.tensor([s.label for s in samples], device=device, dtype=torch.long)
+                        frames_batch = [s.frames for s in samples]
                         opt.zero_grad(set_to_none=True)
                         model.backbone.set_adapter("client")
                         with autocast(device_type=device.type, dtype=torch.bfloat16, enabled=(device.type == "cuda")):
@@ -284,8 +312,33 @@ def main() -> None:
                                 step_loss = step_loss + proximal_penalty(model, global_vec, prox_mu, device)
                         step_loss.backward()
                         opt.step()
-                        nonlocal loss_sum
+                        nonlocal loss_sum, loss_task_sum
                         loss_sum += float(step_loss.detach().cpu())
+                        loss_task_sum += float(step_loss.detach().cpu())
+
+                    def _train_step_ac() -> None:
+                        nonlocal loss_sum, loss_task_sum, loss_pred_sum, loss_grad_sum, loss_post_sum
+                        assert ac_losses is not None
+                        for sample in samples:
+                            y = torch.tensor([sample.label], device=device, dtype=torch.long)
+                            opt.zero_grad(set_to_none=True)
+                            model.backbone.set_adapter("client")
+                            with autocast(device_type=device.type, dtype=torch.bfloat16, enabled=(device.type == "cuda")):
+                                total, stats, _extra = ac_losses.compute(consistency_mode, sample.frames, y)
+                                if use_prox:
+                                    total = total + proximal_penalty(model, global_vec, prox_mu, device)
+                            total.backward()
+                            opt.step()
+                            for p in surrogate_lora:
+                                p.grad = None
+                            ema_surrogate_from_client(client_lora, surrogate_lora, surrogate_ema)
+                            loss_sum += float(stats["loss_total"])
+                            loss_task_sum += float(stats["loss_task"])
+                            loss_pred_sum += float(stats["loss_pred"])
+                            loss_grad_sum += float(stats["loss_grad"])
+                            loss_post_sum += float(stats["loss_post"])
+
+                    _train_step = _train_step_ac if ac_losses is not None else _train_step_task_only
 
                     if steps == 0 and device.type == "cuda":
                         profiler_result = profile_one_step(_train_step, device=device)
@@ -303,6 +356,10 @@ def main() -> None:
                 phase="fit",
             )
             avg_loss = loss_sum / max(1, steps)
+            avg_loss_task = loss_task_sum / max(1, steps)
+            avg_loss_pred = loss_pred_sum / max(1, steps)
+            avg_loss_grad = loss_grad_sum / max(1, steps)
+            avg_loss_post = loss_post_sum / max(1, steps)
 
             model.eval()
             t0 = time.perf_counter()
@@ -366,6 +423,11 @@ def main() -> None:
                 round_timing=round_timing,
                 extra={
                     "avg_train_loss": avg_loss,
+                    "avg_loss_task": avg_loss_task,
+                    "avg_loss_pred": avg_loss_pred,
+                    "avg_loss_grad": avg_loss_grad,
+                    "avg_loss_post": avg_loss_post,
+                    "consistency_mode": consistency_mode,
                     "steps": steps,
                     "train_samples": len(train_rows),
                     **hw,
@@ -375,6 +437,10 @@ def main() -> None:
             # Flower metrics はスカラーのみ（professor_links 等の dict は jsonl のみ）
             fit_return = {
                 "avg_train_loss": avg_loss,
+                "avg_loss_task": avg_loss_task,
+                "avg_loss_pred": avg_loss_pred,
+                "avg_loss_grad": avg_loss_grad,
+                "avg_loss_post": avg_loss_post,
                 **flower_fit_metrics_from_record(metric_row),
             }
             return [vec], len(train_rows), fit_return
@@ -433,6 +499,7 @@ def main() -> None:
                 "adapter_size_mb": adapter_mb,
                 "trainable_parameters": trainable_n,
                 "flower_settings": flower_settings,
+                "consistency_mode": consistency_mode,
                 "status": "completed",
             }
         )

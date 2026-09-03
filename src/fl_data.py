@@ -236,6 +236,8 @@ def apply_fl_cli_overrides(cfg: Dict[str, Any], args: Any) -> Dict[str, Any]:
         fcfg["strategy"] = str(args.strategy)
     if getattr(args, "fedprox_mu", None) is not None:
         fcfg["fedprox_mu"] = float(args.fedprox_mu)
+    if getattr(args, "consistency_mode", None) is not None:
+        fcfg["consistency_mode"] = str(args.consistency_mode)
     return cfg
 
 
