@@ -1,0 +1,38 @@
+Source deck: 進捗会0724_吉村有生.pptx
+Slide count: 21
+Canvas: 1280 x 720
+
+Communication job:
+By the end, the professor should be able to judge the research boundary and evaluation plan because the deck defines the central claim, closest prior work, success criteria, target heterogeneity, and experiment order before discussing Lgrad/Lpost details.
+
+Narrative:
+1. Correct the order of work.
+2. Locate the proposal relative to FedMD/FedDF/Fed-ET/FedMKT.
+3. State the provisional central claim.
+4. Define success as a Pareto improvement across performance, resource use, convergence, and shared information.
+5. Bound model heterogeneity and comparison conditions.
+6. Sequence experiments so Lgrad/Lpost remain later mechanism choices.
+
+Reusable source patterns:
+- Slide 1: title slide with centered title, date, name, affiliation.
+- Slide 10: large title plus one full-slide body text box.
+- Slide 11: large title plus 6 x 4 table; contains an empty inherited content placeholder that must be deleted.
+- Slide 9: large title plus 10 x 4 table.
+
+Visual rules:
+- White background, dark navy text (#203864), Arial/Calibri family.
+- Keep the inherited title, page marker, margins, and table styling.
+- Use the original 48 px content-slide title size and 24 px table text where possible.
+- Do not add decorative primitives, images, or new panels.
+
+Insertion contract:
+- Every output slide duplicates a mapped source slide.
+- Existing inherited text boxes and tables are rewritten in place.
+- No new slide-local shapes are added.
+- Empty inherited placeholders are deleted explicitly.
+
+Master/layout notes:
+- Title slide uses the source title-slide layout and inherited navy footer bars.
+- Content slides use the source master with top-left mark and top-right navy page marker.
+- Page markers are slide-local editable text in the selected source slides.
+

@@ -1,0 +1,563 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/905bis",
+    "id": "905bis",
+    "slide": 1,
+    "layoutId": "01393840-63a2-4d13-bdb2-dd0817b07bfc",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "278cc6b1-f1a0-409a-b734-deee8c5d0de7",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#12304A",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "BIZ UDPGothic"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "01393840-63a2-4d13-bdb2-dd0817b07bfc",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "278cc6b1-f1a0-409a-b734-deee8c5d0de7",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "278cc6b1-f1a0-409a-b734-deee8c5d0de7",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/xs769cnm",
+      "id": "1",
+      "bbox": [
+        650,
+        0,
+        630,
+        720
+      ],
+      "geometry": "rect",
+      "alt": "NEXAR評価用risk動画の最終フレーム。夜間交差点で左右から車両が接近している",
+      "contentType": "image/jpeg",
+      "imageFit": "cover",
+      "imageMask": {
+        "geometry": "rect"
+      },
+      "asset": {
+        "assetId": "c74f0101-82ec-4777-8976-2a6bdedf459d",
+        "contentType": "image/jpeg",
+        "byteLength": 21191
+      }
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z21c3u9o",
+      "id": "2",
+      "bbox": [
+        0,
+        0,
+        650,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "#12304A",
+      "lineColor": "#12304A",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y1svups3",
+      "id": "3",
+      "bbox": [
+        594,
+        0,
+        56,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "#168A7A",
+      "lineColor": "#168A7A",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/983e9orq",
+      "id": "4",
+      "bbox": [
+        66,
+        62,
+        490,
+        34
+      ],
+      "geometry": "rect",
+      "text": "FedPACT / NEXAR concrete case",
+      "textPreview": "FedPACT / NEXAR concrete case",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 20,
+        "typeface": "BIZ UDPGothic",
+        "color": "#84D2C5",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "FedPACT / NEXAR concrete case"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "FedPACT / NEXAR concrete case",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "BIZ UDPGothic",
+            "color": "#84D2C5",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "FedPACT / NEXAR concrete case",
+              "fontSize": 20,
+              "typeface": "BIZ UDPGothic",
+              "color": "#84D2C5",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/87ud0ja5",
+      "id": "5",
+      "bbox": [
+        66,
+        128,
+        500,
+        245
+      ],
+      "geometry": "rect",
+      "text": "Layer 2 動作確認と\n局所更新の\n順序依存性",
+      "textPreview": "Layer 2 動作確認と | 局所更新の | 順序依存性",
+      "resolvedFontSize": 47,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 47,
+        "typeface": "BIZ UDPGothic",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Layer 2 動作確認と"
+          },
+          {
+            "index": 2,
+            "text": "局所更新の"
+          },
+          {
+            "index": 3,
+            "text": "順序依存性"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Layer 2 動作確認と",
+          "lineSpacingPercent": 98000,
+          "resolvedTextStyle": {
+            "fontSize": 47,
+            "typeface": "BIZ UDPGothic",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 0.98
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Layer 2 動作確認と",
+              "fontSize": 47,
+              "typeface": "BIZ UDPGothic",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 0.98
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "局所更新の",
+          "lineSpacingPercent": 98000,
+          "resolvedTextStyle": {
+            "fontSize": 47,
+            "typeface": "BIZ UDPGothic",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 0.98
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "局所更新の",
+              "fontSize": 47,
+              "typeface": "BIZ UDPGothic",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 0.98
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "順序依存性",
+          "lineSpacingPercent": 98000,
+          "resolvedTextStyle": {
+            "fontSize": 47,
+            "typeface": "BIZ UDPGothic",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 0.98
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "順序依存性",
+              "fontSize": 47,
+              "typeface": "BIZ UDPGothic",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 0.98
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/n61w7e9k",
+      "id": "6",
+      "bbox": [
+        70,
+        410,
+        470,
+        78
+      ],
+      "geometry": "rect",
+      "text": "実動画の反応変化から、\n代理データ候補へ至る過程を追う",
+      "textPreview": "実動画の反応変化から、 | 代理データ候補へ至る過程を追う",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "BIZ UDPGothic",
+        "color": "#DCE7EE",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "実動画の反応変化から、"
+          },
+          {
+            "index": 2,
+            "text": "代理データ候補へ至る過程を追う"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "実動画の反応変化から、",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "typeface": "BIZ UDPGothic",
+            "color": "#DCE7EE",
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "実動画の反応変化から、",
+              "fontSize": 25,
+              "typeface": "BIZ UDPGothic",
+              "color": "#DCE7EE",
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "代理データ候補へ至る過程を追う",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "typeface": "BIZ UDPGothic",
+            "color": "#DCE7EE",
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "代理データ候補へ至る過程を追う",
+              "fontSize": 25,
+              "typeface": "BIZ UDPGothic",
+              "color": "#DCE7EE",
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m5svy9sz",
+      "id": "7",
+      "bbox": [
+        70,
+        584,
+        360,
+        26
+      ],
+      "geometry": "rect",
+      "text": "研究会説明用・診断実験",
+      "textPreview": "研究会説明用・診断実験",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "BIZ UDPGothic",
+        "color": "#A9BCC9",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "研究会説明用・診断実験"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "研究会説明用・診断実験",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "BIZ UDPGothic",
+            "color": "#A9BCC9",
+            "alignment": "left",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "研究会説明用・診断実験",
+              "fontSize": 18,
+              "typeface": "BIZ UDPGothic",
+              "color": "#A9BCC9",
+              "alignment": "left",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pczuxkrm",
+      "id": "8",
+      "bbox": [
+        70,
+        635,
+        420,
+        26
+      ],
+      "geometry": "rect",
+      "text": "YOSHIMURA Aoi   2026.09.13",
+      "textPreview": "YOSHIMURA Aoi   2026.09.13",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "BIZ UDPGothic",
+        "color": "#DCE7EE",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "YOSHIMURA Aoi   2026.09.13"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "YOSHIMURA Aoi   2026.09.13",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "BIZ UDPGothic",
+            "color": "#DCE7EE",
+            "alignment": "left",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "YOSHIMURA Aoi   2026.09.13",
+              "fontSize": 18,
+              "typeface": "BIZ UDPGothic",
+              "color": "#DCE7EE",
+              "alignment": "left",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

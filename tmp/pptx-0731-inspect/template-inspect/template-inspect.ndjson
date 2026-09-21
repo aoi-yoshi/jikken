@@ -1,0 +1,50 @@
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"従来手法との差、評価方針の整理","textShapes":4}
+{"kind":"textbox","id":"sh/547294r6","slide":1,"name":"タイトル 1","placeholder":"title","text":"\n従来手法との差、評価方針の整理\n共通処理フローとLpredによる基盤LoRA更新フローの整理surrogate適応情報を用いた基盤モデル更新","textPreview":"| 従来手法との差、評価方針の整理 | 共通処理フローとLpredによる基盤LoRA更新フローの整理surrogate適応情報を用いた基盤モデル更新","textChars":71,"textLines":3,"bbox":[27.92,206.1,1223.12,153.9]}
+{"kind":"textbox","id":"sh/k3yl0zql","slide":1,"name":"字幕 2","placeholder":"subtitle","text":"名古屋大学\n情報学研究科\n知能システム学専攻　1年","textPreview":"名古屋大学 | 情報学研究科 | 知能システム学専攻　1年","textChars":25,"textLines":3,"bbox":[323.22,540.74,911.46,153.9]}
+{"kind":"textbox","id":"sh/7qp4be9c","slide":1,"name":"タイトル 1","text":"吉村　有生","textPreview":"吉村　有生","textChars":5,"textLines":1,"bbox":[205.18,411.89,868.61,153.9]}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"name":"タイトル 1","text":"7月31日報告会","textPreview":"7月31日報告会","textChars":8,"textLines":1,"bbox":[194.46,343.67,890.03,153.9]}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"目次","textShapes":3}
+{"kind":"textbox","id":"sh/9072xkry","slide":2,"name":"タイトル 1","placeholder":"title","text":"目次","textPreview":"目次","textChars":2,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/ozy1ofad","slide":2,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/b29kza94","slide":2,"name":"コンテンツ プレースホルダー 3","text":"全体処理フロー\n基盤LoRA更新の処理フロー\n評価方針の整理","textPreview":"全体処理フロー | 基盤LoRA更新の処理フロー | 評価方針の整理","textChars":30,"textLines":3,"bbox":[0,0,0,0]}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"2","textShapes":3}
+{"kind":"textbox","id":"sh/d0jax03i","slide":3,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/83ulovat","slide":3,"name":"テキスト ボックス 12","text":"＜クライアント＞","textPreview":"＜クライアント＞","textChars":8,"textLines":1,"bbox":[739.53,10.8,220.8,38.78]}
+{"kind":"textbox","id":"sh/a5c3ql8z","slide":3,"name":"テキスト ボックス 14","text":"＜サーバ＞","textPreview":"＜サーバ＞","textChars":5,"textLines":1,"bbox":[338.28,9.57,220.8,38.78]}
+{"kind":"image","id":"im/ulcnalwf","slide":3,"name":"図 16","bbox":[64.46,72.79,1127.15,639.44]}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"クラウド側基盤LoRA更新の詳細フロー","textShapes":2}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"name":"タイトル 1","placeholder":"title","text":"クラウド側基盤LoRA更新の詳細フロー","textPreview":"クラウド側基盤LoRA更新の詳細フロー","textChars":19,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/0ba143al","slide":4,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"image","id":"im/q1sbal07","slide":4,"name":"コンテンツ プレースホルダー 22","bbox":[189,94.95,796.5,625.05]}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"⑥ 次ラウンド用知識の生成・蒸留更新の詳細","textShapes":2}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":5,"name":"タイトル 1","placeholder":"title","text":"⑥ 次ラウンド用知識の生成・蒸留更新の詳細","textPreview":"⑥ 次ラウンド用知識の生成・蒸留更新の詳細","textChars":21,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/cf2tcr61","slide":5,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/m94nadsn","slide":5,"name":"表 5","rows":1,"cols":1,"preview":"基盤teacher分布の生成 𝑧_(base )^(𝑟)𝑥 = 𝑓_(base )𝑥 ; 𝜃_(base )^(𝑟) 𝑞_(base )^(𝑟)𝑥 = softmax(𝑧_(base )^(𝑟)𝑥)⁄(𝑇)  入力： 更新済み基盤モデル 整合デー...","bbox":[7.38,78.26,626.22,441.85]}
+{"kind":"table","id":"tb/nad4jits","slide":5,"name":"表 7","rows":1,"cols":1,"preview":"クライアントstudent分布の計算 𝑧_(𝑐)^((𝑘,𝑟+1))𝑥 = 𝑓_(𝑐)^(𝑘)𝑥 ; 𝜃_(𝑐)^((𝑘.𝑟+1)) 𝑞_(𝑐)^((𝑘.𝑟+1))𝑥 = softmax(𝑧_(𝑐)^((𝑘,𝑟+1))𝑥)⁄(\ud835...","bbox":[646.4,79.74,626.22,411.58]}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"⑥ 次ラウンド用知識の生成・蒸留更新の詳細","textShapes":2}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"name":"タイトル 1","placeholder":"title","text":"⑥ 次ラウンド用知識の生成・蒸留更新の詳細","textPreview":"⑥ 次ラウンド用知識の生成・蒸留更新の詳細","textChars":21,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/zi98nu94","slide":6,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/5gzmp4vu","slide":6,"name":"表 5","rows":1,"cols":1,"preview":"蒸留損失の計算 ℒ_(dist )^((𝑘,𝑟+1)) = (𝑇²)⁄(|𝐷_(align)|)∑_(𝑥∈𝐷_(align )) KL𝑞_(base )^(𝑟)𝑥‖𝑞_(𝑐)^((𝑘,𝑟+1))𝑥 入力： 基盤teacher分布　 クライアントs...","bbox":[7.38,78.26,626.22,359.37]}
+{"kind":"table","id":"tb/4fqlgze9","slide":6,"name":"表 7","rows":1,"cols":1,"preview":"クライアント側勾配の計算 次ラウンド用パラメータの更新・配布 𝑔_(dist)^((𝑘,𝑟+1)) = ∇_(𝜃_(𝑐))ℒ_(dist)^((𝑘,𝑟+1)) 𝜃_(𝑐)^((𝑘,𝑟+1)) = Optimizer_(dist )𝜃_(𝑐)^((\ud835...","bbox":[646.4,79.74,626.22,463.87]}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"異種（規模）モデルと共有データの2つの壁","textShapes":3}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"name":"タイトル 1","placeholder":"title","text":"異種（規模）モデルと共有データの2つの壁","textPreview":"異種（規模）モデルと共有データの2つの壁","textChars":20,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/dcbud0ra","slide":7,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/kzmdova1","slide":7,"name":"コンテンツ プレースホルダー 3","text":"\n\n\n\n制約下での学習有用性\n「知識を反映できるか」と「エッジ上で現実的なコストか」を評価する\nデータ共有制約への適合性\n「整合データへの依存」と「プライバシー上の安全性」を評価する","textPreview":"|  |  |  | 制約下での学習有用性 | 「知識を反映できるか」と「エッジ上で現実的なコストか」を評価する | データ共有制約への適合性 | 「整合データへの依存」と「プライバシー上の安全性」を評価する","textChars":91,"textLines":8,"bbox":[0,85.22,1280,634.78]}
+{"kind":"table","id":"tb/wj29o7ut","slide":7,"name":"表 4","rows":4,"cols":3,"preview":"方法 | できること | 残る問題","bbox":[50.67,119.65,1178.67,230.4]}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"制約下での学習有用性","textShapes":4}
+{"kind":"textbox","id":"sh/18byd4zy","slide":8,"name":"タイトル 1","placeholder":"title","text":"制約下での学習有用性","textPreview":"制約下での学習有用性","textChars":10,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/g72x4zyd","slide":8,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/ri9g7uhw","slide":8,"name":"コンテンツ プレースホルダー 3","text":"そもそも知識を反映できているか\n例：サーバーモデルの更新前後の精度、クライアントのみが持つ知識に対する評価、クライアントモデルへの再配布後の精度\nなぜサロゲートモデルを使う必要があるのか\n例：クライアントのピークメモリ使用量、1ラウンドの学習時間\n収束は本当に速いか\n目標精度に到達するまでのラウンド数、実時間、最終的に到達できる精度\n性能と軽量化のトレードオフ\nモデルサイズと最終精度、収束時間、サイズ差と知識移転性能","textPreview":"そもそも知識を反映できているか | 例：サーバーモデルの更新前後の精度、クライアントのみが持つ知識に対する評価、クライアントモデルへの再配布後の精度 | なぜサロゲートモデルを使う必要があるのか | 例：クライアントのピークメモリ使用量、1ラウンドの学習時間 | 収束は本当...","textChars":210,"textLines":8,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/tkby9kzm","slide":8,"name":"吹き出し: 折線 5","text":"一般的な評価データで精度が上がっただけでは「クライアントの知識が反映された」と断定できない","textPreview":"一般的な評価データで精度が上がっただけでは「クライアントの知識が反映された」と断定できない","textChars":45,"textLines":1,"bbox":[938.78,15.47,295.95,139.5]}
+{"kind":"slide","id":"sl/udsvah03","slide":9,"title":"データ共有制約への適合性","textShapes":3}
+{"kind":"textbox","id":"sh/1cfmhgne","slide":9,"name":"タイトル 1","placeholder":"title","text":"データ共有制約への適合性","textPreview":"データ共有制約への適合性","textChars":12,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/0b65obm9","slide":9,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/nex4jq5k","slide":9,"name":"コンテンツ プレースホルダー 3","text":"整合データにどの程度依存するか\n整合データ100％、50％、タスクと分布が異なる整合データ\nサーバーが知らない知識を反映できるか\nクライアント固有の知識が反映されたか、生データを直接共有せず知識を移転できたか\n本当にプライバシーが保護されているか\nクライアントから何を送信するのか、ロジットや勾配からデータを推測できるか\n","textPreview":"整合データにどの程度依存するか | 整合データ100％、50％、タスクと分布が異なる整合データ | サーバーが知らない知識を反映できるか | クライアント固有の知識が反映されたか、生データを直接共有せず知識を移転できたか | 本当にプライバシーが保護されているか | クライ...","textChars":161,"textLines":7,"bbox":[0,0,0,0]}
+{"kind":"slide","id":"sl/m90b6t0r","slide":10,"title":"今後","textShapes":3}
+{"kind":"textbox","id":"sh/xc3mho32","slide":10,"name":"タイトル 1","placeholder":"title","text":"今後","textPreview":"今後","textChars":2,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/cbu58j2h","slide":10,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/zelojyl8","slide":10,"name":"コンテンツ プレースホルダー 3","text":"規模の異なる同一系統モデル間で、更新後の基盤LoRAからサロゲートLoRAへ、どのように知識を移転すれば、精度・収束速度・エッジ計算量を両立できるか\nどの情報を移転するか\nサイズ差をどう吸収するか\nどうすれば速く収束するか\nエッジ上で本当に利益があるか","textPreview":"規模の異なる同一系統モデル間で、更新後の基盤LoRAからサロゲートLoRAへ、どのように知識を移転すれば、精度・収束速度・エッジ計算量を両立できるか | どの情報を移転するか | サイズ差をどう吸収するか | どうすれば速く収束するか | エッジ上で本当に利益があるか","textChars":126,"textLines":5,"bbox":[0,0,0,0]}
+{"kind":"slide","id":"sl/jetc3ut0","slide":11,"title":"10","textShapes":1}
+{"kind":"shape","id":"sh/xcryxg7y","slide":11,"name":"タイトル 1","placeholder":"title","bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/wbih4b6d","slide":11,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/n69grmpw","slide":11,"name":"コンテンツ プレースホルダー 3","bbox":[0,0,0,0]}

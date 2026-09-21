@@ -1,0 +1,24 @@
+Communication job:
+By the end, the supervising professor should understand that the research no longer claims bidirectionality itself as novel; it tests a narrower claim about same-family, different-capacity VLMs for video under a small shared alignment buffer and practical resource constraints.
+
+Narrative arc:
+Conclusion -> prior-art boundary -> narrowed claim -> measurable success -> comparisons -> experiment order -> immediate actions.
+
+Source deck:
+- 8 slides, 16:9, university research-meeting template.
+- Title slide plus title/content and title/table layouts.
+- Typography: Arial/Calibri theme, dark navy titles, sparse blue academic styling.
+- Reuse all eight source slides one-to-one and edit inherited content in place.
+- Preserve master/layout chrome, page numbers, margins, and table placement.
+
+Placeholder audit:
+- Slide 1: title and subtitle placeholders.
+- Slides 2-8: title and slide-number placeholders.
+- Body placeholders have been imported as editable text shapes or tables and will be edited directly.
+
+Content decisions:
+- Use “同一系列・異容量VLM” and “capacity heterogeneity”; do not claim architecture heterogeneity.
+- Do not claim bidirectionality, client knowledge return, reduced public data, or VLM use alone as first-of-kind.
+- Main comparison is simultaneous server/client improvement against independent and one-way baselines.
+- Lgrad/Lpost remain optional modules, not the novelty claim.
+

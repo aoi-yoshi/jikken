@@ -1,0 +1,1265 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/m1wvqtk3",
+    "id": "m1wvqtk3",
+    "slide": 21,
+    "layoutId": "/ppt/slideLayouts/slideLayout2.xml",
+    "layoutName": "タイトルとコンテンツ",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office テーマ",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "fontScheme": {
+      "name": "ユーザー定義 1",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial",
+      "Calibri",
+      "Calibri Light",
+      "Cambria Math"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout2.xml",
+      "name": "タイトルとコンテンツ",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/4",
+          "id": "4",
+          "name": "四角形: 角を丸くする 3",
+          "bbox": [
+            1192,
+            0,
+            34.98,
+            69.01
+          ],
+          "geometry": "roundRect",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "verticalAlignment": "middle"
+          },
+          "fillColor": "#203864",
+          "lineColor": "#203864",
+          "lineWidth": 1.33
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/2",
+          "id": "2",
+          "name": "Title 1",
+          "bbox": [
+            88,
+            9.25,
+            1104,
+            69.01
+          ],
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText"
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/5",
+          "id": "5",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            798.17,
+            7.77,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/7",
+          "id": "7",
+          "name": "グラフィックス 6",
+          "bbox": [
+            5.82,
+            13.17,
+            61.09,
+            57.77
+          ],
+          "contentType": "image/svg+xml",
+          "asset": {
+            "assetId": "/ppt/media/image1.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          }
+        },
+        {
+          "order": 5,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/6",
+          "id": "6",
+          "name": "Content Placeholder 2",
+          "bbox": [
+            0,
+            85.22,
+            1280,
+            634.78
+          ],
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            0,
+            141.12,
+            1280,
+            578.88
+          ],
+          "geometry": "rect",
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            88,
+            19.95,
+            1104,
+            98.13
+          ],
+          "geometry": "rect",
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/4",
+          "id": "4",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            755.43,
+            19.95,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1gbmxs7a",
+      "id": "2",
+      "name": "タイトル 1",
+      "bbox": [
+        88,
+        9.25,
+        1104,
+        69.01
+      ],
+      "text": "端末logitsから集約teacher分布を生成するプロセス",
+      "textPreview": "端末logitsから集約teacher分布を生成するプロセス",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 48,
+        "typeface": "Arial",
+        "color": "#203864",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "端末logitsから集約teacher分布を生成するプロセス"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "端末logitsから集約teacher分布を生成するプロセス",
+          "runs": [
+            {
+              "index": 1,
+              "text": "端末logitsから集約teacher分布を生成"
+            },
+            {
+              "index": 2,
+              "text": "する"
+            },
+            {
+              "index": 3,
+              "text": "プロセス",
+              "typeface": "Cambria Math"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0f2lon6p",
+      "id": "3",
+      "name": "スライド番号プレースホルダー 2",
+      "bbox": [
+        798.17,
+        7.77,
+        436.57,
+        37.17
+      ],
+      "text": "21",
+      "textPreview": "21",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": {
+          "type": "theme",
+          "value": "bg1",
+          "transform": {
+            "lighten": 0.25
+          }
+        },
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "21"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "21",
+          "runs": [
+            {
+              "index": 1,
+              "text": "21"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4jax4nqd",
+      "id": "10",
+      "name": "コンテンツ プレースホルダー 3",
+      "bbox": [
+        0,
+        78.26,
+        661.03,
+        541.63
+      ],
+      "text": "1.　各端末から送られてきたlogitsを確率分布へ変換\n\n2.　端末ごとの重みを計算\n\n3.　確率分布を集約する。クラウド基盤整合のteacherとなるを作成\n\n\n",
+      "textPreview": "1.　各端末から送られてきたlogitsを確率分布へ変換 |  | 2.　端末ごとの重みを計算 |  | 3.　確率分布を集約する。クラウド基盤整合のteacherとなるを作成 |  |  |",
+      "resolvedFontSize": 42.67,
+      "resolvedTextStyle": {
+        "vertical": 1,
+        "fontSize": 42.67,
+        "typeface": "Arial",
+        "color": "#203864",
+        "alignment": "left",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 15,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1.　各端末から送られてきたlogitsを確率分布へ変換"
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": "2.　端末ごとの重みを計算"
+          },
+          {
+            "index": 6,
+            "text": ""
+          },
+          {
+            "index": 7,
+            "text": ""
+          },
+          {
+            "index": 8,
+            "text": ""
+          },
+          {
+            "index": 9,
+            "text": "3.　確率分布を集約する。クラウド基盤整合のteacherとなるを作成"
+          },
+          {
+            "index": 10,
+            "text": ""
+          },
+          {
+            "index": 11,
+            "text": ""
+          },
+          {
+            "index": 12,
+            "text": ""
+          },
+          {
+            "index": 13,
+            "text": ""
+          },
+          {
+            "index": 14,
+            "text": ""
+          },
+          {
+            "index": 15,
+            "text": ""
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "1.　各端末から送られてきたlogitsを確率分布へ変換",
+          "runs": [
+            {
+              "index": 1,
+              "text": "1.",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            },
+            {
+              "index": 2,
+              "text": "　各端末から送られてきた",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            },
+            {
+              "index": 3,
+              "text": "logits",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            },
+            {
+              "index": 4,
+              "text": "を確率分布",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            },
+            {
+              "index": 5,
+              "text": "へ変換",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            }
+          ],
+          "bulletCharacter": "┃",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 130000
+        },
+        {
+          "index": 2,
+          "text": "𝑞_(𝑐)^((𝑘,𝑟))𝑥 = softmax(𝑧_(𝑐)^(𝑘,𝑟)𝑥)⁄(𝑇)",
+          "runs": [],
+          "bulletCharacter": "┃",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 130000
+        },
+        {
+          "index": 3,
+          "text": "2.　端末ごとの重みを計算",
+          "runs": [
+            {
+              "index": 1,
+              "text": "2.",
+              "fontSize": 24,
+              "typeface": "Calibri"
+            },
+            {
+              "index": 2,
+              "text": "　端末ごとの重み",
+              "fontSize": 24,
+              "typeface": "Calibri"
+            },
+            {
+              "index": 3,
+              "text": "を計算",
+              "fontSize": 24,
+              "typeface": "Calibri"
+            }
+          ],
+          "bulletCharacter": "┃",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 130000
+        },
+        {
+          "index": 4,
+          "text": "𝛼_(𝑘) = (𝑛_(𝑘))⁄(∑_(𝑗=1)^(𝐾) 𝑛_(𝑗))",
+          "runs": [],
+          "bulletCharacter": "┃",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 130000
+        },
+        {
+          "index": 5,
+          "text": "3.　確率分布を集約する。クラウド基盤整合のteacherとなるを作成",
+          "runs": [
+            {
+              "index": 1,
+              "text": "3.",
+              "fontSize": 24,
+              "typeface": "Calibri"
+            },
+            {
+              "index": 2,
+              "text": "　確率分布",
+              "fontSize": 24,
+              "typeface": "Calibri"
+            },
+            {
+              "index": 3,
+              "text": "を集約する。クラウド基盤整合の",
+              "fontSize": 24,
+              "typeface": "Calibri"
+            },
+            {
+              "index": 4,
+              "text": "teacher",
+              "fontSize": 24,
+              "typeface": "Calibri"
+            },
+            {
+              "index": 5,
+              "text": "となる",
+              "fontSize": 24,
+              "typeface": "Calibri"
+            },
+            {
+              "index": 6,
+              "text": "を作成",
+              "fontSize": 24,
+              "typeface": "Calibri"
+            }
+          ],
+          "bulletCharacter": "┃",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 130000
+        },
+        {
+          "index": 6,
+          "text": "𝑞_(𝑎𝑔𝑔)𝑥 = ∑_(𝑘=1)^(𝐾) 𝛼_(𝑘)𝑞_(𝑐)^((𝑘,𝑟))𝑥",
+          "runs": [],
+          "bulletCharacter": "┃",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 130000
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ixsf2d87",
+      "id": "12",
+      "name": "テキスト ボックス 11",
+      "bbox": [
+        759.43,
+        149.94,
+        333.49,
+        92.04
+      ],
+      "geometry": "rect",
+      "text": "𝜃_(𝑐)^(𝑘,𝑟+1) = ∑_(𝑘=1)^(𝐾) (|𝐷^(𝑘)|)⁄(𝑁)𝜃_(𝑐)^(′(𝑘,𝑟))",
+      "textPreview": "𝜃_(𝑐)^(𝑘,𝑟+1) = ∑_(𝑘=1)^(𝐾) (|𝐷^(𝑘)|)⁄(𝑁)𝜃_(𝑐)^(′(𝑘,𝑟))",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "𝜃_(𝑐)^(𝑘,𝑟+1) = ∑_(𝑘 = 1)^(𝐾) (|𝐷^(𝑘)|)⁄(𝑁)𝜃_(𝑐)^(′(𝑘,𝑟))"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "𝜃_(𝑐)^(𝑘,𝑟+1) = ∑_(𝑘=1)^(𝐾) (|𝐷^(𝑘)|)⁄(𝑁)𝜃_(𝑐)^(′(𝑘,𝑟))",
+          "runs": [],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wvax03q1",
+      "id": "14",
+      "name": "テキスト ボックス 13",
+      "bbox": [
+        773.6,
+        106.72,
+        333.49,
+        38.78
+      ],
+      "geometry": "rect",
+      "text": "（FedAvg）",
+      "textPreview": "（FedAvg）",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "（FedAvg）"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "（FedAvg）",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "（",
+              "alignment": "center"
+            },
+            {
+              "index": 2,
+              "text": "FedAvg",
+              "alignment": "center"
+            },
+            {
+              "index": 3,
+              "text": "）",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hwjy98rm",
+      "id": "15",
+      "name": "コンテンツ プレースホルダー 3",
+      "bbox": [
+        661.03,
+        246.43,
+        618.97,
+        343.72
+      ],
+      "geometry": "rect",
+      "text": "クライアントの更新後パラメータをそのまま加重平均し、それを新しいグローバルモデルとする。\n\n\n",
+      "textPreview": "クライアントの更新後パラメータをそのまま加重平均し、それを新しいグローバルモデルとする。 |  |  |",
+      "resolvedFontSize": 42.67,
+      "resolvedTextStyle": {
+        "vertical": 1,
+        "fontSize": 42.67,
+        "typeface": "Arial",
+        "color": "#203864",
+        "alignment": "left",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 9,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1. クライアントの更新後パラメータ"
+          },
+          {
+            "index": 2,
+            "text": "をそのまま加重平均し、それを新しいグローバルモデル"
+          },
+          {
+            "index": 3,
+            "text": "とする。"
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": ""
+          },
+          {
+            "index": 6,
+            "text": ""
+          },
+          {
+            "index": 7,
+            "text": ""
+          },
+          {
+            "index": 8,
+            "text": ""
+          },
+          {
+            "index": 9,
+            "text": ""
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "クライアントの更新後パラメータをそのまま加重平均し、それを新しいグローバルモデルとする。",
+          "runs": [
+            {
+              "index": 1,
+              "text": "クライアントの",
+              "fontSize": 24
+            },
+            {
+              "index": 2,
+              "text": "更新後",
+              "fontSize": 24
+            },
+            {
+              "index": 3,
+              "text": "パラメータ",
+              "fontSize": 24
+            },
+            {
+              "index": 4,
+              "text": "をそのまま加重平均し、それを新しいグローバルモデル",
+              "fontSize": 24
+            },
+            {
+              "index": 5,
+              "text": "とする。",
+              "fontSize": 24
+            }
+          ],
+          "bulletCharacter": "┃",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 130000
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8rqxw3q5",
+      "id": "18",
+      "name": "直線コネクタ 17",
+      "bbox": [
+        618.06,
+        78.26,
+        0.91,
+        632.49
+      ],
+      "geometry": "line"
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/porutkje",
+      "id": "20",
+      "name": "テキスト ボックス 19",
+      "bbox": [
+        622.17,
+        562.05,
+        653.26,
+        145.41
+      ],
+      "geometry": "rect",
+      "text": "異種モデルでも共通のクラス出力空間で端末適応をクラウド更新へつなげる\n「平均して終ではなく、目的関数と勾配による更新ができるわり」",
+      "textPreview": "異種モデルでも共通のクラス出力空間で端末適応をクラウド更新へつなげる | 「平均して終ではなく、目的関数と勾配による更新ができるわり」",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "•異種モデル"
+          },
+          {
+            "index": 2,
+            "text": "でも共通のクラス出力空間で端末適応をクラウド更新"
+          },
+          {
+            "index": 3,
+            "text": "へつなげる"
+          },
+          {
+            "index": 4,
+            "text": "•"
+          },
+          {
+            "index": 5,
+            "text": "「平均して終ではなく、目的関数と勾配による更新が"
+          },
+          {
+            "index": 6,
+            "text": "できるわり」"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "異種モデルでも共通のクラス出力空間で端末適応をクラウド更新へつなげる",
+          "runs": [
+            {
+              "index": 1,
+              "text": "異種",
+              "fontSize": 28
+            },
+            {
+              "index": 2,
+              "text": "モデル",
+              "fontSize": 28
+            },
+            {
+              "index": 3,
+              "text": "でも共通のクラス出力空間で端末適応をクラウド更新へつなげる",
+              "fontSize": 28
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "「平均して終ではなく、目的関数と勾配による更新ができるわり」",
+          "runs": [
+            {
+              "index": 1,
+              "text": "「平均して終ではなく、目的関数と勾配による更新ができるわり」",
+              "fontSize": 28
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineColor": {
+        "type": "theme",
+        "value": "accent1",
+        "transform": {
+          "lighten": 0.4
+        }
+      },
+      "lineWidth": 1.33
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nm9cru18",
+      "id": "22",
+      "name": "正方形/長方形 21",
+      "bbox": [
+        618.97,
+        514.74,
+        311.77,
+        48.46
+      ],
+      "geometry": "rect",
+      "text": "出力分布・最適化を用いるメリット",
+      "textPreview": "出力分布・最適化を用いるメリット",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "出力"
+          },
+          {
+            "index": 2,
+            "text": "分布・最適化を用いるメリット"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "出力分布・最適化を用いるメリット",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "出力",
+              "alignment": "center"
+            },
+            {
+              "index": 2,
+              "text": "分布・最適化を用いるメリット",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

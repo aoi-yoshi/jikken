@@ -1,0 +1,2 @@
+Slides 3–6 intentionally replace the inherited legacy raster workflow image with editable native PowerPoint flow diagrams. The inherited title, page marker, master icon, margins, typography, and color treatment are preserved. The replacement is necessary because the prior image describes an outdated workflow and cannot be corrected by text substitution.
+

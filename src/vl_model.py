@@ -52,6 +52,8 @@ class QwenVLClassifier(nn.Module):
         prompt: str,
         max_length: int,
         output_hidden_states: bool = True,
+        input_mode: str = "images",
+        video_fps: List[float | None] | None = None,
     ) -> Tuple[torch.Tensor, Dict[str, Any]]:
         """複数サンプルを1 forward。batch_frames[i] = サンプル i の全フレーム。
 
@@ -59,22 +61,61 @@ class QwenVLClassifier(nn.Module):
         """
         if not batch_frames:
             raise ValueError("batch_frames is empty")
+        mode = str(input_mode).strip().lower()
         conversations: List[List[Dict[str, Any]]] = []
-        for frames in batch_frames:
-            content: List[Dict[str, Any]] = []
-            for img in frames:
-                content.append({"type": "image", "image": img})
-            content.append({"type": "text", "text": prompt})
-            conversations.append([{"role": "user", "content": content}])
-
-        batch = processor.apply_chat_template(
-            conversations,
-            add_generation_prompt=False,
-            tokenize=True,
-            return_dict=True,
-            return_tensors="pt",
-            padding=True,
-        )
+        if mode == "images":
+            for frames in batch_frames:
+                content: List[Dict[str, Any]] = []
+                for img in frames:
+                    content.append({"type": "image", "image": img})
+                content.append({"type": "text", "text": prompt})
+                conversations.append([{"role": "user", "content": content}])
+            batch = processor.apply_chat_template(
+                conversations,
+                add_generation_prompt=False,
+                tokenize=True,
+                return_dict=True,
+                return_tensors="pt",
+                padding=True,
+            )
+        elif mode == "video":
+            fps_values = list(video_fps or [None] * len(batch_frames))
+            if len(fps_values) != len(batch_frames):
+                raise ValueError("video_fps must have one value per sample")
+            metadata: List[Dict[str, Any]] = []
+            for frames, fps_value in zip(batch_frames, fps_values):
+                if not frames:
+                    raise ValueError("video sample has no frames")
+                fps = float(fps_value) if fps_value is not None else 1.0
+                if fps <= 0:
+                    raise ValueError(f"video fps must be positive, got {fps}")
+                conversations.append(
+                    [{"role": "user", "content": [{"type": "video"}, {"type": "text", "text": prompt}]}]
+                )
+                metadata.append(
+                    {
+                        "fps": fps,
+                        "total_num_frames": len(frames),
+                        "duration": (len(frames) - 1) / fps if len(frames) > 1 else 0.0,
+                        "video_backend": "preextracted_frames",
+                        "frames_indices": list(range(len(frames))),
+                    }
+                )
+            texts = [
+                processor.apply_chat_template(
+                    conversation, add_generation_prompt=False, tokenize=False
+                )
+                for conversation in conversations
+            ]
+            batch = processor(
+                text=texts,
+                videos=batch_frames,
+                videos_kwargs={"video_metadata": metadata},
+                padding=True,
+                return_tensors="pt",
+            )
+        else:
+            raise ValueError(f"Unknown input_mode: {input_mode!r} (expected 'images' or 'video')")
         device = self.classifier.weight.device
         batch = {k: (v.to(device) if hasattr(v, "to") else v) for k, v in batch.items()}
         out = self.backbone(**batch, output_hidden_states=output_hidden_states)
@@ -82,7 +123,14 @@ class QwenVLClassifier(nn.Module):
         pooled = _pool_hidden(hs, batch["attention_mask"])
         pooled = pooled.to(dtype=self.classifier.weight.dtype)
         logits = self.classifier(pooled)
-        meta = {"attention_mask": batch["attention_mask"], "batch_size": len(batch_frames)}
+        meta = {
+            "attention_mask": batch["attention_mask"],
+            "batch_size": len(batch_frames),
+            "input_mode": mode,
+        }
+        if mode == "video":
+            meta["video_grid_thw"] = batch["video_grid_thw"]
+            meta["second_per_grid_ts"] = batch["second_per_grid_ts"]
         return logits, meta
 
     def forward_batch(
@@ -92,6 +140,8 @@ class QwenVLClassifier(nn.Module):
         prompt: str,
         max_length: int,
         output_hidden_states: bool = True,
+        input_mode: str = "images",
+        video_fps: float | None = None,
     ) -> Tuple[torch.Tensor, Dict[str, Any]]:
         """1 サンプルとして pil_images をまとめて処理 (batch=1)。
 
@@ -104,6 +154,8 @@ class QwenVLClassifier(nn.Module):
             prompt,
             max_length,
             output_hidden_states=output_hidden_states,
+            input_mode=input_mode,
+            video_fps=[video_fps],
         )
 
 
@@ -116,16 +168,20 @@ def build_processor(model_id: str, min_pixels: int, max_pixels: int):
     )
 
 
-def build_model(cfg: Dict[str, Any], device: torch.device) -> Tuple[QwenVLClassifier, Any]:
+def build_model(
+    cfg: Dict[str, Any], device: torch.device, model_id: str | None = None
+) -> Tuple[QwenVLClassifier, Any]:
+    """model_id 指定時は cfg["model"]["id"] を上書き（7B サーバ + 3B クライアントの異種構成用）。"""
     mcfg = cfg["model"]
     tcfg = cfg["train"]
+    mid = model_id or mcfg["id"]
     model = QwenVLClassifier(
-        mcfg["id"],
+        mid,
         int(cfg["data"]["num_classes"]),
         attn_implementation=str(mcfg.get("attn_implementation", "sdpa")),
     )
     processor = build_processor(
-        mcfg["id"],
+        mid,
         int(tcfg.get("min_pixels", 50176)),
         int(tcfg.get("max_pixels", 602112)),
     )

@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-09-03T14:13:10.339Z",
+  "workspace": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904",
+  "finalPptx": "C:\\Users\\aoi7y\\OneDrive - 国立大学法人東海国立大学機構\\folder\\卒研_明光\\進捗会0904_吉村有生.pptx",
+  "starterPptx": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter.pptx",
+  "mapPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-frame-map.json",
+  "starterLayoutDir": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-layout",
+  "finalLayoutDir": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\final-layout",
+  "editDir": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904",
+  "issueCount": 0,
+  "issues": []
+}

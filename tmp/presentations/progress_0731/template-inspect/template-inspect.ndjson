@@ -1,0 +1,105 @@
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"共通処理フローとLpredによる基盤LoRA更新フローの整理surrogate適応情報を用いた基盤モデル更新","textShapes":4}
+{"kind":"textbox","id":"sh/547294r6","slide":1,"textChars":54,"textLines":1}
+{"kind":"textbox","id":"sh/k3yl0zql","slide":1,"textChars":25,"textLines":3}
+{"kind":"textbox","id":"sh/7qp4be9c","slide":1,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"textChars":8,"textLines":1}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"1","textShapes":2}
+{"kind":"shape","id":"sh/9072xkry","slide":2,"name":"タイトル 1","placeholder":"title","bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/ozy1ofad","slide":2,"textChars":1,"textLines":1}
+{"kind":"textbox","id":"sh/b29kza94","slide":2,"textChars":36,"textLines":1}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"目次","textShapes":3}
+{"kind":"textbox","id":"sh/cza94vmx","slide":3,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/d0jax03i","slide":3,"textChars":1,"textLines":1}
+{"kind":"textbox","id":"sh/298ryl4v","slide":3,"textChars":67,"textLines":3}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"3","textShapes":12}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"textChars":1,"textLines":1}
+{"kind":"textbox","id":"sh/rm1k7yt4","slide":4,"textChars":138,"textLines":6}
+{"kind":"textbox","id":"sh/ql8jytsj","slide":4,"textChars":119,"textLines":6}
+{"kind":"textbox","id":"sh/doj29oba","slide":4,"textChars":93,"textLines":5}
+{"kind":"shape","id":"sh/sna103ap","slide":4,"name":"直線矢印コネクタ 6","bbox":[240.28,273.61,1.9,102.02]}
+{"kind":"textbox","id":"sh/3ihk3et8","slide":4,"textChars":12,"textLines":1}
+{"kind":"shape","id":"sh/5cva1cfq","slide":4,"name":"直線矢印コネクタ 10","bbox":[411.74,496.93,51.86,45.12]}
+{"kind":"textbox","id":"sh/x8vaxsfe","slide":4,"textChars":11,"textLines":2}
+{"kind":"textbox","id":"sh/p0batw72","slide":4,"textChars":97,"textLines":6}
+{"kind":"textbox","id":"sh/3ytsrmpw","slide":4,"textChars":141,"textLines":8}
+{"kind":"shape","id":"sh/jm5gze1g","slide":4,"name":"直線矢印コネクタ 30","bbox":[640,276.29,2.09,99.47]}
+{"kind":"textbox","id":"sh/rilczq5s","slide":4,"textChars":180,"textLines":8}
+{"kind":"shape","id":"sh/8jq9c72t","slide":4,"name":"直線矢印コネクタ 49","bbox":[820.57,165.09,43.01,1.34]}
+{"kind":"textbox","id":"sh/6psve183","slide":4,"textChars":18,"textLines":2}
+{"kind":"shape","id":"sh/velcrqpk","slide":4,"name":"直線矢印コネクタ 74","bbox":[1062.46,300.41,0,73.65]}
+{"kind":"textbox","id":"sh/3ilwvqpw","slide":4,"textChars":10,"textLines":1}
+{"kind":"shape","id":"sh/29srixcr","slide":4,"name":"直線矢印コネクタ 80","bbox":[1062.46,669.7,0,73.65]}
+{"kind":"shape","id":"sh/pcjadsb2","slide":4,"name":"直線矢印コネクタ 81","bbox":[229.71,-17.09,0,73.65]}
+{"kind":"textbox","id":"sh/bylsf2t8","slide":4,"textChars":1,"textLines":1}
+{"kind":"table","id":"tb/tsz6dsr2","slide":4,"name":"表 2","rows":2,"cols":3,"preview":"基盤","bbox":[0,-0.21,1280,720]}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"クラウド側基盤LoRA更新の詳細フロー","textShapes":4}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":5,"textChars":19,"textLines":1}
+{"kind":"textbox","id":"sh/cf2tcr61","slide":5,"textChars":1,"textLines":1}
+{"kind":"shape","id":"sh/58vehgvy","slide":5,"name":"直線矢印コネクタ 14","bbox":[209.89,144.06,0,74.35]}
+{"kind":"textbox","id":"sh/i54fmlc7","slide":5,"textChars":8,"textLines":1}
+{"kind":"textbox","id":"sh/gfi5grih","slide":5,"textChars":7,"textLines":1}
+{"kind":"shape","id":"sh/fe94nm1w","slide":5,"name":"直線矢印コネクタ 21","bbox":[209.89,372.01,0,80.3]}
+{"kind":"shape","id":"sh/vu5kbihc","slide":5,"name":"コネクタ: カギ線 30","bbox":[30.91,273.04,569.45,211.5]}
+{"kind":"shape","id":"sh/ji5kf2ho","slide":5,"name":"コネクタ: カギ線 34","bbox":[421.39,94.06,218.61,17.99]}
+{"kind":"shape","id":"sh/zmlk3yhk","slide":5,"name":"直線矢印コネクタ 38","bbox":[640,357.19,0,33.82]}
+{"kind":"shape","id":"sh/ehkzepsn","slide":5,"name":"直線矢印コネクタ 40","bbox":[1070.11,352.06,0,33.8]}
+{"kind":"shape","id":"sh/3md0bu94","slide":5,"name":"コネクタ: カギ線 43","bbox":[445.91,288.15,599.67,211.5]}
+{"kind":"shape","id":"sh/bqx0fe9g","slide":5,"name":"コネクタ: カギ線 47","bbox":[851.5,97.03,218.61,15.02]}
+{"kind":"table","id":"tb/98v6l8fy","slide":5,"name":"表 5","rows":1,"cols":1,"preview":"端末logitsの確率分布化・集約 入力：各端末のlogits、端末重み 処理：各端末の出力分布を集約teacher分布へ変換する 出力：集約teacher分布","bbox":[7.38,218.41,405.03,153.6]}
+{"kind":"table","id":"tb/r2t8vyh0","slide":5,"name":"表 7","rows":1,"cols":1,"preview":"基盤側予測分布の計算 入力：整合用データ，現在の基盤モデル＋基盤LoRA＋分類ヘッド 処理：基盤モデル + 基盤LoRAに整合用データを入力し、基盤側の出力分布または更新挙動を計算する 出力：基盤側の出力分布","bbox":[7.38,452.32,405.03,211.2]}
+{"kind":"table","id":"tb/qhk7mt0f","slide":5,"name":"表 9","rows":1,"cols":1,"preview":"集約teacherとの整合損失を計算  入力：集約teacher分布＋基盤側の出力分布 処理：集約teacher分布をteacher、基盤側分布をstudentとして を計算する 出力：整合損失","bbox":[437.49,112.06,405.03,245.13]}
+{"kind":"table","id":"tb/d4bqx8z6","slide":5,"name":"表 11","rows":1,"cols":1,"preview":"基盤側パラメータの勾配計算 入力：現在の基盤LoRA・分類ヘッド 処理：を基盤側パラメータについて微分 出力：基盤LoRA・分類ヘッドの勾配 凍結対象： ・基盤モデル本体  ・集約teacher／参照情報","bbox":[437.49,391,405.03,302.73]}
+{"kind":"table","id":"tb/c32po3il","slide":5,"name":"表 13","rows":1,"cols":1,"preview":"optimizerで基盤LoRAを更新 入力：基盤LoRAに対する勾配＋現在の基盤LoRA 処理：optimizer（Adam, FedAdamなど）を用いて基盤LoRAを更新する出力：更新済み基盤LoRA 更新対象：基盤LoRA 凍結対象：基盤モデル本体","bbox":[867.6,112.06,405.03,240]}
+{"kind":"table","id":"tb/z6t8zihw","slide":5,"name":"表 25","rows":1,"cols":1,"preview":"次ラウンド用知識の生成・蒸留更新 入力：更新済み基盤モデル，還元用整合データ，クライアントモデル 処理：基盤teacher logitsを生成し，クライアントへ蒸留 出力：更新済み基盤LoRA 更新対象：基盤LoRA 凍結対象：基盤モデル本体","bbox":[867.6,385.85,405.03,268.8]}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"④複数端末情報の集約の詳細","textShapes":2}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"textChars":13,"textLines":1}
+{"kind":"textbox","id":"sh/zi98nu94","slide":6,"textChars":1,"textLines":1}
+{"kind":"table","id":"tb/5gzmp4vu","slide":6,"name":"表 8","rows":2,"cols":1,"preview":"各端末のlogitsを確率分布へ変換 各端末のlogitsを、共通温度 のsoftmaxで確率分布に変換する。 𝑞_(𝑐)^((𝑘,𝑟))𝑥 = softmax(𝑧_(𝑐)^((𝑘,𝑟))𝑥)⁄(𝑇) 入力： ） 出力：","bbox":[8.23,78.26,625.37,384.25]}
+{"kind":"table","id":"tb/4fqlgze9","slide":6,"name":"表 10","rows":3,"cols":1,"preview":"複数端末の確率分布を集約 対応するサンプル x ごとに、端末の確率分布を集約し、クラウド更新用のteacher分布を生成する。 𝑞_(𝑎𝑔𝑔)^((𝑟))𝑥 = ∑_(𝑘=1)^(𝐾) 𝛼_(𝑘)𝑞_(𝑐)^((𝑘,𝑟))𝑥 𝛼_(𝑘) =...","bbox":[646.4,78.26,626.22,641.49]}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"⑤集約情報による基盤LoRA更新の詳細（1/2）","textShapes":2}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"textChars":24,"textLines":1}
+{"kind":"textbox","id":"sh/dcbud0ra","slide":7,"textChars":1,"textLines":1}
+{"kind":"table","id":"tb/vit8vmd8","slide":7,"name":"表 8","rows":2,"cols":1,"preview":"基盤モデルが同じ整合用入力を前向き推論 クラウド側の現在の基盤モデル＋基盤LoRAに、同じ整合用入力 x を入力する。 𝑧_(base )^(𝑟)𝑥 = 𝑓_(base )𝑥 ; 𝐹_(base ),𝜃_(𝑏𝑎𝑠𝑒)^(𝑟) 𝑞_(base)^(\ud835...","bbox":[7.38,78.26,626.22,587.02]}
+{"kind":"table","id":"tb/uhkrmhcn","slide":7,"name":"表 10","rows":2,"cols":1,"preview":"集約teacherとの整合損失を計算 集約分布を固定teacherとして、基盤側の予測分布を近づける。 ℒ_(𝑝𝑟𝑒𝑑)^(𝑟) = (𝑇²)⁄(|𝒟_(𝑎𝑙𝑖𝑔𝑛)|)∑_(𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)) KL𝑞_(𝑎𝑔𝑔)^(𝑟...","bbox":[646.4,78.26,626.22,561.59]}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"⑤集約情報による基盤LoRA更新の詳細(2/2)","textShapes":3}
+{"kind":"textbox","id":"sh/18byd4zy","slide":8,"textChars":24,"textLines":1}
+{"kind":"textbox","id":"sh/g72x4zyd","slide":8,"textChars":1,"textLines":1}
+{"kind":"textbox","id":"sh/sjix0zy1","slide":8,"textChars":103,"textLines":2}
+{"kind":"table","id":"tb/u9sb2p0r","slide":8,"name":"表 8","rows":1,"cols":1,"preview":"基盤LoRAについて勾配を計算 𝑔_(𝑟) = ∇_(𝜃_(𝑏𝑎𝑠𝑒))ℒ_(𝑝𝑟𝑒𝑑)^(𝑟) 𝜃_(𝑏𝑎𝑠𝑒) = {𝜙_(𝑏𝑎𝑠𝑒),𝑤_(𝑏𝑎𝑠𝑒)}  入力： 予測整合損失  更新前基盤LoRA  更新前分類ヘ...","bbox":[7.38,78.26,626.22,610.08]}
+{"kind":"table","id":"tb/vu1cvu1c","slide":8,"name":"表 10","rows":1,"cols":1,"preview":"optimizerで基盤LoRAを更新 𝜃_(𝑏𝑎𝑠𝑒)^(𝑟+1) = Optimizer𝜃_(𝑏𝑎𝑠𝑒)^(𝑟),𝑔_(𝑟) 入力： 更新前基盤LoRA  から得た勾配 処理： Adam、FedAdam、Yogi、SGDなどでパラメータを更新...","bbox":[646.4,78.26,626.22,408.15]}
+{"kind":"slide","id":"sl/udsvah03","slide":9,"title":"Lpred・Lgrad・Lpostによって変更される場所","textShapes":2}
+{"kind":"textbox","id":"sh/1cfmhgne","slide":9,"textChars":28,"textLines":1}
+{"kind":"textbox","id":"sh/0b65obm9","slide":9,"textChars":1,"textLines":1}
+{"kind":"table","id":"tb/e5czal83","slide":9,"name":"コンテンツ プレースホルダー 4","rows":10,"cols":4,"preview":"項目 | Lpred | Lgrad | Lpost","bbox":[75.7,129.48,1128.59,519.84]}
+{"kind":"slide","id":"sl/m90b6t0r","slide":10,"title":"今後","textShapes":3}
+{"kind":"textbox","id":"sh/xc3mho32","slide":10,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/cbu58j2h","slide":10,"textChars":1,"textLines":1}
+{"kind":"textbox","id":"sh/zelojyl8","slide":10,"textChars":50,"textLines":5}
+{"kind":"slide","id":"sl/jetc3ut0","slide":11,"title":"集約方法の候補","textShapes":2}
+{"kind":"textbox","id":"sh/xcryxg7y","slide":11,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/wbih4b6d","slide":11,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/n69grmpw","slide":11,"name":"コンテンツ プレースホルダー 3","bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/vqd0fidw","slide":11,"name":"表 5","rows":6,"cols":4,"preview":"方法 | 重み () | 妥当性 | 課題","bbox":[263.97,270.94,752.06,405.78]}
+{"kind":"slide","id":"sl/8f2psfyx","slide":12,"title":"⑥ 次ラウンド用知識の生成・蒸留更新の詳細","textShapes":2}
+{"kind":"textbox","id":"sh/1gbm9s3a","slide":12,"textChars":21,"textLines":1}
+{"kind":"textbox","id":"sh/0f2lgnmp","slide":12,"textChars":2,"textLines":1}
+{"kind":"table","id":"tb/i1ofehcv","slide":12,"name":"表 5","rows":1,"cols":1,"preview":"基盤teacher分布の生成 𝑔_(𝑟) = ∇_(𝜃_(𝑏𝑎𝑠𝑒))ℒ_(𝑝𝑟𝑒𝑑)^(𝑟) 𝜃_(𝑏𝑎𝑠𝑒) = {𝜙_(𝑏𝑎𝑠𝑒),𝑤_(𝑏𝑎𝑠𝑒)}  入力： 更新済み基盤モデル 還元用整合データ 処理； 整合デ...","bbox":[7.38,78.26,626.22,402.09]}
+{"kind":"table","id":"tb/j2xwnmtg","slide":12,"name":"表 7","rows":1,"cols":1,"preview":"クライアントstudent分布の計算 𝑔_(𝑟) = ∇_(𝜃_(𝑏𝑎𝑠𝑒))ℒ_(𝑝𝑟𝑒𝑑)^(𝑟) 𝜃_(𝑏𝑎𝑠𝑒) = {𝜙_(𝑏𝑎𝑠𝑒),𝑤_(𝑏𝑎𝑠𝑒)}  入力： 還元用整合データ 蒸留前クライアントモデル ...","bbox":[646.4,79.74,626.22,371.82]}
+{"kind":"slide","id":"sl/hgzapcr6","slide":13,"title":"⑥ 次ラウンド用知識の生成・蒸留更新の詳細","textShapes":2}
+{"kind":"textbox","id":"sh/q50nydsj","slide":13,"textChars":21,"textLines":1}
+{"kind":"textbox","id":"sh/bq9orito","slide":13,"textChars":2,"textLines":1}
+{"kind":"table","id":"tb/pwbut8ve","slide":13,"name":"表 5","rows":1,"cols":1,"preview":"蒸留損失の計算 𝑔_(𝑟) = ∇_(𝜃_(𝑏𝑎𝑠𝑒))ℒ_(𝑝𝑟𝑒𝑑)^(𝑟) 𝜃_(𝑏𝑎𝑠𝑒) = {𝜙_(𝑏𝑎𝑠𝑒),𝑤_(𝑏𝑎𝑠𝑒)}  入力： 基盤teacher分布 クライアントstudent分布 処理； t...","bbox":[7.38,78.26,626.22,336.85]}
+{"kind":"table","id":"tb/ov2tknu9","slide":13,"name":"表 7","rows":1,"cols":1,"preview":"クライアント側勾配の計算 𝑔_(𝑟) = ∇_(𝜃_(𝑏𝑎𝑠𝑒))ℒ_(𝑝𝑟𝑒𝑑)^(𝑟) 𝜃_(𝑏𝑎𝑠𝑒) = {𝜙_(𝑏𝑎𝑠𝑒),𝑤_(𝑏𝑎𝑠𝑒)}  入力： 蒸留損失 クライアントLoRA・分類ヘッド 処理； 蒸留...","bbox":[646.4,79.74,626.22,371.82]}
+{"kind":"table","id":"tb/3utcrido","slide":13,"name":"表 4","rows":1,"cols":1,"preview":"次ラウンド用パラメータの更新・配布 入力： クライアント側勾配 蒸留前パラメータ 処理：optimizerでLoRA・分類ヘッドを更新し，各端末へ配布 出力：次ラウンド用クライアントパラメータ 更新対象：クライアントLoRA，分類ヘッド","bbox":[646.4,472.23,626.22,240]}
+{"kind":"slide","id":"sl/6lsnupw7","slide":14,"title":"13","textShapes":1}
+{"kind":"shape","id":"sh/xc7eds76","slide":14,"name":"タイトル 1","placeholder":"title","bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/wbydknq1","slide":14,"textChars":2,"textLines":1}
+{"kind":"table","id":"tb/6547ql8z","slide":14,"name":"表 4","rows":3,"cols":5,"preview":"処理 | teacher | 利用データ | 損失 | 実際に更新するもの","bbox":[155.62,309.83,968.76,259.2]}
+{"kind":"slide","id":"sl/vaxsvy10","slide":15,"title":"蒸留プロセス","textShapes":2}
+{"kind":"textbox","id":"sh/547mhg3m","slide":15,"textChars":6,"textLines":1}
+{"kind":"textbox","id":"sh/k3y5ov21","slide":15,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/76p4jqls","slide":15,"name":"コンテンツ プレースホルダー 3","bbox":[0,0,0,0]}
+{"kind":"slide","id":"sl/gny5sjyp","slide":16,"title":"15","textShapes":2}
+{"kind":"shape","id":"sh/8z2h8bq1","slide":16,"name":"タイトル 1","placeholder":"title","bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/9kby1g7m","slide":16,"textChars":2,"textLines":1}
+{"kind":"notice","message":"Truncated: omitted 103 lines. Increase maxChars or narrow target."}

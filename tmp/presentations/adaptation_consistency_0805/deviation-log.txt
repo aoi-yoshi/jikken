@@ -1,0 +1,9 @@
+Slide 1: title and date rewritten to identify the three-layer revision.
+Slide 2: legacy conclusion replaced with the revised architecture conclusion.
+Slide 3: prior-work table narrowed to FedMD, FedDF, FedDGM, and the proposed distinction.
+Slide 4: provisional claim replaced by the new Adaptation Consistency definition and explicit scope.
+Slide 5: evaluation table updated to evaluate each layer and the end-to-end transfer.
+Slide 6: legacy comparison table repurposed as the unique three-layer process flow; no new shapes added.
+Slide 7: legacy Lpred/Lgrad/Lpost experiment order replaced by layer-by-layer validation.
+Slide 8: closing actions replaced by the unresolved decisions that must be fixed before implementation.
+No typography, master, layout, page rail, or table geometry is intentionally changed.

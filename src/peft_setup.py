@@ -53,6 +53,24 @@ def sync_surrogate_from_client(peft_model: nn.Module, *, client: str, surrogate:
             ps.copy_(pc)
 
 
+def copy_adapter_weights(peft_model: nn.Module, *, src: str, dst: str) -> None:
+    """src アダプタの LoRA 重みを dst アダプタに書き込む（同一モデル・同形状前提）。
+
+    Step 7 の配布（distribution.method=copy）: 更新した基盤 LoRA（src=surrogate）を
+    クライアント LoRA（dst=client）に書き込んで次ラウンドへ渡す。
+    """
+    src_params = lora_params_for_adapter(peft_model, src)
+    dst_params = lora_params_for_adapter(peft_model, dst)
+    if len(src_params) != len(dst_params):
+        raise RuntimeError(
+            f"Adapter parameter count mismatch (src={src}: {len(src_params)}, dst={dst}: {len(dst_params)}). "
+            "異種モデル（7B/3B）では copy 配布は使えない。distribution.method=distill を使う。"
+        )
+    with torch.no_grad():
+        for ps, pd in zip(src_params, dst_params):
+            pd.copy_(ps)
+
+
 @torch.no_grad()
 def ema_surrogate_from_client(
     client_params: List[nn.Parameter],

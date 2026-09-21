@@ -1,0 +1,826 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/y5wne50z",
+    "id": "y5wne50z",
+    "slide": 18,
+    "layoutId": "/ppt/slideLayouts/slideLayout2.xml",
+    "layoutName": "タイトルとコンテンツ",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office テーマ",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "fontScheme": {
+      "name": "ユーザー定義 1",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout2.xml",
+      "name": "タイトルとコンテンツ",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/4",
+          "id": "4",
+          "name": "四角形: 角を丸くする 3",
+          "bbox": [
+            1192,
+            0,
+            34.98,
+            69.01
+          ],
+          "geometry": "roundRect",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "verticalAlignment": "middle"
+          },
+          "fillColor": "#203864",
+          "lineColor": "#203864",
+          "lineWidth": 1.33
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/2",
+          "id": "2",
+          "name": "Title 1",
+          "bbox": [
+            88,
+            9.25,
+            1104,
+            69.01
+          ],
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText"
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/5",
+          "id": "5",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            798.17,
+            7.77,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/7",
+          "id": "7",
+          "name": "グラフィックス 6",
+          "bbox": [
+            5.82,
+            13.17,
+            61.09,
+            57.77
+          ],
+          "contentType": "image/svg+xml",
+          "asset": {
+            "assetId": "/ppt/media/image1.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          }
+        },
+        {
+          "order": 5,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/6",
+          "id": "6",
+          "name": "Content Placeholder 2",
+          "bbox": [
+            0,
+            85.22,
+            1280,
+            634.78
+          ],
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            0,
+            141.12,
+            1280,
+            578.88
+          ],
+          "geometry": "rect",
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            88,
+            19.95,
+            1104,
+            98.13
+          ],
+          "geometry": "rect",
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/4",
+          "id": "4",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            755.43,
+            19.95,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wrelszu9",
+      "id": "2",
+      "name": "タイトル 1",
+      "bbox": [
+        88,
+        9.25,
+        1104,
+        69.01
+      ],
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 48,
+        "typeface": "Arial",
+        "color": "#203864",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hsn2l4bu",
+      "id": "3",
+      "name": "スライド番号プレースホルダー 2",
+      "bbox": [
+        798.17,
+        7.77,
+        436.57,
+        37.17
+      ],
+      "text": "18",
+      "textPreview": "18",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": {
+          "type": "theme",
+          "value": "bg1",
+          "transform": {
+            "lighten": 0.25
+          }
+        },
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "18"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "18",
+          "runs": [
+            {
+              "index": 1,
+              "text": "18"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/zyp8jq90",
+      "id": "4",
+      "name": "表 5",
+      "bbox": [
+        7.38,
+        78.26,
+        626.22,
+        77.86
+      ],
+      "text": "基盤モデルが同じ整合用入力を前向き推論\nクラウド側の現在の基盤モデル＋基盤LoRAに、同じ整合用入力 x を入力する。\n𝑧_(base )^(𝑟−1)𝑥 = 𝑓_(base )𝑥 ; 𝐹_(base ),𝜙_(base )^(𝑟−1),𝑤_(base )\n𝑞_(base)^(𝑟 − 1)𝑥 = softmax(𝑧_(𝑏𝑎𝑠𝑒)(𝑥))⁄(𝑇)\n入力： \n整合用データ \n凍結基盤モデル \n更新前基盤LoRA \n分類ヘッド \n𝜃_(𝑏𝑎𝑠𝑒)^(𝑟−1) = {𝜙_(base)^(𝑟−1),𝑤_(base)^(𝑟−1)}\n出力：\nここで、\n：端末群から構成したteacher \n：更新対象となるstudent \nです。",
+      "textPreview": "基盤モデルが同じ整合用入力を前向き推論 | クラウド側の現在の基盤モデル＋基盤LoRAに、同じ整合用入力 x を入力する。 | 𝑧_(base )^(𝑟−1)𝑥 = 𝑓_(base )𝑥 ; 𝐹_(base ),𝜙_(base )^(𝑟−1),𝑤_(bas...",
+      "rows": 2,
+      "cols": 1,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            7.38,
+            78.26,
+            626.22,
+            38.93
+          ],
+          "text": "基盤モデルが同じ整合用入力を前向き推論\nクラウド側の現在の基盤モデル＋基盤LoRAに、同じ整合用入力 x を入力する。\n𝑧_(base )^(𝑟−1)𝑥 = 𝑓_(base )𝑥 ; 𝐹_(base ),𝜙_(base )^(𝑟−1),𝑤_(base )\n𝑞_(base)^(𝑟 − 1)𝑥 = softmax(𝑧_(𝑏𝑎𝑠𝑒)(𝑥))⁄(𝑇)\n入力： \n整合用データ \n凍結基盤モデル \n更新前基盤LoRA \n分類ヘッド \n𝜃_(𝑏𝑎𝑠𝑒)^(𝑟−1) = {𝜙_(base)^(𝑟−1),𝑤_(base)^(𝑟−1)}\n出力：",
+          "textPreview": "基盤モデルが同じ整合用入力を前向き推論 | クラウド側の現在の基盤モデル＋基盤LoRAに、同じ整合用入力 x を入力する。 | 𝑧_(base )^(𝑟−1)𝑥 = 𝑓_(base )𝑥 ; 𝐹_(base ),𝜙_(base )^(𝑟−1),𝑤_(bas...",
+          "fillColor": "bg1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "基盤モデルが同じ整合用入力を前向き推論",
+              "resolvedTextStyle": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "基盤モデルが同じ整合用入力を前向き推論",
+                  "fontSize": 24,
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "クラウド側の現在の基盤モデル＋基盤LoRAに、同じ整合用入力 x を入力する。",
+              "resolvedTextStyle": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "クラウド側の現在の基盤モデル＋基盤",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 2,
+                  "text": "LoRA",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 3,
+                  "text": "に、同じ整合用入力 ",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "x ",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 5,
+                  "text": "を入力する。",
+                  "fontSize": 24,
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "𝑧_(base )^(𝑟−1)𝑥 = 𝑓_(base )𝑥 ; 𝐹_(base ),𝜙_(base )^(𝑟−1),𝑤_(base )",
+              "resolvedTextStyle": {
+                "alignment": "center"
+              },
+              "runs": []
+            },
+            {
+              "index": 4,
+              "text": "𝑞_(base)^(𝑟 − 1)𝑥 = softmax(𝑧_(𝑏𝑎𝑠𝑒)(𝑥))⁄(𝑇)",
+              "resolvedTextStyle": {
+                "alignment": "center"
+              },
+              "runs": []
+            },
+            {
+              "index": 5,
+              "text": "入力： ",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "入力：",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 2,
+                  "text": " ",
+                  "fontSize": 24,
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "text": "整合用データ ",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "整合用データ ",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "text": "凍結基盤モデル ",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "凍結基盤モデル ",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 8,
+              "text": "更新前基盤LoRA ",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "更新前基盤LoRA ",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 9,
+              "text": "分類ヘッド ",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "分類ヘッド ",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 10,
+              "text": "𝜃_(𝑏𝑎𝑠𝑒)^(𝑟−1) = {𝜙_(base)^(𝑟−1),𝑤_(base)^(𝑟−1)}",
+              "runs": []
+            },
+            {
+              "index": 11,
+              "text": "出力：",
+              "lineSpacingPercent": 100000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "出力：",
+                  "fontSize": 24,
+                  "color": "tx1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            7.38,
+            117.19,
+            626.22,
+            38.93
+          ],
+          "text": "ここで、\n：端末群から構成したteacher \n：更新対象となるstudent \nです。",
+          "textPreview": "ここで、 | ：端末群から構成したteacher  | ：更新対象となるstudent  | です。",
+          "fillColor": "bg1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "ここで、",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "ここで、"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "：端末群から構成したteacher ",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "：端末群から構成したteacher "
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "：更新対象となるstudent ",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "：更新対象となるstudent "
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "です。",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "です。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

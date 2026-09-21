@@ -1,0 +1,55 @@
+{
+  "schema": "fedpact-stage2-visual-coverage-audit-v1",
+  "descriptor": "fixed handcrafted RGB/HSV/histogram/edge/DCT descriptor",
+  "interpretation_limit": "A distributional manipulation check only; it does not prove semantic support or foundation-model coverage.",
+  "conditions": {
+    "c_high": {
+      "target_videos": 40,
+      "seed_videos": 60,
+      "descriptor_dimensions": 354,
+      "domain_classifier_oof_auc": 0.5316666666666666,
+      "fold_auc": [
+        0.42708333333333337,
+        0.75,
+        0.5729166666666667,
+        0.38541666666666663,
+        0.4375
+      ],
+      "median_target_to_seed_nn_distance": 17.976983070373535,
+      "median_target_leave_pair_out_nn_distance": 18.112685203552246,
+      "nn_distance_ratio": 0.9925078953422048
+    },
+    "c_factor_separated": {
+      "target_videos": 40,
+      "seed_videos": 60,
+      "descriptor_dimensions": 354,
+      "domain_classifier_oof_auc": 0.7508333333333334,
+      "fold_auc": [
+        0.8020833333333334,
+        0.7083333333333334,
+        0.8645833333333334,
+        0.6666666666666666,
+        0.7604166666666666
+      ],
+      "median_target_to_seed_nn_distance": 18.181660652160645,
+      "median_target_leave_pair_out_nn_distance": 19.069046020507812,
+      "nn_distance_ratio": 0.9534646165627358
+    },
+    "c_nosupport": {
+      "target_videos": 40,
+      "seed_videos": 60,
+      "descriptor_dimensions": 354,
+      "domain_classifier_oof_auc": 0.7445833333333334,
+      "fold_auc": [
+        0.9270833333333333,
+        0.6874999999999999,
+        0.7604166666666666,
+        0.6041666666666666,
+        0.8333333333333334
+      ],
+      "median_target_to_seed_nn_distance": 19.018643379211426,
+      "median_target_leave_pair_out_nn_distance": 18.829854011535645,
+      "nn_distance_ratio": 1.0100260664559653
+    }
+  }
+}

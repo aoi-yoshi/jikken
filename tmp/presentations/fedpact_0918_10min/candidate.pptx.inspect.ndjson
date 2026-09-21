@@ -1,0 +1,229 @@
+{"kind":"deck","id":"pr/gdzxj3","name":"Deck"}
+{"kind":"layout","layoutId":"e667303d-7752-4c52-adf9-5b4f9e8550f0","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"99ac8bc9-2714-48fa-8371-6aec5b179fee","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/5eqj0q","slide":1,"title":"異なる現場で得た適応を、cloud側のfoundationへ還元する","textShapes":24}
+{"kind":"shape","id":"sh/kbe10bil","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/ja5076hg","slide":1,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/y9wjy10v","slide":1,"text":"異なる現場で得た適応を、cloud側のfoundationへ還元する","textPreview":"異なる現場で得た適応を、cloud側のfoundationへ還元する","textChars":34,"textLines":1,"bbox":[62,34,1125,62]}
+{"kind":"textbox","id":"sh/x8ni5wza","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1190,46,42,26]}
+{"kind":"shape","id":"sh/w7e1wrip","slide":1,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/b6l03mh4","slide":1,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,780,18]}
+{"kind":"textbox","id":"sh/a5cjuh0j","slide":1,"text":"1 / 10","textPreview":"1 / 10","textChars":6,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/h472hgze","slide":1,"text":"同じ危険検知task・共通のnormal／riskでも、場所や時間が変われば、各clientが経験する状況は異なる","textPreview":"同じ危険検知task・共通のnormal／riskでも、場所や時間が変われば、各clientが経験する状況は異なる","textChars":57,"textLines":1,"bbox":[70,103,1115,38]}
+{"kind":"textbox","id":"sh/g3y18vit","slide":1,"text":"1　想定する利用場面と価値","textPreview":"1　想定する利用場面と価値","textChars":13,"textLines":1,"bbox":[58,151,366,32]}
+{"kind":"textbox","id":"sh/cvql0r2t","slide":1,"text":"client A\n昼間・市街地","textPreview":"client A | 昼間・市街地","textChars":15,"textLines":2,"bbox":[59,311,174,45]}
+{"kind":"textbox","id":"sh/xwj29wje","slide":1,"text":"client B\n夜間・交差点","textPreview":"client B | 夜間・交差点","textChars":15,"textLines":2,"bbox":[247,311,174,45]}
+{"kind":"textbox","id":"sh/2p83uxkb","slide":1,"text":"各clientは、自分のprivate dataから\n異なる局所適応挙動を獲得する","textPreview":"各clientは、自分のprivate dataから | 異なる局所適応挙動を獲得する","textChars":41,"textLines":2,"bbox":[66,375,349,58]}
+{"kind":"shape","id":"sh/nqhk32lw","slide":1,"bbox":[58,456,364,92]}
+{"kind":"textbox","id":"sh/orqlw72h","slide":1,"text":"目指す価値","textPreview":"目指す価値","textChars":5,"textLines":1,"bbox":[78,469,324,24]}
+{"kind":"textbox","id":"sh/psz25c32","slide":1,"text":"各現場の経験を、共通taskの\nprediction quality改善に生かす","textPreview":"各現場の経験を、共通taskの | prediction quality改善に生かす","textChars":40,"textLines":2,"bbox":[76,499,328,42]}
+{"kind":"shape","id":"sh/mls361kv","slide":1,"bbox":[448,151,2,413]}
+{"kind":"textbox","id":"sh/7m14f61g","slide":1,"text":"2　従来手法で残る接続問題","textPreview":"2　従来手法で残る接続問題","textChars":13,"textLines":1,"bbox":[474,151,334,32]}
+{"kind":"textbox","id":"sh/j6d07y1s","slide":1,"text":"client surrogate","textPreview":"client surrogate","textChars":16,"textLines":1,"bbox":[488,213,135,46]}
+{"kind":"textbox","id":"sh/i5kzyt07","slide":1,"text":"FedAvg","textPreview":"FedAvg","textChars":6,"textLines":1,"bbox":[640,204,72,22]}
+{"kind":"shape","id":"sh/58vi98jy","slide":1,"bbox":[620,235,92,3]}
+{"kind":"textbox","id":"sh/47mh03id","slide":1,"text":"global\nsurrogate","textPreview":"global | surrogate","textChars":16,"textLines":2,"bbox":[723,207,88,58]}
+{"kind":"textbox","id":"sh/rud0by1o","slide":1,"text":"×","textPreview":"×","textChars":1,"textLines":1,"bbox":[615,292,58,58]}
+{"kind":"textbox","id":"sh/6t4z2d03","slide":1,"text":"異種のcloud foundationへ\nparameterをそのまま渡せない","textPreview":"異種のcloud foundationへ | parameterをそのまま渡せない","textChars":39,"textLines":2,"bbox":[489,354,310,63]}
+{"kind":"shape","id":"sh/dwvid8ju","slide":1,"bbox":[485,446,318,1.5]}
+{"kind":"textbox","id":"sh/svmh43i9","slide":1,"text":"既存蒸留は共通・公開dataを使う例が多い\n今回は整合用dataを\nclient／cloudで共有しない","textPreview":"既存蒸留は共通・公開dataを使う例が多い | 今回は整合用dataを | client／cloudで共有しない","textChars":52,"textLines":3,"bbox":[472,466,344,71]}
+{"kind":"shape","id":"sh/fyx0fih0","slide":1,"bbox":[832,151,2,413]}
+{"kind":"textbox","id":"sh/exoj6d0f","slide":1,"text":"3　FedPACTが担う接続","textPreview":"3　FedPACTが担う接続","textChars":14,"textLines":1,"bbox":[856,151,354,32]}
+{"kind":"textbox","id":"sh/c36hwnyd","slide":1,"text":"局所適応後の予測と\n変化方向の要約","textPreview":"局所適応後の予測と | 変化方向の要約","textChars":17,"textLines":2,"bbox":[875,205,315,64]}
+{"kind":"shape","id":"sh/x4zypsfy","slide":1,"bbox":[1029,269,4,25]}
+{"kind":"textbox","id":"sh/a1ozudgn","slide":1,"text":"server seed上で\nserver-side proxyとして顕在化","textPreview":"server seed上で | server-side proxyとして顕在化","textChars":37,"textLines":2,"bbox":[875,294,315,68]}
+{"kind":"shape","id":"sh/b2xgnix8","slide":1,"bbox":[1029,362,4,25]}
+{"kind":"textbox","id":"sh/oz6hs3yh","slide":1,"text":"異種foundationへ\n反映できるかを検証","textPreview":"異種foundationへ | 反映できるかを検証","textChars":23,"textLines":2,"bbox":[875,387,315,68]}
+{"kind":"textbox","id":"sh/p0fyl8f2","slide":1,"text":"proxy-mediated transferが\n2つのモデルをつなぐ","textPreview":"proxy-mediated transferが | 2つのモデルをつなぐ","textChars":35,"textLines":2,"bbox":[882,480,301,58]}
+{"kind":"shape","id":"sh/2xozqdgb","slide":1,"bbox":[58,584,1164,69]}
+{"kind":"textbox","id":"sh/nyxgjixw","slide":1,"text":"対象：共通task上のtask-relevantな予測挙動　（private sampleの意味内容全体は対象外）","textPreview":"対象：共通task上のtask-relevantな予測挙動　（private sampleの意味内容全体は対象外）","textChars":57,"textLines":1,"bbox":[82,603,1116,32]}
+{"kind":"image","id":"im/98vyt47e","slide":1,"name":"","alt":"昼間の市街地を走るNEXAR映像","bbox":[58,193,176,112]}
+{"kind":"image","id":"im/87mxkz6t","slide":1,"name":"","alt":"夜間の交差点で横から車が接近するNEXAR映像","bbox":[246,193,176,112]}
+{"kind":"notes","id":"nt/5eqj0q","slide":1,"text":"【目安 0:00–1:00】\nまず、想定する利用場面です。すべてのclientとcloudは同じ危険検知taskと共通のnormal／riskを持ちます。一方、昼の市街地や夜間の道路ではprivate dataが異なり、各clientは異なる局所適応挙動を得ます。この経験をcloudへ戻し、共通taskの改善に生かすことが目的です。ただしFedAvgは同じ構造のsurrogate間を統合できますが、異種foundationへparameterを直接渡せません。また今回は整合用dataも共有しません。そこでFedPACTは、局所適応後の予測と変化方向を要約し、server seed上のproxyとして表して、この間を接続します。対象は場面の意味内容全体ではなく、共通task上の予測挙動です。server seedだけで十分な場合は追加効果が小さくなるため、効果は今後比較します。今回は性能の証明ではなく、この情報の流れを追跡できるかを確認しました。\n\n【根拠】\nnotes/advisor/sources/raw/2026-09-16/slack_zettsu_reply_to_chen_ja_date_unknown_received_2026-09-16.md（11:00、target scenario、既存手法との違い、server seedとproxyの位置付け）\nnotes/advisor/sources/raw/2026-09-01/FedPACT手法提案260901.pdf（研究目的とproxy-mediated transfer）\n画像: artifacts/datasets/frames/train/003d6c3909/003.jpg, artifacts/datasets/frames/train/b82e955a9fdf13e2/003.jpg"}
+{"kind":"slide","id":"sl/yyh51t","slide":2,"title":"同じriskでも、現場の状況は大きく異なる","textShapes":9}
+{"kind":"shape","id":"sh/itgrahc7","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/5g7qlwvi","slide":2,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/4fy9crux","slide":2,"text":"同じriskでも、現場の状況は大きく異なる","textPreview":"同じriskでも、現場の状況は大きく異なる","textChars":21,"textLines":1,"bbox":[62,34,1125,62]}
+{"kind":"textbox","id":"sh/ri98nmdo","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1190,46,42,26]}
+{"kind":"shape","id":"sh/6h0re1c3","slide":2,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/tkrapwvu","slide":2,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,780,18]}
+{"kind":"textbox","id":"sh/sji9gru9","slide":2,"text":"2 / 10","textPreview":"2 / 10","textChars":6,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/4ni10rad","slide":2,"text":"client A：昼間・市街地","textPreview":"client A：昼間・市街地","textChars":15,"textLines":1,"bbox":[60,104,500,24]}
+{"kind":"textbox","id":"sh/5ob29wry","slide":2,"text":"client B：夜間・高速道路","textPreview":"client B：夜間・高速道路","textChars":16,"textLines":1,"bbox":[720,104,500,24]}
+{"kind":"textbox","id":"sh/i10jyhsn","slide":2,"text":"FedPACTが再現する対象","textPreview":"FedPACTが再現する対象","textChars":14,"textLines":1,"bbox":[70,450,330,34]}
+{"kind":"textbox","id":"sh/329k7m9s","slide":2,"text":"共通タスク上で、private dataによる局所学習後の予測と、その変化","textPreview":"共通タスク上で、private dataによる局所学習後の予測と、その変化","textChars":37,"textLines":1,"bbox":[70,492,1130,48]}
+{"kind":"shape","id":"sh/sr214rap","slide":2,"bbox":[70,562,1140,72]}
+{"kind":"textbox","id":"sh/dsb2dwra","slide":2,"text":"研究の意味：server seedだけでは事前に網羅しにくい現場差を、映像そのものではなく予測挙動の要約としてfoundationへ還元する","textPreview":"研究の意味：server seedだけでは事前に網羅しにくい現場差を、映像そのものではなく予測挙動の要約としてfoundationへ還元する","textChars":70,"textLines":1,"bbox":[94,579,1092,42]}
+{"kind":"image","id":"im/mlk76d8z","slide":2,"name":"","alt":"昼間の市街地で歩行者と車両が見えるNEXAR映像","bbox":[60,128,500,281]}
+{"kind":"image","id":"im/nmtozipk","slide":2,"name":"","alt":"夜間の高速道路で車両が接近するNEXAR映像","bbox":[720,128,500,281]}
+{"kind":"notes","id":"nt/yyh51t","slide":2,"text":"【目安 1:00–1:30】\n具体的には、昼の市街地と夜の高速道路では映像の意味内容が違います。FedPACTはfull scene semanticsを同じだとは仮定しません。現在のnormal／riskという共通出力空間で、各clientのprivate dataによって予測がどう変わったかをserver側で再構成し、異なるfoundation modelへ渡すことが対象です。\n\n【根拠】\nnotes/advisor/sources/raw/2026-09-16/slack_zettsu_reply_to_chen_ja_date_unknown_received_2026-09-16.md（target scenario、Similar logits、server seedの説明）\nnotes/advisor/sources/raw/2026-09-01/FedPACT手法提案260901.pdf（基準表記）"}
+{"kind":"slide","id":"sl/3xuoio","slide":3,"title":"9月15日以降、研究の焦点をLayer 2へ絞った","textShapes":15}
+{"kind":"shape","id":"sh/zmhsne94","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/knqtwjq9","slide":3,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/l8zap47u","slide":3,"text":"9月15日以降、研究の焦点をLayer 2へ絞った","textPreview":"9月15日以降、研究の焦点をLayer 2へ絞った","textChars":25,"textLines":1,"bbox":[62,34,1125,62]}
+{"kind":"textbox","id":"sh/m98by98f","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1190,46,42,26]}
+{"kind":"shape","id":"sh/7ahsrep0","slide":3,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/8bqt0jql","slide":3,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,780,18]}
+{"kind":"textbox","id":"sh/9cjato76","slide":3,"text":"3 / 10","textPreview":"3 / 10","textChars":6,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/2dormp8b","slide":3,"text":"9 / 15","textPreview":"9 / 15","textChars":6,"textLines":1,"bbox":[70,130,315,44]}
+{"kind":"shape","id":"sh/3exsfu9w","slide":3,"bbox":[70,181,300,4]}
+{"kind":"textbox","id":"sh/n61kr214","slide":3,"text":"複雑さを減らす","textPreview":"複雑さを減らす","textChars":7,"textLines":1,"bbox":[70,208,315,42]}
+{"kind":"textbox","id":"sh/m5sjixkj","slide":3,"text":"機能を一度に入れると失敗原因を切り分けられない。中心課題と最小構成を先に確認する。","textPreview":"機能を一度に入れると失敗原因を切り分けられない。中心課題と最小構成を先に確認する。","textChars":41,"textLines":1,"bbox":[70,270,315,205]}
+{"kind":"textbox","id":"sh/9sj2tsja","slide":3,"text":"9 / 16","textPreview":"9 / 16","textChars":6,"textLines":1,"bbox":[432,130,315,44]}
+{"kind":"shape","id":"sh/o7a1k72p","slide":3,"bbox":[432,181,300,4]}
+{"kind":"textbox","id":"sh/z21knil8","slide":3,"text":"第I段階の目的を固定","textPreview":"第I段階の目的を固定","textChars":10,"textLines":1,"bbox":[432,208,315,42]}
+{"kind":"textbox","id":"sh/e18jedkn","slide":3,"text":"三層構造は維持し、研究の中核を第2層に置く。第I段階では性能より、処理とstateの追跡を確認する。","textPreview":"三層構造は維持し、研究の中核を第2層に置く。第I段階では性能より、処理とstateの追跡を確認する。","textChars":50,"textLines":1,"bbox":[432,270,315,205]}
+{"kind":"textbox","id":"sh/14j2psjy","slide":3,"text":"9 / 17","textPreview":"9 / 17","textChars":6,"textLines":1,"bbox":[794,130,315,44]}
+{"kind":"shape","id":"sh/03a1gn2t","slide":3,"bbox":[794,181,300,4]}
+{"kind":"textbox","id":"sh/ryh0jilw","slide":3,"text":"3 roundの接続を確認","textPreview":"3 roundの接続を確認","textChars":13,"textLines":1,"bbox":[794,208,315,42]}
+{"kind":"textbox","id":"sh/qx8jadkb","slide":3,"text":"入力条件を修正した。2 clientからfoundation更新、次roundのstate継承までをログ付きで実行した。","textPreview":"入力条件を修正した。2 clientからfoundation更新、次roundのstate継承までをログ付きで実行した。","textChars":60,"textLines":1,"bbox":[794,270,315,205]}
+{"kind":"shape","id":"sh/u9o3md4j","slide":3,"bbox":[70,526,1025,1.5]}
+{"kind":"shape","id":"sh/fuxkvy54","slide":3,"bbox":[1095,518,18,18]}
+{"kind":"textbox","id":"sh/gvqlo3m9","slide":3,"text":"今週の報告範囲","textPreview":"今週の報告範囲","textChars":7,"textLines":1,"bbox":[70,552,260,32]}
+{"kind":"textbox","id":"sh/hwz2x8nu","slide":3,"text":"Layer 2の有効性を主張する前に、どの処理で崩れるかを追える実装を完成させる","textPreview":"Layer 2の有効性を主張する前に、どの処理で崩れるかを追える実装を完成させる","textChars":40,"textLines":1,"bbox":[330,546,820,50]}
+{"kind":"notes","id":"nt/3xuoio","slide":3,"text":"【目安 1:30–2:20】\n先週以降の大きな更新は三つです。Chen先生から、現在の構成では問題が起きた箇所を切り分けにくいという指摘がありました。教授は三層構造を維持しつつ、Layer 2を研究の中核に置き、第I段階では性能よりも接続と追跡可能性を確認する方針を明確にしました。その方針に沿って、9月17日に3 roundを実行しました。\n\n【根拠】\nnotes/advisor/sources/raw/2026-09-15/slack_2026-09-15.md\nnotes/advisor/sources/raw/2026-09-15/Comments and suggestions_260915.pdf, pp.1–5\nnotes/advisor/sources/raw/2026-09-16/slack_zettsu_experiment_feedback_date_unknown_received_2026-09-16.md\nnotes/advisor/sources/raw/2026-09-16/slack_zettsu_reply_to_chen_ja_date_unknown_received_2026-09-16.md"}
+{"kind":"slide","id":"sl/bvazsp","slide":4,"title":"FedPACT全体フロー","textShapes":6}
+{"kind":"shape","id":"sh/69kbqtg3","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/twba1ofu","slide":4,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/sv2tsjy9","slide":4,"text":"FedPACT全体フロー","textPreview":"FedPACT全体フロー","textChars":12,"textLines":1,"bbox":[62,34,1125,62]}
+{"kind":"textbox","id":"sh/fyts3yxk","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1190,46,42,26]}
+{"kind":"shape","id":"sh/exkbutgf","slide":4,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/10bu58fq","slide":4,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,780,18]}
+{"kind":"textbox","id":"sh/gz2tw3y5","slide":4,"text":"4 / 10","textPreview":"4 / 10","textChars":6,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"shape","id":"sh/v29sruhg","slide":4,"bbox":[82,136,1116,456]}
+{"kind":"textbox","id":"sh/u1gri9gv","slide":4,"text":"ここに9月16日Slack共有版のフローチャートを挿入","textPreview":"ここに9月16日Slack共有版のフローチャートを挿入","textChars":27,"textLines":1,"bbox":[220,300,840,60]}
+{"kind":"textbox","id":"sh/g325gzqh","slide":4,"text":"今回の実験では、この図のLayer 1からLayer 3と次roundへのstate継承までを確認","textPreview":"今回の実験では、この図のLayer 1からLayer 3と次roundへのstate継承までを確認","textChars":49,"textLines":1,"bbox":[145,616,990,32]}
+{"kind":"notes","id":"nt/bvazsp","slide":4,"text":"【目安 2:20–3:10】\nここは自作の9月16日共有版フローチャートへ差し替えてください。説明では、Layer 1は複数clientのsurrogate更新をFedAvgする部分、Layer 2はclientの予測挙動をserver-side seed上でproxyとして顕在化する中核部分、Layer 3はP_{k,r}=(x̃_{k,r}, μ^{post}_{k,r})でfoundation LoRAを更新する部分、とだけ整理します。今回の実験は、この三層をまたいで次roundまでstateが正しく渡るかを確認しています。\n\n【根拠】\nnotes/advisor/sources/raw/2026-09-16/slack_zettsu_flow_feedback_date_unknown_received_2026-09-16.md\nnotes/advisor/sources/raw/2026-09-15/進捗会0911_吉村有生_3.pptx（実日付9月15日、最終承認前）"}
+{"kind":"slide","id":"sl/f6847u","slide":5,"title":"今回の実験は三層の接続確認","textShapes":14}
+{"kind":"shape","id":"sh/mlwn29sz","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/9onmdorq","slide":5,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/one54ja5","slide":5,"text":"今回の実験は三層の接続確認","textPreview":"今回の実験は三層の接続確認","textChars":13,"textLines":1,"bbox":[62,34,1125,62]}
+{"kind":"textbox","id":"sh/bqp4fy9w","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1190,46,42,26]}
+{"kind":"shape","id":"sh/apwn6tsb","slide":5,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/xs7mhorm","slide":5,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,780,18]}
+{"kind":"textbox","id":"sh/wry583ah","slide":5,"text":"5 / 10","textPreview":"5 / 10","textChars":6,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/rul43u9c","slide":5,"text":"確認した問い","textPreview":"確認した問い","textChars":6,"textLines":1,"bbox":[70,118,220,32]}
+{"kind":"textbox","id":"sh/qtc3upsr","slide":5,"text":"各roundで処理とstateが正しくつながり、保存したログから入力と出力を追えるか","textPreview":"各roundで処理とstateが正しくつながり、保存したログから入力と出力を追えるか","textChars":42,"textLines":1,"bbox":[70,154,570,86]}
+{"kind":"textbox","id":"sh/876tgzud","slide":5,"text":"2 client　各clientは normal 3本＋risk 3本","textPreview":"2 client　各clientは normal 3本＋risk 3本","textChars":35,"textLines":1,"bbox":[72,270,545,32]}
+{"kind":"textbox","id":"sh/98fupkvy","slide":5,"text":"server-side seed　normal 30本＋risk 30本","textPreview":"server-side seed　normal 30本＋risk 30本","textChars":36,"textLines":1,"bbox":[72,316,545,32]}
+{"kind":"textbox","id":"sh/mlobepc7","slide":5,"text":"各round　4 prototype、60 proxy候補、4 pair","textPreview":"各round　4 prototype、60 proxy候補、4 pair","textChars":36,"textLines":1,"bbox":[72,362,545,32]}
+{"kind":"textbox","id":"sh/n6xsnuds","slide":5,"text":"実行　1 roundを確認後、3 round連続","textPreview":"実行　1 roundを確認後、3 round連続","textChars":24,"textLines":1,"bbox":[72,408,545,32]}
+{"kind":"textbox","id":"sh/wb6tkzu9","slide":5,"text":"第I段階：surrogate / foundation は同じ3B基盤の独立LoRA、1 run","textPreview":"第I段階：surrogate / foundation は同じ3B基盤の独立LoRA、1 run","textChars":48,"textLines":1,"bbox":[72,454,545,30]}
+{"kind":"textbox","id":"sh/xcfut4bu","slide":5,"text":"risk：time_of_alert と time_of_event の範囲","textPreview":"risk：time_of_alert と time_of_event の範囲","textChars":38,"textLines":1,"bbox":[690,112,490,24]}
+{"kind":"textbox","id":"sh/cfmt8vu5","slide":5,"text":"normal：対応するriskと同じ絶対時刻","textPreview":"normal：対応するriskと同じ絶対時刻","textChars":22,"textLines":1,"bbox":[690,302,490,24]}
+{"kind":"shape","id":"sh/szuhw7ix","slide":5,"bbox":[70,510,1110,102]}
+{"kind":"textbox","id":"sh/7yl0321c","slide":5,"text":"旧runではriskの注釈区間内に選択frameが0枚だったため不合格とした。入力規則を修正し、全画像を確認してから再実行した。","textPreview":"旧runではriskの注釈区間内に選択frameが0枚だったため不合格とした。入力規則を修正し、全画像を確認してから再実行した。","textChars":64,"textLines":1,"bbox":[98,531,1054,60]}
+{"kind":"image","id":"im/5k36x8fe","slide":5,"name":"","alt":"risk映像のalert時点","bbox":[690,144,236,133]}
+{"kind":"image","id":"im/4jup43et","slide":5,"name":"","alt":"risk映像のevent時点","bbox":[944,144,236,133]}
+{"kind":"image","id":"im/yl8nq9gj","slide":5,"name":"","alt":"normal映像の対応時刻1","bbox":[690,334,236,133]}
+{"kind":"image","id":"im/2hgryhg7","slide":5,"name":"","alt":"normal映像の対応時刻4","bbox":[944,334,236,133]}
+{"kind":"notes","id":"nt/f6847u","slide":5,"text":"【目安 3:10–4:10】\n今回の合格条件は、2 clientの局所更新からFedAvg、Layer 2、foundation更新、次roundまでをログで追えることです。性能比較は行いません。重要なのは、最初のrunでrisk区間を選べていない問題を発見し、その結果を研究上の証拠から外したことです。修正版ではriskのalertからeventまでの4時刻を使い、normalは対応するriskと同じ絶対時刻にそろえました。\n\n【根拠】\nnotes/advisor/CURRENT.md（2026-09-17 01:12時点の入力問題）\nartifacts/datasets/fedpact_stage1/manifest_paired_alert_quartiles.jsonl\nartifacts/runs/fedpact_stage1/p1d_full_20260917_02/summary.json"}
+{"kind":"slide","id":"sl/gcza1n","slide":6,"title":"具体例：局所学習でrisk方向へ0.295変化","textShapes":18}
+{"kind":"shape","id":"sh/2pk76hwn","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/psbq1wfy","slide":6,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/4r2p8red","slide":6,"text":"具体例：局所学習でrisk方向へ0.295変化","textPreview":"具体例：局所学習でrisk方向へ0.295変化","textChars":23,"textLines":1,"bbox":[62,34,1125,62]}
+{"kind":"textbox","id":"sh/rud836x4","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1190,46,42,26]}
+{"kind":"shape","id":"sh/qt47a1wj","slide":6,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/dwvq5gfa","slide":6,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,780,18]}
+{"kind":"textbox","id":"sh/cvmpcbep","slide":6,"text":"6 / 10","textPreview":"6 / 10","textChars":6,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/epgn6l0r","slide":6,"text":"time_of_alert","textPreview":"time_of_alert","textChars":13,"textLines":1,"bbox":[70,281,250,24]}
+{"kind":"textbox","id":"sh/fqp4zqhw","slide":6,"text":"約33%","textPreview":"約33%","textChars":4,"textLines":1,"bbox":[350,281,250,24]}
+{"kind":"textbox","id":"sh/ofy5cvit","slide":6,"text":"約67%","textPreview":"約67%","textChars":4,"textLines":1,"bbox":[630,281,250,24]}
+{"kind":"textbox","id":"sh/pgr650ze","slide":6,"text":"time_of_event","textPreview":"time_of_event","textChars":13,"textLines":1,"bbox":[910,281,250,24]}
+{"kind":"textbox","id":"sh/2tgna50n","slide":6,"text":"この動画のrisk成分","textPreview":"この動画のrisk成分","textChars":11,"textLines":1,"bbox":[70,330,300,32]}
+{"kind":"textbox","id":"sh/nup43ah8","slide":6,"text":"q^{pre}","textPreview":"q^{pre}","textChars":7,"textLines":1,"bbox":[72,383,150,28]}
+{"kind":"textbox","id":"sh/4ze50bi9","slide":6,"text":"0.349","textPreview":"0.349","textChars":5,"textLines":1,"bbox":[72,418,150,58]}
+{"kind":"textbox","id":"sh/5knm9gzu","slide":6,"text":"q^{post}","textPreview":"q^{post}","textChars":8,"textLines":1,"bbox":[262,383,150,28]}
+{"kind":"textbox","id":"sh/l4vuh87m","slide":6,"text":"0.644","textPreview":"0.644","textChars":5,"textLines":1,"bbox":[262,418,150,58]}
+{"kind":"textbox","id":"sh/k3mto361","slide":6,"text":"Δq","textPreview":"Δq","textChars":2,"textLines":1,"bbox":[452,383,150,28]}
+{"kind":"textbox","id":"sh/z2dcfypg","slide":6,"text":"+0.295","textPreview":"+0.295","textChars":6,"textLines":1,"bbox":[452,418,150,58]}
+{"kind":"shape","id":"sh/y14bmtov","slide":6,"bbox":[680,336,500,190]}
+{"kind":"textbox","id":"sh/98fulsni","slide":6,"text":"3本のrisk動画から作ったprototype","textPreview":"3本のrisk動画から作ったprototype","textChars":23,"textLines":1,"bbox":[708,360,444,32]}
+{"kind":"textbox","id":"sh/876tsn6x","slide":6,"text":"μ^{post}_{k,r} のrisk成分　0.724\nΔμ_{k,r} のrisk成分　+0.238\nπ_{k,r}　3","textPreview":"μ^{post}_{k,r} のrisk成分　0.724 | Δμ_{k,r} のrisk成分　+0.238 | π_{k,r}　3","textChars":62,"textLines":3,"bbox":[735,410,390,100]}
+{"kind":"shape","id":"sh/76dcji5s","slide":6,"bbox":[70,560,1110,60]}
+{"kind":"textbox","id":"sh/m54bqdo7","slide":6,"text":"serverへ送るのは Q_{k,r}=(μ^{post}_{k,r}, Δμ_{k,r}, π_{k,r})。private動画、raw frame、sample IDは送らない。","textPreview":"serverへ送るのは Q_{k,r}=(μ^{post}_{k,r}, Δμ_{k,r}, π_{k,r})。private動画、raw frame、sample IDは送らない。","textChars":91,"textLines":1,"bbox":[95,575,1060,34]}
+{"kind":"image","id":"im/65svyd83","slide":6,"name":"","alt":"risk映像の注釈区間フレーム1","bbox":[70,128,250,141]}
+{"kind":"image","id":"im/r61cri9o","slide":6,"name":"","alt":"risk映像の注釈区間フレーム2","bbox":[350,128,250,141]}
+{"kind":"image","id":"im/ra1svepw","slide":6,"name":"","alt":"risk映像の注釈区間フレーム3","bbox":[630,128,250,141]}
+{"kind":"image","id":"im/698rmtor","slide":6,"name":"","alt":"risk映像の注釈区間フレーム4","bbox":[910,128,250,141]}
+{"kind":"notes","id":"nt/gcza1n","slide":6,"text":"【目安 4:10–5:20】\n一つの動画を具体的に追います。白い車が横から接近するrisk動画で、局所学習前のrisk確率は0.349、学習後は0.644、変化はプラス0.295でした。同じclassの3本を平均すると、μ^{post}_{k,r}のrisk成分は0.724、Δμ_{k,r}はプラス0.238、frequencyは3です。serverへ送るのはこのprototypeとモデル更新であり、private映像やsample IDではありません。\n\n【根拠】\nartifacts/runs/fedpact_stage1/p1d_layer1_20260917_01/client_local/client-0/private_trace.json（sample 15a4f810cc4c2aef）\nartifacts/runs/fedpact_stage1/p1d_layer1_20260917_01/communication/client-0/payload.json（r1-client-0-class1）\nartifacts/runs/fedpact_stage1/p1d_layer1_20260917_01/client_local/client-0/communication_audit.json"}
+{"kind":"slide","id":"sl/r2gbsx","slide":7,"title":"最終出力は一致したが、変化量は再現できなかった","textShapes":16}
+{"kind":"shape","id":"sh/cn61s3u9","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/bmxkzyto","slide":7,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/alojqtc3","slide":7,"text":"最終出力は一致したが、変化量は再現できなかった","textPreview":"最終出力は一致したが、変化量は再現できなかった","textChars":23,"textLines":1,"bbox":[62,34,1125,62]}
+{"kind":"textbox","id":"sh/pkvixobi","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1190,46,42,26]}
+{"kind":"shape","id":"sh/ojm1ojux","slide":7,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/nid0vetc","slide":7,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,780,18]}
+{"kind":"textbox","id":"sh/2h4jmtcr","slide":7,"text":"7 / 10","textPreview":"7 / 10","textChars":6,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/9gz29sbm","slide":7,"text":"serverが選んだ s^*_{k,r}：normal label、変換なし","textPreview":"serverが選んだ s^*_{k,r}：normal label、変換なし","textChars":38,"textLines":1,"bbox":[70,110,1140,24]}
+{"kind":"textbox","id":"sh/l8vyhcf2","slide":7,"text":"post behavior","textPreview":"post behavior","textChars":13,"textLines":1,"bbox":[110,338,250,28]}
+{"kind":"textbox","id":"sh/qhkfidgf","slide":7,"text":"target 0.724","textPreview":"target 0.724","textChars":12,"textLines":1,"bbox":[105,377,260,48]}
+{"kind":"textbox","id":"sh/bitgbix0","slide":7,"text":"proxy 0.724","textPreview":"proxy 0.724","textChars":11,"textLines":1,"bbox":[105,426,260,42]}
+{"kind":"textbox","id":"sh/cjmxknel","slide":7,"text":"post KL = 8.35 × 10^-10","textPreview":"post KL = 8.35 × 10^-10","textChars":23,"textLines":1,"bbox":[95,478,280,28]}
+{"kind":"shape","id":"sh/dkvydsfq","slide":7,"bbox":[476,326,2,205]}
+{"kind":"textbox","id":"sh/udozuhwj","slide":7,"text":"local delta","textPreview":"local delta","textChars":11,"textLines":1,"bbox":[545,338,250,28]}
+{"kind":"textbox","id":"sh/vexgnmx4","slide":7,"text":"target +0.238","textPreview":"target +0.238","textChars":13,"textLines":1,"bbox":[535,377,270,48]}
+{"kind":"textbox","id":"sh/rypwfedg","slide":7,"text":"proxy +0.051","textPreview":"proxy +0.051","textChars":12,"textLines":1,"bbox":[535,426,270,42]}
+{"kind":"textbox","id":"sh/6xgvm9wv","slide":7,"text":"delta MSE = 0.0349","textPreview":"delta MSE = 0.0349","textChars":18,"textLines":1,"bbox":[530,478,280,28]}
+{"kind":"shape","id":"sh/tkrehovm","slide":7,"bbox":[895,328,285,205]}
+{"kind":"textbox","id":"sh/sjydoje1","slide":7,"text":"重要な診断","textPreview":"重要な診断","textChars":5,"textLines":1,"bbox":[922,348,230,30]}
+{"kind":"textbox","id":"sh/fm9wjeds","slide":7,"text":"最終のrisk確率だけなら一致する。\n局所学習で動いた方向と量は、現在の候補では十分に再現できていない。","textPreview":"最終のrisk確率だけなら一致する。 | 局所学習で動いた方向と量は、現在の候補では十分に再現できていない。","textChars":52,"textLines":2,"bbox":[920,397,235,105]}
+{"kind":"textbox","id":"sh/el0vqtc7","slide":7,"text":"Layer 2で評価すべき対象が、post一致だけでは足りないことを実例で確認","textPreview":"Layer 2で評価すべき対象が、post一致だけでは足りないことを実例で確認","textChars":39,"textLines":1,"bbox":[100,570,1080,42]}
+{"kind":"image","id":"im/9wnm583i","slide":7,"name":"","alt":"選択されたserver-side seedのフレーム1","bbox":[70,145,250,141]}
+{"kind":"image","id":"im/9ozqd4ji","slide":7,"name":"","alt":"選択されたserver-side seedのフレーム2","bbox":[350,145,250,141]}
+{"kind":"image","id":"im/8n69kzix","slide":7,"name":"","alt":"選択されたserver-side seedのフレーム3","bbox":[630,145,250,141]}
+{"kind":"image","id":"im/7mx8bu1c","slide":7,"name":"","alt":"選択されたserver-side seedのフレーム4","bbox":[910,145,250,141]}
+{"kind":"notes","id":"nt/r2gbsx","slide":7,"text":"【目安 5:20–6:30】\n前のprototypeに対して、serverはnormal labelのseedを選びました。更新後global surrogateのrisk出力は0.724でtargetとほぼ一致しました。一方、局所学習による変化量はtargetがプラス0.238、proxy上ではプラス0.051でした。つまり、最終出力だけを近づけても、clientが学習した変化を十分に再現したとは言えません。ここがLayer 2の中心的な評価対象です。\n\n【根拠】\nartifacts/runs/fedpact_stage1/p1d_full_20260917_02/server/layer2_trace.json（r1-client-0-class1 selection）\nartifacts/runs/fedpact_stage1/p1d_full_20260917_02/server/proxy_pairs.json"}
+{"kind":"slide","id":"sl/wxyw2r","slide":8,"title":"round 1では、4件中1件でdeltaの方向が逆転","textShapes":6}
+{"kind":"shape","id":"sh/nmhon2xs","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/onqpgned","slide":8,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/9oz6psfy","slide":8,"text":"round 1では、4件中1件でdeltaの方向が逆転","textPreview":"round 1では、4件中1件でdeltaの方向が逆転","textChars":27,"textLines":1,"bbox":[62,34,1125,62]}
+{"kind":"textbox","id":"sh/ap87ixwj","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1190,46,42,26]}
+{"kind":"shape","id":"sh/bqhor2x4","slide":8,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/wrapk7ep","slide":8,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,780,18]}
+{"kind":"textbox","id":"sh/xcj6tcfa","slide":8,"text":"8 / 10","textPreview":"8 / 10","textChars":6,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"shape","id":"sh/ruxofixk","slide":8,"bbox":[90,470,1100,72]}
+{"kind":"textbox","id":"sh/ji9cfitk","slide":8,"text":"prototype class と seed label はround 1で4件すべて不一致。round 2・3では各3件が一致したため、1 roundの結果を一般化しない。","textPreview":"prototype class と seed label はround 1で4件すべて不一致。round 2・3では各3件が一致したため、1 roundの結果を一般化しない。","textChars":87,"textLines":1,"bbox":[112,487,1055,42]}
+{"kind":"textbox","id":"sh/yh0bmdcz","slide":8,"text":"原因はまだ一つに決められない。60 seedのlabelとmodel argmaxの一致は43件で、model誤分類と検索挙動が混在している。","textPreview":"原因はまだ一つに決められない。60 seedのlabelとmodel argmaxの一致は43件で、model誤分類と検索挙動が混在している。","textChars":71,"textLines":1,"bbox":[105,570,1070,50]}
+{"kind":"table","id":"tb/velc3qxk","slide":8,"name":"","rows":5,"cols":5,"preview":"prototype | target Δrisk | proxy Δrisk | 方向 | seed label","bbox":[90,134,1100,300]}
+{"kind":"notes","id":"nt/wxyw2r","slide":8,"text":"【目安 6:30–7:25】\nround 1の4 prototypeを並べると、deltaの符号は3件で一致し、client-1のnormalだけ逆向きでした。また、prototype classと選択seed labelは4件すべて不一致でした。ただしround 2と3では各3件が一致しています。さらに、60本のseedのうちlabelと更新後global surrogateのargmaxが一致したのは43本です。原因を検索だけに帰属せず、model誤分類、検索挙動、postでtop 3へ絞ってからdeltaを比較する候補生成を分けて確認します。\n\n【根拠】\nartifacts/runs/fedpact_stage1/p1d_full_20260917_02/server/layer2_trace.json\nartifacts/reports/fedpact_stage1_20260917/slack_report.md（診断上の観測事実）"}
+{"kind":"slide","id":"sl/a9znl8","slide":9,"title":"3 roundの状態継承は確認、Layer 3に診断点が残った","textShapes":10}
+{"kind":"shape","id":"sh/g32pw3el","slide":9,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/f2tonydg","slide":9,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/uhk7utwv","slide":9,"text":"3 roundの状態継承は確認、Layer 3に診断点が残った","textPreview":"3 roundの状態継承は確認、Layer 3に診断点が残った","textChars":31,"textLines":1,"bbox":[62,34,1125,62]}
+{"kind":"textbox","id":"sh/tgb6l8va","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1190,46,42,26]}
+{"kind":"shape","id":"sh/sf2ps3ep","slide":9,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/7etojyd4","slide":9,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,780,18]}
+{"kind":"textbox","id":"sh/6d07qtwj","slide":9,"text":"9 / 10","textPreview":"9 / 10","textChars":6,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/kbipojet","slide":9,"text":"各roundでpairが異なるため、KLをround間の性能trendとして比較しない","textPreview":"各roundでpairが異なるため、KLをround間の性能trendとして比較しない","textChars":43,"textLines":1,"bbox":[120,398,1040,24]}
+{"kind":"shape","id":"sh/ids3y50v","slide":9,"bbox":[70,430,525,142]}
+{"kind":"textbox","id":"sh/jy147a1g","slide":9,"text":"確認できたこと","textPreview":"確認できたこと","textChars":7,"textLines":1,"bbox":[96,450,470,28]}
+{"kind":"textbox","id":"sh/kzal0fi1","slide":9,"text":"M_G^0 から M_G^3まで更新し、round間のcheckpointとtensor digestが一致。各client更新とFedAvgを再計算できた。","textPreview":"M_G^0 から M_G^3まで更新し、round間のcheckpointとtensor digestが一致。各client更新とFedAvgを再計算できた。","textChars":79,"textLines":1,"bbox":[96,492,465,62]}
+{"kind":"shape","id":"sh/50jm9kjm","slide":9,"bbox":[625,430,585,142]}
+{"kind":"textbox","id":"sh/a9s3u50z","slide":9,"text":"残った問題","textPreview":"残った問題","textChars":5,"textLines":1,"bbox":[652,450,530,28]}
+{"kind":"textbox","id":"sh/va143a14","slide":9,"text":"加重KLを減らす条件をround 3で満たせず、実行確認として更新した。処理は動いたが、安定したfoundation更新とは言えない。","textPreview":"加重KLを減らす条件をround 3で満たせず、実行確認として更新した。処理は動いたが、安定したfoundation更新とは言えない。","textChars":67,"textLines":1,"bbox":[652,492,525,62]}
+{"kind":"textbox","id":"sh/wbalwfip","slide":9,"text":"この結果から性能向上、proxy品質、未知データへの転移、形式的privacy保証は主張しない","textPreview":"この結果から性能向上、proxy品質、未知データへの転移、形式的privacy保証は主張しない","textChars":47,"textLines":1,"bbox":[100,614,1080,34]}
+{"kind":"table","id":"tb/4fixo7qp","slide":9,"name":"","rows":4,"cols":6,"preview":"round | 入力 M_G | 出力 M_G | client LoRA update norm | FedAvg再計算差 | 各roundの4 pair上の加重KL","bbox":[55,134,1170,255]}
+{"kind":"notes","id":"nt/a9znl8","slide":9,"text":"【目安 7:25–8:45】\n3 roundを通して、global surrogateとfoundationのcheckpointおよびtensor digestがround間で一致し、state継承を確認しました。client更新は毎round非ゼロで、FedAvgの独立再計算差も10のマイナス10程度でした。一方、round 3では学習率10のマイナス6から10のマイナス11まで、同じ4 pair上の加重KLを減らす条件を満たせませんでした。第I段階の実行確認として更新は完了しましたが、安定した知識転移の証拠にはしません。\n\n【根拠】\nartifacts/reports/fedpact_stage1_20260917/three_round_state_lineage.md\nartifacts/reports/fedpact_stage1_20260917/three_round_state_lineage.json\nartifacts/runs/fedpact_stage1/p1d_round3_full_20260917_02/summary.json"}
+{"kind":"slide","id":"sl/y80mjw","slide":10,"title":"今後：5 roundの前に、失敗箇所を切り分ける","textShapes":14}
+{"kind":"shape","id":"sh/98re9ovy","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/m50fe9c7","slide":10,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/n69w7eds","slide":10,"text":"今後：5 roundの前に、失敗箇所を切り分ける","textPreview":"今後：5 roundの前に、失敗箇所を切り分ける","textChars":24,"textLines":1,"bbox":[62,34,1125,62]}
+{"kind":"textbox","id":"sh/wv2xkju9","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1190,46,42,26]}
+{"kind":"shape","id":"sh/xwbedovu","slide":10,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/a90fitcj","slide":10,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,780,18]}
+{"kind":"textbox","id":"sh/va9wbydo","slide":10,"text":"10 / 10","textPreview":"10 / 10","textChars":7,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/czyd8zu5","slide":10,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[76,126,60,60]}
+{"kind":"textbox","id":"sh/d07e14vq","slide":10,"text":"Layer 3の更新を再確認","textPreview":"Layer 3の更新を再確認","textChars":14,"textLines":1,"bbox":[166,124,940,40]}
+{"kind":"textbox","id":"sh/dkvu5kby","slide":10,"text":"同じ4 pairと同じ損失で、gradient、重み、FP32計算、finite differenceを照合する。十分小さい1回更新で損失が増えないことを合格条件にする。","textPreview":"同じ4 pairと同じ損失で、gradient、重み、FP32計算、finite differenceを照合する。十分小さい1回更新で損失が増えないことを合格条件にする。","textChars":85,"textLines":1,"bbox":[166,173,980,78]}
+{"kind":"shape","id":"sh/sjmdwfad","slide":10,"bbox":[166,260,1000,1.5]}
+{"kind":"textbox","id":"sh/ridc3at8","slide":10,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[76,281,60,60]}
+{"kind":"textbox","id":"sh/qh4vu5sn","slide":10,"text":"問題が解消したら5 roundへ","textPreview":"問題が解消したら5 roundへ","textChars":16,"textLines":1,"bbox":[166,279,940,40]}
+{"kind":"textbox","id":"sh/1ofe9kba","slide":10,"text":"M_Gとfoundationのstate継承、client送信内容、実行時間を同じ形式で保存する。","textPreview":"M_Gとfoundationのstate継承、client送信内容、実行時間を同じ形式で保存する。","textChars":49,"textLines":1,"bbox":[166,328,980,78]}
+{"kind":"shape","id":"sh/0nmd0fap","slide":10,"bbox":[166,415,1000,1.5]}
+{"kind":"textbox","id":"sh/fmdw7at4","slide":10,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[76,436,60,60]}
+{"kind":"textbox","id":"sh/el4vypsj","slide":10,"text":"第II段階でLayer 2を比較","textPreview":"第II段階でLayer 2を比較","textChars":16,"textLines":1,"bbox":[166,434,940,40]}
+{"kind":"textbox","id":"sh/psfed4b6","slide":10,"text":"Server Only、Post Only、Post + Deltaを同じ条件で比較し、seed内容、model予測、delta再現を分けて評価する。","textPreview":"Server Only、Post Only、Post + Deltaを同じ条件で比較し、seed内容、model予測、delta再現を分けて評価する。","textChars":75,"textLines":1,"bbox":[166,483,980,78]}
+{"kind":"shape","id":"sh/or6d4zal","slide":10,"bbox":[70,597,1110,58]}
+{"kind":"textbox","id":"sh/8vexg3ix","slide":10,"text":"次の問い：clientのadaptation signalは、server-side seedだけの場合を超えてfoundation更新へ寄与するか","textPreview":"次の問い：clientのadaptation signalは、server-side seedだけの場合を超えてfoundation更新へ寄与するか","textChars":74,"textLines":1,"bbox":[96,611,1058,32]}
+{"kind":"notes","id":"nt/y80mjw","slide":10,"text":"【目安 8:45–10:00】\n次は5 roundへ直ちに進まず、round 3のfoundation更新を最小条件で切り分けます。これが解消した後に5 roundのstate継承を確認します。その後、第II段階でServer Only、Post Only、Post + Deltaを同じ条件で比較します。最終評価には、局所学習、prototype作成、server検索、条件選択に使っていない評価用データを用います。今週の到達点は、3 roundを通し、次に見るべき場所をLayer 2のdelta再現とLayer 3の更新へ絞れたことです。\n\n【根拠】\nnotes/advisor/sources/raw/2026-09-16/slack_zettsu_experiment_feedback_date_unknown_received_2026-09-16.md\nnotes/advisor/sources/raw/2026-09-15/Comments and suggestions_260915.pdf, p.4\nartifacts/reports/fedpact_stage1_20260917/three_round_state_lineage.md"}

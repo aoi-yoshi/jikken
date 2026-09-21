@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-07-29T08:17:35.812Z",
+  "workspace": "C:\\Python\\実験_修正\\tmp\\pptx\\0731_revision",
+  "finalPptx": "C:\\Users\\aoi7y\\OneDrive - 国立大学法人東海国立大学機構\\folder\\卒研_明光\\進捗会0731_吉村有生_改訂版.pptx",
+  "starterPptx": "C:\\Python\\実験_修正\\tmp\\pptx\\0731_revision\\template-starter.pptx",
+  "mapPath": "C:\\Python\\実験_修正\\tmp\\pptx\\0731_revision\\template-frame-map.json",
+  "starterLayoutDir": "C:\\Python\\実験_修正\\tmp\\pptx\\0731_revision\\template-starter-layout",
+  "finalLayoutDir": "C:\\Python\\実験_修正\\tmp\\pptx\\0731_revision\\final-layout",
+  "editDir": "C:\\Python\\実験_修正\\tmp\\pptx\\0731_revision",
+  "issueCount": 0,
+  "issues": []
+}

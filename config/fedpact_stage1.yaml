@@ -1,0 +1,54 @@
+# FedPACT Stage I Basic path only. This file overrides config/default.yaml.
+model:
+  id: "Qwen/Qwen2.5-VL-3B-Instruct"
+  server_id: "Qwen/Qwen2.5-VL-3B-Instruct"
+  client_id: "Qwen/Qwen2.5-VL-3B-Instruct"
+  attn_implementation: "sdpa"
+
+data:
+  manifest_path: "artifacts/datasets/fedpact_stage1/manifest_paired_alert_quartiles.jsonl"
+  test_manifest_path: "artifacts/datasets/fedpact_stage1/test_manifest_paired_alert_quartiles.jsonl"
+  num_frames: 4
+  use_num_frames: 4
+  use_frame_slice: "last"
+  frame_sampling: "paired_alert_event_quartiles"
+  frame_max_side: 480
+  max_videos_per_class: 60
+  max_test_videos_per_class: 20
+  paired_candidate_multiplier: 3
+  weather_filter: ""
+
+train:
+  seed: 42
+  batch_size: 1
+  lr: 1.0e-4
+  weight_decay: 0.01
+
+lora:
+  r: 8
+  lora_alpha: 16
+  lora_dropout: 0.0
+  target_modules: ["q_proj", "v_proj"]
+  bias: "none"
+
+fedpact_stage1:
+  schema: "fedpact.stage1.config.v1"
+  initial_global_checkpoint: "artifacts/checkpoints/step05_fl/run_20260607_200402/step05_fedavg_global.pt"
+  initial_foundation_checkpoint: "artifacts/checkpoints/step05_fl/run_20260607_200402/step05_fedavg_global.pt"
+  output_representation: "softmax_probability_t1"
+  prototype_method: "classwise_mean_probability"
+  frequency_unit: "sample_count"
+  fedavg_weight: "unique_local_sample_count"
+  local_optimizer: "AdamW"
+  local_steps_p1a: 4
+  client_train_per_class_p1a: 2
+  validation_per_class: 1
+  server_seed_per_class_p1b: 4
+  server_seed_per_class_p1d: 30
+  client_train_per_class_p1d: 3
+  foundation_lr_p1c: 1.0e-6
+  foundation_backtracking_max_attempts_p1c: 6
+  final_evaluation_per_class: 1
+  payload_schema: "fedpact.client_payload.v2"
+  state_digest_schema: "fedpact.tensor_state.sha256.v1"
+  p1a_round: 1

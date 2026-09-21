@@ -1,0 +1,106 @@
+{
+  "outputSlides": [
+    {
+      "outputSlide": 1,
+      "sourceSlide": 1,
+      "narrativeRole": "opening title",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/547294r6", "purpose": "new deck title" },
+        { "action": "rewrite", "sourceElementId": "sh/ts7md4r2", "purpose": "new meeting date" },
+        { "action": "keep", "sourceElementId": "sh/7qp4be9c", "purpose": "presenter name" },
+        { "action": "rewrite", "sourceElementId": "sh/k3yl0zql", "purpose": "confirm affiliation" }
+      ]
+    },
+    {
+      "outputSlide": 2,
+      "sourceSlide": 10,
+      "narrativeRole": "research objective and problem",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/xc3mho32", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/cbu58j2h", "purpose": "page marker" },
+        { "action": "rewrite", "sourceElementId": "sh/zelojyl8", "purpose": "objective and two obstacles" }
+      ]
+    },
+    {
+      "outputSlide": 3,
+      "sourceSlide": 4,
+      "narrativeRole": "overall three-layer method flow",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/1cj2d8b6", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/0ba143al", "purpose": "page marker" },
+        { "action": "delete", "sourceElementId": "im/q1sbal07", "purpose": "remove outdated workflow raster" },
+        { "action": "add", "newPrimitiveAllowed": true, "zone": { "left": 48, "top": 92, "width": 1160, "height": 596 }, "reason": "replace the obsolete workflow image area with an editable corrected three-layer flow", "mustNotOverlapInherited": true }
+      ]
+    },
+    {
+      "outputSlide": 4,
+      "sourceSlide": 4,
+      "narrativeRole": "layer one data ownership and transmission",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/1cj2d8b6", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/0ba143al", "purpose": "page marker" },
+        { "action": "delete", "sourceElementId": "im/q1sbal07", "purpose": "remove outdated workflow raster" },
+        { "action": "add", "newPrimitiveAllowed": true, "zone": { "left": 48, "top": 92, "width": 1160, "height": 596 }, "reason": "replace the obsolete workflow image area with an editable client/cloud Layer 1 flow", "mustNotOverlapInherited": true }
+      ]
+    },
+    {
+      "outputSlide": 5,
+      "sourceSlide": 4,
+      "narrativeRole": "layer two iterative proxy generation",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/1cj2d8b6", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/0ba143al", "purpose": "page marker" },
+        { "action": "delete", "sourceElementId": "im/q1sbal07", "purpose": "remove outdated workflow raster" },
+        { "action": "add", "newPrimitiveAllowed": true, "zone": { "left": 48, "top": 92, "width": 1160, "height": 596 }, "reason": "replace the obsolete workflow image area with an editable iterative proxy-search flow", "mustNotOverlapInherited": true }
+      ]
+    },
+    {
+      "outputSlide": 6,
+      "sourceSlide": 4,
+      "narrativeRole": "proxy selection and foundation distillation",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/1cj2d8b6", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/0ba143al", "purpose": "page marker" },
+        { "action": "delete", "sourceElementId": "im/q1sbal07", "purpose": "remove outdated workflow raster" },
+        { "action": "add", "newPrimitiveAllowed": true, "zone": { "left": 48, "top": 92, "width": 1160, "height": 596 }, "reason": "replace the obsolete workflow image area with an editable proxy-pair and distillation flow", "mustNotOverlapInherited": true }
+      ]
+    },
+    {
+      "outputSlide": 7,
+      "sourceSlide": 2,
+      "narrativeRole": "future four-stage roadmap",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/9072xkry", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/ozy1ofad", "purpose": "page marker" },
+        { "action": "rewrite", "sourceElementId": "sh/b29kza94", "purpose": "four-stage roadmap and current position" }
+      ]
+    },
+    {
+      "outputSlide": 8,
+      "sourceSlide": 10,
+      "narrativeRole": "closing synthesis",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/xc3mho32", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/cbu58j2h", "purpose": "page marker" },
+        { "action": "rewrite", "sourceElementId": "sh/zelojyl8", "purpose": "three-part method synthesis" }
+      ]
+    }
+  ],
+  "omittedSourceSlides": [
+    { "sourceSlide": 3, "reason": "legacy workflow is replaced by the corrected three-layer flow" },
+    { "sourceSlide": 5, "reason": "legacy foundation-to-client distillation is not part of the basic FedPACT flow" },
+    { "sourceSlide": 6, "reason": "legacy foundation-to-client distillation is not part of the basic FedPACT flow" },
+    { "sourceSlide": 7, "reason": "prior related-work table is outside this ten-minute method update" },
+    { "sourceSlide": 8, "reason": "prior evaluation discussion is replaced by the revised method detail" },
+    { "sourceSlide": 9, "reason": "prior data-sharing evaluation discussion is replaced by the revised method detail" },
+    { "sourceSlide": 11, "reason": "blank ending slide is unnecessary" }
+  ]
+}

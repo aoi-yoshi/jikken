@@ -1,0 +1,586 @@
+{
+  "sourcePptx": "C:\\Users\\aoi7y\\OneDrive - 国立大学法人東海国立大学機構\\folder\\卒研_明光\\進捗会0724_吉村有生.pptx",
+  "workspace": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731",
+  "outDir": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect",
+  "generatedAt": "2026-07-29T07:10:12.473Z",
+  "slideCount": 21,
+  "slideArtifacts": [
+    {
+      "slide": 1,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-01.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-01.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-01.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-01.layout.json"
+    },
+    {
+      "slide": 2,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-02.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-02.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-02.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-02.layout.json"
+    },
+    {
+      "slide": 3,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-03.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-03.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-03.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-03.layout.json"
+    },
+    {
+      "slide": 4,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-04.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-04.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-04.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-04.layout.json"
+    },
+    {
+      "slide": 5,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-05.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-05.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-05.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-05.layout.json"
+    },
+    {
+      "slide": 6,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-06.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-06.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-06.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-06.layout.json"
+    },
+    {
+      "slide": 7,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-07.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-07.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-07.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-07.layout.json"
+    },
+    {
+      "slide": 8,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-08.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-08.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-08.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-08.layout.json"
+    },
+    {
+      "slide": 9,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-09.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-09.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-09.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-09.layout.json"
+    },
+    {
+      "slide": 10,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-10.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-10.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-10.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-10.layout.json"
+    },
+    {
+      "slide": 11,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-11.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-11.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-11.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-11.layout.json"
+    },
+    {
+      "slide": 12,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-12.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-12.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-12.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-12.layout.json"
+    },
+    {
+      "slide": 13,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-13.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-13.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-13.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-13.layout.json"
+    },
+    {
+      "slide": 14,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-14.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-14.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-14.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-14.layout.json"
+    },
+    {
+      "slide": 15,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-15.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-15.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-15.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-15.layout.json"
+    },
+    {
+      "slide": 16,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-16.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-16.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-16.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-16.layout.json"
+    },
+    {
+      "slide": 17,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-17.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-17.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-17.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-17.layout.json"
+    },
+    {
+      "slide": 18,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-18.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-18.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-18.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-18.layout.json"
+    },
+    {
+      "slide": 19,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-19.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-19.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-19.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-19.layout.json"
+    },
+    {
+      "slide": 20,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-20.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-20.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-20.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-20.layout.json"
+    },
+    {
+      "slide": 21,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\source-slides\\source-slide-21.png",
+      "previewRelativePath": "template-inspect/source-slides/source-slide-21.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\layouts\\source-slide-21.layout.json",
+      "layoutRelativePath": "template-inspect/layouts/source-slide-21.layout.json"
+    }
+  ],
+  "inspectPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\template-inspect.ndjson",
+  "inspectRelativePath": "template-inspect/template-inspect.ndjson",
+  "inspectTruncated": true,
+  "inspectMetadata": {
+    "revision": "5rusqx",
+    "target": {
+      "id": "pr/fhuaf3"
+    },
+    "kind": {
+      "requested": "slide,textbox,shape,image,table,chart",
+      "tokens": [
+        "slide",
+        "textbox",
+        "shape",
+        "image",
+        "table",
+        "chart"
+      ]
+    },
+    "include": {
+      "tokens": []
+    },
+    "exclude": {
+      "tokens": []
+    },
+    "notices": []
+  },
+  "extractedMedia": [
+    {
+      "entry": "ppt/media/image1.svg",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image1.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image1.svg",
+      "bytes": 682
+    },
+    {
+      "entry": "ppt/media/image10.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image10.png",
+      "relativePath": "template-inspect/assets/ppt/media/image10.png",
+      "bytes": 48461
+    },
+    {
+      "entry": "ppt/media/image11.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image11.png",
+      "relativePath": "template-inspect/assets/ppt/media/image11.png",
+      "bytes": 65197
+    },
+    {
+      "entry": "ppt/media/image12.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image12.png",
+      "relativePath": "template-inspect/assets/ppt/media/image12.png",
+      "bytes": 45135
+    },
+    {
+      "entry": "ppt/media/image13.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image13.png",
+      "relativePath": "template-inspect/assets/ppt/media/image13.png",
+      "bytes": 28121
+    },
+    {
+      "entry": "ppt/media/image14.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image14.png",
+      "relativePath": "template-inspect/assets/ppt/media/image14.png",
+      "bytes": 24649
+    },
+    {
+      "entry": "ppt/media/image15.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image15.png",
+      "relativePath": "template-inspect/assets/ppt/media/image15.png",
+      "bytes": 58427
+    },
+    {
+      "entry": "ppt/media/image16.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image16.png",
+      "relativePath": "template-inspect/assets/ppt/media/image16.png",
+      "bytes": 30043
+    },
+    {
+      "entry": "ppt/media/image17.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image17.png",
+      "relativePath": "template-inspect/assets/ppt/media/image17.png",
+      "bytes": 24786
+    },
+    {
+      "entry": "ppt/media/image18.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image18.png",
+      "relativePath": "template-inspect/assets/ppt/media/image18.png",
+      "bytes": 20010
+    },
+    {
+      "entry": "ppt/media/image19.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image19.png",
+      "relativePath": "template-inspect/assets/ppt/media/image19.png",
+      "bytes": 28673
+    },
+    {
+      "entry": "ppt/media/image2.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image2.png",
+      "relativePath": "template-inspect/assets/ppt/media/image2.png",
+      "bytes": 25179
+    },
+    {
+      "entry": "ppt/media/image20.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image20.png",
+      "relativePath": "template-inspect/assets/ppt/media/image20.png",
+      "bytes": 30884
+    },
+    {
+      "entry": "ppt/media/image21.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image21.png",
+      "relativePath": "template-inspect/assets/ppt/media/image21.png",
+      "bytes": 7041
+    },
+    {
+      "entry": "ppt/media/image22.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image22.png",
+      "relativePath": "template-inspect/assets/ppt/media/image22.png",
+      "bytes": 41544
+    },
+    {
+      "entry": "ppt/media/image23.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image23.png",
+      "relativePath": "template-inspect/assets/ppt/media/image23.png",
+      "bytes": 22364
+    },
+    {
+      "entry": "ppt/media/image24.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image24.png",
+      "relativePath": "template-inspect/assets/ppt/media/image24.png",
+      "bytes": 7377
+    },
+    {
+      "entry": "ppt/media/image25.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image25.png",
+      "relativePath": "template-inspect/assets/ppt/media/image25.png",
+      "bytes": 49074
+    },
+    {
+      "entry": "ppt/media/image26.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image26.png",
+      "relativePath": "template-inspect/assets/ppt/media/image26.png",
+      "bytes": 26887
+    },
+    {
+      "entry": "ppt/media/image27.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image27.png",
+      "relativePath": "template-inspect/assets/ppt/media/image27.png",
+      "bytes": 2434
+    },
+    {
+      "entry": "ppt/media/image28.svg",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image28.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image28.svg",
+      "bytes": 879
+    },
+    {
+      "entry": "ppt/media/image29.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image29.png",
+      "relativePath": "template-inspect/assets/ppt/media/image29.png",
+      "bytes": 2885
+    },
+    {
+      "entry": "ppt/media/image3.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image3.png",
+      "relativePath": "template-inspect/assets/ppt/media/image3.png",
+      "bytes": 16807
+    },
+    {
+      "entry": "ppt/media/image30.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image30.png",
+      "relativePath": "template-inspect/assets/ppt/media/image30.png",
+      "bytes": 2570
+    },
+    {
+      "entry": "ppt/media/image31.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image31.png",
+      "relativePath": "template-inspect/assets/ppt/media/image31.png",
+      "bytes": 1438
+    },
+    {
+      "entry": "ppt/media/image32.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image32.png",
+      "relativePath": "template-inspect/assets/ppt/media/image32.png",
+      "bytes": 1439
+    },
+    {
+      "entry": "ppt/media/image33.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image33.png",
+      "relativePath": "template-inspect/assets/ppt/media/image33.png",
+      "bytes": 2540
+    },
+    {
+      "entry": "ppt/media/image34.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image34.png",
+      "relativePath": "template-inspect/assets/ppt/media/image34.png",
+      "bytes": 2575
+    },
+    {
+      "entry": "ppt/media/image35.svg",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image35.svg",
+      "relativePath": "template-inspect/assets/ppt/media/image35.svg",
+      "bytes": 1488
+    },
+    {
+      "entry": "ppt/media/image36.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image36.png",
+      "relativePath": "template-inspect/assets/ppt/media/image36.png",
+      "bytes": 2224
+    },
+    {
+      "entry": "ppt/media/image37.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image37.png",
+      "relativePath": "template-inspect/assets/ppt/media/image37.png",
+      "bytes": 1548
+    },
+    {
+      "entry": "ppt/media/image38.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image38.png",
+      "relativePath": "template-inspect/assets/ppt/media/image38.png",
+      "bytes": 3244
+    },
+    {
+      "entry": "ppt/media/image39.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image39.png",
+      "relativePath": "template-inspect/assets/ppt/media/image39.png",
+      "bytes": 14686
+    },
+    {
+      "entry": "ppt/media/image4.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image4.png",
+      "relativePath": "template-inspect/assets/ppt/media/image4.png",
+      "bytes": 25905
+    },
+    {
+      "entry": "ppt/media/image40.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image40.png",
+      "relativePath": "template-inspect/assets/ppt/media/image40.png",
+      "bytes": 2692
+    },
+    {
+      "entry": "ppt/media/image41.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image41.png",
+      "relativePath": "template-inspect/assets/ppt/media/image41.png",
+      "bytes": 3768
+    },
+    {
+      "entry": "ppt/media/image42.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image42.png",
+      "relativePath": "template-inspect/assets/ppt/media/image42.png",
+      "bytes": 10623
+    },
+    {
+      "entry": "ppt/media/image43.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image43.png",
+      "relativePath": "template-inspect/assets/ppt/media/image43.png",
+      "bytes": 4175
+    },
+    {
+      "entry": "ppt/media/image44.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image44.png",
+      "relativePath": "template-inspect/assets/ppt/media/image44.png",
+      "bytes": 2277
+    },
+    {
+      "entry": "ppt/media/image45.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image45.png",
+      "relativePath": "template-inspect/assets/ppt/media/image45.png",
+      "bytes": 3264
+    },
+    {
+      "entry": "ppt/media/image46.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image46.png",
+      "relativePath": "template-inspect/assets/ppt/media/image46.png",
+      "bytes": 1314
+    },
+    {
+      "entry": "ppt/media/image47.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image47.png",
+      "relativePath": "template-inspect/assets/ppt/media/image47.png",
+      "bytes": 1883
+    },
+    {
+      "entry": "ppt/media/image48.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image48.png",
+      "relativePath": "template-inspect/assets/ppt/media/image48.png",
+      "bytes": 2536
+    },
+    {
+      "entry": "ppt/media/image49.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image49.png",
+      "relativePath": "template-inspect/assets/ppt/media/image49.png",
+      "bytes": 2723
+    },
+    {
+      "entry": "ppt/media/image5.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image5.png",
+      "relativePath": "template-inspect/assets/ppt/media/image5.png",
+      "bytes": 28370
+    },
+    {
+      "entry": "ppt/media/image50.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image50.png",
+      "relativePath": "template-inspect/assets/ppt/media/image50.png",
+      "bytes": 3627
+    },
+    {
+      "entry": "ppt/media/image51.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image51.png",
+      "relativePath": "template-inspect/assets/ppt/media/image51.png",
+      "bytes": 2048
+    },
+    {
+      "entry": "ppt/media/image52.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image52.png",
+      "relativePath": "template-inspect/assets/ppt/media/image52.png",
+      "bytes": 1855
+    },
+    {
+      "entry": "ppt/media/image53.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image53.png",
+      "relativePath": "template-inspect/assets/ppt/media/image53.png",
+      "bytes": 1672
+    },
+    {
+      "entry": "ppt/media/image54.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image54.png",
+      "relativePath": "template-inspect/assets/ppt/media/image54.png",
+      "bytes": 2357
+    },
+    {
+      "entry": "ppt/media/image55.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image55.png",
+      "relativePath": "template-inspect/assets/ppt/media/image55.png",
+      "bytes": 32691
+    },
+    {
+      "entry": "ppt/media/image56.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image56.png",
+      "relativePath": "template-inspect/assets/ppt/media/image56.png",
+      "bytes": 3546
+    },
+    {
+      "entry": "ppt/media/image57.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image57.png",
+      "relativePath": "template-inspect/assets/ppt/media/image57.png",
+      "bytes": 3137
+    },
+    {
+      "entry": "ppt/media/image58.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image58.png",
+      "relativePath": "template-inspect/assets/ppt/media/image58.png",
+      "bytes": 12278
+    },
+    {
+      "entry": "ppt/media/image6.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image6.png",
+      "relativePath": "template-inspect/assets/ppt/media/image6.png",
+      "bytes": 18907
+    },
+    {
+      "entry": "ppt/media/image7.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image7.png",
+      "relativePath": "template-inspect/assets/ppt/media/image7.png",
+      "bytes": 25028
+    },
+    {
+      "entry": "ppt/media/image8.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image8.png",
+      "relativePath": "template-inspect/assets/ppt/media/image8.png",
+      "bytes": 41422
+    },
+    {
+      "entry": "ppt/media/image9.png",
+      "path": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-inspect\\assets\\ppt\\media\\image9.png",
+      "relativePath": "template-inspect/assets/ppt/media/image9.png",
+      "bytes": 62057
+    }
+  ],
+  "fonts": [
+    "+mj-ea",
+    "+mj-lt",
+    "+mn-cs",
+    "+mn-ea",
+    "+mn-lt",
+    "-apple-system",
+    "Angsana New",
+    "Aptos Slab Black",
+    "Arial",
+    "Calibri",
+    "Calibri Light",
+    "Cambria Math",
+    "Cordia New",
+    "DaunPenh",
+    "DokChampa",
+    "Estrangelo Edessa",
+    "Euphemia",
+    "Gautami",
+    "Iskoola Pota",
+    "Kalinga",
+    "Kartika",
+    "Latha",
+    "MV Boli",
+    "Mangal",
+    "Microsoft Himalaya",
+    "Microsoft Uighur",
+    "Microsoft Yi Baiti",
+    "Mongolian Baiti",
+    "MoolBoran",
+    "Nyala",
+    "Plantagenet Cherokee",
+    "Raavi",
+    "Shruti",
+    "Sylfaen",
+    "Times New Roman",
+    "Tunga",
+    "Vrinda",
+    "Wingdings",
+    "新細明體",
+    "游ゴシック",
+    "游ゴシック Light",
+    "等线",
+    "等线 Light",
+    "맑은 고딕",
+    "ＭＳ Ｐゴシック"
+  ],
+  "packageParts": {
+    "mediaCount": 58,
+    "slideXmlCount": 21,
+    "chartCount": 0,
+    "tableSlideCount": 11
+  }
+}

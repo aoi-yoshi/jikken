@@ -1,0 +1,46 @@
+Slide 1 — Title
+FedPACTの全体処理フロー
+代理データを介した異種モデル間知識転移
+9月4日研究会
+
+Slide 2 — Research objective
+Purpose: transfer client-side private local-adaptation knowledge into a heterogeneous foundation model without sharing raw data.
+Obstacle 1: LoRA parameters cannot be directly aggregated across 3B and 7B models.
+Obstacle 2: private inputs are not shared, so client logits cannot be aligned on the same samples.
+Approach: bridge the two obstacles with server-owned seed data and proxy-logit pairs.
+
+Slide 3 — Overall three-layer flow
+Layer 1: distribute global surrogate LoRA, locally adapt on private data, send LoRA update and post/delta/frequency prototypes, aggregate to the next global surrogate.
+Layer 2: use the pre/post global surrogate, client prototypes, and server seed to search and validate proxy inputs.
+Layer 3: use selected proxy pairs to distill into the foundation LoRA.
+The updated global surrogate is also redistributed in the next round.
+
+Slide 4 — Layer 1 detail
+Private data never leaves the client.
+The client computes pre/post on the same samples, forms delta, and sends post, delta, frequency, LoRA update, and head information.
+Mu_pre stays inside the client.
+The server aggregates LoRA updates to A_G^(t+1), which is used by Layer 2 and the next round.
+
+Slide 5 — Layer 2 detail
+Inputs: M_G^t, M_G^(t+1), mu_post, delta_mu, frequency, and server seed data.
+Retrieve a seed, transform it, evaluate post fidelity and delta fidelity, add regularization, and iterate until quality is sufficient.
+Regularization covers seed deviation, naturalness, temporal consistency, and diversity.
+
+Slide 6 — Layer 3 detail
+Define P=(x_tilde, mu_post).
+Initial use keeps prototype frequency; Stage II adds Qinv-based selection or weighting.
+Use selected weighted pairs as teachers to update only the foundation LoRA.
+Replay, anchor, Qretain, and residual paths are Stage III extensions.
+
+Slide 7 — Future work
+Stage I: local FedPACT prototype and 3–5-round traceable execution.
+Stage II: basic FedPACT preliminary experiments with 3B surrogate and 7B+ foundation.
+Stage III: continual learning, replay, anchor, and residual-path decision.
+Stage IV: integrated full experiment and ablations.
+Current position: Stage I.
+
+Slide 8 — Summary
+Represent private adaptation by mu_post, delta_mu, and frequency.
+Materialize it as a proxy input using the pre/post global surrogate and server seed.
+Select proxy pairs and transfer them to a heterogeneous foundation LoRA.
+

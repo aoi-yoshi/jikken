@@ -1,0 +1,9 @@
+Slide 1: Retitle to the narrower research scope; preserve all branding and identity fields.
+Slide 2: Replace provisional planning language with the Deep Research verdict.
+Slide 3: Prioritize the strongest novelty objections: FedMKT, FedProxy, Fed-ET, and FedMD/FedDF.
+Slide 4: Replace the client-knowledge-return-first claim with the recommended same-family capacity-heterogeneous VLM claim.
+Slide 5: Replace generic metrics with explicit pass/fail evidence for simultaneous improvement and practical Pareto advantage.
+Slide 6: Keep the five-condition structure but align it to independent, one-way, prior-art-like, and proposed conditions.
+Slide 7: Add domain-sliced clients, controlled compute, and shared-buffer ablations.
+Slide 8: Convert broad planning items into the exact next implementation and reading tasks.
+

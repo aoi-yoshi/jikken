@@ -1,0 +1,48 @@
+{"kind":"deck","id":"pr/ug3pwt","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"","type":"master","placeholders":[{"name":"body","type":"body","textPreview":"マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル"},{"name":"title","type":"title","textPreview":"マスター タイトルの書式設定"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"タイトル スライド","type":"title","placeholders":[{"name":"title","type":"title","textPreview":"マスター タイトル"},{"name":"subtitle","type":"subtitle","textPreview":"マスター サブタイトルの書式設定"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout2.xml","name":"タイトルとコンテンツ","placeholders":[{"name":"title","type":"title","textPreview":"マスター タイトルの書式設定"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"},{"name":"content placeholder 2","textPreview":"マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout3.xml","name":"ユーザー設定レイアウト","placeholders":[{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"slide","id":"sl/g69ch6","slide":1,"title":"共通処理フローとLpredによる基盤LoRA更新フローの整理surrogate適応情報を用いた基盤モデル更新","textShapes":4}
+{"kind":"textbox","id":"sh/sby98nu1","slide":1,"name":"タイトル 1","placeholder":"title","text":"共通処理フローとLpredによる基盤LoRA更新フローの整理surrogate適応情報を用いた基盤モデル更新","textPreview":"共通処理フローとLpredによる基盤LoRA更新フローの整理surrogate適応情報を用いた基盤モデル更新","textChars":54,"textLines":1,"bbox":[27.92,206.1,1223.12,153.9]}
+{"kind":"textbox","id":"sh/dc7a1svm","slide":1,"name":"字幕 2","placeholder":"subtitle","text":"名古屋大学\n情報学研究科\n知能システム学専攻　1年","textPreview":"名古屋大学 | 情報学研究科 | 知能システム学専攻　1年","textChars":25,"textLines":3,"bbox":[323.22,540.74,911.46,153.9]}
+{"kind":"textbox","id":"sh/edgraxcr","slide":1,"name":"タイトル 1","text":"吉村　有生","textPreview":"吉村　有生","textChars":5,"textLines":1,"bbox":[205.18,411.89,868.61,153.9]}
+{"kind":"textbox","id":"sh/0zy9cnux","slide":1,"name":"タイトル 1","text":"7月24日報告会","textPreview":"7月24日報告会","textChars":8,"textLines":1,"bbox":[194.46,343.67,890.03,153.9]}
+{"kind":"notes","id":"nt/g69ch6","slide":1,"text":""}
+{"kind":"slide","id":"sl/lxobvo","slide":2,"title":"今後","textShapes":3}
+{"kind":"textbox","id":"sh/na5czalk","slide":2,"name":"タイトル 1","placeholder":"title","text":"今後","textPreview":"今後","textChars":2,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/29wv65kz","slide":2,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/xg7u5kjm","slide":2,"name":"コンテンツ プレースホルダー 3","text":"未確定の処理，複数の方法が考えられる処理\nLpred・Lgrad・Lpost、集約方法\n蒸留部分\n\n","textPreview":"未確定の処理，複数の方法が考えられる処理 | Lpred・Lgrad・Lpost、集約方法 | 蒸留部分 |  |","textChars":50,"textLines":5,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/lxobvo","slide":2,"text":""}
+{"kind":"slide","id":"sl/xgxkcm","slide":3,"title":"集約方法の候補","textShapes":2}
+{"kind":"textbox","id":"sh/xw3mto3m","slide":3,"name":"タイトル 1","placeholder":"title","text":"集約方法の候補","textPreview":"集約方法の候補","textChars":7,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/wvu50jm1","slide":3,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/jyl4vylc","slide":3,"name":"コンテンツ プレースホルダー 3","bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/nq54nip4","slide":3,"name":"表 5","rows":6,"cols":4,"preview":"方法 | 重み () | 妥当性 | 課題","bbox":[263.97,270.94,752.06,405.78]}
+{"kind":"notes","id":"nt/xgxkcm","slide":3,"text":""}
+{"kind":"slide","id":"sl/qmqfmo","slide":4,"title":"今後","textShapes":3}
+{"kind":"textbox","id":"sh/uts3id03","slide":4,"name":"タイトル 1","placeholder":"title","text":"今後","textPreview":"今後","textChars":2,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/vu1kbiho","slide":4,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/4zuloni5","slide":4,"name":"コンテンツ プレースホルダー 3","text":"未確定の処理，複数の方法が考えられる処理\nLpred・Lgrad・Lpost、集約方法\n蒸留部分\n\n","textPreview":"未確定の処理，複数の方法が考えられる処理 | Lpred・Lgrad・Lpost、集約方法 | 蒸留部分 |  |","textChars":50,"textLines":5,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/qmqfmo","slide":4,"text":""}
+{"kind":"slide","id":"sl/9ivil1","slide":5,"title":"Lpred・Lgrad・Lpostによって変更される場所","textShapes":2}
+{"kind":"textbox","id":"sh/dcn6lcny","slide":5,"name":"タイトル 1","placeholder":"title","text":"Lpred・Lgrad・Lpostによって変更される場所","textPreview":"Lpred・Lgrad・Lpostによって変更される場所","textChars":28,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/cbe5s7md","slide":5,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/ax47ihsn","slide":5,"name":"コンテンツ プレースホルダー 4","rows":10,"cols":4,"preview":"項目 | Lpred | Lgrad | Lpost","bbox":[75.7,129.48,1128.59,519.84]}
+{"kind":"notes","id":"nt/9ivil1","slide":5,"text":""}
+{"kind":"slide","id":"sl/mysjyf","slide":6,"title":"集約方法の候補","textShapes":2}
+{"kind":"textbox","id":"sh/1cvalwbu","slide":6,"name":"タイトル 1","placeholder":"title","text":"集約方法の候補","textPreview":"集約方法の候補","textChars":7,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/gbmtsra9","slide":6,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/3edsn6t0","slide":6,"name":"コンテンツ プレースホルダー 3","bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/nq1ozqdg","slide":6,"name":"表 5","rows":6,"cols":4,"preview":"方法 | 重み () | 妥当性 | 課題","bbox":[263.97,270.94,752.06,405.78]}
+{"kind":"notes","id":"nt/mysjyf","slide":6,"text":""}
+{"kind":"slide","id":"sl/aezqxf","slide":7,"title":"今後","textShapes":3}
+{"kind":"textbox","id":"sh/adcnaxk7","slide":7,"name":"タイトル 1","placeholder":"title","text":"今後","textPreview":"今後","textChars":2,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/vyloj21s","slide":7,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/k3u5g72p","slide":7,"name":"コンテンツ プレースホルダー 3","text":"未確定の処理，複数の方法が考えられる処理\nLpred・Lgrad・Lpost、集約方法\n蒸留部分\n\n","textPreview":"未確定の処理，複数の方法が考えられる処理 | Lpred・Lgrad・Lpost、集約方法 | 蒸留部分 |  |","textChars":50,"textLines":5,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/aezqxf","slide":7,"text":""}
+{"kind":"slide","id":"sl/d124cl","slide":8,"title":"今後","textShapes":3}
+{"kind":"textbox","id":"sh/z2x436xk","slide":8,"name":"タイトル 1","placeholder":"title","text":"今後","textPreview":"今後","textChars":2,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/y143u1gz","slide":8,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/9sfm9gfm","slide":8,"name":"コンテンツ プレースホルダー 3","text":"未確定の処理，複数の方法が考えられる処理\nLpred・Lgrad・Lpost、集約方法\n蒸留部分\n\n","textPreview":"未確定の処理，複数の方法が考えられる処理 | Lpred・Lgrad・Lpost、集約方法 | 蒸留部分 |  |","textChars":50,"textLines":5,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/d124cl","slide":8,"text":""}

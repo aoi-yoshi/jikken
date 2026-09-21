@@ -1,0 +1,18 @@
+Slide 1:
+- Rewrites only the title and meeting date. Name, affiliation, master, layout, and all title-slide chrome are preserved.
+
+Slides 2, 4, 7, 8:
+- Reuse the source slide 10 title-and-body pattern.
+- Rewrite inherited text only; no geometry or style changes.
+
+Slides 3 and 6:
+- Reuse the source slide 11 table pattern.
+- Rewrite all table cell values in place.
+- Delete the source's empty full-slide content placeholder because leaving it would create an unresolved PowerPoint placeholder.
+
+Slide 5:
+- Reuse the source slide 9 full-width table pattern.
+- Rewrite all 10 x 4 cells in place.
+
+No new primitives, media, diagrams, or layout overlays are introduced.
+

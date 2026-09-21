@@ -1,4 +1,10 @@
-"""Step 7 Stage 1+: クライアント logits の export・集約（FedMD / FedDF 型）。"""
+"""Step 7 Stage 1+: logits の export・集約・蒸留配布（FedMD / FedDF 型）。
+
+- export_client_logits: クライアント→サーバの logits 送信（Stage 1 の Lpred teacher）
+- distill_adapter_from_logits: サーバ→クライアントの蒸留配布
+  （更新した基盤 LoRA の logits を teacher に、クライアント LoRA + 分類ヘッドを KL で更新。
+   LoRA 形状に依存しないため 7B 基盤モデル → 3B クライアントでも動く）
+"""
 from __future__ import annotations
 
 import json
@@ -10,6 +16,7 @@ import torch.nn.functional as F
 from torch.amp import autocast
 
 from .dataset_manifest import load_sample_row
+from .vl_model import kl_distillation
 
 
 @torch.no_grad()
@@ -51,6 +58,8 @@ def save_client_logits_artifact(
     run_dir: Path,
     round_num: int,
     logits_map: Dict[str, List[float]],
+    *,
+    name: str = "client_logits",
 ) -> Path:
     sample_ids = list(logits_map.keys())
     payload = {
@@ -58,7 +67,7 @@ def save_client_logits_artifact(
         "sample_ids": sample_ids,
         "logits": [logits_map[sid] for sid in sample_ids],
     }
-    path = run_dir / f"client_logits_r{round_num}.json"
+    path = run_dir / f"{name}_r{round_num}.json"
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     return path
 
@@ -113,3 +122,57 @@ def logits_map_to_tensor(
     """1 サンプル分の logits を (1, num_classes) テンソルに。"""
     vec = logits_map[sample_id]
     return torch.tensor([vec], device=device, dtype=torch.float32)
+
+
+def distill_adapter_from_logits(
+    model,
+    processor,
+    rows: List[dict],
+    dcfg: dict,
+    *,
+    teacher_logits_map: Dict[str, List[float]],
+    adapter: str,
+    trainable_params: List[torch.nn.Parameter],
+    prompt: str,
+    max_length: int,
+    device: torch.device,
+    lr: float,
+    max_steps: int | None = None,
+    temperature: float = 2.0,
+) -> Dict[str, float]:
+    """蒸留配布: teacher logits（更新済み基盤 LoRA の出力）へ KL で adapter + ヘッドを寄せる。
+
+    FedMD の Digest / FedDF のサーバ蒸留と同型。重みを直接コピーしないため、
+    基盤モデル（7B）とクライアントモデル（3B）で LoRA 形状が違ってもエラーにならない。
+    rows は公開整合セット（server_train）。teacher_logits_map に無い ID はスキップ。
+    """
+    model.train()
+    model.backbone.set_adapter(adapter)
+    for p in trainable_params:
+        p.requires_grad = True
+    opt = torch.optim.AdamW(trainable_params, lr=lr)
+    steps = 0
+    last_kl = 0.0
+    for r in rows:
+        if max_steps is not None and steps >= max_steps:
+            break
+        sid = str(r["id"])
+        if sid not in teacher_logits_map:
+            continue
+        sample = load_sample_row(r, dcfg)
+        teacher = logits_map_to_tensor(teacher_logits_map, sid, device)
+        opt.zero_grad(set_to_none=True)
+        with autocast(device_type=device.type, dtype=torch.bfloat16, enabled=(device.type == "cuda")):
+            logits, _ = model.forward_batch(
+                processor,
+                sample.frames,
+                prompt,
+                max_length,
+                output_hidden_states=True,
+            )
+            loss = kl_distillation(logits.float(), teacher, temperature)
+        loss.backward()
+        opt.step()
+        last_kl = float(loss.detach().cpu())
+        steps += 1
+    return {"distill_steps": float(steps), "distill_kl_last": last_kl}

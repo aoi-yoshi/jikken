@@ -1,0 +1,92 @@
+{
+  "outputSlides": [
+    {
+      "outputSlide": 1,
+      "sourceSlide": 1,
+      "narrativeRole": "opening thesis",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId": "sh/547294r6", "action": "rewrite"},
+        {"sourceElementId": "sh/k3yl0zql", "action": "fill-placeholder"}
+      ]
+    },
+    {
+      "outputSlide": 2,
+      "sourceSlide": 2,
+      "narrativeRole": "summary",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId": "sh/9072xkry", "action": "rewrite"},
+        {"sourceElementId": "sh/ozy1ofad", "action": "fill-placeholder"},
+        {"sourceElementId": "sh/b29kza94", "action": "rewrite"}
+      ]
+    },
+    {
+      "outputSlide": 3,
+      "sourceSlide": 3,
+      "narrativeRole": "comparison table",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId": "sh/cza94vmx", "action": "rewrite"},
+        {"sourceElementId": "sh/d0jax03i", "action": "fill-placeholder"},
+        {"sourceElementId": "tb/juho7qhg", "action": "rewrite"}
+      ]
+    },
+    {
+      "outputSlide": 4,
+      "sourceSlide": 4,
+      "narrativeRole": "research thesis",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId": "sh/1cj2d8b6", "action": "rewrite"},
+        {"sourceElementId": "sh/0ba143al", "action": "fill-placeholder"},
+        {"sourceElementId": "sh/rm1k7yt4", "action": "rewrite"}
+      ]
+    },
+    {
+      "outputSlide": 5,
+      "sourceSlide": 5,
+      "narrativeRole": "success metric table",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId": "sh/dgbulwnm", "action": "rewrite"},
+        {"sourceElementId": "sh/cf2tcr61", "action": "fill-placeholder"},
+        {"sourceElementId": "tb/m94nadsn", "action": "rewrite"}
+      ]
+    },
+    {
+      "outputSlide": 6,
+      "sourceSlide": 6,
+      "narrativeRole": "comparison table",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId": "sh/yhg7epsj", "action": "rewrite"},
+        {"sourceElementId": "sh/zi98nu94", "action": "fill-placeholder"},
+        {"sourceElementId": "tb/5gzmp4vu", "action": "rewrite"}
+      ]
+    },
+    {
+      "outputSlide": 7,
+      "sourceSlide": 7,
+      "narrativeRole": "experiment arc",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId": "sh/cb2tkvap", "action": "rewrite"},
+        {"sourceElementId": "sh/dcbud0ra", "action": "fill-placeholder"},
+        {"sourceElementId": "sh/ydkbm5sv", "action": "rewrite"}
+      ]
+    },
+    {
+      "outputSlide": 8,
+      "sourceSlide": 8,
+      "narrativeRole": "action summary",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId": "sh/18byd4zy", "action": "rewrite"},
+        {"sourceElementId": "sh/g72x4zyd", "action": "fill-placeholder"},
+        {"sourceElementId": "sh/ri9g7uhw", "action": "rewrite"}
+      ]
+    }
+  ],
+  "omittedSourceSlides": []
+}

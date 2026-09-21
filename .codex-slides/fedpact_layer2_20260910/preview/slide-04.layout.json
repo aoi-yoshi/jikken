@@ -1,0 +1,1559 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/v3s17a",
+    "id": "v3s17a",
+    "slide": 4,
+    "layoutId": "2dbcd378-f854-4033-a3aa-0712fe66c271",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "dff54aff-60bb-4ccf-9618-7a656e900462",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F7F6F2",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "BIZ UDPGothic"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2dbcd378-f854-4033-a3aa-0712fe66c271",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "dff54aff-60bb-4ccf-9618-7a656e900462",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "dff54aff-60bb-4ccf-9618-7a656e900462",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fi1wvypw",
+      "id": "1",
+      "bbox": [
+        64,
+        42,
+        1080,
+        54
+      ],
+      "geometry": "rect",
+      "text": "探索距離はseed候補を順位付けするための尺度",
+      "textPreview": "探索距離はseed候補を順位付けするための尺度",
+      "resolvedFontSize": 36,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 36,
+        "typeface": "BIZ UDPGothic",
+        "color": "#102A43",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "探索距離はseed候補を順位付けするための尺度"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "探索距離はseed候補を順位付けするための尺度",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 36,
+            "typeface": "BIZ UDPGothic",
+            "color": "#102A43",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "探索距離はseed候補を順位付けするための尺度",
+              "fontSize": 36,
+              "typeface": "BIZ UDPGothic",
+              "color": "#102A43",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gjaxo3qh",
+      "id": "2",
+      "bbox": [
+        1158,
+        48,
+        62,
+        26
+      ],
+      "geometry": "rect",
+      "text": "03",
+      "textPreview": "03",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "BIZ UDPGothic",
+        "color": "#2F6FA5",
+        "bold": true,
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "BIZ UDPGothic",
+            "color": "#2F6FA5",
+            "bold": true,
+            "alignment": "right",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03",
+              "fontSize": 16,
+              "typeface": "BIZ UDPGothic",
+              "color": "#2F6FA5",
+              "bold": true,
+              "alignment": "right",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1kjexo72",
+      "id": "3",
+      "bbox": [
+        64,
+        105,
+        1152,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#C7D1D9",
+      "lineWidth": 1.5
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2lsfqt8n",
+      "id": "4",
+      "bbox": [
+        64,
+        165,
+        355,
+        190
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#DDF1EC",
+      "lineColor": "#168A7A",
+      "lineWidth": 2
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3m1wzyp8",
+      "id": "5",
+      "bbox": [
+        88,
+        187,
+        307,
+        32
+      ],
+      "geometry": "rect",
+      "text": "端末から届いた目標",
+      "textPreview": "端末から届いた目標",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "BIZ UDPGothic",
+        "color": "#168A7A",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "端末から届いた目標"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "端末から届いた目標",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "typeface": "BIZ UDPGothic",
+            "color": "#168A7A",
+            "bold": true,
+            "alignment": "center",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "端末から届いた目標",
+              "fontSize": 25,
+              "typeface": "BIZ UDPGothic",
+              "color": "#168A7A",
+              "bold": true,
+              "alignment": "center",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/onuxs3qd",
+      "id": "6",
+      "bbox": [
+        88,
+        235,
+        307,
+        30
+      ],
+      "geometry": "rect",
+      "text": "μ_post",
+      "textPreview": "μ_post",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "BIZ UDPGothic",
+        "color": "#102A43",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "μ_post"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "μ_post",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "BIZ UDPGothic",
+            "color": "#102A43",
+            "bold": true,
+            "alignment": "center",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "μ_post",
+              "fontSize": 22,
+              "typeface": "BIZ UDPGothic",
+              "color": "#102A43",
+              "bold": true,
+              "alignment": "center",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p83e187y",
+      "id": "7",
+      "bbox": [
+        95,
+        305,
+        294,
+        28
+      ],
+      "geometry": "rect",
+      "fillColor": "#E7ECEF",
+      "lineColor": "#E7ECEF",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ip8ve983",
+      "id": "8",
+      "bbox": [
+        95,
+        305,
+        19.7,
+        28
+      ],
+      "geometry": "rect",
+      "fillColor": "#2F6FA5",
+      "lineColor": "#2F6FA5",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jqhwnepo",
+      "id": "9",
+      "bbox": [
+        114.7,
+        305,
+        274.3,
+        28
+      ],
+      "geometry": "rect",
+      "fillColor": "#D95D45",
+      "lineColor": "#D95D45",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zylw32t0",
+      "id": "10",
+      "bbox": [
+        95,
+        280,
+        147,
+        22
+      ],
+      "geometry": "rect",
+      "text": "normal 0.067",
+      "textPreview": "normal 0.067",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "BIZ UDPGothic",
+        "color": "#2F6FA5",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "normal 0.067"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "normal 0.067",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "BIZ UDPGothic",
+            "color": "#2F6FA5",
+            "alignment": "left",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "normal 0.067",
+              "fontSize": 17,
+              "typeface": "BIZ UDPGothic",
+              "color": "#2F6FA5",
+              "alignment": "left",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yxcvaxcf",
+      "id": "11",
+      "bbox": [
+        242,
+        280,
+        147,
+        22
+      ],
+      "geometry": "rect",
+      "text": "risk 0.933",
+      "textPreview": "risk 0.933",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "BIZ UDPGothic",
+        "color": "#D95D45",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "risk 0.933"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "risk 0.933",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "BIZ UDPGothic",
+            "color": "#D95D45",
+            "alignment": "right",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "risk 0.933",
+              "fontSize": 17,
+              "typeface": "BIZ UDPGothic",
+              "color": "#D95D45",
+              "alignment": "right",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l03e5cb6",
+      "id": "12",
+      "bbox": [
+        486,
+        205,
+        270,
+        110
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#2F6FA5",
+      "lineWidth": 2
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0zudc7ul",
+      "id": "13",
+      "bbox": [
+        505,
+        226,
+        232,
+        30
+      ],
+      "geometry": "rect",
+      "text": "updated global surrogate",
+      "textPreview": "updated global surrogate",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "BIZ UDPGothic",
+        "color": "#2F6FA5",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "updated global"
+          },
+          {
+            "index": 2,
+            "text": "surrogate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "updated global surrogate",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "BIZ UDPGothic",
+            "color": "#2F6FA5",
+            "bold": true,
+            "alignment": "center",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "updated global surrogate",
+              "fontSize": 21,
+              "typeface": "BIZ UDPGothic",
+              "color": "#2F6FA5",
+              "bold": true,
+              "alignment": "center",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/balwzit4",
+      "id": "14",
+      "bbox": [
+        505,
+        270,
+        232,
+        25
+      ],
+      "geometry": "rect",
+      "text": "seed画像を確率分布へ変換",
+      "textPreview": "seed画像を確率分布へ変換",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "BIZ UDPGothic",
+        "color": "#52667A",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "seed画像を確率分布へ変換"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "seed画像を確率分布へ変換",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "BIZ UDPGothic",
+            "color": "#52667A",
+            "alignment": "center",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "seed画像を確率分布へ変換",
+              "fontSize": 17,
+              "typeface": "BIZ UDPGothic",
+              "color": "#52667A",
+              "alignment": "center",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q9sv6dcj",
+      "id": "15",
+      "bbox": [
+        824,
+        165,
+        390,
+        190
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#E5EFF8",
+      "lineColor": "#2F6FA5",
+      "lineWidth": 2
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dw3e1sbu",
+      "id": "16",
+      "bbox": [
+        850,
+        187,
+        338,
+        32
+      ],
+      "geometry": "rect",
+      "text": "seed候補 k の出力",
+      "textPreview": "seed候補 k の出力",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "BIZ UDPGothic",
+        "color": "#2F6FA5",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "seed候補 k の出力"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "seed候補 k の出力",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "typeface": "BIZ UDPGothic",
+            "color": "#2F6FA5",
+            "bold": true,
+            "alignment": "center",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "seed候補 k の出力",
+              "fontSize": 25,
+              "typeface": "BIZ UDPGothic",
+              "color": "#2F6FA5",
+              "bold": true,
+              "alignment": "center",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cbud8nup",
+      "id": "17",
+      "bbox": [
+        850,
+        235,
+        338,
+        30
+      ],
+      "geometry": "rect",
+      "text": "p_G^after(x_seed,k)",
+      "textPreview": "p_G^after(x_seed,k)",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "BIZ UDPGothic",
+        "color": "#102A43",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "p_G^after(x_seed,k)"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "p_G^after(x_seed,k)",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "BIZ UDPGothic",
+            "color": "#102A43",
+            "bold": true,
+            "alignment": "center",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "p_G^after(x_seed,k)",
+              "fontSize": 22,
+              "typeface": "BIZ UDPGothic",
+              "color": "#102A43",
+              "bold": true,
+              "alignment": "center",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/361wvits",
+      "id": "18",
+      "bbox": [
+        864,
+        305,
+        310,
+        28
+      ],
+      "geometry": "rect",
+      "fillColor": "#E7ECEF",
+      "lineColor": "#E7ECEF",
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/25sv2dc7",
+      "id": "19",
+      "bbox": [
+        864,
+        305,
+        27.59,
+        28
+      ],
+      "geometry": "rect",
+      "fillColor": "#2F6FA5",
+      "lineColor": "#2F6FA5",
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/618fedwf",
+      "id": "20",
+      "bbox": [
+        891.59,
+        305,
+        282.41,
+        28
+      ],
+      "geometry": "rect",
+      "fillColor": "#D95D45",
+      "lineColor": "#D95D45",
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/r2hwnidk",
+      "id": "21",
+      "bbox": [
+        864,
+        280,
+        155,
+        22
+      ],
+      "geometry": "rect",
+      "text": "normal 0.089",
+      "textPreview": "normal 0.089",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "BIZ UDPGothic",
+        "color": "#2F6FA5",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "normal 0.089"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "normal 0.089",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "BIZ UDPGothic",
+            "color": "#2F6FA5",
+            "alignment": "left",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "normal 0.089",
+              "fontSize": 17,
+              "typeface": "BIZ UDPGothic",
+              "color": "#2F6FA5",
+              "alignment": "left",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s3axgne5",
+      "id": "22",
+      "bbox": [
+        1019,
+        280,
+        155,
+        22
+      ],
+      "geometry": "rect",
+      "text": "risk 0.911",
+      "textPreview": "risk 0.911",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "BIZ UDPGothic",
+        "color": "#D95D45",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "risk 0.911"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "risk 0.911",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "BIZ UDPGothic",
+            "color": "#D95D45",
+            "alignment": "right",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "risk 0.911",
+              "fontSize": 17,
+              "typeface": "BIZ UDPGothic",
+              "color": "#D95D45",
+              "alignment": "right",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t4jep8vq",
+      "id": "23",
+      "bbox": [
+        419,
+        260,
+        67,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#168A7A",
+      "lineWidth": 3
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e5sfidwb",
+      "id": "24",
+      "bbox": [
+        756,
+        260,
+        68,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#2F6FA5",
+      "lineWidth": 3
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f61wridw",
+      "id": "25",
+      "bbox": [
+        130,
+        410,
+        1020,
+        92
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C7D1D9",
+      "lineWidth": 1.5
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g7axkneh",
+      "id": "26",
+      "bbox": [
+        170,
+        430,
+        940,
+        45
+      ],
+      "geometry": "rect",
+      "text": "d_k = D_KL( μ_post  ||  p_G^after(x_seed,k) )",
+      "textPreview": "d_k = D_KL( μ_post  ||  p_G^after(x_seed,k) )",
+      "resolvedFontSize": 31,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 31,
+        "typeface": "BIZ UDPGothic",
+        "color": "#102A43",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "d_k = D_KL( μ_post  ||  p_G^after(x_seed,k) )"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "d_k = D_KL( μ_post  ||  p_G^after(x_seed,k) )",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 31,
+            "typeface": "BIZ UDPGothic",
+            "color": "#102A43",
+            "bold": true,
+            "alignment": "center",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "d_k = D_KL( μ_post  ||  p_G^after(x_seed,k) )",
+              "fontSize": 31,
+              "typeface": "BIZ UDPGothic",
+              "color": "#102A43",
+              "bold": true,
+              "alignment": "center",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/18jetsv2",
+      "id": "27",
+      "bbox": [
+        64,
+        550,
+        225,
+        30
+      ],
+      "geometry": "rect",
+      "text": "なぜ距離が必要か",
+      "textPreview": "なぜ距離が必要か",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "BIZ UDPGothic",
+        "color": "#D95D45",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "なぜ距離が必要か"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "なぜ距離が必要か",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "BIZ UDPGothic",
+            "color": "#D95D45",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "なぜ距離が必要か",
+              "fontSize": 23,
+              "typeface": "BIZ UDPGothic",
+              "color": "#D95D45",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/29sfmxw7",
+      "id": "28",
+      "bbox": [
+        300,
+        548,
+        900,
+        36
+      ],
+      "geometry": "rect",
+      "text": "多数のseedを並べるには、2つの確率分布のずれを1つの数値にする必要がある",
+      "textPreview": "多数のseedを並べるには、2つの確率分布のずれを1つの数値にする必要がある",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "BIZ UDPGothic",
+        "color": "#102A43",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "多数のseedを並べるには、2つの確率分布のずれを1つの数値にする必要がある"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "多数のseedを並べるには、2つの確率分布のずれを1つの数値にする必要がある",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "BIZ UDPGothic",
+            "color": "#102A43",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "多数のseedを並べるには、2つの確率分布のずれを1つの数値にする必要がある",
+              "fontSize": 22,
+              "typeface": "BIZ UDPGothic",
+              "color": "#102A43",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ulgv2ds",
+      "id": "29",
+      "bbox": [
+        300,
+        602,
+        900,
+        34
+      ],
+      "geometry": "rect",
+      "text": "距離が小さいほど、updated global surrogateが端末の学習後判断に近い反応をする",
+      "textPreview": "距離が小さいほど、updated global surrogateが端末の学習後判断に近い反応をする",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "BIZ UDPGothic",
+        "color": "#52667A",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "距離が小さいほど、updated global surrogateが端末の学習後判断に近い反応をする"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "距離が小さいほど、updated global surrogateが端末の学習後判断に近い反応をする",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "BIZ UDPGothic",
+            "color": "#52667A",
+            "alignment": "left",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "距離が小さいほど、updated global surrogateが端末の学習後判断に近い反応をする",
+              "fontSize": 21,
+              "typeface": "BIZ UDPGothic",
+              "color": "#52667A",
+              "alignment": "left",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/donilwfa",
+      "id": "30",
+      "bbox": [
+        64,
+        682,
+        1040,
+        20
+      ],
+      "geometry": "rect",
+      "text": "retrievalではpost prototypeのみを用いる。画像の画素距離や見た目の類似度ではない",
+      "textPreview": "retrievalではpost prototypeのみを用いる。画像の画素距離や見た目の類似度ではない",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "BIZ UDPGothic",
+        "color": "#7D8A97",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "retrievalではpost prototypeのみを用いる。画像の画素距離や見た目の類似度ではない"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "retrievalではpost prototypeのみを用いる。画像の画素距離や見た目の類似度ではない",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "BIZ UDPGothic",
+            "color": "#7D8A97",
+            "alignment": "left",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "retrievalではpost prototypeのみを用いる。画像の画素距離や見た目の類似度ではない",
+              "fontSize": 14,
+              "typeface": "BIZ UDPGothic",
+              "color": "#7D8A97",
+              "alignment": "left",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c3ehcryp",
+      "id": "31",
+      "bbox": [
+        1160,
+        680,
+        56,
+        22
+      ],
+      "geometry": "rect",
+      "text": "4",
+      "textPreview": "4",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "BIZ UDPGothic",
+        "color": "#7D8A97",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "4"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "4",
+          "lineSpacingPercent": 100000,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "BIZ UDPGothic",
+            "color": "#7D8A97",
+            "alignment": "right",
+            "lineSpacing": 1
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "4",
+              "fontSize": 15,
+              "typeface": "BIZ UDPGothic",
+              "color": "#7D8A97",
+              "alignment": "right",
+              "lineSpacing": 1
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "fedpact-stage2-temporal-input-v3",
+  "source_dir": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920",
+  "num_frames": 8,
+  "sampling_rule": "risk_alert_event_uniform_8_shared_absolute_seconds",
+  "input_task": "alert-interval clip normal/risk classification; not early anticipation",
+  "unique_videos": 132,
+  "manifest_counts": {
+    "client_train": 16,
+    "gate_validation": 16,
+    "d_server_lab": 60,
+    "retention_test": 40
+  },
+  "pair_count": 66,
+  "alert_interval_sec": {
+    "min": 0.4009999999999998,
+    "mean": 1.797666666666667,
+    "max": 4.099999999999998
+  },
+  "content_hash": "21f1221558bef8fbe38ef106e6e6f1ce748fe683c0fcfe64923663b67711ca94"
+}

@@ -1,0 +1,312 @@
+{"kind":"deck","id":"pr/mh22zl","name":"Deck"}
+{"kind":"layout","layoutId":"dff54aff-60bb-4ccf-9618-7a656e900462","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"2dbcd378-f854-4033-a3aa-0712fe66c271","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/1bjdc0","slide":1,"title":"FedPACT Layer 2","textShapes":5}
+{"kind":"shape","id":"sh/3at0zmhs","slide":1,"bbox":[0,0,650,720]}
+{"kind":"shape","id":"sh/29kj6hg7","slide":1,"bbox":[594,0,56,720]}
+{"kind":"textbox","id":"sh/dgvi5wfu","slide":1,"text":"FedPACT Layer 2","textPreview":"FedPACT Layer 2","textChars":15,"textLines":1,"bbox":[66,70,480,34]}
+{"kind":"textbox","id":"sh/cf21cby9","slide":1,"text":"現場の適応知識を\n生画像なしで\nクラウドへ戻す","textPreview":"現場の適応知識を | 生画像なしで | クラウドへ戻す","textChars":23,"textLines":3,"bbox":[66,135,485,220]}
+{"kind":"textbox","id":"sh/bet036xo","slide":1,"text":"NEXARの具体例で追う\nseed探索・画像変換・proxy選択","textPreview":"NEXARの具体例で追う | seed探索・画像変換・proxy選択","textChars":32,"textLines":2,"bbox":[70,405,450,78]}
+{"kind":"textbox","id":"sh/qdkja1g3","slide":1,"text":"研究会説明用ケーススタディ","textPreview":"研究会説明用ケーススタディ","textChars":13,"textLines":1,"bbox":[70,586,360,26]}
+{"kind":"textbox","id":"sh/tkritczq","slide":1,"text":"YOSHIMURA Aoi   2026.09.10","textPreview":"YOSHIMURA Aoi   2026.09.10","textChars":26,"textLines":1,"bbox":[70,635,420,26]}
+{"kind":"image","id":"im/54za98n2","slide":1,"name":"","geometry":"rect","alt":"NEXARの危険運転場面。前方車両へ接近している","bbox":[650,0,630,720]}
+{"kind":"notes","id":"nt/1bjdc0","slide":1,"text":"冒頭では、モデルの性能値ではなく研究の問いを示す。\nフィジカルAIが現場経験を継続的に学ぶには、現場から学習へ知識を戻す循環が必要になる。一方で、現場の生画像を一か所へ集められない場合がある。\n今回の問いは、端末で獲得した適応知識を、生画像を送らずにクラウド側へ戻せるか、である。\nこの発表ではFedPACTのLayer 2を、NEXARの具体例で説明する。\nSource: notes/advisor/CURRENT.md; notes/advisor/sources/raw/2026-09-08/professor_physical_ai_hook_context.md"}
+{"kind":"slide","id":"sl/0jjcic","slide":2,"title":"proxy generationが必要になる理由","textShapes":17}
+{"kind":"textbox","id":"sh/xsrq1s3a","slide":2,"text":"proxy generationが必要になる理由","textPreview":"proxy generationが必要になる理由","textChars":24,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/ap07qd4j","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/bq9ozil4","slide":2,"bbox":[64,105,1152,0]}
+{"kind":"textbox","id":"sh/lwbq5s36","slide":2,"text":"CLIENT","textPreview":"CLIENT","textChars":6,"textLines":1,"bbox":[64,400,120,30]}
+{"kind":"textbox","id":"sh/ytk7ux4v","slide":2,"text":"現場固有の危険パターンを\nprivate映像から学習","textPreview":"現場固有の危険パターンを | private映像から学習","textChars":26,"textLines":2,"bbox":[64,435,420,68]}
+{"kind":"textbox","id":"sh/zut832lg","slide":2,"text":"人物・位置・ナンバーを含み得る映像は端末内に残す","textPreview":"人物・位置・ナンバーを含み得る映像は端末内に残す","textChars":24,"textLines":1,"bbox":[64,520,430,56]}
+{"kind":"shape","id":"sh/0zypk3mh","slide":2,"bbox":[540,130,3,472]}
+{"kind":"textbox","id":"sh/1076t832","slide":2,"text":"生画像を送れない壁","textPreview":"生画像を送れない壁","textChars":9,"textLines":1,"bbox":[452,610,180,24]}
+{"kind":"shape","id":"sh/tkjm58z2","slide":2,"bbox":[595,160,260,110]}
+{"kind":"textbox","id":"sh/sjalw3ih","slide":2,"text":"判断の要約を送る","textPreview":"判断の要約を送る","textChars":8,"textLines":1,"bbox":[615,177,220,28]}
+{"kind":"textbox","id":"sh/ry143yhw","slide":2,"text":"μ_post・Δμ_local\nfrequency・LoRA更新情報","textPreview":"μ_post・Δμ_local | frequency・LoRA更新情報","textChars":34,"textLines":2,"bbox":[604,216,242,46]}
+{"kind":"shape","id":"sh/6xs3ut0b","slide":2,"bbox":[920,160,275,110]}
+{"kind":"textbox","id":"sh/1o3m98zy","slide":2,"text":"SERVER","textPreview":"SERVER","textChars":6,"textLines":1,"bbox":[940,178,235,25]}
+{"kind":"textbox","id":"sh/gnul03id","slide":2,"text":"seedから代理画像を作る","textPreview":"seedから代理画像を作る","textChars":13,"textLines":1,"bbox":[940,217,235,30]}
+{"kind":"shape","id":"sh/fm147ihs","slide":2,"bbox":[855,215,65,0]}
+{"kind":"shape","id":"sh/els3yd07","slide":2,"bbox":[590,345,175,70]}
+{"kind":"textbox","id":"sh/ps3mdszu","slide":2,"text":"Layer 1\n端末で適応","textPreview":"Layer 1 | 端末で適応","textChars":13,"textLines":2,"bbox":[605,354,145,52]}
+{"kind":"shape","id":"sh/orul4nyp","slide":2,"bbox":[805,330,190,100]}
+{"kind":"textbox","id":"sh/ov250r6l","slide":2,"text":"Layer 2\nproxy生成","textPreview":"Layer 2 | proxy生成","textChars":15,"textLines":2,"bbox":[825,350,150,62]}
+{"kind":"shape","id":"sh/9wb69w76","slide":2,"bbox":[1035,345,175,70]}
+{"kind":"textbox","id":"sh/mtknyhov","slide":2,"text":"Layer 3\n基盤へ蒸留","textPreview":"Layer 3 | 基盤へ蒸留","textChars":13,"textLines":2,"bbox":[1050,354,145,52]}
+{"kind":"shape","id":"sh/nuto7mp0","slide":2,"bbox":[765,380,40,0]}
+{"kind":"shape","id":"sh/wzm54b6x","slide":2,"bbox":[995,380,40,0]}
+{"kind":"textbox","id":"sh/x0v6dg7i","slide":2,"text":"今回の説明範囲","textPreview":"今回の説明範囲","textChars":7,"textLines":1,"bbox":[820,452,160,26]}
+{"kind":"textbox","id":"sh/axkn21or","slide":2,"text":"端末の判断を再現するserver画像を探し、\nLayer 3へ渡せるpairを作る","textPreview":"端末の判断を再現するserver画像を探し、 | Layer 3へ渡せるpairを作る","textChars":41,"textLines":2,"bbox":[595,515,610,64]}
+{"kind":"textbox","id":"sh/bytob6pc","slide":2,"text":"研究方針：private raw dataは送らず、判断の要約を介してfoundation側へ接続","textPreview":"研究方針：private raw dataは送らず、判断の要約を介してfoundation側へ接続","textChars":49,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/c3i5s76d","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"image","id":"im/hwnq5w3a","slide":2,"name":"","geometry":"rect","alt":"端末だけが保持するNEXAR映像","bbox":[64,145,420,236]}
+{"kind":"notes","id":"nt/0jjcic","slide":2,"text":"左がclient、右がserverである。clientはprivate映像を保持したまま局所適応する。\nserverが画像を持たないと、異種foundation modelへ出力蒸留する入力がない。そこでLayer 2が、server所有seedから代理入力を作る。\nclientから送るbasic payloadはLoRA更新情報、μ_post、Δμ_local、frequency。μ_preはdelta計算にだけ使い、独立には送らない。\nこの資料はLayer 2の必要性と処理を具体化する。\nSource: notes/advisor/CURRENT.md; SOURCE_INDEX.md D-041, D-055, D-059"}
+{"kind":"slide","id":"sl/1v4bh8","slide":3,"title":"端末から届く目標は画像ではなく判断の変化","textShapes":16}
+{"kind":"textbox","id":"sh/10ryxoby","slide":3,"text":"端末から届く目標は画像ではなく判断の変化","textPreview":"端末から届く目標は画像ではなく判断の変化","textChars":20,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/edgf29s7","slide":3,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/zepgvets","slide":3,"bbox":[64,105,1152,0]}
+{"kind":"shape","id":"sh/cbyx0jah","slide":3,"bbox":[64,127,150,34]}
+{"kind":"textbox","id":"sh/dc7yt4bm","slide":3,"text":"CLIENT 内","textPreview":"CLIENT 内","textChars":8,"textLines":1,"bbox":[74,132,130,24]}
+{"kind":"textbox","id":"sh/58nihk7e","slide":3,"text":"表示画像はrisk prototypeを作った3件のうち1件","textPreview":"表示画像はrisk prototypeを作った3件のうち1件","textChars":30,"textLines":1,"bbox":[64,333,550,26]}
+{"kind":"textbox","id":"sh/47eh8f6t","slide":3,"text":"局所適応前の平均出力","textPreview":"局所適応前の平均出力","textChars":10,"textLines":1,"bbox":[64,397,280,30]}
+{"kind":"shape","id":"sh/j650fap8","slide":3,"bbox":[64,462,420,30]}
+{"kind":"shape","id":"sh/i5wz65on","slide":3,"bbox":[64,462,132.3,30]}
+{"kind":"shape","id":"sh/h4nid072","slide":3,"bbox":[196.3,462,287.7,30]}
+{"kind":"textbox","id":"sh/w3eh4f6h","slide":3,"text":"normal 0.315","textPreview":"normal 0.315","textChars":12,"textLines":1,"bbox":[64,437,210,22]}
+{"kind":"textbox","id":"sh/v250bapw","slide":3,"text":"risk 0.685","textPreview":"risk 0.685","textChars":10,"textLines":1,"bbox":[274,437,210,22]}
+{"kind":"textbox","id":"sh/u1cz25ob","slide":3,"text":"局所適応後の平均出力  μ_post","textPreview":"局所適応後の平均出力  μ_post","textChars":18,"textLines":1,"bbox":[550,397,390,30]}
+{"kind":"shape","id":"sh/107ip476","slide":3,"bbox":[550,462,420,30]}
+{"kind":"shape","id":"sh/gzyhgz61","slide":3,"bbox":[550,462,28.14,30]}
+{"kind":"shape","id":"sh/0361c3ex","slide":3,"bbox":[578.14,462,391.86,30]}
+{"kind":"textbox","id":"sh/l4f2l8fi","slide":3,"text":"normal 0.067","textPreview":"normal 0.067","textChars":12,"textLines":1,"bbox":[550,437,210,22]}
+{"kind":"textbox","id":"sh/ehojadwr","slide":3,"text":"risk 0.933","textPreview":"risk 0.933","textChars":10,"textLines":1,"bbox":[760,437,210,22]}
+{"kind":"textbox","id":"sh/zixkjyxc","slide":3,"text":"risk判断の変化","textPreview":"risk判断の変化","textChars":9,"textLines":1,"bbox":[1014,405,200,27]}
+{"kind":"textbox","id":"sh/cf6183e1","slide":3,"text":"+0.248","textPreview":"+0.248","textChars":6,"textLines":1,"bbox":[1014,445,200,58]}
+{"kind":"textbox","id":"sh/dgf2h8fm","slide":3,"text":"Δμ_local","textPreview":"Δμ_local","textChars":8,"textLines":1,"bbox":[1014,505,200,28]}
+{"kind":"shape","id":"sh/qdoj6twv","slide":3,"bbox":[64,573,1150,72]}
+{"kind":"textbox","id":"sh/rexkfyxg","slide":3,"text":"SERVERへ送る   μ_post=[0.067, 0.933]   Δμ_local=[−0.248, +0.248]   frequency=3   LoRA更新情報","textPreview":"SERVERへ送る   μ_post=[0.067, 0.933]   Δμ_local=[−0.248, +0.248]   frequency=3   LoRA更新情報","textChars":86,"textLines":1,"bbox":[88,596,1100,34]}
+{"kind":"textbox","id":"sh/4bm14jep","slide":3,"text":"Diagnostic run: run_20260910_002139_presentation_case","textPreview":"Diagnostic run: run_20260910_002139_presentation_case","textChars":53,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/pcv2dofa","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"image","id":"im/jml4v65g","slide":3,"name":"","geometry":"rect","alt":"client private sequence frame 1","bbox":[64,185,242,136]}
+{"kind":"image","id":"im/ilsnm14v","slide":3,"name":"","geometry":"rect","alt":"client private sequence frame 2","bbox":[314,185,242,136]}
+{"kind":"image","id":"im/tc361gni","slide":3,"name":"","geometry":"rect","alt":"client private sequence frame 3","bbox":[564,185,242,136]}
+{"kind":"image","id":"im/sbu5sbmx","slide":3,"name":"","geometry":"rect","alt":"client private sequence frame 4","bbox":[814,185,242,136]}
+{"kind":"notes","id":"nt/1v4bh8","slide":3,"text":"この例ではclient private側のrisk場面3件をclass-wise meanでまとめた。上の4フレームは3件のうち代表例である。\n局所適応前の平均risk確率は0.685、適応後は0.933。risk方向のlocal deltaは+0.248。\nclientは同一private sample上でpreとpostを計算する。serverへはμ_post、Δμ_local、frequencyを送るが、private画像、sample ID、μ_preは送らない。\n説明では、μ_postを『学習後にどんな判断をするようになったか』、Δμ_localを『学習で判断がどれだけ変わったか』と言い換える。\nSource: artifacts/runs/fedpact_nexar_example/run_20260910_002139_presentation_case/client_local/private_trace.json; summary.json"}
+{"kind":"slide","id":"sl/v3s17a","slide":4,"title":"探索距離はseed候補を順位付けするための尺度","textShapes":18}
+{"kind":"textbox","id":"sh/fi1wvypw","slide":4,"text":"探索距離はseed候補を順位付けするための尺度","textPreview":"探索距離はseed候補を順位付けするための尺度","textChars":23,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/gjaxo3qh","slide":4,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/1kjexo72","slide":4,"bbox":[64,105,1152,0]}
+{"kind":"shape","id":"sh/2lsfqt8n","slide":4,"bbox":[64,165,355,190]}
+{"kind":"textbox","id":"sh/3m1wzyp8","slide":4,"text":"端末から届いた目標","textPreview":"端末から届いた目標","textChars":9,"textLines":1,"bbox":[88,187,307,32]}
+{"kind":"textbox","id":"sh/onuxs3qd","slide":4,"text":"μ_post","textPreview":"μ_post","textChars":6,"textLines":1,"bbox":[88,235,307,30]}
+{"kind":"shape","id":"sh/p83e187y","slide":4,"bbox":[95,305,294,28]}
+{"kind":"shape","id":"sh/ip8ve983","slide":4,"bbox":[95,305,19.7,28]}
+{"kind":"shape","id":"sh/jqhwnepo","slide":4,"bbox":[114.7,305,274.3,28]}
+{"kind":"textbox","id":"sh/zylw32t0","slide":4,"text":"normal 0.067","textPreview":"normal 0.067","textChars":12,"textLines":1,"bbox":[95,280,147,22]}
+{"kind":"textbox","id":"sh/yxcvaxcf","slide":4,"text":"risk 0.933","textPreview":"risk 0.933","textChars":10,"textLines":1,"bbox":[242,280,147,22]}
+{"kind":"shape","id":"sh/l03e5cb6","slide":4,"bbox":[486,205,270,110]}
+{"kind":"textbox","id":"sh/0zudc7ul","slide":4,"text":"updated global surrogate","textPreview":"updated global surrogate","textChars":24,"textLines":1,"bbox":[505,226,232,30]}
+{"kind":"textbox","id":"sh/balwzit4","slide":4,"text":"seed画像を確率分布へ変換","textPreview":"seed画像を確率分布へ変換","textChars":14,"textLines":1,"bbox":[505,270,232,25]}
+{"kind":"shape","id":"sh/q9sv6dcj","slide":4,"bbox":[824,165,390,190]}
+{"kind":"textbox","id":"sh/dw3e1sbu","slide":4,"text":"seed候補 k の出力","textPreview":"seed候補 k の出力","textChars":12,"textLines":1,"bbox":[850,187,338,32]}
+{"kind":"textbox","id":"sh/cbud8nup","slide":4,"text":"p_G^after(x_seed,k)","textPreview":"p_G^after(x_seed,k)","textChars":19,"textLines":1,"bbox":[850,235,338,30]}
+{"kind":"shape","id":"sh/361wvits","slide":4,"bbox":[864,305,310,28]}
+{"kind":"shape","id":"sh/25sv2dc7","slide":4,"bbox":[864,305,27.59,28]}
+{"kind":"shape","id":"sh/618fedwf","slide":4,"bbox":[891.59,305,282.41,28]}
+{"kind":"textbox","id":"sh/r2hwnidk","slide":4,"text":"normal 0.089","textPreview":"normal 0.089","textChars":12,"textLines":1,"bbox":[864,280,155,22]}
+{"kind":"textbox","id":"sh/s3axgne5","slide":4,"text":"risk 0.911","textPreview":"risk 0.911","textChars":10,"textLines":1,"bbox":[1019,280,155,22]}
+{"kind":"shape","id":"sh/t4jep8vq","slide":4,"bbox":[419,260,67,0]}
+{"kind":"shape","id":"sh/e5sfidwb","slide":4,"bbox":[756,260,68,0]}
+{"kind":"shape","id":"sh/f61wridw","slide":4,"bbox":[130,410,1020,92]}
+{"kind":"textbox","id":"sh/g7axkneh","slide":4,"text":"d_k = D_KL( μ_post  ||  p_G^after(x_seed,k) )","textPreview":"d_k = D_KL( μ_post  ||  p_G^after(x_seed,k) )","textChars":45,"textLines":1,"bbox":[170,430,940,45]}
+{"kind":"textbox","id":"sh/18jetsv2","slide":4,"text":"なぜ距離が必要か","textPreview":"なぜ距離が必要か","textChars":8,"textLines":1,"bbox":[64,550,225,30]}
+{"kind":"textbox","id":"sh/29sfmxw7","slide":4,"text":"多数のseedを並べるには、2つの確率分布のずれを1つの数値にする必要がある","textPreview":"多数のseedを並べるには、2つの確率分布のずれを1つの数値にする必要がある","textChars":38,"textLines":1,"bbox":[300,548,900,36]}
+{"kind":"textbox","id":"sh/3ulgv2ds","slide":4,"text":"距離が小さいほど、updated global surrogateが端末の学習後判断に近い反応をする","textPreview":"距離が小さいほど、updated global surrogateが端末の学習後判断に近い反応をする","textChars":50,"textLines":1,"bbox":[300,602,900,34]}
+{"kind":"textbox","id":"sh/donilwfa","slide":4,"text":"retrievalではpost prototypeのみを用いる。画像の画素距離や見た目の類似度ではない","textPreview":"retrievalではpost prototypeのみを用いる。画像の画素距離や見た目の類似度ではない","textChars":51,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/c3ehcryp","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"notes","id":"nt/v3s17a","slide":4,"text":"探索距離は突然導入するのではなく、seed候補を順位付けする必要から導入する。\nupdated global surrogateへseed画像を入れるとnormal/riskの確率分布が得られる。その分布と端末から届いたμ_postのずれをKL divergenceで1つの数値にする。\n式の向きはD_KL(μ_post || candidate)。μ_postを目標分布、candidateを再現側として評価する。\n距離が小さいほど、画像がprivate画像に似ているのではなく、モデルの反応が端末の学習後判断に近い。\nこの例のBは[0.089, 0.911]で、目標[0.067, 0.933]に近く、post KLは0.00325。\nSource: notes/advisor/CURRENT.md; SOURCE_INDEX.md D-059; artifacts/.../server/layer2_trace.json"}
+{"kind":"slide","id":"sl/vkn59x","slide":5,"title":"8件のserver seedを評価し、最小距離のBを選択","textShapes":39}
+{"kind":"textbox","id":"sh/juhwj6lg","slide":5,"text":"8件のserver seedを評価し、最小距離のBを選択","textPreview":"8件のserver seedを評価し、最小距離のBを選択","textChars":28,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/kvadcb2l","slide":5,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/5wjelg36","slide":5,"bbox":[64,105,1152,0]}
+{"kind":"textbox","id":"sh/6xsvelkr","slide":5,"text":"目標  μ_post=[normal 0.067, risk 0.933]","textPreview":"目標  μ_post=[normal 0.067, risk 0.933]","textChars":37,"textLines":1,"bbox":[64,126,600,30]}
+{"kind":"textbox","id":"sh/7i1w7qlc","slide":5,"text":"表示は8件中4件","textPreview":"表示は8件中4件","textChars":8,"textLines":1,"bbox":[1000,130,215,24]}
+{"kind":"textbox","id":"sh/sjaxgv2x","slide":5,"text":"候補 A","textPreview":"候補 A","textChars":4,"textLines":1,"bbox":[64,175,260,36]}
+{"kind":"shape","id":"sh/ulsfilk3","slide":5,"bbox":[64,418,260,24]}
+{"kind":"shape","id":"sh/fmlwbq18","slide":5,"bbox":[64,418,129.74,24]}
+{"kind":"shape","id":"sh/zet8361o","slide":5,"bbox":[193.74,418,130.26,24]}
+{"kind":"textbox","id":"sh/edk7u1k3","slide":5,"text":"normal 0.499","textPreview":"normal 0.499","textChars":12,"textLines":1,"bbox":[64,393,130,22]}
+{"kind":"textbox","id":"sh/1gbq5gju","slide":5,"text":"risk 0.501","textPreview":"risk 0.501","textChars":10,"textLines":1,"bbox":[194,393,130,22]}
+{"kind":"textbox","id":"sh/0f2pwb29","slide":5,"text":"post KL","textPreview":"post KL","textChars":7,"textLines":1,"bbox":[64,472,122,28]}
+{"kind":"textbox","id":"sh/ra98z61c","slide":5,"text":"0.4463","textPreview":"0.4463","textChars":6,"textLines":1,"bbox":[190,471,134,28]}
+{"kind":"textbox","id":"sh/q907q1k7","slide":5,"text":"順位","textPreview":"順位","textChars":2,"textLines":1,"bbox":[64,512,122,28]}
+{"kind":"textbox","id":"sh/dcrq1gji","slide":5,"text":"8 / 8","textPreview":"8 / 8","textChars":5,"textLines":1,"bbox":[190,511,134,28]}
+{"kind":"textbox","id":"sh/sbipsb2x","slide":5,"text":"目標と離れる","textPreview":"目標と離れる","textChars":6,"textLines":1,"bbox":[64,563,260,30]}
+{"kind":"textbox","id":"sh/b6d8bq1w","slide":5,"text":"候補 B","textPreview":"候補 B","textChars":4,"textLines":1,"bbox":[363,175,260,36]}
+{"kind":"shape","id":"sh/a54r2lkb","slide":5,"bbox":[353,164,282,450]}
+{"kind":"shape","id":"sh/72xs3ul4","slide":5,"bbox":[363,418,260,24]}
+{"kind":"shape","id":"sh/83qtwzmp","slide":5,"bbox":[363,418,23.14,24]}
+{"kind":"shape","id":"sh/t4za543a","slide":5,"bbox":[386.14,418,236.86,24]}
+{"kind":"textbox","id":"sh/u58by94f","slide":5,"text":"normal 0.089","textPreview":"normal 0.089","textChars":12,"textLines":1,"bbox":[363,393,130,22]}
+{"kind":"textbox","id":"sh/v6hs7el0","slide":5,"text":"risk 0.911","textPreview":"risk 0.911","textChars":10,"textLines":1,"bbox":[493,393,130,22]}
+{"kind":"textbox","id":"sh/g7qt0jml","slide":5,"text":"post KL","textPreview":"post KL","textChars":7,"textLines":1,"bbox":[363,472,122,28]}
+{"kind":"textbox","id":"sh/h8zu9436","slide":5,"text":"0.0033","textPreview":"0.0033","textChars":6,"textLines":1,"bbox":[489,471,134,28]}
+{"kind":"textbox","id":"sh/a94bm54b","slide":5,"text":"順位","textPreview":"順位","textChars":2,"textLines":1,"bbox":[363,512,122,28]}
+{"kind":"textbox","id":"sh/badsvalw","slide":5,"text":"1 / 8","textPreview":"1 / 8","textChars":5,"textLines":1,"bbox":[489,511,134,28]}
+{"kind":"textbox","id":"sh/do3e18ne","slide":5,"text":"最小距離","textPreview":"最小距離","textChars":4,"textLines":1,"bbox":[363,563,260,30]}
+{"kind":"textbox","id":"sh/snudsn6t","slide":5,"text":"候補 C","textPreview":"候補 C","textChars":4,"textLines":1,"bbox":[662,175,260,36]}
+{"kind":"shape","id":"sh/q1svqdon","slide":5,"bbox":[662,418,260,24]}
+{"kind":"shape","id":"sh/1s3e5sna","slide":5,"bbox":[662,418,25.74,24]}
+{"kind":"shape","id":"sh/0rudwn65","slide":5,"bbox":[687.74,418,234.26,24]}
+{"kind":"textbox","id":"sh/fqlw3i5k","slide":5,"text":"normal 0.099","textPreview":"normal 0.099","textChars":12,"textLines":1,"bbox":[662,393,130,22]}
+{"kind":"textbox","id":"sh/epcvudoz","slide":5,"text":"risk 0.901","textPreview":"risk 0.901","textChars":10,"textLines":1,"bbox":[792,393,130,22]}
+{"kind":"textbox","id":"sh/hwjeton6","slide":5,"text":"post KL","textPreview":"post KL","textChars":7,"textLines":1,"bbox":[662,472,122,28]}
+{"kind":"textbox","id":"sh/gvadkj6l","slide":5,"text":"0.0065","textPreview":"0.0065","textChars":6,"textLines":1,"bbox":[788,471,134,28]}
+{"kind":"textbox","id":"sh/k3ipovul","slide":5,"text":"順位","textPreview":"順位","textChars":2,"textLines":1,"bbox":[662,512,122,28]}
+{"kind":"textbox","id":"sh/5orqh0b6","slide":5,"text":"3 / 8","textPreview":"3 / 8","textChars":5,"textLines":1,"bbox":[788,511,134,28]}
+{"kind":"textbox","id":"sh/i107mlcf","slide":5,"text":"近い","textPreview":"近い","textChars":2,"textLines":1,"bbox":[662,563,260,30]}
+{"kind":"textbox","id":"sh/j298fqt0","slide":5,"text":"候補 D","textPreview":"候補 D","textChars":4,"textLines":1,"bbox":[961,175,260,36]}
+{"kind":"shape","id":"sh/x0rqdgbu","slide":5,"bbox":[961,418,260,24]}
+{"kind":"shape","id":"sh/axg7ilcj","slide":5,"bbox":[961,418,37.44,24]}
+{"kind":"shape","id":"sh/vyp8bqto","slide":5,"bbox":[998.44,418,222.56,24]}
+{"kind":"textbox","id":"sh/8vypgbud","slide":5,"text":"normal 0.144","textPreview":"normal 0.144","textChars":12,"textLines":1,"bbox":[961,393,130,22]}
+{"kind":"textbox","id":"sh/9w7q9gby","slide":5,"text":"risk 0.856","textPreview":"risk 0.856","textChars":10,"textLines":1,"bbox":[1091,393,130,22]}
+{"kind":"textbox","id":"sh/r658z6xk","slide":5,"text":"post KL","textPreview":"post KL","textChars":7,"textLines":1,"bbox":[961,472,122,28]}
+{"kind":"textbox","id":"sh/q5wrq1wz","slide":5,"text":"0.0293","textPreview":"0.0293","textChars":6,"textLines":1,"bbox":[1087,471,134,28]}
+{"kind":"textbox","id":"sh/ds7q1gfq","slide":5,"text":"順位","textPreview":"順位","textChars":2,"textLines":1,"bbox":[961,512,122,28]}
+{"kind":"textbox","id":"sh/cre9sbe5","slide":5,"text":"4 / 8","textPreview":"4 / 8","textChars":5,"textLines":1,"bbox":[1087,511,134,28]}
+{"kind":"textbox","id":"sh/zup836xw","slide":5,"text":"やや離れる","textPreview":"やや離れる","textChars":5,"textLines":1,"bbox":[961,563,260,30]}
+{"kind":"textbox","id":"sh/ytgrulwb","slide":5,"text":"Bを次のtransformationへ渡す","textPreview":"Bを次のtransformationへ渡す","textChars":21,"textLines":1,"bbox":[335,630,340,28]}
+{"kind":"textbox","id":"sh/lw7q5gfm","slide":5,"text":"選択基準：updated global surrogateの出力とμ_postのpost KLが最小","textPreview":"選択基準：updated global surrogateの出力とμ_postのpost KLが最小","textChars":50,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/0vy9wbeh","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"image","id":"im/wfidwf6d","slide":5,"name":"","geometry":"rect","alt":"server seed candidate A","bbox":[64,220,260,146]}
+{"kind":"image","id":"im/9gry5cf6","slide":5,"name":"","geometry":"rect","alt":"server seed candidate B","bbox":[363,220,260,146]}
+{"kind":"image","id":"im/ofed03uh","slide":5,"name":"","geometry":"rect","alt":"server seed candidate C","bbox":[662,220,260,146]}
+{"kind":"image","id":"im/valsrah8","slide":5,"name":"","geometry":"rect","alt":"server seed candidate D","bbox":[961,220,260,146]}
+{"kind":"notes","id":"nt/vkn59x","slide":5,"text":"server seedはclientへ配布しないcloud-only data。このrunでは8件を評価し、説明用に4件を表示した。\n各seedをupdated global surrogateへ入力し、μ_postとのpost KLを計算した。Bの0.0033が最小だったため、Bをretrieved seedとした。\nretrievalは画像の見た目やground-truth labelを直接使って選ぶ処理ではない。選択基準はモデル出力の一致度。\n候補Cも近いが、Bの方が目標分布へのKLが小さい。\nこの段階ではdeltaをまだ使わない。deltaは次のproxy objectiveで使う。\nSource: artifacts/runs/fedpact_nexar_example/run_20260910_002139_presentation_case/server/layer2_trace.json"}
+{"kind":"slide","id":"sl/ic913a","slide":6,"title":"Bを4通りに変換し、判断の再現誤差を比較","textShapes":40}
+{"kind":"textbox","id":"sh/0vi143ul","slide":6,"text":"Bを4通りに変換し、判断の再現誤差を比較","textPreview":"Bを4通りに変換し、判断の再現誤差を比較","textChars":20,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/fu90vyt0","slide":6,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/et0j2tcf","slide":6,"bbox":[64,105,1152,0]}
+{"kind":"textbox","id":"sh/dsrit8bu","slide":6,"text":"同じ4フレームへ各変換を独立に適用","textPreview":"同じ4フレームへ各変換を独立に適用","textChars":17,"textLines":1,"bbox":[64,126,500,30]}
+{"kind":"textbox","id":"sh/sri103up","slide":6,"text":"変換は累積しない","textPreview":"変換は累積しない","textChars":8,"textLines":1,"bbox":[1000,130,215,24]}
+{"kind":"textbox","id":"sh/rq90ryt4","slide":6,"text":"無変換","textPreview":"無変換","textChars":3,"textLines":1,"bbox":[64,178,260,34]}
+{"kind":"textbox","id":"sh/xob25sbe","slide":6,"text":"Bをそのまま使用","textPreview":"Bをそのまま使用","textChars":8,"textLines":1,"bbox":[64,386,260,28]}
+{"kind":"textbox","id":"sh/cn21cnut","slide":6,"text":"post KL","textPreview":"post KL","textChars":7,"textLines":1,"bbox":[64,435,122,28]}
+{"kind":"textbox","id":"sh/6hg3y1on","slide":6,"text":"0.00325","textPreview":"0.00325","textChars":7,"textLines":1,"bbox":[190,434,134,28]}
+{"kind":"textbox","id":"sh/7i9kr658","slide":6,"text":"delta MSE","textPreview":"delta MSE","textChars":9,"textLines":1,"bbox":[64,475,122,28]}
+{"kind":"textbox","id":"sh/s3il0b6t","slide":6,"text":"0.00003","textPreview":"0.00003","textChars":7,"textLines":1,"bbox":[190,474,134,28]}
+{"kind":"shape","id":"sh/t4r2tgne","slide":6,"bbox":[64,516,260,0]}
+{"kind":"textbox","id":"sh/idgju1or","slide":6,"text":"L_match","textPreview":"L_match","textChars":7,"textLines":1,"bbox":[64,536,122,28]}
+{"kind":"textbox","id":"sh/jepk365c","slide":6,"text":"0.00329","textPreview":"0.00329","textChars":7,"textLines":1,"bbox":[190,535,134,28]}
+{"kind":"textbox","id":"sh/kfylwb6x","slide":6,"text":"明るさ ×0.75","textPreview":"明るさ ×0.75","textChars":9,"textLines":1,"bbox":[363,178,260,34]}
+{"kind":"textbox","id":"sh/29036lov","slide":6,"text":"全フレームを25%暗く","textPreview":"全フレームを25%暗く","textChars":11,"textLines":1,"bbox":[363,386,260,28]}
+{"kind":"textbox","id":"sh/3atkzq5g","slide":6,"text":"post KL","textPreview":"post KL","textChars":7,"textLines":1,"bbox":[363,435,122,28]}
+{"kind":"textbox","id":"sh/zel0rils","slide":6,"text":"0.01086","textPreview":"0.01086","textChars":7,"textLines":1,"bbox":[489,434,134,28]}
+{"kind":"textbox","id":"sh/ydczyd47","slide":6,"text":"delta MSE","textPreview":"delta MSE","textChars":9,"textLines":1,"bbox":[363,475,122,28]}
+{"kind":"textbox","id":"sh/lg3its3y","slide":6,"text":"0.00129","textPreview":"0.00129","textChars":7,"textLines":1,"bbox":[489,474,134,28]}
+{"kind":"shape","id":"sh/0fuh0nmd","slide":6,"bbox":[363,516,260,0]}
+{"kind":"textbox","id":"sh/nil0v2l4","slide":6,"text":"L_match","textPreview":"L_match","textChars":7,"textLines":1,"bbox":[363,536,122,28]}
+{"kind":"textbox","id":"sh/mhcz2x4j","slide":6,"text":"0.01215","textPreview":"0.01215","textChars":7,"textLines":1,"bbox":[489,535,134,28]}
+{"kind":"textbox","id":"sh/9knixc3u","slide":6,"text":"contrast ×1.20","textPreview":"contrast ×1.20","textChars":14,"textLines":1,"bbox":[662,178,260,34]}
+{"kind":"textbox","id":"sh/vm50z2l0","slide":6,"text":"明暗差を20%強調","textPreview":"明暗差を20%強調","textChars":9,"textLines":1,"bbox":[662,386,260,28]}
+{"kind":"textbox","id":"sh/alwz6x4f","slide":6,"text":"post KL","textPreview":"post KL","textChars":7,"textLines":1,"bbox":[662,435,122,28]}
+{"kind":"textbox","id":"sh/sbyhw7it","slide":6,"text":"0.00585","textPreview":"0.00585","textChars":7,"textLines":1,"bbox":[788,434,134,28]}
+{"kind":"textbox","id":"sh/tc7ypcje","slide":6,"text":"delta MSE","textPreview":"delta MSE","textChars":9,"textLines":1,"bbox":[662,475,122,28]}
+{"kind":"textbox","id":"sh/6pwzuh0n","slide":6,"text":"0.00030","textPreview":"0.00030","textChars":7,"textLines":1,"bbox":[788,474,134,28]}
+{"kind":"shape","id":"sh/7qpgn218","slide":6,"bbox":[662,516,260,0]}
+{"kind":"textbox","id":"sh/knehs7ih","slide":6,"text":"L_match","textPreview":"L_match","textChars":7,"textLines":1,"bbox":[662,536,122,28]}
+{"kind":"textbox","id":"sh/5onylcj2","slide":6,"text":"0.00615","textPreview":"0.00615","textChars":7,"textLines":1,"bbox":[788,535,134,28]}
+{"kind":"shape","id":"sh/ilwzqx0r","slide":6,"bbox":[951,165,282,454]}
+{"kind":"textbox","id":"sh/jm5gj21c","slide":6,"text":"center crop 0.85","textPreview":"center crop 0.85","textChars":16,"textLines":1,"bbox":[961,178,260,34]}
+{"kind":"textbox","id":"sh/xknyhsj6","slide":6,"text":"中央85%を切り出して拡大","textPreview":"中央85%を切り出して拡大","textChars":13,"textLines":1,"bbox":[961,386,260,28]}
+{"kind":"textbox","id":"sh/1czm94vm","slide":6,"text":"post KL","textPreview":"post KL","textChars":7,"textLines":1,"bbox":[961,435,122,28]}
+{"kind":"textbox","id":"sh/0bq50zu1","slide":6,"text":"0.00270","textPreview":"0.00270","textChars":7,"textLines":1,"bbox":[1087,434,134,28]}
+{"kind":"textbox","id":"sh/zah47udg","slide":6,"text":"delta MSE","textPreview":"delta MSE","textChars":9,"textLines":1,"bbox":[961,475,122,28]}
+{"kind":"textbox","id":"sh/ep8nypcv","slide":6,"text":"0.00055","textPreview":"0.00055","textChars":7,"textLines":1,"bbox":[1087,474,134,28]}
+{"kind":"shape","id":"sh/9gjmd4vi","slide":6,"bbox":[961,516,260,0]}
+{"kind":"textbox","id":"sh/ofa54zud","slide":6,"text":"L_match","textPreview":"L_match","textChars":7,"textLines":1,"bbox":[961,536,122,28]}
+{"kind":"textbox","id":"sh/ne14buds","slide":6,"text":"0.00325","textPreview":"0.00325","textChars":7,"textLines":1,"bbox":[1087,535,134,28]}
+{"kind":"textbox","id":"sh/md8n29c7","slide":6,"text":"選択","textPreview":"選択","textChars":2,"textLines":1,"bbox":[961,583,260,26]}
+{"kind":"textbox","id":"sh/pkfm1kve","slide":6,"text":"L_match = post判断のずれ + 判断変化のずれ   小さいほど端末の適応挙動に近い","textPreview":"L_match = post判断のずれ + 判断変化のずれ   小さいほど端末の適応挙動に近い","textChars":47,"textLines":1,"bbox":[150,640,980,28]}
+{"kind":"textbox","id":"sh/4j6lsfut","slide":6,"text":"10変換を評価。スライドは説明しやすい4候補を表示","textPreview":"10変換を評価。スライドは説明しやすい4候補を表示","textChars":25,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/up4j2lsr","slide":6,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"image","id":"im/z2doral8","slide":6,"name":"","geometry":"rect","alt":"transformation candidate 無変換","bbox":[64,226,260,146]}
+{"kind":"image","id":"im/a5sryh4r","slide":6,"name":"","geometry":"rect","alt":"transformation candidate 明るさ ×0.75","bbox":[363,226,260,146]}
+{"kind":"image","id":"im/7ilsf2t0","slide":6,"name":"","geometry":"rect","alt":"transformation candidate contrast ×1.20","bbox":[662,226,260,146]}
+{"kind":"image","id":"im/b2pcb6d4","slide":6,"name":"","geometry":"rect","alt":"transformation candidate center crop 0.85","bbox":[961,226,260,146]}
+{"kind":"notes","id":"nt/ic913a","slide":6,"text":"retrieved seed Bから、無変換、明るさ、contrast、cropなど10候補を作った。スライドには4候補を示す。\n各変換はBへ独立に適用する。左から順に画像を加工したわけではない。\npost KLは学習後判断の一致、delta MSEはclientのΔμ_localとproxy上のglobal surrogate更新前後差の一致を測る。\ncenter crop 0.85はpost KLを0.003251から0.002700へ下げた。一方でdelta MSEは無変換より増えた。両者の和L_matchは0.003254で最小になった。\n無変換との差は小さいため、この1例からtransformationの有効性は主張しない。ここでは選択過程と評価量を説明する。\n今回のL_matchはλ_post=λ_delta=1、L_reg未導入。\nSource: artifacts/runs/fedpact_nexar_example/run_20260910_002139_presentation_case/server/layer2_trace.json"}
+{"kind":"slide","id":"sl/i6a3i6","slide":7,"title":"最終proxyと端末目標をpairにしてLayer 3へ渡す","textShapes":15}
+{"kind":"textbox","id":"sh/yhsnepwz","slide":7,"text":"最終proxyと端末目標をpairにしてLayer 3へ渡す","textPreview":"最終proxyと端末目標をpairにしてLayer 3へ渡す","textChars":30,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/lk3mp4vq","slide":7,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/kja5gze5","slide":7,"bbox":[64,105,1152,0]}
+{"kind":"shape","id":"sh/7ml4redw","slide":7,"bbox":[64,126,150,34]}
+{"kind":"textbox","id":"sh/6lcni9wb","slide":7,"text":"SERVER","textPreview":"SERVER","textChars":6,"textLines":1,"bbox":[74,131,130,24]}
+{"kind":"textbox","id":"sh/8zq5srup","slide":7,"text":"x̃：center crop 0.85を適用した4フレーム","textPreview":"x̃：center crop 0.85を適用した4フレーム","textChars":29,"textLines":1,"bbox":[64,323,520,28]}
+{"kind":"textbox","id":"sh/90zm1wva","slide":7,"text":"端末の目標  μ_post","textPreview":"端末の目標  μ_post","textChars":13,"textLines":1,"bbox":[64,398,320,32]}
+{"kind":"shape","id":"sh/md8nqhcz","slide":7,"bbox":[64,472,410,30]}
+{"kind":"shape","id":"sh/neh4zmdk","slide":7,"bbox":[64,472,27.47,30]}
+{"kind":"shape","id":"sh/w3a5wbu1","slide":7,"bbox":[91.47,472,382.53,30]}
+{"kind":"textbox","id":"sh/x4jm5wbm","slide":7,"text":"normal 0.067","textPreview":"normal 0.067","textChars":12,"textLines":1,"bbox":[64,447,205,22]}
+{"kind":"textbox","id":"sh/a18nu1cv","slide":7,"text":"risk 0.933","textPreview":"risk 0.933","textChars":10,"textLines":1,"bbox":[269,447,205,22]}
+{"kind":"textbox","id":"sh/v2h436dg","slide":7,"text":"proxy上のupdated surrogate出力","textPreview":"proxy上のupdated surrogate出力","textChars":26,"textLines":1,"bbox":[535,398,420,32]}
+{"kind":"shape","id":"sh/k7a50bux","slide":7,"bbox":[535,472,410,30]}
+{"kind":"shape","id":"sh/58jm9gbi","slide":7,"bbox":[535,472,35.67,30]}
+{"kind":"shape","id":"sh/tofmdg3m","slide":7,"bbox":[570.67,472,374.33,30]}
+{"kind":"textbox","id":"sh/sn65kbm1","slide":7,"text":"normal 0.087","textPreview":"normal 0.087","textChars":12,"textLines":1,"bbox":[535,447,205,22]}
+{"kind":"textbox","id":"sh/rmx4b6lw","slide":7,"text":"risk 0.913","textPreview":"risk 0.913","textChars":10,"textLines":1,"bbox":[740,447,205,22]}
+{"kind":"textbox","id":"sh/6loni14b","slide":7,"text":"proxy上のrisk変化 +0.224\n目標のrisk変化 +0.248","textPreview":"proxy上のrisk変化 +0.224 | 目標のrisk変化 +0.248","textChars":37,"textLines":2,"bbox":[1010,420,205,78]}
+{"kind":"shape","id":"sh/1szmhg3y","slide":7,"bbox":[170,555,600,98]}
+{"kind":"textbox","id":"sh/grq5obmd","slide":7,"text":"P = ( x̃ , μ_post )","textPreview":"P = ( x̃ , μ_post )","textChars":19,"textLines":1,"bbox":[205,581,530,42]}
+{"kind":"shape","id":"sh/fqh4fqls","slide":7,"bbox":[900,555,285,98]}
+{"kind":"textbox","id":"sh/eponml47","slide":7,"text":"Layer 3へ\nfoundation LoRA蒸留用","textPreview":"Layer 3へ | foundation LoRA蒸留用","textChars":27,"textLines":2,"bbox":[920,570,245,66]}
+{"kind":"shape","id":"sh/hwvm5w3e","slide":7,"bbox":[770,604,130,0]}
+{"kind":"textbox","id":"sh/wvmlcrm9","slide":7,"text":"teacherはμ_post。proxy上のsurrogate出力をteacher labelにはしない","textPreview":"teacherはμ_post。proxy上のsurrogate出力をteacher labelにはしない","textChars":52,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/mp0bqtgf","slide":7,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"image","id":"im/sfip83ad","slide":7,"name":"","geometry":"rect","alt":"selected proxy frame 1","bbox":[64,185,218,123]}
+{"kind":"image","id":"im/tgr618ri","slide":7,"name":"","geometry":"rect","alt":"selected proxy frame 2","bbox":[290,185,218,123]}
+{"kind":"image","id":"im/ypg72tsv","slide":7,"name":"","geometry":"rect","alt":"selected proxy frame 3","bbox":[516,185,218,123]}
+{"kind":"image","id":"im/jqpovy9g","slide":7,"name":"","geometry":"rect","alt":"selected proxy frame 4","bbox":[742,185,218,123]}
+{"kind":"notes","id":"nt/i6a3i6","slide":7,"text":"最終出力はproxy画像x_tildeと端末のpost prototype μ_postのpair。\nこの例でproxy上のupdated surrogateはrisk 0.913。端末目標risk 0.933に近い。\nproxy上で測ったglobal surrogateのrisk変化は+0.224、client local deltaの目標は+0.248。\nLayer 3のteacherは端末から届いたμ_post。proxy上のglobal surrogate出力をteacher labelへ置き換えない。\nこのslideはLayer 2からLayer 3への受渡しを説明する。foundation性能の改善結果を示すslideではない。\nSource: notes/advisor/SOURCE_INDEX.md D-029, D-049, D-062; run summary.json; server/proxy_pair.json"}
+{"kind":"slide","id":"sl/o4l4to","slide":8,"title":"補足：retrievalとproxy optimizationの評価量","textShapes":18}
+{"kind":"textbox","id":"sh/4zids7m5","slide":8,"text":"補足：retrievalとproxy optimizationの評価量","textPreview":"補足：retrievalとproxy optimizationの評価量","textChars":35,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/3y9wj2lk","slide":8,"text":"A1","textPreview":"A1","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/2xgvqx4f","slide":8,"bbox":[64,105,1152,0]}
+{"kind":"shape","id":"sh/d4repw32","slide":8,"bbox":[64,130,150,34]}
+{"kind":"textbox","id":"sh/c3idwrmh","slide":8,"text":"Retrieval","textPreview":"Retrieval","textChars":9,"textLines":1,"bbox":[74,135,130,24]}
+{"kind":"textbox","id":"sh/b29wnmlw","slide":8,"text":"seed候補の順位付け","textPreview":"seed候補の順位付け","textChars":11,"textLines":1,"bbox":[64,184,500,34]}
+{"kind":"shape","id":"sh/q10vuh4b","slide":8,"bbox":[64,240,530,100]}
+{"kind":"textbox","id":"sh/lsbetw3y","slide":8,"text":"D_KL( μ_post || p_G^after(x_seed) )","textPreview":"D_KL( μ_post || p_G^after(x_seed) )","textChars":35,"textLines":1,"bbox":[92,272,474,40]}
+{"kind":"textbox","id":"sh/0r2x0rmd","slide":8,"text":"updated global surrogateのpost出力だけで検索","textPreview":"updated global surrogateのpost出力だけで検索","textChars":36,"textLines":1,"bbox":[64,365,530,32]}
+{"kind":"shape","id":"sh/61cnu5ob","slide":8,"bbox":[632,130,3,430]}
+{"kind":"shape","id":"sh/725o3a5w","slide":8,"bbox":[675,130,150,34]}
+{"kind":"textbox","id":"sh/sne5wv6h","slide":8,"text":"Optimization","textPreview":"Optimization","textChars":12,"textLines":1,"bbox":[685,135,130,24]}
+{"kind":"textbox","id":"sh/ton650n2","slide":8,"text":"変換候補の再現誤差","textPreview":"変換候補の再現誤差","textChars":9,"textLines":1,"bbox":[675,184,540,34]}
+{"kind":"shape","id":"sh/upwny54n","slide":8,"bbox":[675,240,540,148]}
+{"kind":"textbox","id":"sh/fq5o7a5s","slide":8,"text":"L_match = λ_post D_KL(μ_post || p_after(x̃))\n+ λ_Δ MSE(Δμ_local, p_after(x̃) − p_before(x̃))","textPreview":"L_match = λ_post D_KL(μ_post || p_after(x̃)) | + λ_Δ MSE(Δμ_local, p_after(x̃) − p_before(x̃))","textChars":92,"textLines":2,"bbox":[700,258,490,110]}
+{"kind":"textbox","id":"sh/gre50fmd","slide":8,"text":"clientのdeltaとproxy上のglobal round差を比較","textPreview":"clientのdeltaとproxy上のglobal round差を比較","textChars":36,"textLines":1,"bbox":[675,405,540,32]}
+{"kind":"textbox","id":"sh/hsn69kny","slide":8,"text":"重要な区別","textPreview":"重要な区別","textChars":5,"textLines":1,"bbox":[64,470,200,32]}
+{"kind":"textbox","id":"sh/atsnmlo3","slide":8,"text":"Δμ_local","textPreview":"Δμ_local","textChars":8,"textLines":1,"bbox":[64,525,160,30]}
+{"kind":"textbox","id":"sh/vul4vq5o","slide":8,"text":"client固有の局所適応前後差","textPreview":"client固有の局所適応前後差","textChars":16,"textLines":1,"bbox":[220,525,360,30]}
+{"kind":"textbox","id":"sh/zyhk3mlg","slide":8,"text":"p_after − p_before","textPreview":"p_after − p_before","textChars":18,"textLines":1,"bbox":[675,525,220,30]}
+{"kind":"textbox","id":"sh/ed83uh4v","slide":8,"text":"同一proxy上で測るglobal surrogate更新前後差","textPreview":"同一proxy上で測るglobal surrogate更新前後差","textChars":32,"textLines":1,"bbox":[900,525,315,54]}
+{"kind":"textbox","id":"sh/10z25c3m","slide":8,"text":"現在の診断run：λ_post=1、λ_Δ=1、L_reg未導入。Qinvの具体式とthresholdはscreening待ち","textPreview":"現在の診断run：λ_post=1、λ_Δ=1、L_reg未導入。Qinvの具体式とthresholdはscreening待ち","textChars":63,"textLines":1,"bbox":[64,616,1150,34]}
+{"kind":"textbox","id":"sh/0zqlwrm1","slide":8,"text":"L_proxy = L_match + L_reg。seed逸脱・自然性・時間的一貫性は後続screeningで固定","textPreview":"L_proxy = L_match + L_reg。seed逸脱・自然性・時間的一貫性は後続screeningで固定","textChars":58,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/raxkz2lk","slide":8,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"notes","id":"nt/o4l4to","slide":8,"text":"retrievalとoptimizationで評価量が違う。retrievalはupdated global surrogateのpost出力とμ_postのKLだけ。\ntransformation後はpost KLに加えてdelta MSEも使う。\nΔμ_localはclient固有の局所適応差。p_after-p_beforeはproxy上で測るglobal surrogateのround前後差。同一の量ではない。\n現在の診断runではlambdaを1に置き、regularizationは未導入。Qinvの具体式とthresholdも未固定。\n教授から細部を聞かれた場合は、このslideで実装済み部分とscreening待ちを分けて説明する。\nSource: notes/advisor/CURRENT.md; SOURCE_INDEX.md D-043, D-049, D-050; FedPACT実験計画26060901.pdf 3-4ページ"}
+{"kind":"slide","id":"sl/56wgdn","slide":9,"title":"補足：説明用runの条件","textShapes":26}
+{"kind":"textbox","id":"sh/v29wfu1s","slide":9,"text":"補足：説明用runの条件","textPreview":"補足：説明用runの条件","textChars":12,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/w3id8zid","slide":9,"text":"A2","textPreview":"A2","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/x4reh4jy","slide":9,"bbox":[64,105,1152,0]}
+{"kind":"textbox","id":"sh/mxgv2p0b","slide":9,"text":"実行条件","textPreview":"実行条件","textChars":4,"textLines":1,"bbox":[64,135,500,36]}
+{"kind":"textbox","id":"sh/ny9cbu1w","slide":9,"text":"surrogate","textPreview":"surrogate","textChars":9,"textLines":1,"bbox":[64,195,190,28]}
+{"kind":"textbox","id":"sh/8zid4zih","slide":9,"text":"Qwen2.5-VL-3B-Instruct","textPreview":"Qwen2.5-VL-3B-Instruct","textChars":22,"textLines":1,"bbox":[264,195,370,28]}
+{"kind":"shape","id":"sh/90red4jm","slide":9,"bbox":[64,232,560,0]}
+{"kind":"textbox","id":"sh/6tkvet0f","slide":9,"text":"client","textPreview":"client","textChars":6,"textLines":1,"bbox":[64,251,190,28]}
+{"kind":"textbox","id":"sh/7utw7e10","slide":9,"text":"1 client  局所学習3 step","textPreview":"1 client  局所学習3 step","textChars":20,"textLines":1,"bbox":[264,251,370,28]}
+{"kind":"shape","id":"sh/b2l8v690","slide":9,"bbox":[64,288,560,0]}
+{"kind":"textbox","id":"sh/a1crm1sf","slide":9,"text":"private prototype","textPreview":"private prototype","textChars":17,"textLines":1,"bbox":[64,307,190,28]}
+{"kind":"textbox","id":"sh/x4nqxwr6","slide":9,"text":"risk 3件のclass-wise mean","textPreview":"risk 3件のclass-wise mean","textChars":23,"textLines":1,"bbox":[264,307,370,28]}
+{"kind":"shape","id":"sh/c3e9oral","slide":9,"bbox":[64,344,560,0]}
+{"kind":"textbox","id":"sh/zq58z69w","slide":9,"text":"server seed","textPreview":"server seed","textChars":11,"textLines":1,"bbox":[64,363,190,28]}
+{"kind":"textbox","id":"sh/y5wrq1sr","slide":9,"text":"8件  clientとsample非重複","textPreview":"8件  clientとsample非重複","textChars":20,"textLines":1,"bbox":[264,363,370,28]}
+{"kind":"shape","id":"sh/lsnq1gr2","slide":9,"bbox":[64,400,560,0]}
+{"kind":"textbox","id":"sh/kre9sbah","slide":9,"text":"入力","textPreview":"入力","textChars":2,"textLines":1,"bbox":[64,419,190,28]}
+{"kind":"textbox","id":"sh/7up83q98","slide":9,"text":"各サンプル4フレーム","textPreview":"各サンプル4フレーム","textChars":10,"textLines":1,"bbox":[264,419,370,28]}
+{"kind":"shape","id":"sh/mtwrulsn","slide":9,"bbox":[64,456,560,0]}
+{"kind":"textbox","id":"sh/ip0b2pcv","slide":9,"text":"変換","textPreview":"変換","textChars":2,"textLines":1,"bbox":[64,475,190,28]}
+{"kind":"textbox","id":"sh/jq9cvutg","slide":9,"text":"10候補からL_match最小を選択","textPreview":"10候補からL_match最小を選択","textChars":18,"textLines":1,"bbox":[264,475,370,28]}
+{"kind":"shape","id":"sh/4rit4fu1","slide":9,"bbox":[64,512,560,0]}
+{"kind":"textbox","id":"sh/5sruxkbm","slide":9,"text":"この例から言えること","textPreview":"この例から言えること","textChars":10,"textLines":1,"bbox":[672,135,500,36]}
+{"kind":"textbox","id":"sh/ulgby5cz","slide":9,"text":"Layer 2の入出力が実データで接続した","textPreview":"Layer 2の入出力が実データで接続した","textChars":21,"textLines":1,"bbox":[672,202,520,34]}
+{"kind":"textbox","id":"sh/vm9crat4","slide":9,"text":"seed候補と変換候補を同じ基準で追跡できる","textPreview":"seed候補と変換候補を同じ基準で追跡できる","textChars":22,"textLines":1,"bbox":[672,255,520,34]}
+{"kind":"textbox","id":"sh/wnit0fup","slide":9,"text":"private ID・raw frameがserver payloadへ入っていない","textPreview":"private ID・raw frameがserver payloadへ入っていない","textChars":42,"textLines":1,"bbox":[672,308,520,34]}
+{"kind":"textbox","id":"sh/horutkba","slide":9,"text":"まだ言えないこと","textPreview":"まだ言えないこと","textChars":8,"textLines":1,"bbox":[672,395,500,36]}
+{"kind":"textbox","id":"sh/ehkba9s3","slide":9,"text":"transformationが一貫してproxy fidelityを改善するか","textPreview":"transformationが一貫してproxy fidelityを改善するか","textChars":39,"textLines":1,"bbox":[672,462,520,34]}
+{"kind":"textbox","id":"sh/fitc3eto","slide":9,"text":"proxyがfoundationのF1・AUCを改善するか","textPreview":"proxyがfoundationのF1・AUCを改善するか","textChars":29,"textLines":1,"bbox":[672,515,520,34]}
+{"kind":"textbox","id":"sh/pcvet8vq","slide":9,"text":"複数clientのFedAvg後でも同じ再現度を得られるか","textPreview":"複数clientのFedAvg後でも同じ再現度を得られるか","textChars":29,"textLines":1,"bbox":[672,556,520,50]}
+{"kind":"shape","id":"sh/obmx03e5","slide":9,"bbox":[64,617,1150,40]}
+{"kind":"textbox","id":"sh/nadwrydk","slide":9,"text":"位置づけ：処理説明と実装診断のためのcase study。性能の有効性を示す評価実験ではない","textPreview":"位置づけ：処理説明と実装診断のためのcase study。性能の有効性を示す評価実験ではない","textChars":46,"textLines":1,"bbox":[82,626,1115,24]}
+{"kind":"textbox","id":"sh/294fytwf","slide":9,"text":"run_20260910_002139_presentation_case  seed=42","textPreview":"run_20260910_002139_presentation_case  seed=42","textChars":46,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/1ovepovu","slide":9,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"notes","id":"nt/56wgdn","slide":9,"text":"このslideは質疑用。今回の数値を性能結果として過大解釈しないために条件と範囲を明示する。\n単一clientなので、このrunではFedAvg後global surrogateがそのclientのlocal after stateと一致する。\nseed数8、変換数10は説明用診断の規模。本評価ではscreeningで候補集合とlambdaを固定し、複数runで確認する。\nclient private、server seed、evaluation-onlyのID重複は0。server payload内のprivate sample IDも0件。\nSource: artifacts/runs/fedpact_nexar_example/run_20260910_002139_presentation_case/summary.json; client_local/data_splits.json; client_upload/server_payload.json"}

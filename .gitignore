@@ -27,3 +27,6 @@ data/synthetic/
 # Advisor context for Cursor (local only — README is tracked)
 notes/advisor/*
 !notes/advisor/README.md
+
+# Local PDFs (紹介論文, 進捗会, 実験計画等 — copyright / not for GitHub)
+*.pdf

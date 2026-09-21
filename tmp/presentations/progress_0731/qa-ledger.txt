@@ -1,0 +1,20 @@
+Final deck:
+C:/Python/実験_修正/output/presentation/進捗会0731_吉村有生.pptx
+
+Checks completed:
+- Artifact-tool render: all eight slides inspected individually.
+- Microsoft PowerPoint COM render: all eight slides exported at 1280 x 720 and inspected as a contact sheet.
+- Template fidelity: pass, zero issues.
+- Empty structural placeholders in final PPTX XML: zero.
+- Legacy source phrases: zero matches.
+- Title wrapping: corrected to a balanced two-line title.
+- Slide 4 empty bullet: corrected by shortening the value statement.
+- Tables: all text legible in Microsoft PowerPoint; no clipped cells.
+- Page markers: 2 through 8 present and consistent.
+
+Overflow diagnostic:
+- slides_test.py reported slides 2-8 because of imported source-master/layout extents.
+- The diagnostic was inspected rather than ignored.
+- Microsoft PowerPoint's authoritative render showed no visible content outside the slide canvas, no clipping, and no overlap.
+- Template fidelity also passed with zero issues; therefore no geometry rewrite was applied.
+

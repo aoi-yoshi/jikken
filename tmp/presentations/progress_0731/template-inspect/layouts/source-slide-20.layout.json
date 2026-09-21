@@ -1,0 +1,5032 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/zyxsni5k",
+    "id": "zyxsni5k",
+    "slide": 20,
+    "layoutId": "/ppt/slideLayouts/slideLayout2.xml",
+    "layoutName": "タイトルとコンテンツ",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office テーマ",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "fontScheme": {
+      "name": "ユーザー定義 1",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "-apple-system",
+      "Arial",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout2.xml",
+      "name": "タイトルとコンテンツ",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/4",
+          "id": "4",
+          "name": "四角形: 角を丸くする 3",
+          "bbox": [
+            1192,
+            0,
+            34.98,
+            69.01
+          ],
+          "geometry": "roundRect",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "verticalAlignment": "middle"
+          },
+          "fillColor": "#203864",
+          "lineColor": "#203864",
+          "lineWidth": 1.33
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/2",
+          "id": "2",
+          "name": "Title 1",
+          "bbox": [
+            88,
+            9.25,
+            1104,
+            69.01
+          ],
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText"
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/5",
+          "id": "5",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            798.17,
+            7.77,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/7",
+          "id": "7",
+          "name": "グラフィックス 6",
+          "bbox": [
+            5.82,
+            13.17,
+            61.09,
+            57.77
+          ],
+          "contentType": "image/svg+xml",
+          "asset": {
+            "assetId": "/ppt/media/image1.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          }
+        },
+        {
+          "order": 5,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/6",
+          "id": "6",
+          "name": "Content Placeholder 2",
+          "bbox": [
+            0,
+            85.22,
+            1280,
+            634.78
+          ],
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            0,
+            141.12,
+            1280,
+            578.88
+          ],
+          "geometry": "rect",
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            88,
+            19.95,
+            1104,
+            98.13
+          ],
+          "geometry": "rect",
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/4",
+          "id": "4",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            755.43,
+            19.95,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cj65wzyd",
+      "id": "11",
+      "name": "四角形: 角を丸くする 10",
+      "bbox": [
+        74.13,
+        399.74,
+        787.79,
+        314.81
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#FDF0E7",
+      "lineColor": "#203864",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hk3ipcr6",
+      "id": "9",
+      "name": "四角形: 角を丸くする 8",
+      "bbox": [
+        77.33,
+        73.14,
+        1182.4,
+        314.81
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#EAF5F7",
+      "lineColor": "#203864",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/grm5ofy5",
+      "id": "19",
+      "name": "四角形: 角を丸くする 18",
+      "bbox": [
+        91.73,
+        440.34,
+        383.42,
+        268.21
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#FDF3ED",
+      "lineColor": "#D96C4A",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qpwjmh8n",
+      "id": "2",
+      "name": "タイトル 1",
+      "bbox": [
+        88,
+        9.25,
+        1104,
+        69.01
+      ],
+      "text": "現在の基本処理フロー",
+      "textPreview": "現在の基本処理フロー",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 48,
+        "typeface": "Arial",
+        "color": "#203864",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "現在の基本処理フロー"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "現在の基本処理フロー",
+          "runs": [
+            {
+              "index": 1,
+              "text": "現在の基本処理フロー"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rq50vmp8",
+      "id": "3",
+      "name": "スライド番号プレースホルダー 2",
+      "bbox": [
+        798.17,
+        7.77,
+        436.57,
+        37.17
+      ],
+      "text": "20",
+      "textPreview": "20",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": {
+          "type": "theme",
+          "value": "bg1",
+          "transform": {
+            "lighten": 0.25
+          }
+        },
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "20"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "20",
+          "runs": [
+            {
+              "index": 1,
+              "text": "20"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/po3itc72",
+      "id": "5",
+      "name": "四角形: 角を丸くする 4",
+      "bbox": [
+        21.33,
+        71.74,
+        49.07,
+        314.81
+      ],
+      "geometry": "roundRect",
+      "text": "基盤",
+      "textPreview": "基盤",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "基"
+          },
+          {
+            "index": 2,
+            "text": "盤"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "基盤",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "基盤",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#203864",
+      "lineColor": "#203864",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4vm5sfy1",
+      "id": "15",
+      "name": "四角形: 角を丸くする 14",
+      "bbox": [
+        83.47,
+        131.92,
+        342.67,
+        222.78
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#F1F8F9",
+      "lineColor": "#203864",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ml0rmpw",
+      "id": "7",
+      "name": "四角形: 角を丸くする 6",
+      "bbox": [
+        21.33,
+        395.2,
+        49.07,
+        315.2
+      ],
+      "geometry": "roundRect",
+      "text": "クライアント\n",
+      "textPreview": "クライアント |",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "クラ"
+          },
+          {
+            "index": 2,
+            "text": "イア"
+          },
+          {
+            "index": 3,
+            "text": "ント"
+          },
+          {
+            "index": 4,
+            "text": ""
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "クライアント",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "クライアント",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "𝑘",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#D96C4A",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2t4nqpgb",
+      "id": "17",
+      "name": "四角形: 角を丸くする 16",
+      "bbox": [
+        88.21,
+        406.75,
+        143.06,
+        34.66
+      ],
+      "geometry": "roundRect",
+      "text": "2.蒸留配布",
+      "textPreview": "2.蒸留配布",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2.蒸留配布"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2.蒸留配布",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2.",
+              "alignment": "center"
+            },
+            {
+              "index": 2,
+              "text": "蒸留配布",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#D96C4A",
+      "lineColor": "#D96C4A",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/j6x47ap4",
+      "id": "27",
+      "name": "四角形: 角を丸くする 26",
+      "bbox": [
+        785.6,
+        98.33,
+        464.8,
+        335.28
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#F1F8F9",
+      "lineColor": "#203864",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qh4nupg7",
+      "id": "13",
+      "name": "四角形: 角を丸くする 12",
+      "bbox": [
+        83.47,
+        98.33,
+        265.07,
+        33.59
+      ],
+      "geometry": "roundRect",
+      "text": "1.還元用の知識を保存",
+      "textPreview": "1.還元用の知識を保存",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1.還元用の知識を保存"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "1.還元用の知識を保存",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "1.",
+              "alignment": "center"
+            },
+            {
+              "index": 2,
+              "text": "還元用の知識を保存",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#203864",
+      "lineColor": "#203864",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e9wzyxcn",
+      "id": "31",
+      "name": "四角形: 角を丸くする 30",
+      "bbox": [
+        438.5,
+        98.71,
+        306.55,
+        281.22
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#F1F8F9",
+      "lineColor": "#203864",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l8fm907a",
+      "id": "25",
+      "name": "四角形: 角を丸くする 24",
+      "bbox": [
+        786.04,
+        78.26,
+        217.6,
+        33.59
+      ],
+      "geometry": "roundRect",
+      "text": "6.クラウド基盤整合",
+      "textPreview": "6.クラウド基盤整合",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "6.クラウド基盤整合"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "6.クラウド基盤整合",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "6.",
+              "alignment": "center"
+            },
+            {
+              "index": 2,
+              "text": "クラウド基盤整合",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#203864",
+      "lineColor": "#203864",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/54j6l47e",
+      "id": "29",
+      "name": "四角形: 角を丸くする 28",
+      "bbox": [
+        436.12,
+        70.57,
+        97.07,
+        33.59
+      ],
+      "geometry": "roundRect",
+      "text": "5.集約",
+      "textPreview": "5.集約",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "5.集約"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "5.集約",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "5",
+              "alignment": "center"
+            },
+            {
+              "index": 2,
+              "text": ".",
+              "alignment": "center"
+            },
+            {
+              "index": 3,
+              "text": "集約",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#203864",
+      "lineColor": "#203864",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2lczih8r",
+      "id": "6",
+      "name": "四角形: 角を丸くする 5",
+      "bbox": [
+        911.35,
+        472.88,
+        217.6,
+        33.59
+      ],
+      "geometry": "roundRect",
+      "text": "7.次ラウンドへ",
+      "textPreview": "7.次ラウンドへ",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "7.次ラウンドへ"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "7.次ラウンドへ",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "7.",
+              "alignment": "center"
+            },
+            {
+              "index": 2,
+              "text": "次ラウンドへ",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#203864",
+      "lineColor": "#203864",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ud4juhg",
+      "id": "16",
+      "name": "テキスト ボックス 15",
+      "bbox": [
+        77.33,
+        200.6,
+        115.2,
+        63.01
+      ],
+      "geometry": "rect",
+      "text": "更新済み\n基盤モデル\n＋基盤LoRA",
+      "textPreview": "更新済み | 基盤モデル | ＋基盤LoRA",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "更新済み"
+          },
+          {
+            "index": 2,
+            "text": "基盤モデル"
+          },
+          {
+            "index": 3,
+            "text": "＋基盤LoRA"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "更新済み",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "更新済み",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "基盤モデル",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "基盤モデル",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "＋基盤LoRA",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "＋基盤",
+              "fontSize": 14.67
+            },
+            {
+              "index": 2,
+              "text": "LoRA",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hsvmhkzq",
+      "id": "18",
+      "name": "矢印: 右 17",
+      "bbox": [
+        179.73,
+        163.35,
+        111.3,
+        9.7
+      ],
+      "geometry": "rightArrow",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/69on25ov",
+      "id": "22",
+      "name": "テキスト ボックス 21",
+      "bbox": [
+        179.73,
+        137.81,
+        115.2,
+        27.47
+      ],
+      "geometry": "rect",
+      "text": "前向き推論",
+      "textPreview": "前向き推論",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "前向き推論"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "前向き推論",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "前向き推論",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/jalsbmps",
+      "id": "172",
+      "name": "グラフィックス 13",
+      "bbox": [
+        210.88,
+        173.15,
+        45.87,
+        45.87
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image28.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 879
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image28.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 879
+      }
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y5ony58z",
+      "id": "26",
+      "name": "テキスト ボックス 25",
+      "bbox": [
+        276.64,
+        168.84,
+        161.87,
+        67.74
+      ],
+      "geometry": "rect",
+      "text": "サンプル ID と\n 基盤 logits を保存",
+      "textPreview": "サンプル ID と |  基盤 logits を保存",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "サンプル ID と"
+          },
+          {
+            "index": 2,
+            "text": " 基盤 logits を保存"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "サンプル ID と",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "サンプル ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 2,
+              "text": "ID ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 3,
+              "text": "と",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": " 基盤 logits を保存",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": " 基盤 ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 2,
+              "text": "logits",
+              "fontSize": 14.67
+            },
+            {
+              "index": 3,
+              "text": " ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 4,
+              "text": "を保存",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4ryhcn2d",
+      "id": "46",
+      "name": "四角形: 角を丸くする 45",
+      "bbox": [
+        552.04,
+        418.17,
+        293.84,
+        172.85
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#FDF3ED",
+      "lineColor": "#D96C4A",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/za50r2ds",
+      "id": "30",
+      "name": "矢印: 右 29",
+      "bbox": [
+        213.83,
+        389.22,
+        63.1,
+        15.26
+      ],
+      "rotation": 90,
+      "geometry": "rightArrow",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ny50v2d4",
+      "id": "34",
+      "name": "テキスト ボックス 33",
+      "bbox": [
+        138.48,
+        281.59,
+        236.54,
+        33.99
+      ],
+      "geometry": "rect",
+      "text": "サンプル ID とを送信",
+      "textPreview": "サンプル ID とを送信",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "サンプル ID とを送信"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "サンプル ID とを送信",
+          "runs": [
+            {
+              "index": 1,
+              "text": "サンプル ",
+              "fontSize": 16
+            },
+            {
+              "index": 2,
+              "text": "ID ",
+              "fontSize": 16
+            },
+            {
+              "index": 3,
+              "text": "と",
+              "fontSize": 16
+            },
+            {
+              "index": 4,
+              "text": "を送信",
+              "fontSize": 16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/32lgjid0",
+      "id": "38",
+      "name": "四角形: 角を丸くする 37",
+      "bbox": [
+        552.68,
+        391.89,
+        200.75,
+        34.66
+      ],
+      "geometry": "roundRect",
+      "text": "3.端末学習(L_task)",
+      "textPreview": "3.端末学習(L_task)",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "3.端末学習(L_task)"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "3.端末学習(L_task)",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3",
+              "alignment": "center"
+            },
+            {
+              "index": 2,
+              "text": ".",
+              "alignment": "center"
+            },
+            {
+              "index": 3,
+              "text": "端末学習",
+              "alignment": "center"
+            },
+            {
+              "index": 4,
+              "text": "(",
+              "alignment": "center"
+            },
+            {
+              "index": 5,
+              "text": "L_task",
+              "alignment": "center"
+            },
+            {
+              "index": 6,
+              "text": ")",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#D96C4A",
+      "lineColor": "#D96C4A",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ulwz6d4b",
+      "id": "40",
+      "name": "四角形: 角を丸くする 39",
+      "bbox": [
+        875.76,
+        545.73,
+        387.76,
+        163.15
+      ],
+      "geometry": "roundRect",
+      "text": "基盤モデルを中心とした循環更新\n複数の適応情報を使った基盤 LoRA更新\n重み平均と共有整合データへの依存除去",
+      "textPreview": "基盤モデルを中心とした循環更新 | 複数の適応情報を使った基盤 LoRA更新 | 重み平均と共有整合データへの依存除去",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1. 基盤モデルを中心とした循環更新"
+          },
+          {
+            "index": 2,
+            "text": "2. 複数の適応情報を使った基盤 LoRA更新"
+          },
+          {
+            "index": 3,
+            "text": "3. 重み平均と共有整合データへの依存除去"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "基盤モデルを中心とした循環更新",
+          "runs": [
+            {
+              "index": 1,
+              "text": "基盤モデルを中心とした循環更新",
+              "fontSize": 21.33,
+              "color": "tx1"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "複数の適応情報を使った基盤 LoRA更新",
+          "runs": [
+            {
+              "index": 1,
+              "text": "複数の適応情報を使った基盤 ",
+              "fontSize": 21.33,
+              "color": "tx1"
+            },
+            {
+              "index": 2,
+              "text": "LoRA",
+              "fontSize": 21.33,
+              "color": "tx1"
+            },
+            {
+              "index": 3,
+              "text": "更新",
+              "fontSize": 21.33,
+              "color": "tx1"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "重み平均と共有整合データへの依存除去",
+          "runs": [
+            {
+              "index": 1,
+              "text": "重み平均と共有整合データへの依存除去",
+              "fontSize": 21.33,
+              "color": "tx1"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#FFEBEB",
+      "lineColor": "#FF0000",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gnyh8nm1",
+      "id": "42",
+      "name": "テキスト ボックス 41",
+      "bbox": [
+        82.49,
+        496.45,
+        124.79,
+        60.59
+      ],
+      "geometry": "rect",
+      "text": "Surrogateモデル\n＋クライアントLoRA",
+      "textPreview": "Surrogateモデル | ＋クライアントLoRA",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Surrogateモデル"
+          },
+          {
+            "index": 2,
+            "text": "＋クライアントLoRA"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Surrogateモデル",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Surrogate",
+              "fontSize": 14
+            },
+            {
+              "index": 2,
+              "text": "モデル",
+              "fontSize": 14
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "＋クライアントLoRA",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "＋クライアント",
+              "fontSize": 14
+            },
+            {
+              "index": 2,
+              "text": "LoRA",
+              "fontSize": 14
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ipgzadk7",
+      "id": "44",
+      "name": "テキスト ボックス 43",
+      "bbox": [
+        170.18,
+        214.78,
+        129.98,
+        59.48
+      ],
+      "geometry": "rect",
+      "text": "公開整合セットの各サンプル\n",
+      "textPreview": "公開整合セットの各サンプル |",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "公開整合セットの各"
+          },
+          {
+            "index": 2,
+            "text": "サンプル"
+          },
+          {
+            "index": 3,
+            "text": ""
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "公開整合セットの各サンプル",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "公開整合セットの各サンプル",
+              "fontSize": 13.33
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)",
+          "runs": [],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qdgzexk3",
+      "id": "48",
+      "name": "矢印: 右 47",
+      "bbox": [
+        186.3,
+        466.63,
+        181.7,
+        7.88
+      ],
+      "geometry": "rightArrow",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "accent2",
+      "lineColor": "accent2",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/18b2xwn6",
+      "id": "50",
+      "name": "テキスト ボックス 49",
+      "bbox": [
+        224.45,
+        442.02,
+        115.2,
+        27.47
+      ],
+      "geometry": "rect",
+      "text": "前向き推論",
+      "textPreview": "前向き推論",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "前向き推論"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "前向き推論",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "前向き推論",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 30,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/i9sb2ho7",
+      "id": "173",
+      "name": "グラフィックス 51",
+      "bbox": [
+        262.02,
+        477.28,
+        45.87,
+        45.87
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image28.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 879
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image28.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 879
+      }
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9cb21gn2",
+      "id": "54",
+      "name": "テキスト ボックス 53",
+      "bbox": [
+        220.61,
+        517.9,
+        129.98,
+        59.48
+      ],
+      "geometry": "rect",
+      "text": "公開整合セットの\n各サンプル\n",
+      "textPreview": "公開整合セットの | 各サンプル |",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "公開整合セットの"
+          },
+          {
+            "index": 2,
+            "text": "各サンプル"
+          },
+          {
+            "index": 3,
+            "text": ""
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "公開整合セットの",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "公開整合セットの",
+              "fontSize": 13.33
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "各サンプル",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "各サンプル",
+              "fontSize": 13.33
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)",
+          "runs": [],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z61s7q50",
+      "id": "159",
+      "name": "四角形: 角を丸くする 158",
+      "bbox": [
+        551.65,
+        471.4,
+        294.09,
+        69.51
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#FDF3ED",
+      "lineColor": "accent2",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/natkz65w",
+      "id": "56",
+      "name": "テキスト ボックス 55",
+      "bbox": [
+        348.5,
+        470.4,
+        131.25,
+        63.88
+      ],
+      "geometry": "rect",
+      "text": "サンプル ID と\n 基盤 logits\nを保存",
+      "textPreview": "サンプル ID と |  基盤 logits | を保存",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "サンプル ID と"
+          },
+          {
+            "index": 2,
+            "text": " 基盤 logits"
+          },
+          {
+            "index": 3,
+            "text": "を保存"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "サンプル ID と",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "サンプル ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 2,
+              "text": "ID ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 3,
+              "text": "と",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": " 基盤 logits",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": " 基盤 ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 2,
+              "text": "logits",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "を保存",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "を保存",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xgv25gne",
+      "id": "58",
+      "name": "テキスト ボックス 57",
+      "bbox": [
+        136.22,
+        651.15,
+        308,
+        27.47
+      ],
+      "geometry": "rect",
+      "text": "クライアント LoRA + 分類ヘッド ",
+      "textPreview": "クライアント LoRA + 分類ヘッド",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "クライアント LoRA + 分類ヘッド"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "クライアント LoRA + 分類ヘッド ",
+          "runs": [
+            {
+              "index": 1,
+              "text": "クライアント LoRA + 分類ヘッド ",
+              "fontSize": 14.67,
+              "typeface": "-apple-system",
+              "color": "tx1"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 35,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/h8ja9c7m",
+      "id": "174",
+      "name": "グラフィックス 61",
+      "bbox": [
+        571.67,
+        423.83,
+        45.87,
+        45.87
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image35.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 1488
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image35.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 1488
+      }
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4zedsjyd",
+      "id": "64",
+      "name": "テキスト ボックス 63",
+      "bbox": [
+        608.96,
+        433.07,
+        252.97,
+        32.31
+      ],
+      "geometry": "rect",
+      "text": "端末固有データ ",
+      "textPreview": "端末固有データ",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "端末固有データ"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "端末固有データ ",
+          "runs": [
+            {
+              "index": 1,
+              "text": "端末固有データ",
+              "fontSize": 18.67,
+              "typeface": "Calibri Light",
+              "color": "tx1"
+            },
+            {
+              "index": 2,
+              "text": " ",
+              "fontSize": 18.67,
+              "typeface": "Calibri",
+              "color": "tx1"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tcz6dk7m",
+      "id": "21",
+      "name": "四角形: 角を丸くする 20",
+      "bbox": [
+        569.93,
+        675.52,
+        255.25,
+        34.66
+      ],
+      "geometry": "roundRect",
+      "text": "4.適応情報送信",
+      "textPreview": "4.適応情報送信",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "4.適応情報送信"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "4.適応情報送信",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "4.",
+              "alignment": "center"
+            },
+            {
+              "index": 2,
+              "text": "適応情報送信",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#D96C4A",
+      "lineColor": "#D96C4A",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 38,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0beh07ud",
+      "id": "33",
+      "name": "四角形: 角を丸くする 32",
+      "bbox": [
+        676.3,
+        637.79,
+        57.7,
+        33.59
+      ],
+      "geometry": "roundRect",
+      "text": "Logits",
+      "textPreview": "Logits",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Logits"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Logits",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Logits",
+              "fontSize": 18.67,
+              "color": "tx1"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": {
+        "type": "theme",
+        "value": "accent2",
+        "transform": {
+          "lighten": 0.8
+        }
+      },
+      "lineColor": {
+        "type": "theme",
+        "value": "accent2",
+        "transform": {
+          "darken": 0.25
+        }
+      },
+      "lineWidth": 1.33
+    },
+    {
+      "order": 39,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mdwz2xcj",
+      "id": "35",
+      "name": "四角形: 角を丸くする 34",
+      "bbox": [
+        569.93,
+        638.09,
+        101.55,
+        33.59
+      ],
+      "geometry": "roundRect",
+      "text": "勾配情報",
+      "textPreview": "勾配情報",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "勾配情報"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "勾配情報",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "勾配情報",
+              "fontSize": 18.67,
+              "color": "tx1"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": {
+        "type": "theme",
+        "value": "accent4",
+        "transform": {
+          "lighten": 0.8
+        }
+      },
+      "lineColor": {
+        "type": "theme",
+        "value": "accent4",
+        "transform": {
+          "darken": 0.25
+        }
+      },
+      "lineWidth": 1.33
+    },
+    {
+      "order": 40,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8zeh47up",
+      "id": "37",
+      "name": "四角形: 角を丸くする 36",
+      "bbox": [
+        738.27,
+        636.57,
+        83.51,
+        33.59
+      ],
+      "geometry": "roundRect",
+      "text": "差分LoRA",
+      "textPreview": "差分LoRA",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "差分LoRA"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "差分LoRA",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "差分",
+              "fontSize": 18.67,
+              "color": "tx1"
+            },
+            {
+              "index": 2,
+              "text": "LoRA",
+              "fontSize": 18.67,
+              "color": "tx1"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": {
+        "type": "theme",
+        "value": "accent6",
+        "transform": {
+          "lighten": 0.8
+        }
+      },
+      "lineColor": {
+        "type": "theme",
+        "value": "accent6",
+        "transform": {
+          "darken": 0.25
+        }
+      },
+      "lineWidth": 1.33
+    },
+    {
+      "order": 41,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ixwvqtg7",
+      "id": "66",
+      "name": "テキスト ボックス 65",
+      "bbox": [
+        548.06,
+        468.22,
+        297.68,
+        26.66
+      ],
+      "geometry": "rect",
+      "text": "予測と正解ラベル  の差を L_task で測る。",
+      "textPreview": "予測と正解ラベル  の差を L_task で測る。",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1. 予測と正解ラベル  の差を L_task で測る。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "予測と正解ラベル  の差を L_task で測る。",
+          "resolvedTextStyle": {
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "予測と正解ラベル ",
+              "fontSize": 14,
+              "typeface": "-apple-system",
+              "color": "tx1"
+            },
+            {
+              "index": 2,
+              "text": " の差を ",
+              "fontSize": 14,
+              "typeface": "-apple-system",
+              "color": "tx1"
+            },
+            {
+              "index": 3,
+              "text": "L_task",
+              "fontSize": 14,
+              "typeface": "-apple-system",
+              "color": "tx1",
+              "bold": true
+            },
+            {
+              "index": 4,
+              "text": " で測る。",
+              "fontSize": 14,
+              "typeface": "-apple-system",
+              "color": "tx1"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 42,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k3udgzyt",
+      "id": "68",
+      "name": "テキスト ボックス 67",
+      "bbox": [
+        556.19,
+        485.8,
+        284.76,
+        59.25
+      ],
+      "geometry": "rect",
+      "text": "ℒ_(𝑡𝑎𝑠𝑘)^(𝑘) = 1⁄(|𝒟_(𝑘)|)∑_((𝑥,𝑦)∈𝒟_(𝑘)) CE𝑓_(𝑘)𝑥 ; 𝜃_(𝑘),𝑦",
+      "textPreview": "ℒ_(𝑡𝑎𝑠𝑘)^(𝑘) = 1⁄(|𝒟_(𝑘)|)∑_((𝑥,𝑦)∈𝒟_(𝑘)) CE𝑓_(𝑘)𝑥 ; 𝜃_(𝑘),𝑦",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ℒ_(𝑡𝑎𝑠𝑘)^(𝑘) = 1⁄(|𝒟_(𝑘)|)∑_((𝑥,𝑦)∈𝒟_(𝑘)) CE𝑓_(𝑘)𝑥;𝜃_(𝑘),𝑦"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ℒ_(𝑡𝑎𝑠𝑘)^(𝑘) = 1⁄(|𝒟_(𝑘)|)∑_((𝑥,𝑦)∈𝒟_(𝑘)) CE𝑓_(𝑘)𝑥 ; 𝜃_(𝑘),𝑦",
+          "runs": [],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 43,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/903uxk7i",
+      "id": "140",
+      "name": "四角形: 角を丸くする 139",
+      "bbox": [
+        805.08,
+        248.13,
+        428.48,
+        79.01
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#F1F8F9",
+      "lineColor": "#203864",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 44,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/wnat0761",
+      "id": "175",
+      "name": "図 101",
+      "bbox": [
+        114.86,
+        153.16,
+        40.14,
+        40.23
+      ],
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "/ppt/media/image39.png",
+        "contentType": "image/png",
+        "byteLength": 14686
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image39.png",
+        "contentType": "image/png",
+        "byteLength": 14686
+      }
+    },
+    {
+      "order": 45,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7mx8rqx4",
+      "id": "120",
+      "name": "テキスト ボックス 119",
+      "bbox": [
+        843.94,
+        173.74,
+        115.2,
+        63.01
+      ],
+      "geometry": "rect",
+      "text": "更新済み\n基盤モデル\n＋基盤LoRA",
+      "textPreview": "更新済み | 基盤モデル | ＋基盤LoRA",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "更新済み"
+          },
+          {
+            "index": 2,
+            "text": "基盤モデル"
+          },
+          {
+            "index": 3,
+            "text": "＋基盤LoRA"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "更新済み",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "更新済み",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "基盤モデル",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "基盤モデル",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "＋基盤LoRA",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "＋基盤",
+              "fontSize": 14.67
+            },
+            {
+              "index": 2,
+              "text": "LoRA",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 46,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tofqt0fa",
+      "id": "122",
+      "name": "矢印: 右 121",
+      "bbox": [
+        946.34,
+        136.48,
+        111.3,
+        9.7
+      ],
+      "geometry": "rightArrow",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 47,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vqx8vaxg",
+      "id": "124",
+      "name": "テキスト ボックス 123",
+      "bbox": [
+        946.34,
+        110.95,
+        115.2,
+        27.47
+      ],
+      "geometry": "rect",
+      "text": "前向き推論",
+      "textPreview": "前向き推論",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "前向き推論"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "前向き推論",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "前向き推論",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 48,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/vm1s72pw",
+      "id": "176",
+      "name": "グラフィックス 125",
+      "bbox": [
+        977.48,
+        146.29,
+        45.87,
+        45.87
+      ],
+      "contentType": "image/svg+xml",
+      "asset": {
+        "assetId": "/ppt/media/image28.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 879
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image28.svg",
+        "contentType": "image/svg+xml",
+        "byteLength": 879
+      }
+    },
+    {
+      "order": 49,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bud8j6xc",
+      "id": "128",
+      "name": "テキスト ボックス 127",
+      "bbox": [
+        1043.24,
+        141.97,
+        161.87,
+        63.01
+      ],
+      "geometry": "rect",
+      "text": "サンプル ID と\n 基盤 logits を保存",
+      "textPreview": "サンプル ID と |  基盤 logits を保存",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "サンプル ID と"
+          },
+          {
+            "index": 2,
+            "text": " 基盤 logits を保存"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "サンプル ID と",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "サンプル ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 2,
+              "text": "ID ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 3,
+              "text": "と",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": " 基盤 logits を保存",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": " 基盤 ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 2,
+              "text": "logits",
+              "fontSize": 14.67
+            },
+            {
+              "index": 3,
+              "text": " ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 4,
+              "text": "を保存",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 50,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0zi5k7e9",
+      "id": "130",
+      "name": "テキスト ボックス 129",
+      "bbox": [
+        936.78,
+        187.92,
+        129.98,
+        59.48
+      ],
+      "geometry": "rect",
+      "text": "公開整合セットの各サンプル\n",
+      "textPreview": "公開整合セットの各サンプル |",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "公開整合セットの各"
+          },
+          {
+            "index": 2,
+            "text": "サンプル"
+          },
+          {
+            "index": 3,
+            "text": ""
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "公開整合セットの各サンプル",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "公開整合セットの各サンプル",
+              "fontSize": 13.33
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)",
+          "runs": [],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 51,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/alsryxob",
+      "id": "177",
+      "name": "図 131",
+      "bbox": [
+        881.46,
+        126.29,
+        40.14,
+        40.23
+      ],
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "/ppt/media/image39.png",
+        "contentType": "image/png",
+        "byteLength": 14686
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image39.png",
+        "contentType": "image/png",
+        "byteLength": 14686
+      }
+    },
+    {
+      "order": 52,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/svi5g7ed",
+      "id": "134",
+      "name": "テキスト ボックス 133",
+      "bbox": [
+        787.64,
+        248.13,
+        455.27,
+        29.08
+      ],
+      "geometry": "rect",
+      "text": "KL(teacher || 基盤モデル) × T²により Lpred を計算する。",
+      "textPreview": "KL(teacher || 基盤モデル) × T²により Lpred を計算する。",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "KL(teacher || 基盤モデル) × T²により Lpred を計算する。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "KL(teacher || 基盤モデル) × T²により Lpred を計算する。",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "KL(teacher || ",
+              "fontSize": 16
+            },
+            {
+              "index": 2,
+              "text": "基盤モデル",
+              "fontSize": 16
+            },
+            {
+              "index": 3,
+              "text": ") × T²",
+              "fontSize": 16
+            },
+            {
+              "index": 4,
+              "text": "により ",
+              "fontSize": 16
+            },
+            {
+              "index": 5,
+              "text": "Lpred",
+              "fontSize": 16
+            },
+            {
+              "index": 6,
+              "text": " ",
+              "fontSize": 16
+            },
+            {
+              "index": 7,
+              "text": "を計算する。",
+              "fontSize": 16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 53,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cr2psreh",
+      "id": "138",
+      "name": "テキスト ボックス 137",
+      "bbox": [
+        842.37,
+        269.4,
+        365.44,
+        62.87
+      ],
+      "geometry": "rect",
+      "text": "ℒ_(𝑝𝑟𝑒𝑑) = (𝑇²)⁄(|𝒟_(𝑎𝑙𝑖𝑔𝑛)|)∑_(𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)) KL𝑝_(𝑎𝑔𝑔)𝑥‖𝑝_(𝑏𝑎𝑠𝑒)𝑥",
+      "textPreview": "ℒ_(𝑝𝑟𝑒𝑑) = (𝑇²)⁄(|𝒟_(𝑎𝑙𝑖𝑔𝑛)|)∑_(𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)) KL𝑝_(𝑎𝑔𝑔)𝑥‖𝑝_(𝑏𝑎𝑠𝑒)𝑥",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ℒ_(𝑝𝑟𝑒𝑑) = (𝑇²)⁄(|𝒟_(𝑎𝑙𝑖𝑔𝑛)|)∑_(𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)) KL𝑝_(𝑎𝑔𝑔)𝑥‖𝑝_(𝑏𝑎𝑠𝑒)𝑥"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ℒ_(𝑝𝑟𝑒𝑑) = (𝑇²)⁄(|𝒟_(𝑎𝑙𝑖𝑔𝑛)|)∑_(𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)) KL𝑝_(𝑎𝑔𝑔)𝑥‖𝑝_(𝑏𝑎𝑠𝑒)𝑥",
+          "runs": [],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 54,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/9kja5s7q",
+      "id": "178",
+      "name": "図 141",
+      "bbox": [
+        123.5,
+        450.48,
+        39.23,
+        39.41
+      ],
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "/ppt/media/image42.png",
+        "contentType": "image/png",
+        "byteLength": 10623
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image42.png",
+        "contentType": "image/png",
+        "byteLength": 10623
+      }
+    },
+    {
+      "order": 55,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mxsb2p8r",
+      "id": "143",
+      "name": "直線コネクタ 142",
+      "bbox": [
+        85.02,
+        281.84,
+        341.11,
+        1.13
+      ],
+      "verticalFlip": true,
+      "geometry": "line",
+      "lineColor": "#002060",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 56,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vmlczup8",
+      "id": "146",
+      "name": "四角形: 角を丸くする 145",
+      "bbox": [
+        93.06,
+        571.24,
+        380.3,
+        74.23
+      ],
+      "geometry": "roundRect",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "#FDF3ED",
+      "lineColor": "accent2",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 57,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5snu5o7a",
+      "id": "148",
+      "name": "テキスト ボックス 147",
+      "bbox": [
+        87.91,
+        571.39,
+        399.07,
+        27.47
+      ],
+      "geometry": "rect",
+      "text": "KL(基盤モデル || 端末モデル) × T²により Ldist を計算する。",
+      "textPreview": "KL(基盤モデル || 端末モデル) × T²により Ldist を計算する。",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "KL(基盤モデル || 端末モデル) × T²により Ldist を計算する。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "KL(基盤モデル || 端末モデル) × T²により Ldist を計算する。",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "KL(",
+              "fontSize": 14.67
+            },
+            {
+              "index": 2,
+              "text": "基盤モデル",
+              "fontSize": 14.67
+            },
+            {
+              "index": 3,
+              "text": " || ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 4,
+              "text": "端末モデル",
+              "fontSize": 14.67
+            },
+            {
+              "index": 5,
+              "text": ") × T²",
+              "fontSize": 14.67
+            },
+            {
+              "index": 6,
+              "text": "により ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 7,
+              "text": "Ldist",
+              "fontSize": 14.67
+            },
+            {
+              "index": 8,
+              "text": " ",
+              "fontSize": 14.67
+            },
+            {
+              "index": 9,
+              "text": "を計算する。",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 58,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2xorq1on",
+      "id": "150",
+      "name": "テキスト ボックス 149",
+      "bbox": [
+        101.16,
+        587.32,
+        365.44,
+        62.87
+      ],
+      "geometry": "rect",
+      "text": "ℒ_(𝑑𝑖𝑠𝑡)^((𝑘)) = (𝑇²)⁄(|𝒟_(𝑎𝑙𝑖𝑔𝑛)|)∑_(𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)) KL𝑝_(𝑏𝑎𝑠𝑒)^((𝑟−1))𝑥‖𝑝_(𝑘)𝑥",
+      "textPreview": "ℒ_(𝑑𝑖𝑠𝑡)^((𝑘)) = (𝑇²)⁄(|𝒟_(𝑎𝑙𝑖𝑔𝑛)|)∑_(𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)) KL𝑝_(𝑏𝑎𝑠𝑒)^((𝑟−1))𝑥‖𝑝_(𝑘)𝑥",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ℒ_(𝑑𝑖𝑠𝑡)^((𝑘)) = (𝑇²)⁄(|𝒟_(𝑎𝑙𝑖𝑔𝑛)|)∑_(𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)) KL𝑝_(𝑏𝑎𝑠𝑒)^((𝑟 − 1))𝑥‖𝑝_(𝑘)𝑥"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ℒ_(𝑑𝑖𝑠𝑡)^((𝑘)) = (𝑇²)⁄(|𝒟_(𝑎𝑙𝑖𝑔𝑛)|)∑_(𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)) KL𝑝_(𝑏𝑎𝑠𝑒)^((𝑟−1))𝑥‖𝑝_(𝑘)𝑥",
+          "runs": [],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 59,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/uts7m54n",
+      "id": "161",
+      "name": "テキスト ボックス 160",
+      "bbox": [
+        554.82,
+        565.85,
+        308,
+        27.47
+      ],
+      "geometry": "rect",
+      "text": "クライアント LoRA + 分類ヘッド ",
+      "textPreview": "クライアント LoRA + 分類ヘッド",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "クライアント LoRA + 分類ヘッド"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "クライアント LoRA + 分類ヘッド ",
+          "runs": [
+            {
+              "index": 1,
+              "text": "クライアント LoRA + 分類ヘッド ",
+              "fontSize": 14.67,
+              "typeface": "-apple-system",
+              "color": "tx1"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 60,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wvapov2t",
+      "id": "163",
+      "name": "矢印: 右 162",
+      "bbox": [
+        685.91,
+        548.4,
+        25.85,
+        17.65
+      ],
+      "rotation": 90,
+      "geometry": "rightArrow",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      },
+      "fillColor": "accent2",
+      "lineColor": "accent2",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 61,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m587il4r",
+      "id": "165",
+      "name": "テキスト ボックス 164",
+      "bbox": [
+        919.85,
+        361.62,
+        216.1,
+        32.31
+      ],
+      "geometry": "rect",
+      "text": "基盤 LoRA  ",
+      "textPreview": "基盤 LoRA",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "基盤 LoRA"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "基盤 LoRA  ",
+          "runs": [
+            {
+              "index": 1,
+              "text": "基盤",
+              "fontSize": 18.67,
+              "typeface": "-apple-system"
+            },
+            {
+              "index": 2,
+              "text": " LoRA ",
+              "fontSize": 18.67,
+              "typeface": "-apple-system",
+              "color": "tx1"
+            },
+            {
+              "index": 3,
+              "text": " ",
+              "fontSize": 18.67,
+              "typeface": "-apple-system"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 62,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/87apkvmx",
+      "id": "167",
+      "name": "テキスト ボックス 166",
+      "bbox": [
+        788.73,
+        385.22,
+        461.17,
+        44.54
+      ],
+      "geometry": "rect",
+      "text": "𝜃_(𝑏𝑎𝑠𝑒)^(𝑟)← Optimizer 𝜃_(𝑏𝑎𝑠𝑒)^((𝑟−1)),∇_(𝜃_(𝑏𝑎𝑠𝑒)^((𝑟−1)))ℒ_(𝑝𝑟𝑒𝑑) ; 𝜂_(𝑏𝑎𝑠𝑒)",
+      "textPreview": "𝜃_(𝑏𝑎𝑠𝑒)^(𝑟)← Optimizer 𝜃_(𝑏𝑎𝑠𝑒)^((𝑟−1)),∇_(𝜃_(𝑏𝑎𝑠𝑒)^((𝑟−1)))ℒ_(𝑝𝑟𝑒𝑑) ; 𝜂_(𝑏𝑎𝑠𝑒)",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "𝜃_(𝑏𝑎𝑠𝑒)^(𝑟)← Optimizer 𝜃_(𝑏𝑎𝑠𝑒)^((𝑟 − 1)),∇_(𝜃_(𝑏𝑎𝑠𝑒)^((𝑟 − 1)))ℒ_(𝑝𝑟𝑒𝑑);𝜂_(𝑏𝑎𝑠𝑒)"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "𝜃_(𝑏𝑎𝑠𝑒)^(𝑟)← Optimizer 𝜃_(𝑏𝑎𝑠𝑒)^((𝑟−1)),∇_(𝜃_(𝑏𝑎𝑠𝑒)^((𝑟−1)))ℒ_(𝑝𝑟𝑒𝑑) ; 𝜂_(𝑏𝑎𝑠𝑒)",
+          "runs": [],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 63,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y187el4f",
+      "id": "169",
+      "name": "矢印: 右 168",
+      "bbox": [
+        1003.44,
+        335.4,
+        31.77,
+        17.15
+      ],
+      "rotation": 90,
+      "geometry": "rightArrow",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 64,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p8fmxcjy",
+      "id": "171",
+      "name": "矢印: 右 170",
+      "bbox": [
+        1007.47,
+        441.14,
+        31.77,
+        17.15
+      ],
+      "rotation": 90,
+      "geometry": "rightArrow",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 65,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rid4nuhs",
+      "id": "12",
+      "name": "矢印: 右 11",
+      "bbox": [
+        180.8,
+        671.38,
+        211.02,
+        41.84
+      ],
+      "geometry": "rightArrow",
+      "text": "3.端末学習(L_task)で利用",
+      "textPreview": "3.端末学習(L_task)で利用",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "3.端末学習(L_task)で利用"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "3.端末学習(L_task)で利用",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3.",
+              "fontSize": 16
+            },
+            {
+              "index": 2,
+              "text": "端末学習",
+              "fontSize": 16
+            },
+            {
+              "index": 3,
+              "text": "(",
+              "fontSize": 16
+            },
+            {
+              "index": 4,
+              "text": "L_task",
+              "fontSize": 16
+            },
+            {
+              "index": 5,
+              "text": ")",
+              "fontSize": 16
+            },
+            {
+              "index": 6,
+              "text": "で利用",
+              "fontSize": 16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "accent2",
+      "lineColor": "accent2",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 66,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/43q5cz69",
+      "id": "28",
+      "name": "テキスト ボックス 27",
+      "bbox": [
+        630.11,
+        592.47,
+        139.8,
+        43.32
+      ],
+      "geometry": "rect",
+      "text": "\nを用いた前向き推論",
+      "textPreview": "| を用いた前向き推論",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          },
+          {
+            "index": 2,
+            "text": "を用いた前向き推論"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "𝑥∈𝒟_(𝑎𝑙𝑖𝑔𝑛)",
+          "runs": [],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "を用いた前向き推論",
+          "runs": [
+            {
+              "index": 1,
+              "text": "を用いた前向き推論",
+              "fontSize": 13.33
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 67,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1cnitsvy",
+      "id": "32",
+      "name": "矢印: 上向き折線 31",
+      "bbox": [
+        528.02,
+        397.08,
+        41.42,
+        301.12
+      ],
+      "horizontalFlip": true,
+      "geometry": "bentUpArrow",
+      "text": "𝑧_(𝑘)𝑥",
+      "textPreview": "𝑧_(𝑘)𝑥",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "𝑧_(𝑘)𝑥"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "𝑧_(𝑘)𝑥",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#D96C4A",
+      "lineColor": "#D96C4A",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 68,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4nu1krqh",
+      "id": "4",
+      "name": "直線コネクタ 3",
+      "bbox": [
+        438.5,
+        311.69,
+        306.55,
+        1.86
+      ],
+      "geometry": "line",
+      "lineColor": "#002060",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 69,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7ax4bapg",
+      "id": "23",
+      "name": "テキスト ボックス 22",
+      "bbox": [
+        463.42,
+        315.47,
+        268.18,
+        34.15
+      ],
+      "geometry": "rect",
+      "text": "サンプル ID とを送信",
+      "textPreview": "サンプル ID とを送信",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "サンプル ID とを送信"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "サンプル ID とを送信",
+          "runs": [
+            {
+              "index": 1,
+              "text": "サンプル ",
+              "fontSize": 18.67
+            },
+            {
+              "index": 2,
+              "text": "ID ",
+              "fontSize": 18.67
+            },
+            {
+              "index": 3,
+              "text": "と",
+              "fontSize": 18.67
+            },
+            {
+              "index": 4,
+              "text": "を送信",
+              "fontSize": 18.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 70,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/907ixcva",
+      "id": "36",
+      "name": "テキスト ボックス 35",
+      "bbox": [
+        140.32,
+        319.03,
+        236.54,
+        34.24
+      ],
+      "geometry": "rect",
+      "text": "2.蒸留配布の利用",
+      "textPreview": "2.蒸留配布の利用",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2.蒸留配布の利用"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2.蒸留配布の利用",
+          "runs": [
+            {
+              "index": 1,
+              "text": "2.",
+              "fontSize": 16
+            },
+            {
+              "index": 2,
+              "text": "蒸留配布の",
+              "fontSize": 16
+            },
+            {
+              "index": 3,
+              "text": "利用",
+              "fontSize": 16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 71,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vmp0zilg",
+      "id": "41",
+      "name": "テキスト ボックス 40",
+      "bbox": [
+        456.2,
+        114.95,
+        260.07,
+        45.24
+      ],
+      "geometry": "rect",
+      "text": "各から重み付き平均により集約分布を作成",
+      "textPreview": "各から重み付き平均により集約分布を作成",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "各"
+          },
+          {
+            "index": 2,
+            "text": "から重み付き平均により集約分布を作成"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "各から重み付き平均により集約分布を作成",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "各",
+              "fontSize": 14.67
+            },
+            {
+              "index": 2,
+              "text": "から重み付き平均により集約分布を作成",
+              "fontSize": 14.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 72,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3qp03ils",
+      "id": "45",
+      "name": "テキスト ボックス 44",
+      "bbox": [
+        484.47,
+        164.02,
+        213.35,
+        35.22
+      ],
+      "geometry": "rect",
+      "text": "𝑞_(𝑘)𝑥 = softmax𝑧_(𝑘)𝑥",
+      "textPreview": "𝑞_(𝑘)𝑥 = softmax𝑧_(𝑘)𝑥",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "𝑞_(𝑘)𝑥 = softmax𝑧_(𝑘)𝑥"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "𝑞_(𝑘)𝑥 = softmax𝑧_(𝑘)𝑥",
+          "runs": [],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 73,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/re9072lo",
+      "id": "49",
+      "name": "テキスト ボックス 48",
+      "bbox": [
+        485.65,
+        196.77,
+        184.51,
+        57.4
+      ],
+      "geometry": "rect",
+      "text": "𝑞_(𝑎𝑔𝑔)𝑥 = ∑_(𝑘=1)^(𝐾) 𝛼_(𝑘)𝑞_(𝑘)𝑥",
+      "textPreview": "𝑞_(𝑎𝑔𝑔)𝑥 = ∑_(𝑘=1)^(𝐾) 𝛼_(𝑘)𝑞_(𝑘)𝑥",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "𝑞_(𝑎𝑔𝑔)𝑥 = ∑_(𝑘 = 1)^(𝐾) 𝛼_(𝑘)𝑞_(𝑘)𝑥"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "𝑞_(𝑎𝑔𝑔)𝑥 = ∑_(𝑘=1)^(𝐾) 𝛼_(𝑘)𝑞_(𝑘)𝑥",
+          "runs": [],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 74,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/el0j2hof",
+      "id": "53",
+      "name": "テキスト ボックス 52",
+      "bbox": [
+        477,
+        251.69,
+        210.25,
+        34.15
+      ],
+      "geometry": "rect",
+      "text": "𝑧_(𝑎𝑔𝑔)𝑥 = 𝑙og(𝑞_(𝑎𝑔𝑔))𝑥",
+      "textPreview": "𝑧_(𝑎𝑔𝑔)𝑥 = 𝑙og(𝑞_(𝑎𝑔𝑔))𝑥",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "𝑧_(𝑎𝑔𝑔)𝑥 = 𝑙og(𝑞_(𝑎𝑔𝑔))𝑥"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "𝑧_(𝑎𝑔𝑔)𝑥 = 𝑙og(𝑞_(𝑎𝑔𝑔))𝑥",
+          "runs": [],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 75,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m9k3614b",
+      "id": "57",
+      "name": "矢印: 右 56",
+      "bbox": [
+        465.04,
+        340.43,
+        265.14,
+        33.43
+      ],
+      "geometry": "rightArrow",
+      "text": "6.クラウド基盤整合利用",
+      "textPreview": "6.クラウド基盤整合利用",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "6.クラウド基盤整合利用"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "6.クラウド基盤整合利用",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "6.",
+              "fontSize": 14
+            },
+            {
+              "index": 2,
+              "text": "クラウド基盤整合",
+              "fontSize": 14
+            },
+            {
+              "index": 3,
+              "text": "利用",
+              "fontSize": 14
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 76,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dkfmp4zy",
+      "id": "10",
+      "name": "四角形: 角を丸くする 9",
+      "bbox": [
+        874.79,
+        511.27,
+        91.03,
+        33.59
+      ],
+      "geometry": "roundRect",
+      "text": "新規性",
+      "textPreview": "新規性",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "lt1",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "新規性"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "新規性",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "新規性",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "#FF0000",
+      "lineColor": "#FF0000",
+      "lineWidth": 1.33
+    }
+  ],
+  "composeRuns": []
+}

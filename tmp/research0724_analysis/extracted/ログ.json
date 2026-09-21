@@ -1,0 +1,410 @@
+{
+  "type": "docx",
+  "path": "C:\\Users\\aoi7y\\OneDrive - 国立大学法人東海国立大学機構\\folder\\卒研_明光\\ログ.docx",
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "text": "ZETTSU Koji  [07:19]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "グループDMに転送します．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "進捗会でいただいたアドバイスを踏まえ、研究計画のマイルストーンに沿って進めてまいりました内容についてご報告いたします。Flowerを用いた連合学習パイプラインについて、ローカル環境（1台のPC・1 GPU）にて、LoRAの送受信・集約・再配布を含めた複数ラウンドの学習を問題なく完走できることを確認いたしました。本環境では、Flower上ではクライアント0・1が同一ラウンドに並行して接続する構成ですが、GPUメモリおよびVRAMの制約に対応するため、fit/evalフェーズにおけるGPU使用区間のみをファイルロックにより直列化する仕組みをプロジェクト側で実装しており、これにより複数クライアントプロセスが順番に学習・評価を行いながらも、ラウンド単位の集約・再配布が正しく行われることを確認しております。これにより、基本的なパイプラインが一通り安定して動作する段階に到達できたと考えております。各ラウンドにおける詳細な実験結果や、学習時間、VRAMのピーク値、nvidia-smiによるリソースログにつきましては、PDFにまとめて本メッセージに添付いたしました。お手すきの際にご確認いただけますと幸いです。"
+    },
+    {
+      "kind": "paragraph",
+      "text": "PDF"
+    },
+    {
+      "kind": "paragraph",
+      "text": "[07:23]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "@吉村有生 さんご報告ありがとうございます．添付いただいた実験結果を確認しました．Flowerによる2クライアント連合学習について，LoRAの送受信・集約・再配布を含む複数ラウンドの学習が安定して完走しており，Step 5の目標である連合学習パイプラインの動作確認は概ね達成できていると考えます．GPU直列化の工夫によって限られたVRAM環境でも実験を成立させている点も良いと思います．また，学習時間やVRAM使用量，nvidia-smiによる計測結果を整理している点も評価できます．Profilerの問題については，まずは学習時間やGPU利用状況を確実に取得できる状態を優先し，詳細な内訳分析は並行して進めてください．今後の進め方ですが，現時点でStep 5まで到達しているため，Avalancheによる継続学習環境（Step 6）の構築に入る前に，研究の核心であるStep 7のAdaptation Consistencyのプロトタイプ実装へ進んでください．国際学会等への論文投稿に向け，研究を加速させます．まずはサーバ側・クライアント側ともにQwen-3Bを用い，同一データセット上でLpred，Lgrad，Lpostが計算できること，および学習が安定して動作することを確認してください．その後，GCP環境へ移行し，研究計画本来の構成であるサーバ側7B，クライアント側3Bへ切り替えて再調整を行い，評価実験と結果整理を進める方が，研究成果を早い段階で確認できると思います．継続学習（Step 6）は重要ですが，提案手法の基本動作が確認できた後でも実施できます．まずはAdaptation Consistencyの成立性を確認することを優先してください．なお，一点，今後の報告についてお願いがあります．今回の資料では精度，実行時間，GPU使用量などの結果は整理されていますが，研究として結果を解釈するためには，その結果を生み出した実験設定も同じ粒度で整理する必要があります．例えば，"
+    },
+    {
+      "kind": "paragraph",
+      "text": "LoRA設定（r，alpha，target modules）"
+    },
+    {
+      "kind": "paragraph",
+      "text": "学習率"
+    },
+    {
+      "kind": "paragraph",
+      "text": "batch size"
+    },
+    {
+      "kind": "paragraph",
+      "text": "フレーム数"
+    },
+    {
+      "kind": "paragraph",
+      "text": "データ数"
+    },
+    {
+      "kind": "paragraph",
+      "text": "量子化有無"
+    },
+    {
+      "kind": "paragraph",
+      "text": "AMPやgradient checkpointingの有無"
+    },
+    {
+      "kind": "paragraph",
+      "text": "などです．今後は，実験結果と実験設定（レシピ）を必ずセットで整理してください．これは今後の比較実験や論文執筆において，再現性を確保しながら結果を考察するために重要です． （編集済み）"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Caijuan Chen  [11:26]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ok. I will read the documents carefully."
+    },
+    {
+      "kind": "paragraph",
+      "text": "ZETTSU Koji  [13:14]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "@Caijuan Chen 先生Yoshimura-san's seminar presentation materials have been uploaded to the #研究会 channel as a reply to the message posted on the date of the seminar. Please take a look at them as well."
+    },
+    {
+      "kind": "paragraph",
+      "text": "Caijuan Chen  [17:08]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "OK. Thank you for your information. I will refer the slides as well."
+    },
+    {
+      "kind": "paragraph",
+      "text": "ZETTSU Koji  [11:30]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "@吉村有生 さん，@Caijuan Chen 先生現在進めてもらっている連合学習の実験について，今後の実験環境の候補として，GCP等のAIクラウドに加えて，JHPCNのmdxも検討してみるとよいのではないかと思います．今回の実験では，ローカルPC上でサーバ1台＋クライアント2台の基本構成が動作しつつありますが，今後，クライアント数を10台程度，さらに必要に応じて数十台規模まで増やし，連合学習の精度，実行時間，通信量，スケーラビリティを評価する段階に進む可能性があります．そのような実験を想定すると，仮想マシンベースで複数のクライアント環境を構成できるmdxは，有力な選択肢の一つになると思います．mdxは，プロジェクトごとに独立した仮想環境を構築でき，Root権限でOS，Docker，Python，PyTorch，LoRA関連ライブラリなどを自由に導入できるようです．そのため，サーバ1台＋複数クライアントという連合学習の実験構成を，仮想ノード群として比較的自然に再現できる可能性があります．また，料金面でも商用クラウドより低コストで利用できる可能性が高く，継続的な研究実験には有利かもしれません．mdxを利用できれば，10〜数十クライアント規模まで拡張した連合学習評価も現実的になると考えています．当面は，現在のローカル環境でアルゴリズム開発，デバッグ，プロトタイピングを優先するのがよいと思います．その上で，基本動作が安定した段階で，mdx上にサーバVMと複数クライアントVMを構成し，10クライアント程度の連合学習実験に移行できるかを検討してみてください．GCP等のAIクラウドについては，一般的な商用クラウド環境での再現性確認や比較実験の位置づけで使う，という役割分担も考えられます．Chen先生Chen先生にとっても，mdxはご自身の連合学習研究に活用できる可能性が高いのではないかと思います．特に，複数クライアントを仮想ノードとして立ち上げ，Non-IIDデータ分布，クライアント数，通信頻度，同期・非同期集約，計算資源の違いなどを制御しながら評価する用途には適しているように見えます．今回の学生実験でmdx上の基本構成や運用手順を整備できれば，先生ご自身の研究テーマにも再利用できる実験基盤になるかもしれません．お時間のある際に，mdxで利用可能なVM構成，GPU利用環境，DockerやKubernetesの利用条件，外部通信，グローバルIP，ストレージ，料金見積もり，JHPCN枠での申請条件などを確認し，学生実験と先生ご自身の連合学習研究の双方で利用できる共通の実験環境として整備できそうか，検討していただけると助かります．I also think that mdx could be a promising platform for your own federated learning research. In particular, it seems well suited for experiments in which multiple clients are deployed as virtual nodes while systematically controlling factors such as non-IID data distributions, the number of clients, communication frequency, synchronous/asynchronous aggregation, and available computational resources. If we can establish a basic mdx environment and operational workflow through this student project, it may also become a reusable experimental platform for your own research.When you have some time, I would appreciate it if you could look into the available VM configurations, GPU support, Docker/Kubernetes availability, external network connectivity, global IP options, storage, estimated usage costs, and the application requirements under the JHPCN program. It would be great if we could assess whether mdx can serve as a common experimental platform for both the student's project and your own federated learning research.本日，名古屋大学情報基盤センターのオンライン説明会がありましたので，関連する資料を添付します．参考までにご参照ください．なお，資料で紹介されている「不老・弐」は，大規模GPU学習や大規模モデルの更新など，より大きな計算資源を必要とする処理を対象としたHPC環境です．今回の実験では主にmdxを想定していますが，将来的な発展先として参考になると思います．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "2 個のファイル"
+    },
+    {
+      "kind": "paragraph",
+      "text": "mdx利用説明会20260626.pdf"
+    },
+    {
+      "kind": "paragraph",
+      "text": "PDF"
+    },
+    {
+      "kind": "paragraph",
+      "text": "不老・弐利用説明会20260626.pdf"
+    },
+    {
+      "kind": "paragraph",
+      "text": "PDF"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Caijuan Chen  [12:08]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Thank you for sharing the orientation materials and the suggestion regarding mdx. I will carefully study the materials you shared."
+    },
+    {
+      "kind": "paragraph",
+      "text": "吉村有生  [18:16]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ありがとうございます。仮想環境整備も視野に入れながら実験環境を整えていきたいと思います。"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ZETTSU Koji  [17:34]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "@吉村有生 さん国際学会での発表等の関係で，直近2回の研究会を欠席されていたと思いますので，現在の研究および実験の進捗状況について，簡単に共有していただけますでしょうか．本メッセージへの返信として，直接記入いただく形で結構です．7月3日（金）の研究会の前に，こちらでも内容を確認し，必要に応じて検討・調整を進めたいと考えています．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "吉村有生  [03:29]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "国際学会の関係で研究会を欠席しており、ご連絡が遅くなり申し訳ございません。直近の進捗を共有いたします。■ Step 7（Adaptation Consistency）— 現在の作業【構築しているフレームワークのループ】次のような1ラウンド循環で Step 7 のパイプラインを組んでいます。  ① サーバ → クライアントへ、基盤 LoRA を配布  ② クライアントでの学習: ローカルデータで L_task のみを用い、クライアント LoRA を更新 → サーバへ送信  ③ FedAvg（現設定はクライアント1台のため省略。送信重みをそのまま FedAvg 後の重みとして扱う）  ④ サーバでの学習（整合）: FedAvg 後の重みと基盤 LoRA の間で整合損失を計算し、基盤 LoRA を更新  ⑤ サーバ → クライアントへ、更新した基盤 LoRA を配布 → 次ラウンドへLpred / Lgrad / Lpost の3種を実装済みです。上記データ件数を最小に落とした設定で、このループ全体が完走することを確認済みです。サーバ側では、FedAvg 後の重みを参照として固定し、基盤 LoRA のみを更新します。整合はサーバ専用データ（学習50件）の各サンプルについて、次の3成分を ablation モードに応じて組み合わせます。・Lpred（予測整合）: 基盤 LoRA 側の出力分布が、固定した FedAvg 後の重み（クライアント LoRA 側）の出力分布に近づくよう KL ダイバージェンスで揃える（温度 T=2.0、係数 w_pred=0.5）・Lgrad（勾配整合）: Lpred に加え、両適応（基盤 LoRA / FedAvg 後の重み）それぞれについて L_task + Lpred の合成損失を LoRA パラメータで微分した勾配ベクトル同士の MSE を取る（w_grad=0.1）・Lpost（適応後整合）: 基盤 LoRA 側に1ステップ分の適応（inner_lr=1e-4）をシミュレートしたあとの予測分布が、FedAvg 後の重み側の予測と整合するよう KL で揃える（w_post=0.5）クライアントでの学習では L_task のみで、クライアント LoRA を更新し、整合損失はサーバでのみ計算します。クライアントの学習データ（100件）とサーバの整合データ（50件）と、評価・テストデータは ID が重複しないよう分割し、記録しています。【現在の実験設定（レシピ）】・モデル: Qwen2.5-VL-3B-Instruct（基盤・クライアントとも同一。3B/3B プロトタイプ）・クライアント数: 1（FedAvg 省略）・ラウンド数: 5・データ: NEXAR 二値分類  - クライアントでの学習: 学習 100件 / 評価 30件 — L_task のみ  - 　サーバ　　での学習: 学習 50件 / 評価 30件 — 上記整合損失で基盤 LoRA を更新・LoRA: rank 8, alpha 16, 対象層 q_proj / v_proj・学習率 1e-4, batch size 1, 入力フレーム数 4（0.5秒間隔）・量子化: なし / AMP: bfloat16 有 / gradient checkpointing: 有・整合損失の重み: Lpred 0.5 / Lgrad 0.1 / Lpost 0.5（温度 2.0）【今後の検討事項】GCP 移行で基盤モデル（7B）とクライアント側モデル（3B）のサイズが異なる場合、整合によって更新した基盤 LoRA をそのままクライアントへ再配布することはできません（LoRA パラメータの形状が一致しないため）。7B 側で整合済みの適応情報を 3B 側に渡す方法（蒸留・射影・中間表現の整合など）を、Step 7 の 3B/3B での動作確認後に検討する必要があります。7月3日の研究会では、上記ループの実装状況と現在の ablation 設定を中心にお話しできればと思います。ご指摘があればお願いいたします。よろしくお願いいたします。 （編集済み）"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ZETTSU Koji  [14:48]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Step 6をいったん後回しにして，Step 7のAdaptation Consistencyのプロトタイプに進めた点は良いと思います．まず3B/3Bの最小構成でループ全体を完走させたことも，次の検討に進むうえで重要な進捗です．現在の実装では，クライアント側ではL_taskのみでLoRAを更新し，Lpred，Lgrad，Lpostはサーバ側でFedAvg後の重みを参照として計算しているように見えます．この構成は，Step 7の動作確認用プロトタイプとしては有用だと思います．一方で，今後の実装では，FedAvg後の重みだけでなく，クライアント側のローカル学習から得られる情報を，サーバ側の整合損失計算にどう使うかを明確にする必要があります．次の段階では，以下の点を整理してください．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "クライアント側で何を更新するのか．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "現在のように，まずはL_taskに基づいてLoRAを更新する形でよいと思います．ただし，その更新がどのデータ，どの損失，どのLoRA設定に基づくものかを明確にしてください．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "クライアントからサーバへ何を送るのか．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "更新後LoRAまたはLoRA更新差分に加えて，Lpred，Lgrad，Lpostの計算に必要な補助情報を送ることを検討してください．例えば，予測整合に必要な出力分布，勾配整合に必要なLoRAパラメータに対する勾配情報，適応後整合に必要な1ステップ適応後の出力分布などです．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "サーバ側で何を計算し，どう基盤LoRAを更新するのか．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "サーバ側では，複数クライアントから送られたLoRA更新と補助情報を集約し，Lpred，Lgrad，Lpostを計算します．そのうえで，これらを重み付き線形和として合成した損失を用いて，サーバ側の基盤LoRAまたは基盤モデルを更新する流れを検討してください．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Lpred，Lgrad，Lpostを合成した損失に基づいて基盤LoRAを更新する処理は，クライアントで更新されたパラメータ（または更新差分）を平均するFedAvgとは別の，「サーバ側最適化手法」（各クライアントから送られた補助情報を直接使って基盤LoRAを更新）として提案・実装する必要がある可能性があります．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "更新したモデルを次ラウンドにどう戻すのか．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "サーバ側でAdaptation Consistencyを反映して更新した基盤モデル，またはそこから知識蒸留，射影，中間表現整合などによって更新した小型モデルを，次ラウンドでクライアントへ再配布する流れを整理してください．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "7月3日の研究会では，現在の実装を否定的に説明する必要はありません．むしろ，3B/3Bの最小構成でStep 7のループを完走させたプロトタイプとして説明したうえで，次の拡張として，クライアントから送る補助情報，サーバ側で計算する損失，サーバ側LoRA更新への反映方法，再配布の流れを整理して説明してください． （編集済み）"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ZETTSU Koji  [14:56]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "上記コメントの研究的背景を，続けて説明します．研究全体の位置づけとしては，Adaptation Consistencyそのものを目的にするというより，エッジ側surrogateモデルの局所適応から得られる情報を用いて，サーバ側の基盤モデルを継続的に更新することが中心概念だと考えています．つまり，本研究の中心概念は，「surrogate適応情報を用いた基盤モデル更新」と整理するとよいと思います．ここでいうsurrogate適応情報には，クライアント側で得られるLoRA更新差分，出力分布，勾配情報，1ステップ適応後の出力分布，局所性能変化などが含まれます．この中心概念を実現する具体的なアプローチとして，Lpred，Lgrad，Lpostを用いたAdaptation Consistencyに基づく基盤モデル連合学習を位置づけると，研究提案との対応が分かりやすくなります．ここで注意すべき点は，連合学習といっても，基盤LoRAの更新を単純にFedAvgで行うとは限らないことです．FedAvgは，クライアントから送られたLoRA更新差分やパラメータを集約し，平均的なクライアント適応や参照adapterを作る方法としては有効です．一方で，Lpred，Lgrad，Lpostを合成した損失に基づいて基盤LoRAを更新する処理は，FedAvgとは別のサーバ側最適化として考える必要があるかもしれません．この考え方では，クライアント側で必ずL_task，Lpred，Lgrad，Lpostをすべて合成してLoRAを更新しなければならない，というわけではありません．エッジ環境では計算資源や通信量に制約があるため，クライアント側ではL_taskに基づいて局所LoRA更新を行い，その更新結果と補助情報をサーバへ送る方式も有効です．サーバ側では，クライアントから送られたLoRA更新，出力分布，勾配情報，適応後出力などを用いて，Lpred，Lgrad，Lpostを計算します．そして，これらを合成した損失を用いて，基盤LoRAまたは基盤モデルを更新します．このとき，FedAvgは参照adapterを作るために使うのか，補助情報の集約に使うのか，あるいは使わずに各クライアントの情報から直接サーバ側損失を計算するのかを整理する必要があります．さらに，サーバ側で更新された基盤モデル，またはそこから知識蒸留や射影によって更新された小型モデルをクライアントへ再配布すれば，次ラウンドのクライアントは，他のクライアントで得られた適応情報も反映したモデルから学習を開始できます．この循環により，クライアント側の局所適応とサーバ側の基盤モデル更新が接続されます．したがって，この方式は単なるFedAvgによるパラメータ平均ではなく，エッジ側surrogateモデルの局所適応情報を用いて，サーバ側基盤モデルを整合的に更新し，その結果を次ラウンドのクライアントへ戻すための循環的な更新原理として位置づけられます．今後は，Adaptation Consistencyを「予測を近づけるための損失」としてだけ説明するのではなく，エッジ（クライアント）側surrogateモデルの局所適応を，クラウド（サーバ）側基盤モデルの循環的進化へ接続するための更新原理として説明するのが良いと思います． （編集済み）"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ZETTSU Koji  [06:08]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "サーバ側の基盤LoRA更新方法を検討する際には，FedAvgだけで考えず，関連研究をいくつか確認してください．特に参考になるのは，"
+    },
+    {
+      "kind": "paragraph",
+      "text": "FedOpt/FedAdamのようにサーバ側でoptimizerを使う連合最適化"
+    },
+    {
+      "kind": "paragraph",
+      "text": "クライアントのlogitsや出力分布をサーバ側で集約するFederated Distillation"
+    },
+    {
+      "kind": "paragraph",
+      "text": "クライアント勾配の方向や類似度を使うGradient matching/alignment系"
+    },
+    {
+      "kind": "paragraph",
+      "text": "継続学習において蒸留やFisher情報を使って忘却を抑えるFederated Continual Learning系"
+    },
+    {
+      "kind": "paragraph",
+      "text": "です．まず，FedOpt/FedAdam系は，FedAvgを単純な平均処理として固定せず，サーバ側にもoptimizerを置いてグローバルモデルを更新する考え方として参考になります．Reddi et al. [1] は，FedAdagrad，FedAdam，FedYogiなどのadaptive federated optimizerを提案し，クライアントデータの異質性がある状況でのサーバ側最適化を扱っています．今回の研究で，FedAvg後の重みをそのまま基盤LoRA更新とみなすのではなく，サーバ側で合成損失に基づいて基盤LoRAを更新する可能性を考えるうえで参考になります．次に，Federated Distillation系は，クライアントからモデルパラメータだけでなく，logitsや出力分布などの知識情報を集約し，サーバ側モデルの更新に使う考え方として参考になります．FedMD [2] は，参加者が異なるモデル構造を持つ場合でも，知識蒸留を用いて協調学習を可能にする枠組みです．FedDF [3] は，クライアントモデルの出力を用いたensemble distillationにより，中央モデルを訓練する方法を提案しています．FedGen [4] は，proxy datasetがない場合に，サーバ側でgeneratorを学習し，ユーザモデルの知識を集約するdata-free distillationの方法です．これらは，今回のLpred，すなわちクライアント側surrogateの出力分布をサーバ側基盤モデル更新に使う設計の参考になります．一方で，今回の研究は出力分布の一致だけではなく，勾配整合や適応後整合も扱う点が重要です．この点では，Gradient matching/alignment系の研究が参考になります．FedACG [5] は，lookahead gradientを用いて，個々のクライアント勾配をサーバ側の勾配と整合させる連合最適化手法です．FedOMG [6] は，Federated Domain Generalizationにおいて，サーバ側でmatching gradientを用いる方法を提案しています．これらは，今回のLgrad，すなわちクライアント側surrogateの局所適応方向を，サーバ側基盤モデル更新にどう反映するかを考えるうえで参考になります．さらに，Step 6やStep 7との接続を考えると，Federated Continual Learning系も確認しておくとよいです．CFeD [7] は，継続的に新しいタスクを学習する連合学習において，クライアント側とサーバ側の両方で知識蒸留を用い，破滅的忘却を抑える方法です．また，Federated Continual Learningの最近のサーベイ[8,9]では，分散環境における非定常データ，concept drift，catastrophic forgetting，client heterogeneityが主要課題として整理されています．これらは，Lpostや継続学習時の安定性，および更新後モデルの挙動を評価する観点の参考になります．今回の研究では，クライアント側のsurrogateモデルがL_taskで局所適応し，その結果として得られるLoRA更新差分，出力分布，勾配情報，適応後出力などをサーバに送り，サーバ側でLpred，Lgrad，Lpostを計算し，基盤LoRA更新に反映することを考えています．このため，FedAvgは最終更新方法として固定するのではなく，LoRA差分や参照adapterを作るための集約手段の候補として扱い，最終的な基盤LoRA更新は，合成損失に基づくサーバ側最適化として検討してください．関連研究を読む際には，次の点を比較するとよいと思います．1．クライアントからサーバへ何を送っているか．2．サーバ側で何を集約しているか．3．サーバ側で何を最適化しているか．4．FedAvgは最終的なモデル更新なのか，参照情報を作るための集約なのか．5．logits，出力分布，勾配，Fisher情報，蒸留用データなどの補助情報をどう使っているか．【参考文献】[1] Sashank J. Reddi，Zachary Charles，Manzil Zaheer，Zachary Garrett，Keith Rush，Jakub Konečný，Sanjiv Kumar，H. Brendan McMahan，Adaptive Federated Optimization，ICLR 2021．[2] Daliang Li，Junpu Wang，FedMD: Heterogenous Federated Learning via Model Distillation，arXiv:1910.03581，2019．[3] Tao Lin，Lingjing Kong，Sebastian U. Stich，Martin Jaggi，Ensemble Distillation for Robust Model Fusion in Federated Learning，NeurIPS 2020．[4] Zhuangdi Zhu，Junyuan Hong，Jiayu Zhou，Data-Free Knowledge Distillation for Heterogeneous Federated Learning，ICML 2021．[5] Geeho Kim，Jinkyu Kim，Bohyung Han，Communication-Efficient Federated Learning with Accelerated Client Gradient，CVPR 2024．[6] Federated Learning via On-server Matching Gradient，ICLR 2025．[7] Qiankun Gao，Chen Zhao，Bernhard Ghanem，Jian Zhang，Continual Federated Learning Based on Knowledge Distillation，IJCAI 2022．[8] Federated Continual Learning: A Comprehensive Survey，arXiv:2606.11272，2026．[9] A Contemporary Survey of Federated Continual Learning，2025．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ZETTSU Koji  [06:27]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Step 7のアブレーション分析について，Lpred，Lgrad，Lpostの各損失に基づくサーバ側の基盤LoRA更新手法の提案・評価に沿って，段階的に進めていくのが良いと思います．そうすることで，各段階の技術的貢献を切り分けやすくなり，論文化の単位としても整理しやすくなると考えています．アブレーション分析は，例えば以下のように段階的に進めるとよいと思います．0．現在の簡略版：クライアントはL_taskのみでLoRAを更新し，サーバ側で整合損失の計算とループ動作を確認する．1．Lpredのみ：クライアント側の出力分布またはlogitsに基づき，サーバ側で基盤LoRAを更新する．2．Lpred + Lgrad：出力分布に加えて，クライアント側の勾配情報またはLoRA更新方向を反映して，サーバ側で基盤LoRAを更新する．3．Lpred + Lpost：継続学習設定で，1ステップ適応後の出力分布や挙動の整合を反映して，サーバ側で基盤LoRAを更新する．4．Lpred + Lgrad + Lpost：すべての整合損失を用いた提案手法として評価する．現在のプロトタイプは，Step 7のループ全体が動くことを確認するための簡略版，かつ次の段階以降の比較評価用ベースラインとして整理できると思います．そのうえで，次の段階では，関連研究を参考にしながら，サーバ側で基盤LoRAをどう更新するかを検討してください．第1段階としては，Lpred系の更新を優先するとよいと思います．これは，クライアント側の出力分布やlogitsをサーバ側で集約し，基盤LoRAの更新に使う方法です．Federated Distillation系の研究を参考にしながら，クライアントから送る出力分布，サーバ側での集約方法，基盤LoRA更新に使う損失を整理してください．第2段階として，Lgrad系の更新を検討してください．これは，クライアント側の勾配情報やLoRA更新方向を，サーバ側基盤LoRAの更新に反映する方法です．Gradient matchingやgradient alignment系の研究を参考にしながら，FedAvgを単純な最終更新として使うのか，参照adapterや平均的な更新方向を作るために使うのか，あるいはFedAvgとは別に合成損失に基づいてサーバ側で最適化するのかを比較してください．第3段階のLpost系については，Step 6の連合継続学習対応とセットでアブレーション分析を行うのがよいと思います．Lpostは，1ステップ適応後の出力分布や挙動が整合するかを見る損失なので，単発のローカル学習だけで評価するより，タスクやデータ分布が時間的に変化する継続学習設定で評価した方が意味を説明しやすいです．したがって，Lpost系のサーバ側基盤LoRA更新は，Step 6で作成する継続学習設定と接続し，忘却，転移，次ラウンド性能への影響と併せて評価してください．このとき，FedAvgは最終的な基盤LoRA更新方法として固定しなくてよいと思います．クライアントLoRA更新差分を集約して参照adapterを作るために使うのか，補助情報の平均化に使うのか，あるいはFedAvgを使わずにサーバ側で合成損失に基づいて基盤LoRAを直接最適化するのかを整理してください．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "吉村有生  [02:18]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "お疲れさまです。Step7でいま動かしている 3 パターンの比較について、この内容で進めてよいかご意見をいただきたくご連絡しました。3 パターン（いずれも同じ提案ループ（端末で学習 → logits で基盤 LoRA を整合更新（Lpred） → 蒸留配布で端末へ返す））"
+    },
+    {
+      "kind": "paragraph",
+      "text": "① 提案（主）— FedDF [3] 型 … 端末 logits を 重み付き softmax 平均してクラウド基盤整合。蒸留配布で還元。"
+    },
+    {
+      "kind": "paragraph",
+      "text": "② 提案 + FedOpt [1] … ①と同じ。クラウド基盤整合の optimizer だけ FedAdam 型（β1=0.9, β2=0.99, τ=1e-3）。原論文の「集約重みへの FedAdam」そのものではなく、整合損失で基盤 LoRA を更新する段階への適用です。"
+    },
+    {
+      "kind": "paragraph",
+      "text": "③ FedMD [2] 型 … ①と同じループ。クラウドでの logits 集約だけ 等平均（FedMD 型）に変更。"
+    },
+    {
+      "kind": "paragraph",
+      "text": "1. 比較の目的提案ループ を 同じレシピで回しながら、次の 2 軸を見たいです（別軸ですが、①を共通基準にそれぞれ 1 条件ずつ変えます）。"
+    },
+    {
+      "kind": "paragraph",
+      "text": "① vs ② … クラウド基盤整合に FedOpt の FedAdam 型 optimizer を足す意味（文献 [1]）"
+    },
+    {
+      "kind": "paragraph",
+      "text": "① vs ③ … 端末 logits の 集約方式を FedDF 型（重み付き平均）から FedMD 型（等平均） に変えたときの差（文献 [2]）"
+    },
+    {
+      "kind": "paragraph",
+      "text": "蒸留配布（①②③共通・クラウド→端末）前ラウンド末にクラウドが保存した 基盤 LoRA の logits を teacher に、端末の クライアント LoRA を KL 蒸留（公開整合セット 50 件、KL×T²、T=2.0）。FedMD Digest / FedDF の蒸留形式を参考にしています。teacher の更新対象は FedMD/FedDF と異なり クライアント LoRA です。共通レシピLoRA r=8/α=16、LR 1e-4、端末 100 件・整合用 50 件、3 ラウンド、端末 2 台、seed 固定。ローカル 3B/3B でも GCP 7B+3B でも同手順です。2.  1ラウンドの流れ（①②③共通）"
+    },
+    {
+      "kind": "paragraph",
+      "text": "端末 … 蒸留配布（基盤 logits → クライアント LoRA）→ L_task（端末データ 100 件）→ 整合用データ上の logits 送信"
+    },
+    {
+      "kind": "paragraph",
+      "text": "クラウド … 集めた logits を集約（①②=重み付き平均、③=等平均）→ 基盤 LoRA を Lpred 整合更新 → 基盤 logits を保存（次ラウンドの蒸留配布用）"
+    },
+    {
+      "kind": "paragraph",
+      "text": "整合用 50 件は FedMD 型の公開整合セット（全端末・クラウドが同じ ID をローカル参照）。3. 確認したいこと上記 ①を基準に ②（FedOpt）と ③（FedMD 集約） を並べる比較で、いまの段階の目的として足りるでしょうか。結果は数値と実験レシピをセットで後ほど共有します。よろしくお願いします。"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ZETTSU Koji  [18:29]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "Step 7でLpredを対象に比較実験を進めようとしている点は良いと思います．全体処理フローについても，現在「2．1ラウンドの流れ」に書いてくれている，「端末で学習し，logitsをクラウドに送り，クラウド側で基盤LoRAを整合更新し，その結果を端末へ戻す」という1ラウンドの大枠は，今回の方向性に沿っていると思います．まず，前回の研究会でコメントした通り，提案ループ全体の処理フローと，その中で特に重要なクラウド側基盤LoRA更新の処理フローを，それぞれ1枚の図（または表）に整理してください．その図表の中で，各処理の入力，出力，更新対象，参考にした関連研究，および既存研究との差分・本研究で検討すべき点を明記すると，研究の全体構成が分かりやすくなると思います．その際，特に以下の点を明確にしてください．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "端末からクラウドへ送るlogitsは，どのモデルが，どの整合用データに対して出力したものなのか．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "クラウド側では，複数端末から受け取ったlogitsをどのように集約するのか．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "集約logitsをteacherとして，クラウド側の基盤LoRAを，どの損失で，どのように更新するのか．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "更新された基盤LoRAまたは基盤logitsをteacherとして，次ラウンドのクライアントLoRAをどのように蒸留更新するのか．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "次に，クラウド側での基盤LoRA更新については，まず① Lpred基盤LoRA更新を基本条件として明確にしてください．ここでは，端末から送られたlogitsを集約し，その集約logitsをteacherとして，クラウド側の基盤LoRAをLpredで更新する，という処理になります．この処理が今回のLpred段階の中心です．そのうえで，② Lpred + FedOpt型サーバ最適化を拡張条件として検討するとよいと思います．これは，①と同じlogits集約，同じLpred損失を用いたうえで，クラウド側の基盤LoRA更新optimizerを通常のoptimizerからFedAdam型などに変更し，サーバ側最適化の効果を見る比較として整理できます．この比較であれば，① vs ②は，「同じLpred情報を使った場合に，クラウド側の基盤LoRA更新をどの最適化方法で行うべきか」を見る実験として位置づけられます．これは，今回の研究で本質的に確認したい点に近いと思います．一方で，③ FedMD型比較については，現段階では対象から外してもよいと思います．FedMDは，公開整合セット上で参加モデル間の知識共有を行う考え方としては参考になりますが，今回の主眼は，端末側surrogateのlogitsを用いてクラウド側の基盤LoRAをどう更新するかにあります．そのため，FedMD型の等平均を比較条件として入れると，研究の焦点が少しぼやける可能性があります．したがって，まずはLpredに限定して，以下の2条件を中心に整理してください．① Lpred基盤LoRA更新：端末logitsを集約し，Lpredに基づいてクラウド側基盤LoRAを更新する．② Lpred + FedOpt型サーバ最適化：①と同じlogits集約・Lpred損失を使い，クラウド側基盤LoRA更新のoptimizerをFedAdam型などに変更する．そのうえで，logits集約方法の違い，例えば単純平均，データ数重み付き平均，性能重み付き平均，信頼度重み付き平均などは，必要であれば補助実験として検討すればよいと思います．ただし，最初のLpred段階では，集約方法の比較よりも，クラウド側基盤LoRA更新フローを明確にし，Lpredに基づく更新が有効か，さらにFedOpt型optimizerを導入する効果があるかを確認することを優先してください．なお，ここで整理する枠組みはLpredに限定されるものではなく，クラウド・端末間でやり取りする情報とクラウド側の更新方法を変えることで，LgradやLpostにも拡張できると思います．具体的には，Lgradでは勾配情報やLoRA更新方向，Lpostでは1ステップ適応後のlogitsや更新後挙動を扱うことになるため，まずはLpredで全体フローとクラウド側更新方法を明確にし，その後，同じ枠組みでLgrad，Lpostへ拡張する形で整理してください．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ZETTSU Koji  [00:58]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ここ数日の議論を踏まえ，今回の研究の基本的な考え方を整理した資料を作成しましたので共有します．この資料は，現時点での設計思想を整理したものであり，今後も研究の方向性を確認・調整する際の基本文書として適宜参照してください．特に，"
+    },
+    {
+      "kind": "paragraph",
+      "text": "本研究の中心概念（Surrogate適応情報を用いた基盤モデル循環進化）"
+    },
+    {
+      "kind": "paragraph",
+      "text": "FedAvg型連合学習や従来のSurrogate学習との違い"
+    },
+    {
+      "kind": "paragraph",
+      "text": "本研究の利点と主な課題・リスク"
+    },
+    {
+      "kind": "paragraph",
+      "text": "を整理しています．今後は，この整理を共通認識として，Lpred，Lgrad，Lpostそれぞれの具体的な実現方法や，サーバ側基盤LoRA更新方式を順に検討していければと思います．まずは一度目を通しておいてください．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "PDF"
+    },
+    {
+      "kind": "paragraph",
+      "text": "研究の新規性と課題260707.pdf"
+    },
+    {
+      "kind": "paragraph",
+      "text": "PDF"
+    },
+    {
+      "kind": "paragraph",
+      "text": "吉村有生  [09:00]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ありがとうございます。スムーズに議論できるよう、努めてまいります。"
+    },
+    {
+      "kind": "paragraph",
+      "text": "吉村有生  [07:34]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "公開整合セット依存の改善方針についてご意見をいただきたくご連絡しました。■ 現状全端末・クラウドが同じサンプル ID を参照する公開整合セット上でlogits を計算・集約し、Lpred で基盤 LoRA を更新。■ 検討している方針端末は公開整合セットを見ず、次を送る想定です。・クライアント LoRA + 分類ヘッドの更新差分（今までと同様）・ローカル分布の要約  - クラス別件数  - クラス別 prototype（当該クラスの特徴平均）  - クラス別の平均出力分布これらを送信すれば各端末の分布を具体化できますが、統計情報だけではクラウドは自身の基盤モデル（基盤LoRA）の logits を出せません。そこでクラウド側では、上記統計・prototype に近い入力を毎ラウンド生成、もしくは選択し、その入力上で端末側と基盤の出方（ logits ）を比較してLpred により基盤 LoRA を更新します。ただし、「上記統計・prototype に近い入力」というのをどのように再現するのか検討が必要です。今の段階だと、・クラウド側で上記統計・prototype に基づいた疑似映像の生成・クラウド側で上記統計・prototype に基づいた非共有データセットからのサンプリングが有効な方法だと思います。■ prototype についてここでいう prototype は、各端末がローカルデータ上で計算する「クラスごとの特徴平均」です。クラウドでは、候補入力の特徴と prototype の近さで「その端末の分布に近い整合用入力か」を判断するために使います。■ 参考・FedMD: 公開データ上 logits 共有（現在の公開整合セット。ここを置き換えたい）・FedProto: クラス prototype 通信で公開データなしの知識共有。・FedGen: 公開/proxy なしで生成的に知識を補う data-free の先行例"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ZETTSU Koji  [14:26]"
+    },
+    {
+      "kind": "paragraph",
+      "text": "まず，これまで何度も指摘している通り，提案ループ全体の処理フローと，その中でも特に重要なクラウド側における基盤LoRA更新の処理フローを，それぞれフローチャートとして整理してください．研究全体の処理構造が見えないまま局所的な議論を続けると，本来の提案の要点を踏まえて，どの処理を提案・改良すべきか，また，どの点を性能評価すべきかを見失う恐れがあります．現状では，すでにそのような状況になりつつあります．また，前回の研究会で提示されたポンチ絵に近い図では，処理の順序や入出力について複数の解釈が生じる可能性があります．そのため，各処理の順序，入出力，および更新対象が明確に分かるよう，フローチャートとして整理してください．先のメッセージでコメントした内容を，以下に再掲します．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "まず，前回の研究会でコメントした通り，提案ループ全体の処理フローと，その中で特に重要なクラウド側基盤LoRA更新の処理フローを，それぞれ1枚の図（または表）に整理してください．その図表の中で，各処理の入力，出力，更新対象，参考にした関連研究，および既存研究との差分・本研究で検討すべき点を明記すると，研究の全体構成が分かりやすくなると思います．その際，特に以下の点を明確にしてください．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "端末からクラウドへ送るlogitsは，どのモデルが，どの整合用データに対して出力したものなのか．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "クラウド側では，複数端末から受け取ったlogitsをどのように集約するのか．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "集約logitsをteacherとして，クラウド側の基盤LoRAを，どの損失で，どのように更新するのか．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "更新された基盤LoRAまたは基盤logitsをteacherとして，次ラウンドのクライアントLoRAをどのように蒸留更新するのか．"
+    },
+    {
+      "kind": "paragraph",
+      "text": "ただし，最初からすべての処理の詳細を確定する必要はありません．まずは，先にお送りした「研究の新規性と課題を整理した資料」（https://w1743663979-9sp502129.slack.com/files/U08LVN3NCQ1/F0BFJL40Q2X/___________________________260707.pdf）の「2．基本処理フロー」を参考に，提案ループのバックボーンとなる主要な処理と，処理間を流れるデータを抽出し，詳細の検討に時間をかけすぎず，フローチャートのたたき台を作成してください．具体的には，前回の研究会資料の7スライド目「Lgradの基本処理フロー」をそのまま清書するのではなく，図中に示されている処理，モデル，データ，送信情報，損失，および更新対象について，それぞれの妥当性を再確認した上で整理し直し，処理の順序が一意に読み取れるフローチャートにしてください．特に，各処理ノードには，処理名だけでなく，必要に応じて，入力，出力，利用するデータ，計算する損失，および更新対象を簡潔に記載してください．また，処理間の矢印には，実際に流れる情報を記載してください．さらに，クラウド側基盤LoRA更新の処理については，集約された情報をどの損失のteacherまたは参照情報として使用し，何を最適化するのかが分かるようにしてください．最初のたたき台では，まずLpred，Lgrad，Lpostに共通する全体フローを1枚に整理してください．その上で，Lpred，Lgrad，Lpostによって処理，送信情報，損失，または更新方法が異なる部分は，必要に応じて別図または分岐として整理してください．まずはこの粒度で全体の骨格を可視化し，そのたたき台を基に，未確定の処理，複数の方法が考えられる処理，および本研究で新たに提案・評価すべき処理を順次具体化してください．なお，お送りいただいた，公開整合セットへの依存を改善する方針は，上記の「端末からクラウドへ送るlogitsは，どのモデルが，どの整合用データに対して出力したものなのか．」という点に関する検討だと理解しています．ただし，整合用データをどのように構成・生成するかについては，整合・蒸留の有効性，データの代表性，全体の処理性能，およびプライバシー保護のバランスを考慮しながら，提案ループ全体の中で検討する必要があります．また，採用すべき方法が一つに限られるとは限らず，複数の候補を比較した上で選択する必要があります．先ほどの研究の新規性と課題を整理した資料が，その検討の指針となります．したがって，お送りいただいた提案の妥当性については，現時点では判断できません．まずは，上記の処理フローと，その中での整合用データの役割および位置づけを明確にしてください．その上で，提案ループ全体の性能やプライバシー保護への影響を含めて，今回の方法の妥当性を評価するとともに，他の方法の可能性も検討する必要があります． （編集済み）"
+    },
+    {
+      "kind": "paragraph",
+      "text": "PDF"
+    },
+    {
+      "kind": "paragraph",
+      "text": "研究の新規性と課題260707.pdf"
+    },
+    {
+      "kind": "paragraph",
+      "text": "PDF を Slack で表示する"
+    }
+  ]
+}

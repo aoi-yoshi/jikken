@@ -1,0 +1,1661 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/udsvah03",
+    "id": "udsvah03",
+    "slide": 9,
+    "layoutId": "/ppt/slideLayouts/slideLayout2.xml",
+    "layoutName": "タイトルとコンテンツ",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office テーマ",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "fontScheme": {
+      "name": "ユーザー定義 1",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout2.xml",
+      "name": "タイトルとコンテンツ",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/4",
+          "id": "4",
+          "name": "四角形: 角を丸くする 3",
+          "bbox": [
+            1192,
+            0,
+            34.98,
+            69.01
+          ],
+          "geometry": "roundRect",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "verticalAlignment": "middle"
+          },
+          "fillColor": "#203864",
+          "lineColor": "#203864",
+          "lineWidth": 1.33
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/2",
+          "id": "2",
+          "name": "Title 1",
+          "bbox": [
+            88,
+            9.25,
+            1104,
+            69.01
+          ],
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText"
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/5",
+          "id": "5",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            798.17,
+            7.77,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/7",
+          "id": "7",
+          "name": "グラフィックス 6",
+          "bbox": [
+            5.82,
+            13.17,
+            61.09,
+            57.77
+          ],
+          "contentType": "image/svg+xml",
+          "asset": {
+            "assetId": "/ppt/media/image1.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          }
+        },
+        {
+          "order": 5,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/6",
+          "id": "6",
+          "name": "Content Placeholder 2",
+          "bbox": [
+            0,
+            85.22,
+            1280,
+            634.78
+          ],
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            0,
+            141.12,
+            1280,
+            578.88
+          ],
+          "geometry": "rect",
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            88,
+            19.95,
+            1104,
+            98.13
+          ],
+          "geometry": "rect",
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/4",
+          "id": "4",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            755.43,
+            19.95,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1cfmhgne",
+      "id": "2",
+      "name": "タイトル 1",
+      "bbox": [
+        88,
+        9.25,
+        1104,
+        69.01
+      ],
+      "text": "Lpred・Lgrad・Lpostによって変更される場所",
+      "textPreview": "Lpred・Lgrad・Lpostによって変更される場所",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 48,
+        "typeface": "Arial",
+        "color": "#203864",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Lpred・Lgrad・Lpostによって変更される場所"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Lpred・Lgrad・Lpostによって変更される場所",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Lpred・Lgrad・Lpost"
+            },
+            {
+              "index": 2,
+              "text": "によって変更される場所"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0b65obm9",
+      "id": "3",
+      "name": "スライド番号プレースホルダー 2",
+      "bbox": [
+        798.17,
+        7.77,
+        436.57,
+        37.17
+      ],
+      "text": "9",
+      "textPreview": "9",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": {
+          "type": "theme",
+          "value": "bg1",
+          "transform": {
+            "lighten": 0.25
+          }
+        },
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "9"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "9",
+          "runs": [
+            {
+              "index": 1,
+              "text": "9"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/e5czal83",
+      "id": "4",
+      "name": "コンテンツ プレースホルダー 4",
+      "bbox": [
+        75.7,
+        129.48,
+        1128.6,
+        516.33
+      ],
+      "text": "項目 | Lpred | Lgrad | Lpost\n端末から得る情報 | 整合用データに対するlogits・出力分布 | クライアントLoRAの勾配・更新差分・更新方向 | 1ステップ適応後のlogits・更新後挙動\n情報を出すモデル | 局所適応後surrogate＋クライアントLoRA＋分類ヘッド | 局所学習中のクライアントLoRA | 仮想適応後のsurrogate＋クライアントLoRA＋分類ヘッド\nサーバ側の集約対象 | サンプルごとの確率分布 | 勾配・更新方向 | 適応後の出力分布・挙動\nteacher／参照情報 | 集約teacher分布 | 集約更新方向 | 集約適応後挙動\n基盤側で計算するもの | 同じ整合入力に対する現在の予測分布 | 基盤LoRAに対する勾配・更新方向 | 基盤LoRAを仮想適応した後の出力・挙動\n損失 | KL、JS、logits MSEなど | cosine distance、L2距離など | KL、L2距離など\n損失の目的 | 基盤の予測を端末群の予測へ近づける | 基盤LoRAの学習方向を端末群へ近づける | 基盤の適応後挙動を端末群へ近づける\n主な成立条件 | 共通クラス空間と対応する整合入力が必要 | 3Bと7Bの勾配空間を対応付ける必要がある | 仮想適応用データと更新手順を揃える必要がある\n主な課題 | teacherの校正、整合データ代表性、集約方法 | 異種モデル間の次元・層・尺度の違い | 計算量、二階微分、更新ステップ数",
+      "textPreview": "項目 | Lpred | Lgrad | Lpost | 端末から得る情報 | 整合用データに対するlogits・出力分布 | クライアントLoRAの勾配・更新差分・更新方向 | 1ステップ適応後のlogits・更新後挙動 | 情報を出すモデル | 局所適応後surroga...",
+      "rows": 10,
+      "cols": 4,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            75.7,
+            129.48,
+            282.15,
+            33.86
+          ],
+          "text": "項目",
+          "textPreview": "項目",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "項目",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "項目",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            357.85,
+            129.48,
+            282.15,
+            33.86
+          ],
+          "text": "Lpred",
+          "textPreview": "Lpred",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Lpred",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Lpred",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            640,
+            129.48,
+            282.15,
+            33.86
+          ],
+          "text": "Lgrad",
+          "textPreview": "Lgrad",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Lgrad",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Lgrad",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            922.15,
+            129.48,
+            282.15,
+            33.86
+          ],
+          "text": "Lpost",
+          "textPreview": "Lpost",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Lpost",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Lpost",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            75.7,
+            163.34,
+            282.15,
+            59.25
+          ],
+          "text": "端末から得る情報",
+          "textPreview": "端末から得る情報",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "端末から得る情報",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "端末から得る情報",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            357.85,
+            163.34,
+            282.15,
+            59.25
+          ],
+          "text": "整合用データに対するlogits・出力分布",
+          "textPreview": "整合用データに対するlogits・出力分布",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "整合用データに対するlogits・出力分布",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "整合用データに対するlogits・出力分布",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            640,
+            163.34,
+            282.15,
+            59.25
+          ],
+          "text": "クライアントLoRAの勾配・更新差分・更新方向",
+          "textPreview": "クライアントLoRAの勾配・更新差分・更新方向",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "クライアントLoRAの勾配・更新差分・更新方向",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "クライアントLoRAの勾配・更新差分・更新方向",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            922.15,
+            163.34,
+            282.15,
+            59.25
+          ],
+          "text": "1ステップ適応後のlogits・更新後挙動",
+          "textPreview": "1ステップ適応後のlogits・更新後挙動",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "1ステップ適応後のlogits・更新後挙動",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "1ステップ適応後のlogits・更新後挙動",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            75.7,
+            222.59,
+            282.15,
+            84.64
+          ],
+          "text": "情報を出すモデル",
+          "textPreview": "情報を出すモデル",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "情報を出すモデル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "情報を出すモデル",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            357.85,
+            222.59,
+            282.15,
+            84.64
+          ],
+          "text": "局所適応後surrogate＋クライアントLoRA＋分類ヘッド",
+          "textPreview": "局所適応後surrogate＋クライアントLoRA＋分類ヘッド",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "局所適応後surrogate＋クライアントLoRA＋分類ヘッド",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "局所適応後surrogate＋クライアントLoRA＋分類ヘッド",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            640,
+            222.59,
+            282.15,
+            84.64
+          ],
+          "text": "局所学習中のクライアントLoRA",
+          "textPreview": "局所学習中のクライアントLoRA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "局所学習中のクライアントLoRA",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "局所学習中のクライアントLoRA",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            922.15,
+            222.59,
+            282.15,
+            84.64
+          ],
+          "text": "仮想適応後のsurrogate＋クライアントLoRA＋分類ヘッド",
+          "textPreview": "仮想適応後のsurrogate＋クライアントLoRA＋分類ヘッド",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "仮想適応後のsurrogate＋クライアントLoRA＋分類ヘッド",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "仮想適応後のsurrogate＋クライアントLoRA＋分類ヘッド",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            75.7,
+            307.23,
+            282.15,
+            33.86
+          ],
+          "text": "サーバ側の集約対象",
+          "textPreview": "サーバ側の集約対象",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "サーバ側の集約対象",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "サーバ側の集約対象",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            357.85,
+            307.23,
+            282.15,
+            33.86
+          ],
+          "text": "サンプルごとの確率分布",
+          "textPreview": "サンプルごとの確率分布",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "サンプルごとの確率分布",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "サンプルごとの確率分布",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            640,
+            307.23,
+            282.15,
+            33.86
+          ],
+          "text": "勾配・更新方向",
+          "textPreview": "勾配・更新方向",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "勾配・更新方向",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "勾配・更新方向",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            922.15,
+            307.23,
+            282.15,
+            33.86
+          ],
+          "text": "適応後の出力分布・挙動",
+          "textPreview": "適応後の出力分布・挙動",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "適応後の出力分布・挙動",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "適応後の出力分布・挙動",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            75.7,
+            341.09,
+            282.15,
+            33.86
+          ],
+          "text": "teacher／参照情報",
+          "textPreview": "teacher／参照情報",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "teacher／参照情報",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "teacher／参照情報",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            357.85,
+            341.09,
+            282.15,
+            33.86
+          ],
+          "text": "集約teacher分布",
+          "textPreview": "集約teacher分布",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "集約teacher分布",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "集約teacher分布",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            640,
+            341.09,
+            282.15,
+            33.86
+          ],
+          "text": "集約更新方向",
+          "textPreview": "集約更新方向",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "集約更新方向",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "集約更新方向",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            922.15,
+            341.09,
+            282.15,
+            33.86
+          ],
+          "text": "集約適応後挙動",
+          "textPreview": "集約適応後挙動",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "集約適応後挙動",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "集約適応後挙動",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            75.7,
+            374.95,
+            282.15,
+            59.25
+          ],
+          "text": "基盤側で計算するもの",
+          "textPreview": "基盤側で計算するもの",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "基盤側で計算するもの",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "基盤側で計算するもの",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            357.85,
+            374.95,
+            282.15,
+            59.25
+          ],
+          "text": "同じ整合入力に対する現在の予測分布",
+          "textPreview": "同じ整合入力に対する現在の予測分布",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "同じ整合入力に対する現在の予測分布",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "同じ整合入力に対する現在の予測分布",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 6,
+          "column": 3,
+          "bbox": [
+            640,
+            374.95,
+            282.15,
+            59.25
+          ],
+          "text": "基盤LoRAに対する勾配・更新方向",
+          "textPreview": "基盤LoRAに対する勾配・更新方向",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "基盤LoRAに対する勾配・更新方向",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "基盤LoRAに対する勾配・更新方向",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 6,
+          "column": 4,
+          "bbox": [
+            922.15,
+            374.95,
+            282.15,
+            59.25
+          ],
+          "text": "基盤LoRAを仮想適応した後の出力・挙動",
+          "textPreview": "基盤LoRAを仮想適応した後の出力・挙動",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "基盤LoRAを仮想適応した後の出力・挙動",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "基盤LoRAを仮想適応した後の出力・挙動",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "row": 7,
+          "column": 1,
+          "bbox": [
+            75.7,
+            434.2,
+            282.15,
+            33.86
+          ],
+          "text": "損失",
+          "textPreview": "損失",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "損失",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "損失",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "row": 7,
+          "column": 2,
+          "bbox": [
+            357.85,
+            434.2,
+            282.15,
+            33.86
+          ],
+          "text": "KL、JS、logits MSEなど",
+          "textPreview": "KL、JS、logits MSEなど",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "KL、JS、logits MSEなど",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "KL、JS、logits MSEなど",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "row": 7,
+          "column": 3,
+          "bbox": [
+            640,
+            434.2,
+            282.15,
+            33.86
+          ],
+          "text": "cosine distance、L2距離など",
+          "textPreview": "cosine distance、L2距離など",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "cosine distance、L2距離など",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "cosine distance、L2距離など",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "row": 7,
+          "column": 4,
+          "bbox": [
+            922.15,
+            434.2,
+            282.15,
+            33.86
+          ],
+          "text": "KL、L2距離など",
+          "textPreview": "KL、L2距離など",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "KL、L2距離など",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "KL、L2距離など",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "row": 8,
+          "column": 1,
+          "bbox": [
+            75.7,
+            468.06,
+            282.15,
+            59.25
+          ],
+          "text": "損失の目的",
+          "textPreview": "損失の目的",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "損失の目的",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "損失の目的",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "row": 8,
+          "column": 2,
+          "bbox": [
+            357.85,
+            468.06,
+            282.15,
+            59.25
+          ],
+          "text": "基盤の予測を端末群の予測へ近づける",
+          "textPreview": "基盤の予測を端末群の予測へ近づける",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "基盤の予測を端末群の予測へ近づける",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "基盤の予測を端末群の予測へ近づける",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 31,
+          "row": 8,
+          "column": 3,
+          "bbox": [
+            640,
+            468.06,
+            282.15,
+            59.25
+          ],
+          "text": "基盤LoRAの学習方向を端末群へ近づける",
+          "textPreview": "基盤LoRAの学習方向を端末群へ近づける",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "基盤LoRAの学習方向を端末群へ近づける",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "基盤LoRAの学習方向を端末群へ近づける",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 32,
+          "row": 8,
+          "column": 4,
+          "bbox": [
+            922.15,
+            468.06,
+            282.15,
+            59.25
+          ],
+          "text": "基盤の適応後挙動を端末群へ近づける",
+          "textPreview": "基盤の適応後挙動を端末群へ近づける",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "基盤の適応後挙動を端末群へ近づける",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "基盤の適応後挙動を端末群へ近づける",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 33,
+          "row": 9,
+          "column": 1,
+          "bbox": [
+            75.7,
+            527.31,
+            282.15,
+            59.25
+          ],
+          "text": "主な成立条件",
+          "textPreview": "主な成立条件",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "主な成立条件",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "主な成立条件",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 34,
+          "row": 9,
+          "column": 2,
+          "bbox": [
+            357.85,
+            527.31,
+            282.15,
+            59.25
+          ],
+          "text": "共通クラス空間と対応する整合入力が必要",
+          "textPreview": "共通クラス空間と対応する整合入力が必要",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "共通クラス空間と対応する整合入力が必要",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "共通クラス空間と対応する整合入力が必要",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 35,
+          "row": 9,
+          "column": 3,
+          "bbox": [
+            640,
+            527.31,
+            282.15,
+            59.25
+          ],
+          "text": "3Bと7Bの勾配空間を対応付ける必要がある",
+          "textPreview": "3Bと7Bの勾配空間を対応付ける必要がある",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "3Bと7Bの勾配空間を対応付ける必要がある",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "3Bと7Bの勾配空間を対応付ける必要がある",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 36,
+          "row": 9,
+          "column": 4,
+          "bbox": [
+            922.15,
+            527.31,
+            282.15,
+            59.25
+          ],
+          "text": "仮想適応用データと更新手順を揃える必要がある",
+          "textPreview": "仮想適応用データと更新手順を揃える必要がある",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "仮想適応用データと更新手順を揃える必要がある",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "仮想適応用データと更新手順を揃える必要がある",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 37,
+          "row": 10,
+          "column": 1,
+          "bbox": [
+            75.7,
+            586.56,
+            282.15,
+            59.25
+          ],
+          "text": "主な課題",
+          "textPreview": "主な課題",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "主な課題",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "主な課題",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 38,
+          "row": 10,
+          "column": 2,
+          "bbox": [
+            357.85,
+            586.56,
+            282.15,
+            59.25
+          ],
+          "text": "teacherの校正、整合データ代表性、集約方法",
+          "textPreview": "teacherの校正、整合データ代表性、集約方法",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "teacherの校正、整合データ代表性、集約方法",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "teacherの校正、整合データ代表性、集約方法",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 39,
+          "row": 10,
+          "column": 3,
+          "bbox": [
+            640,
+            586.56,
+            282.15,
+            59.25
+          ],
+          "text": "異種モデル間の次元・層・尺度の違い",
+          "textPreview": "異種モデル間の次元・層・尺度の違い",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "異種モデル間の次元・層・尺度の違い",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "異種モデル間の次元・層・尺度の違い",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 40,
+          "row": 10,
+          "column": 4,
+          "bbox": [
+            922.15,
+            586.56,
+            282.15,
+            59.25
+          ],
+          "text": "計算量、二階微分、更新ステップ数",
+          "textPreview": "計算量、二階微分、更新ステップ数",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "計算量、二階微分、更新ステップ数",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "計算量、二階微分、更新ステップ数",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

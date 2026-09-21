@@ -1,0 +1,18 @@
+Local source documents:
+- C:/Users/aoi7y/Downloads/FedPACT手法提案260901.pdf
+- C:/Users/aoi7y/Downloads/FedPACT実験計画260901.pdf
+- C:/Users/aoi7y/Downloads/FedPACT案2608.pdf
+- C:/Users/aoi7y/OneDrive - 国立大学法人東海国立大学機構/folder/卒研_明光/進捗会0731_吉村有生.pptx
+
+Source priority:
+1. FedPACT手法提案260901.pdf defines the current method.
+2. FedPACT実験計画260901.pdf defines the implementation and experiment stages.
+3. FedPACT案2608.pdf is an older proposal and is used only to understand revisions.
+
+Claim handling:
+- mu_pre is client-internal and is not a basic server transmission item.
+- client local delta and the global surrogate's round-to-round output change are distinct.
+- frequency is retained in both Uniform and Qinv-based conditions.
+- Qcons/Qnovel are conditional later additions; Qretain, replay, anchor, and residual paths belong to Stage III.
+- Stage I is about correctness, traceability, and 3–5-round state inheritance rather than performance comparison.
+

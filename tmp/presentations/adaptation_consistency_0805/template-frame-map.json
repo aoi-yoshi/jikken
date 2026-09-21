@@ -1,0 +1,94 @@
+{
+  "outputSlides": [
+    {
+      "outputSlide": 1,
+      "sourceSlide": 1,
+      "narrativeRole": "opening definition",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId":"sh/547294r6","action":"rewrite","purpose":"three-layer title"},
+        {"sourceElementId":"sh/ts7md4r2","action":"rewrite","purpose":"revision date"},
+        {"sourceElementId":"sh/7qp4be9c","action":"keep","purpose":"presenter"},
+        {"sourceElementId":"sh/k3yl0zql","action":"fill-placeholder","purpose":"preserve affiliation in inherited placeholder"}
+      ]
+    },
+    {
+      "outputSlide": 2,
+      "sourceSlide": 2,
+      "narrativeRole": "direction correction",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId":"sh/9072xkry","action":"rewrite","purpose":"slide title"},
+        {"sourceElementId":"sh/ozy1ofad","action":"fill-placeholder","purpose":"page number"},
+        {"sourceElementId":"sh/b29kza94","action":"rewrite","purpose":"revised conclusion"}
+      ]
+    },
+    {
+      "outputSlide": 3,
+      "sourceSlide": 3,
+      "narrativeRole": "prior-work distinction",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId":"sh/cza94vmx","action":"rewrite","purpose":"slide title"},
+        {"sourceElementId":"sh/d0jax03i","action":"fill-placeholder","purpose":"page number"},
+        {"sourceElementId":"tb/juho7qhg","action":"rewrite","purpose":"prior-work comparison"}
+      ]
+    },
+    {
+      "outputSlide": 4,
+      "sourceSlide": 4,
+      "narrativeRole": "formal research definition",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId":"sh/1cj2d8b6","action":"rewrite","purpose":"slide title"},
+        {"sourceElementId":"sh/0ba143al","action":"fill-placeholder","purpose":"page number"},
+        {"sourceElementId":"sh/rm1k7yt4","action":"rewrite","purpose":"definition and scope"}
+      ]
+    },
+    {
+      "outputSlide": 5,
+      "sourceSlide": 5,
+      "narrativeRole": "layer evaluation criteria",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId":"sh/dgbulwnm","action":"rewrite","purpose":"slide title"},
+        {"sourceElementId":"sh/cf2tcr61","action":"fill-placeholder","purpose":"page number"},
+        {"sourceElementId":"tb/m94nadsn","action":"rewrite","purpose":"evaluation table"}
+      ]
+    },
+    {
+      "outputSlide": 6,
+      "sourceSlide": 6,
+      "narrativeRole": "three-layer end-to-end flow",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId":"sh/yhg7epsj","action":"rewrite","purpose":"slide title"},
+        {"sourceElementId":"sh/zi98nu94","action":"fill-placeholder","purpose":"page number"},
+        {"sourceElementId":"tb/5gzmp4vu","action":"rewrite","purpose":"process flow table"}
+      ]
+    },
+    {
+      "outputSlide": 7,
+      "sourceSlide": 7,
+      "narrativeRole": "ordered validation plan",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId":"sh/cb2tkvap","action":"rewrite","purpose":"slide title"},
+        {"sourceElementId":"sh/dcbud0ra","action":"fill-placeholder","purpose":"page number"},
+        {"sourceElementId":"sh/ydkbm5sv","action":"rewrite","purpose":"layer-by-layer validation"}
+      ]
+    },
+    {
+      "outputSlide": 8,
+      "sourceSlide": 8,
+      "narrativeRole": "open decisions and next discussion",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        {"sourceElementId":"sh/18byd4zy","action":"rewrite","purpose":"slide title"},
+        {"sourceElementId":"sh/g72x4zyd","action":"fill-placeholder","purpose":"page number"},
+        {"sourceElementId":"sh/ri9g7uhw","action":"rewrite","purpose":"open decisions"}
+      ]
+    }
+  ],
+  "omittedSourceSlides": []
+}

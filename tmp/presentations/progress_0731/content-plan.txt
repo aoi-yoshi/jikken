@@ -1,0 +1,36 @@
+Slide 1 — Title
+surrogateモデルを用いた連合知識蒸留の中心主張と評価設計
+7月31日報告会
+
+Slide 2 — 今回の結論
+細部の実装より先に、研究の「出口」を固定する。
+FedMD/FedDFに対して何を改善するか。
+何ができれば成功かを定義する。
+Lpred/Lgrad/Lpostは目的に応じて後から選ぶ。
+
+Slide 3 — Related work
+FedMD: heterogeneous clients and public-data consensus logits.
+FedDF: heterogeneous client ensemble distillation into a server model.
+Fed-ET: small heterogeneous clients train a larger server model.
+FedMKT: mutual transfer between client SLMs and server LLM.
+Proposal: edge-surrogate resource and shared-information trade-off for a cyclic VLM setting.
+
+Slide 4 — Central claim
+Reflect client-only new knowledge from 3B edge surrogates into a 7B server foundation model while limiting raw/shared data and maintaining useful performance.
+
+Slide 5 — Success criteria
+Server and client quality, convergence, client memory/time, communication, alignment data, model-size gap, and client-only knowledge.
+Success means a Pareto improvement rather than maximizing every metric at once.
+
+Slide 6 — Comparison conditions
+Centralized upper bound, server-only, client-only, logit-distillation baseline, and proposed cyclic condition.
+
+Slide 7 — Experiment order
+First validate the outside of the research with Lpred.
+Then vary D_align size/domain.
+Only then add Lgrad/Lpost/optimizer if a named metric remains insufficient.
+
+Slide 8 — Closing
+Lock the one-sentence claim, comparison table, and success criteria.
+Do not start detailed Lgrad/Lpost implementation yet.
+

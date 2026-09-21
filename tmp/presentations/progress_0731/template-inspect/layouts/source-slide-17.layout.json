@@ -1,0 +1,1141 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/14bup87q",
+    "id": "14bup87q",
+    "slide": 17,
+    "layoutId": "/ppt/slideLayouts/slideLayout2.xml",
+    "layoutName": "タイトルとコンテンツ",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office テーマ",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "fontScheme": {
+      "name": "ユーザー定義 1",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial",
+      "Calibri",
+      "Calibri Light",
+      "Cambria Math"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout2.xml",
+      "name": "タイトルとコンテンツ",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/4",
+          "id": "4",
+          "name": "四角形: 角を丸くする 3",
+          "bbox": [
+            1192,
+            0,
+            34.98,
+            69.01
+          ],
+          "geometry": "roundRect",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "verticalAlignment": "middle"
+          },
+          "fillColor": "#203864",
+          "lineColor": "#203864",
+          "lineWidth": 1.33
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/2",
+          "id": "2",
+          "name": "Title 1",
+          "bbox": [
+            88,
+            9.25,
+            1104,
+            69.01
+          ],
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText"
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/5",
+          "id": "5",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            798.17,
+            7.77,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/7",
+          "id": "7",
+          "name": "グラフィックス 6",
+          "bbox": [
+            5.82,
+            13.17,
+            61.09,
+            57.77
+          ],
+          "contentType": "image/svg+xml",
+          "asset": {
+            "assetId": "/ppt/media/image1.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          }
+        },
+        {
+          "order": 5,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/6",
+          "id": "6",
+          "name": "Content Placeholder 2",
+          "bbox": [
+            0,
+            85.22,
+            1280,
+            634.78
+          ],
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            0,
+            141.12,
+            1280,
+            578.88
+          ],
+          "geometry": "rect",
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            88,
+            19.95,
+            1104,
+            98.13
+          ],
+          "geometry": "rect",
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/4",
+          "id": "4",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            755.43,
+            19.95,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1c7e50ni",
+      "id": "2",
+      "name": "タイトル 1",
+      "bbox": [
+        88,
+        9.25,
+        1104,
+        69.01
+      ],
+      "text": "②クライアント局所適応の詳細プロセス",
+      "textPreview": "②クライアント局所適応の詳細プロセス",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 48,
+        "typeface": "Arial",
+        "color": "#203864",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "②クライアント局所適応の詳細プロセス"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "②クライアント局所適応の詳細プロセス",
+          "runs": [
+            {
+              "index": 1,
+              "text": "②クライアント局所適応の詳細プロセス"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gbedwfmx",
+      "id": "3",
+      "name": "スライド番号プレースホルダー 2",
+      "bbox": [
+        798.17,
+        7.77,
+        436.57,
+        37.17
+      ],
+      "text": "17",
+      "textPreview": "17",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": {
+          "type": "theme",
+          "value": "bg1",
+          "transform": {
+            "lighten": 0.25
+          }
+        },
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "17"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "17",
+          "runs": [
+            {
+              "index": 1,
+              "text": "17"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6lwvql4v",
+      "id": "5",
+      "name": "テキスト ボックス 4",
+      "bbox": [
+        426.06,
+        87.4,
+        479.08,
+        115.53
+      ],
+      "geometry": "rect",
+      "text": "端末学習\n",
+      "textPreview": "端末学習 |",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "端末学習"
+          },
+          {
+            "index": 2,
+            "text": ""
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "端末学習",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "端末学習",
+              "typeface": "Cambria Math"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "ℒ_(task)^(𝑘) = 1⁄(|𝒟^(𝑘)|)∑_((𝑥,𝑦)∈𝒟^(𝑘)) CE𝑓𝑥 ; 𝜃_(𝑐)^(𝑘,𝑟),𝑦",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/snedsvml",
+      "id": "7",
+      "name": "コンテンツ プレースホルダー 3",
+      "bbox": [
+        0,
+        183.07,
+        1293.71,
+        345.88
+      ],
+      "text": "端末固有データ 学習を行う\n：関数で入力データに対してパラメータを使って予測を行う。\nを各学習パラメータ偏微分した結果をとする\n得られた勾配を用いて、クライアント側のオプティマイザ（SGD等）で\n\n",
+      "textPreview": "端末固有データ 学習を行う | ：関数で入力データに対してパラメータを使って予測を行う。 | を各学習パラメータ偏微分した結果をとする | 得られた勾配を用いて、クライアント側のオプティマイザ（SGD等）で |  |",
+      "resolvedFontSize": 42.67,
+      "resolvedTextStyle": {
+        "vertical": 1,
+        "fontSize": 42.67,
+        "typeface": "Arial",
+        "color": "#203864",
+        "alignment": "left",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 11,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1. 端末固有データ 学習を行う"
+          },
+          {
+            "index": 2,
+            "text": ""
+          },
+          {
+            "index": 3,
+            "text": "2. ：関数で入力データに対してパラメータを使って予測を行う。"
+          },
+          {
+            "index": 4,
+            "text": ""
+          },
+          {
+            "index": 5,
+            "text": "3. を各学習パラメータ偏微分した結果をとする"
+          },
+          {
+            "index": 6,
+            "text": ""
+          },
+          {
+            "index": 7,
+            "text": "4. 得られた勾配を用いて、クライアント側のオプティマイザ（SGD等）で"
+          },
+          {
+            "index": 8,
+            "text": ""
+          },
+          {
+            "index": 9,
+            "text": ""
+          },
+          {
+            "index": 10,
+            "text": ""
+          },
+          {
+            "index": 11,
+            "text": ""
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "端末固有データ 学習を行う",
+          "runs": [
+            {
+              "index": 1,
+              "text": "端末固有データ ",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            },
+            {
+              "index": 2,
+              "text": "学習を行う",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            }
+          ],
+          "bulletCharacter": "┃",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 130000
+        },
+        {
+          "index": 2,
+          "text": "：関数で入力データに対してパラメータを使って予測を行う。",
+          "runs": [
+            {
+              "index": 1,
+              "text": "：関数",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            },
+            {
+              "index": 2,
+              "text": "で入力データ",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            },
+            {
+              "index": 3,
+              "text": "に対して",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            },
+            {
+              "index": 4,
+              "text": "パラメータ",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            },
+            {
+              "index": 5,
+              "text": "を使って予測を行う。",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            }
+          ],
+          "bulletCharacter": "┃",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 130000
+        },
+        {
+          "index": 3,
+          "text": "を各学習パラメータ偏微分した結果をとする",
+          "runs": [
+            {
+              "index": 1,
+              "text": "を各学習パラメータ",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            },
+            {
+              "index": 2,
+              "text": "偏微分した結果を",
+              "fontSize": 24,
+              "typeface": "Calibri",
+              "color": "#203864"
+            },
+            {
+              "index": 3,
+              "text": "とする",
+              "fontSize": 25.33,
+              "typeface": "Calibri",
+              "color": "#203864"
+            }
+          ],
+          "bulletCharacter": "┃",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 130000
+        },
+        {
+          "index": 4,
+          "text": "得られた勾配を用いて、クライアント側のオプティマイザ（SGD等）で",
+          "runs": [
+            {
+              "index": 1,
+              "text": "得られた勾配を用いて、クライアント側のオプティマイザ",
+              "fontSize": 24
+            },
+            {
+              "index": 2,
+              "text": "（",
+              "fontSize": 24
+            },
+            {
+              "index": 3,
+              "text": "SGD",
+              "fontSize": 24
+            },
+            {
+              "index": 4,
+              "text": "等）で",
+              "fontSize": 24
+            }
+          ],
+          "bulletCharacter": "┃",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 130000
+        },
+        {
+          "index": 5,
+          "text": "𝜃_(𝑐)^(′𝑘,𝑟)←𝜃_(𝑐)^(𝑘,𝑟) − 𝜂^(𝑘)∇_(𝜃_(𝑐)^(𝑘,𝑟))ℒ_(𝑡𝑎𝑠𝑘)^(𝑘)",
+          "runs": [],
+          "bulletCharacter": "┃",
+          "marginLeft": 228600,
+          "indent": -228600,
+          "lineSpacingPercent": 130000
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ihcvml4j",
+      "id": "9",
+      "name": "テキスト ボックス 8",
+      "bbox": [
+        659.2,
+        510.87,
+        634.51,
+        209.12
+      ],
+      "geometry": "rect",
+      "text": "：更新対象となるクライアント側のパラメータ\nクライアントLoRAの重み行列\n：分類ヘッドの重み行列\n端末番号\nラウンド数\n ：更新後のパラメータ",
+      "textPreview": "：更新対象となるクライアント側のパラメータ | クライアントLoRAの重み行列 | ：分類ヘッドの重み行列 | 端末番号 | ラウンド数 |  ：更新後のパラメータ",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "•：更新対象となるクライアント側のパラメータ"
+          },
+          {
+            "index": 2,
+            "text": "•クライアントLoRAの重み行列"
+          },
+          {
+            "index": 3,
+            "text": "•：分類ヘッドの重み行列"
+          },
+          {
+            "index": 4,
+            "text": "•端末番号"
+          },
+          {
+            "index": 5,
+            "text": "•ラウンド数"
+          },
+          {
+            "index": 6,
+            "text": "• ：更新後のパラメータ"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "：更新対象となるクライアント側のパラメータ",
+          "runs": [
+            {
+              "index": 1,
+              "text": "："
+            },
+            {
+              "index": 2,
+              "text": "更新対象となるクライアント側の"
+            },
+            {
+              "index": 3,
+              "text": "パラメータ"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "クライアントLoRAの重み行列",
+          "runs": [
+            {
+              "index": 1,
+              "text": "クライアントLoRAの重み行列"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "：分類ヘッドの重み行列",
+          "runs": [
+            {
+              "index": 1,
+              "text": "："
+            },
+            {
+              "index": 2,
+              "text": "分類ヘッドの重み行列"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "端末番号",
+          "runs": [
+            {
+              "index": 1,
+              "text": "端末番号"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "ラウンド数",
+          "runs": [
+            {
+              "index": 1,
+              "text": "ラウンド数"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 6,
+          "text": " ：更新後のパラメータ",
+          "runs": [
+            {
+              "index": 1,
+              "text": " ："
+            },
+            {
+              "index": 2,
+              "text": "更新"
+            },
+            {
+              "index": 3,
+              "text": "後"
+            },
+            {
+              "index": 4,
+              "text": "の"
+            },
+            {
+              "index": 5,
+              "text": "パラメータ"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pc7qhwn6",
+      "id": "11",
+      "name": "テキスト ボックス 10",
+      "bbox": [
+        961.83,
+        101.34,
+        522.29,
+        107.79
+      ],
+      "geometry": "rect",
+      "text": "入力：端末固有データ \n出力：\n更新対象：",
+      "textPreview": "入力：端末固有データ  | 出力： | 更新対象：",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "•入力：端末固有データ"
+          },
+          {
+            "index": 2,
+            "text": "•出力："
+          },
+          {
+            "index": 3,
+            "text": "•更新対象："
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "入力：端末固有データ ",
+          "runs": [
+            {
+              "index": 1,
+              "text": "入力：",
+              "fontSize": 26.67
+            },
+            {
+              "index": 2,
+              "text": "端末固有データ ",
+              "fontSize": 26.67,
+              "typeface": "Calibri",
+              "color": "#203864"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "出力：",
+          "runs": [
+            {
+              "index": 1,
+              "text": "出力：",
+              "fontSize": 26.67
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "更新対象：",
+          "runs": [
+            {
+              "index": 1,
+              "text": "更新対象：",
+              "fontSize": 26.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

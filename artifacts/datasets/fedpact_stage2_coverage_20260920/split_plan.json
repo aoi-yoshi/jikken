@@ -1,0 +1,3095 @@
+{
+  "schema": "fedpact-stage2-coverage-split-v1",
+  "seed": 20260920,
+  "target_environment": [
+    "Normal",
+    "Cloudy",
+    "Highway"
+  ],
+  "dataset_root": "C:\\nexar_collision_prediction\\train",
+  "candidate_videos_readable": 1500,
+  "feasible_matched_pairs": 557,
+  "pool_pairs": {
+    "client_train": [
+      {
+        "pair_id": "14083f93c0facd77",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.4,
+          18.627666666666666,
+          18.85533333333333,
+          19.083
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00334.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01772.mp4"
+      },
+      {
+        "pair_id": "e717801494ea1739",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.846,
+          18.979666666666667,
+          19.113333333333333,
+          19.247
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00658.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01476.mp4"
+      },
+      {
+        "pair_id": "0c65c99d674a4989",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          8.398,
+          9.164333333333333,
+          9.930666666666665,
+          10.697
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00083.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01342.mp4"
+      },
+      {
+        "pair_id": "3830de4e13fdc3d6",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          6.833,
+          7.911,
+          8.989,
+          10.067
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00171.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01733.mp4"
+      },
+      {
+        "pair_id": "3ffc50420b1e54d4",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          17.645,
+          18.418,
+          19.191,
+          19.964
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00077.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01194.mp4"
+      },
+      {
+        "pair_id": "f8e40149dec3495f",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.8,
+          19.111,
+          19.422,
+          19.733
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00464.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01959.mp4"
+      },
+      {
+        "pair_id": "ed45ab14274429fb",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          19.5,
+          19.733333333333334,
+          19.966666666666665,
+          20.2
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00735.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01951.mp4"
+      },
+      {
+        "pair_id": "80fe2892a9e51296",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          15.867,
+          16.867,
+          17.867,
+          18.867
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00190.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01225.mp4"
+      }
+    ],
+    "client_validation": [
+      {
+        "pair_id": "807dc2085e179796",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.419,
+          18.996,
+          19.573,
+          20.15
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00453.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01742.mp4"
+      },
+      {
+        "pair_id": "ab342c2c75e359e2",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.433,
+          18.722,
+          19.011,
+          19.3
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00701.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01865.mp4"
+      },
+      {
+        "pair_id": "f45ae62d0e01635f",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          17.29,
+          18.303,
+          19.316,
+          20.329
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00194.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01484.mp4"
+      },
+      {
+        "pair_id": "94eb4069ceb80536",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          7.899,
+          8.787666666666667,
+          9.676333333333332,
+          10.565
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00803.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01232.mp4"
+      }
+    ],
+    "target_test": [
+      {
+        "pair_id": "72c3951222d85a62",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          19.5,
+          19.989,
+          20.477999999999998,
+          20.967
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00599.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01270.mp4"
+      },
+      {
+        "pair_id": "df4f62855df9c818",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          17.367,
+          18.433666666666667,
+          19.500333333333334,
+          20.567
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00596.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01108.mp4"
+      },
+      {
+        "pair_id": "68de5b9a5c803795",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          8.226,
+          8.648000000000001,
+          9.07,
+          9.492
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00833.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01901.mp4"
+      },
+      {
+        "pair_id": "23e9cc6e1b5b5893",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          16.5,
+          17.0,
+          17.5,
+          18.0
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\01022.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01401.mp4"
+      },
+      {
+        "pair_id": "4768f3e4123976c4",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          17.248,
+          18.021,
+          18.794,
+          19.567
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00574.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02083.mp4"
+      },
+      {
+        "pair_id": "b07c93fe0e1c42fd",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.5,
+          18.8,
+          19.099999999999998,
+          19.4
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00880.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01463.mp4"
+      },
+      {
+        "pair_id": "b28146caaa095bb6",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          17.859,
+          18.283333333333335,
+          18.707666666666668,
+          19.132
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00729.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02120.mp4"
+      },
+      {
+        "pair_id": "52a4d6c61337d5f2",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.667,
+          19.000333333333334,
+          19.33366666666667,
+          19.667
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00980.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01631.mp4"
+      }
+    ],
+    "server_target": [
+      {
+        "pair_id": "1313b1aa6603f271",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.533,
+          18.877666666666666,
+          19.222333333333335,
+          19.567
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00686.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01319.mp4"
+      },
+      {
+        "pair_id": "6d34f3806e36feca",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          9.991,
+          10.168666666666667,
+          10.346333333333332,
+          10.524
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00459.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01382.mp4"
+      },
+      {
+        "pair_id": "c0bbd63777deee93",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.6,
+          19.07766666666667,
+          19.555333333333333,
+          20.033
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00222.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01569.mp4"
+      },
+      {
+        "pair_id": "5617f01ccf2728c6",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          19.699,
+          19.961666666666666,
+          20.224333333333334,
+          20.487
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00096.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01048.mp4"
+      },
+      {
+        "pair_id": "736f3d5b46d12de1",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          15.933,
+          17.088666666666665,
+          18.244333333333334,
+          19.4
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00600.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01661.mp4"
+      },
+      {
+        "pair_id": "e0b5604f7d114bbd",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          16.9,
+          17.92233333333333,
+          18.944666666666667,
+          19.967
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00780.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01570.mp4"
+      },
+      {
+        "pair_id": "82ea70d1326c22a4",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          6.733,
+          7.766,
+          8.799,
+          9.832
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00641.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01960.mp4"
+      },
+      {
+        "pair_id": "e2a7f5bda3f45a08",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          15.229,
+          16.035,
+          16.840999999999998,
+          17.647
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00291.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01095.mp4"
+      },
+      {
+        "pair_id": "6f67074ee5dcf82d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          6.997,
+          7.93,
+          8.863,
+          9.796
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00026.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02002.mp4"
+      },
+      {
+        "pair_id": "d12f0e37bec61220",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          15.767,
+          17.255666666666666,
+          18.744333333333334,
+          20.233
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00584.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01170.mp4"
+      },
+      {
+        "pair_id": "715d13353cd392c7",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          19.019,
+          19.319333333333333,
+          19.619666666666667,
+          19.92
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00851.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01647.mp4"
+      },
+      {
+        "pair_id": "0b9b779d092394d8",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          20.067,
+          20.344666666666665,
+          20.622333333333334,
+          20.9
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00410.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01462.mp4"
+      },
+      {
+        "pair_id": "f1735cc183e3200b",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.533,
+          18.844333333333335,
+          19.155666666666665,
+          19.467
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00872.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01871.mp4"
+      },
+      {
+        "pair_id": "9472a93e9d01336d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          19.333,
+          19.922,
+          20.511,
+          21.1
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00753.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01781.mp4"
+      },
+      {
+        "pair_id": "e4eb4b14017122f8",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          8.5,
+          9.044333333333332,
+          9.588666666666667,
+          10.133
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00597.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01980.mp4"
+      }
+    ],
+    "cloudy_non_highway": [
+      {
+        "pair_id": "d831b6dbd42a9e7f",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.567,
+          18.778,
+          18.989,
+          19.2
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00481.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01049.mp4"
+      },
+      {
+        "pair_id": "aeaa20f7b861c01d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.167,
+          18.489,
+          18.811,
+          19.133
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00295.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01825.mp4"
+      },
+      {
+        "pair_id": "b607c1ad3e64c35d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.933,
+          19.499666666666666,
+          20.066333333333333,
+          20.633
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00562.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01599.mp4"
+      },
+      {
+        "pair_id": "3079d358174c882c",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.967,
+          19.42233333333333,
+          19.877666666666666,
+          20.333
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00415.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01437.mp4"
+      },
+      {
+        "pair_id": "52be3770708ad36e",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          19.067,
+          19.422333333333334,
+          19.777666666666665,
+          20.133
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00245.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01603.mp4"
+      },
+      {
+        "pair_id": "33920659f3e35cc2",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          19.1,
+          20.011,
+          20.922,
+          21.833
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00889.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01250.mp4"
+      },
+      {
+        "pair_id": "91a154e2f6cd9a6b",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          18.867,
+          19.522333333333332,
+          20.177666666666667,
+          20.833
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00645.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01646.mp4"
+      },
+      {
+        "pair_id": "562402f8b01defae",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          17.861,
+          18.497666666666667,
+          19.134333333333334,
+          19.771
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00016.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02046.mp4"
+      },
+      {
+        "pair_id": "2bac5a1156051441",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.0,
+          18.311,
+          18.622,
+          18.933
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00078.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01434.mp4"
+      },
+      {
+        "pair_id": "5d9420b4c6d67e1c",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          16.033,
+          17.155333333333335,
+          18.277666666666665,
+          19.4
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00503.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02135.mp4"
+      },
+      {
+        "pair_id": "4ee80a4df018dae8",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          16.9,
+          17.910999999999998,
+          18.922,
+          19.933
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00879.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01584.mp4"
+      },
+      {
+        "pair_id": "2e98222ab7bcd10d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          18.929,
+          19.310666666666666,
+          19.692333333333334,
+          20.074
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00143.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01580.mp4"
+      },
+      {
+        "pair_id": "661c87933a4aaa4e",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.167,
+          18.589000000000002,
+          19.011,
+          19.433
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00233.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01277.mp4"
+      },
+      {
+        "pair_id": "a2bf6fc7adfd3e7e",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Industrial"
+        ],
+        "times_sec": [
+          9.067,
+          9.255666666666666,
+          9.444333333333333,
+          9.633
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\01031.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01926.mp4"
+      },
+      {
+        "pair_id": "d0447ea8ab688b93",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.4,
+          18.788999999999998,
+          19.178,
+          19.567
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00047.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01727.mp4"
+      },
+      {
+        "pair_id": "78e293a654892d41",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          17.333,
+          17.872,
+          18.410999999999998,
+          18.95
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00252.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01493.mp4"
+      },
+      {
+        "pair_id": "26758534622750bf",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.312,
+          18.825333333333333,
+          19.33866666666667,
+          19.852
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00361.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01995.mp4"
+      },
+      {
+        "pair_id": "da1fd5a9520e05b4",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.3,
+          18.933333333333334,
+          19.566666666666666,
+          20.2
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00754.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01490.mp4"
+      },
+      {
+        "pair_id": "da3ff966cbb090ca",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          18.4,
+          18.622333333333334,
+          18.844666666666665,
+          19.067
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00014.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01673.mp4"
+      },
+      {
+        "pair_id": "6c335ec114b74210",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          18.267,
+          18.989,
+          19.711,
+          20.433
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00792.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01362.mp4"
+      },
+      {
+        "pair_id": "b7b02b0b9ba3779c",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          14.601,
+          15.591666666666667,
+          16.582333333333334,
+          17.573
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00638.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01806.mp4"
+      },
+      {
+        "pair_id": "7a91c80957777aa9",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.933,
+          19.511,
+          20.089000000000002,
+          20.667
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00266.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01910.mp4"
+      },
+      {
+        "pair_id": "b9c4cf0759a955f0",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          19.598,
+          19.91433333333333,
+          20.230666666666668,
+          20.547
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00449.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01501.mp4"
+      },
+      {
+        "pair_id": "0b973ae2d5ec137d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          15.812,
+          17.097,
+          18.382,
+          19.667
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00847.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01904.mp4"
+      },
+      {
+        "pair_id": "9e7e3799573810a1",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          17.867,
+          18.567,
+          19.267,
+          19.967
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00372.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01783.mp4"
+      },
+      {
+        "pair_id": "da44df48f3677d80",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          17.833,
+          18.299666666666667,
+          18.766333333333332,
+          19.233
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00329.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01511.mp4"
+      },
+      {
+        "pair_id": "fd2f1330b43a40ad",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          19.346,
+          19.91433333333333,
+          20.482666666666667,
+          21.051
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00875.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02029.mp4"
+      },
+      {
+        "pair_id": "19658e6782119aa8",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          16.892,
+          17.899333333333335,
+          18.906666666666666,
+          19.914
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00608.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01643.mp4"
+      },
+      {
+        "pair_id": "d9aa0610bb6d1c08",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          16.785,
+          17.644666666666666,
+          18.504333333333335,
+          19.364
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00916.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01621.mp4"
+      },
+      {
+        "pair_id": "e4fa7966ceaf5f57",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          17.7,
+          18.444333333333333,
+          19.188666666666666,
+          19.933
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00046.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01916.mp4"
+      }
+    ],
+    "noncloudy_highway": [
+      {
+        "pair_id": "a4e5401385a807ee",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          15.159,
+          15.721666666666668,
+          16.284333333333336,
+          16.847
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00387.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02104.mp4"
+      },
+      {
+        "pair_id": "5c508b237eb983a3",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.091,
+          17.646333333333335,
+          18.201666666666668,
+          18.757
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00636.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01263.mp4"
+      },
+      {
+        "pair_id": "6b5220eadbf9afca",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          15.449,
+          16.806,
+          18.163,
+          19.52
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00819.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01717.mp4"
+      },
+      {
+        "pair_id": "349579bc22e22158",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          9.164,
+          9.530666666666667,
+          9.897333333333332,
+          10.264
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00414.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01625.mp4"
+      },
+      {
+        "pair_id": "ac17f6b6bd802cba",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.1,
+          17.489,
+          17.878,
+          18.267
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\01034.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01539.mp4"
+      },
+      {
+        "pair_id": "eedcf949ed1e4f83",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          9.059,
+          9.392,
+          9.725,
+          10.058
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00417.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01240.mp4"
+      },
+      {
+        "pair_id": "c4ad694d0af66f81",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          18.799,
+          19.088333333333335,
+          19.377666666666666,
+          19.667
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00589.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01085.mp4"
+      },
+      {
+        "pair_id": "432f6d4210777063",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          19.033,
+          19.599666666666668,
+          20.166333333333334,
+          20.733
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00703.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01550.mp4"
+      },
+      {
+        "pair_id": "2dbe3991245c58f6",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.667,
+          18.278000000000002,
+          18.889,
+          19.5
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00928.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02088.mp4"
+      },
+      {
+        "pair_id": "f71d028986929d84",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.934,
+          18.639,
+          19.344,
+          20.049
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00181.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01500.mp4"
+      },
+      {
+        "pair_id": "252d120d970b2d45",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          11.469,
+          12.710666666666667,
+          13.952333333333334,
+          15.194
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00733.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01564.mp4"
+      },
+      {
+        "pair_id": "7f98cce091596fe6",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          19.367,
+          19.722333333333335,
+          20.077666666666666,
+          20.433
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00731.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01760.mp4"
+      },
+      {
+        "pair_id": "a57dadf30ed79a7d",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          16.11,
+          17.316,
+          18.522000000000002,
+          19.728
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00966.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01420.mp4"
+      },
+      {
+        "pair_id": "06a59e30e971755a",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          8.863,
+          8.996333333333332,
+          9.129666666666667,
+          9.263
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00043.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01326.mp4"
+      },
+      {
+        "pair_id": "4b0aa81a0d8db9e0",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          18.63,
+          18.902666666666665,
+          19.175333333333334,
+          19.448
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00952.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01388.mp4"
+      }
+    ],
+    "retention_test": [
+      {
+        "pair_id": "8a388216acaa6514",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Urban"
+        ],
+        "times_sec": [
+          17.033,
+          17.761,
+          18.489,
+          19.217
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00495.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01846.mp4"
+      },
+      {
+        "pair_id": "1519223cddfb54dd",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          18.196,
+          19.179333333333336,
+          20.162666666666667,
+          21.146
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00205.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01955.mp4"
+      },
+      {
+        "pair_id": "e03bb057bbf9ac4c",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.8,
+          19.3,
+          19.8,
+          20.3
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00551.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02096.mp4"
+      },
+      {
+        "pair_id": "7ab68e80e91ce4ac",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          23.767,
+          24.400333333333332,
+          25.03366666666667,
+          25.667
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00985.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02001.mp4"
+      },
+      {
+        "pair_id": "51bf961e0788be49",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          19.1,
+          19.511,
+          19.922,
+          20.333
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00751.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01840.mp4"
+      },
+      {
+        "pair_id": "2d61cf0f1599362d",
+        "environment": [
+          "Normal",
+          "Rain",
+          "Urban"
+        ],
+        "times_sec": [
+          19.499,
+          20.255666666666666,
+          21.01233333333333,
+          21.769
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\01036.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02000.mp4"
+      },
+      {
+        "pair_id": "7b91c1eebff00c8d",
+        "environment": [
+          "Twilight",
+          "Clear",
+          "Urban"
+        ],
+        "times_sec": [
+          18.4,
+          18.944333333333333,
+          19.488666666666667,
+          20.033
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00418.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01838.mp4"
+      },
+      {
+        "pair_id": "5540be74bed94e8c",
+        "environment": [
+          "Dark",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.633,
+          18.144333333333332,
+          18.65566666666667,
+          19.167
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00936.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01141.mp4"
+      },
+      {
+        "pair_id": "0c090b4ac3aba076",
+        "environment": [
+          "Twilight",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.252,
+          18.808,
+          19.364,
+          19.92
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00700.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02102.mp4"
+      },
+      {
+        "pair_id": "ef0efa7078675e11",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Other"
+        ],
+        "times_sec": [
+          7.228,
+          7.877666666666666,
+          8.527333333333333,
+          9.177
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00235.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01221.mp4"
+      },
+      {
+        "pair_id": "bcd20e71ca0c85ed",
+        "environment": [
+          "Twilight",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.803,
+          18.467000000000002,
+          19.131,
+          19.795
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00979.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01519.mp4"
+      },
+      {
+        "pair_id": "71d4e40ab2a836fc",
+        "environment": [
+          "Twilight",
+          "Clear",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          8.398,
+          9.075666666666667,
+          9.753333333333332,
+          10.431
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00629.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01530.mp4"
+      },
+      {
+        "pair_id": "c04c90f2ecd14c16",
+        "environment": [
+          "Dark",
+          "Clear",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          19.333,
+          19.699666666666666,
+          20.066333333333333,
+          20.433
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00463.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01942.mp4"
+      },
+      {
+        "pair_id": "b40dfb0929cc14fc",
+        "environment": [
+          "Dark",
+          "Clear",
+          "Urban"
+        ],
+        "times_sec": [
+          16.7,
+          16.9,
+          17.1,
+          17.3
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00411.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01663.mp4"
+      },
+      {
+        "pair_id": "1b2f0da4777e3b09",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Other"
+        ],
+        "times_sec": [
+          10.842,
+          11.157666666666668,
+          11.473333333333333,
+          11.789
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00659.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02053.mp4"
+      },
+      {
+        "pair_id": "b9fd094103e6bcd5",
+        "environment": [
+          "Normal",
+          "Rain",
+          "Highway"
+        ],
+        "times_sec": [
+          16.9,
+          17.677666666666667,
+          18.455333333333332,
+          19.233
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00003.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01249.mp4"
+      },
+      {
+        "pair_id": "85e27d373e5828b1",
+        "environment": [
+          "Twilight",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          19.047,
+          19.393,
+          19.739,
+          20.085
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\01002.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01724.mp4"
+      },
+      {
+        "pair_id": "8be5c24bb0460bd6",
+        "environment": [
+          "Twilight",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          17.033,
+          18.39966666666667,
+          19.766333333333332,
+          21.133
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00690.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01523.mp4"
+      },
+      {
+        "pair_id": "fcea4104f2901d30",
+        "environment": [
+          "Bright",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.471,
+          17.810333333333332,
+          18.14966666666667,
+          18.489
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00469.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01062.mp4"
+      },
+      {
+        "pair_id": "f973ad151aa070ff",
+        "environment": [
+          "Bright",
+          "Clear",
+          "Urban"
+        ],
+        "times_sec": [
+          19.341,
+          19.526,
+          19.711000000000002,
+          19.896
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00019.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01116.mp4"
+      }
+    ],
+    "server_seed_c_high": [
+      {
+        "pair_id": "1313b1aa6603f271",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.533,
+          18.877666666666666,
+          19.222333333333335,
+          19.567
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00686.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01319.mp4"
+      },
+      {
+        "pair_id": "6d34f3806e36feca",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          9.991,
+          10.168666666666667,
+          10.346333333333332,
+          10.524
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00459.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01382.mp4"
+      },
+      {
+        "pair_id": "c0bbd63777deee93",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.6,
+          19.07766666666667,
+          19.555333333333333,
+          20.033
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00222.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01569.mp4"
+      },
+      {
+        "pair_id": "5617f01ccf2728c6",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          19.699,
+          19.961666666666666,
+          20.224333333333334,
+          20.487
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00096.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01048.mp4"
+      },
+      {
+        "pair_id": "736f3d5b46d12de1",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          15.933,
+          17.088666666666665,
+          18.244333333333334,
+          19.4
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00600.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01661.mp4"
+      },
+      {
+        "pair_id": "e0b5604f7d114bbd",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          16.9,
+          17.92233333333333,
+          18.944666666666667,
+          19.967
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00780.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01570.mp4"
+      },
+      {
+        "pair_id": "82ea70d1326c22a4",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          6.733,
+          7.766,
+          8.799,
+          9.832
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00641.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01960.mp4"
+      },
+      {
+        "pair_id": "e2a7f5bda3f45a08",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          15.229,
+          16.035,
+          16.840999999999998,
+          17.647
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00291.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01095.mp4"
+      },
+      {
+        "pair_id": "6f67074ee5dcf82d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          6.997,
+          7.93,
+          8.863,
+          9.796
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00026.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02002.mp4"
+      },
+      {
+        "pair_id": "d12f0e37bec61220",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          15.767,
+          17.255666666666666,
+          18.744333333333334,
+          20.233
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00584.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01170.mp4"
+      },
+      {
+        "pair_id": "715d13353cd392c7",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          19.019,
+          19.319333333333333,
+          19.619666666666667,
+          19.92
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00851.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01647.mp4"
+      },
+      {
+        "pair_id": "0b9b779d092394d8",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          20.067,
+          20.344666666666665,
+          20.622333333333334,
+          20.9
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00410.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01462.mp4"
+      },
+      {
+        "pair_id": "f1735cc183e3200b",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          18.533,
+          18.844333333333335,
+          19.155666666666665,
+          19.467
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00872.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01871.mp4"
+      },
+      {
+        "pair_id": "9472a93e9d01336d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          19.333,
+          19.922,
+          20.511,
+          21.1
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00753.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01781.mp4"
+      },
+      {
+        "pair_id": "e4eb4b14017122f8",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Highway"
+        ],
+        "times_sec": [
+          8.5,
+          9.044333333333332,
+          9.588666666666667,
+          10.133
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00597.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01980.mp4"
+      },
+      {
+        "pair_id": "d831b6dbd42a9e7f",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.567,
+          18.778,
+          18.989,
+          19.2
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00481.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01049.mp4"
+      },
+      {
+        "pair_id": "aeaa20f7b861c01d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.167,
+          18.489,
+          18.811,
+          19.133
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00295.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01825.mp4"
+      },
+      {
+        "pair_id": "b607c1ad3e64c35d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.933,
+          19.499666666666666,
+          20.066333333333333,
+          20.633
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00562.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01599.mp4"
+      },
+      {
+        "pair_id": "3079d358174c882c",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.967,
+          19.42233333333333,
+          19.877666666666666,
+          20.333
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00415.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01437.mp4"
+      },
+      {
+        "pair_id": "52be3770708ad36e",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          19.067,
+          19.422333333333334,
+          19.777666666666665,
+          20.133
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00245.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01603.mp4"
+      },
+      {
+        "pair_id": "33920659f3e35cc2",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          19.1,
+          20.011,
+          20.922,
+          21.833
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00889.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01250.mp4"
+      },
+      {
+        "pair_id": "91a154e2f6cd9a6b",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          18.867,
+          19.522333333333332,
+          20.177666666666667,
+          20.833
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00645.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01646.mp4"
+      },
+      {
+        "pair_id": "562402f8b01defae",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          17.861,
+          18.497666666666667,
+          19.134333333333334,
+          19.771
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00016.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02046.mp4"
+      },
+      {
+        "pair_id": "a4e5401385a807ee",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          15.159,
+          15.721666666666668,
+          16.284333333333336,
+          16.847
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00387.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02104.mp4"
+      },
+      {
+        "pair_id": "5c508b237eb983a3",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.091,
+          17.646333333333335,
+          18.201666666666668,
+          18.757
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00636.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01263.mp4"
+      },
+      {
+        "pair_id": "6b5220eadbf9afca",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          15.449,
+          16.806,
+          18.163,
+          19.52
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00819.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01717.mp4"
+      },
+      {
+        "pair_id": "349579bc22e22158",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          9.164,
+          9.530666666666667,
+          9.897333333333332,
+          10.264
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00414.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01625.mp4"
+      },
+      {
+        "pair_id": "ac17f6b6bd802cba",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.1,
+          17.489,
+          17.878,
+          18.267
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\01034.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01539.mp4"
+      },
+      {
+        "pair_id": "eedcf949ed1e4f83",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          9.059,
+          9.392,
+          9.725,
+          10.058
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00417.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01240.mp4"
+      },
+      {
+        "pair_id": "c4ad694d0af66f81",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          18.799,
+          19.088333333333335,
+          19.377666666666666,
+          19.667
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00589.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01085.mp4"
+      }
+    ],
+    "server_seed_c_recomp": [
+      {
+        "pair_id": "d831b6dbd42a9e7f",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.567,
+          18.778,
+          18.989,
+          19.2
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00481.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01049.mp4"
+      },
+      {
+        "pair_id": "aeaa20f7b861c01d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.167,
+          18.489,
+          18.811,
+          19.133
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00295.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01825.mp4"
+      },
+      {
+        "pair_id": "b607c1ad3e64c35d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.933,
+          19.499666666666666,
+          20.066333333333333,
+          20.633
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00562.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01599.mp4"
+      },
+      {
+        "pair_id": "3079d358174c882c",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.967,
+          19.42233333333333,
+          19.877666666666666,
+          20.333
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00415.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01437.mp4"
+      },
+      {
+        "pair_id": "52be3770708ad36e",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          19.067,
+          19.422333333333334,
+          19.777666666666665,
+          20.133
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00245.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01603.mp4"
+      },
+      {
+        "pair_id": "33920659f3e35cc2",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          19.1,
+          20.011,
+          20.922,
+          21.833
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00889.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01250.mp4"
+      },
+      {
+        "pair_id": "91a154e2f6cd9a6b",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          18.867,
+          19.522333333333332,
+          20.177666666666667,
+          20.833
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00645.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01646.mp4"
+      },
+      {
+        "pair_id": "562402f8b01defae",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          17.861,
+          18.497666666666667,
+          19.134333333333334,
+          19.771
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00016.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02046.mp4"
+      },
+      {
+        "pair_id": "2bac5a1156051441",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.0,
+          18.311,
+          18.622,
+          18.933
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00078.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01434.mp4"
+      },
+      {
+        "pair_id": "5d9420b4c6d67e1c",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          16.033,
+          17.155333333333335,
+          18.277666666666665,
+          19.4
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00503.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02135.mp4"
+      },
+      {
+        "pair_id": "4ee80a4df018dae8",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          16.9,
+          17.910999999999998,
+          18.922,
+          19.933
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00879.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01584.mp4"
+      },
+      {
+        "pair_id": "2e98222ab7bcd10d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          18.929,
+          19.310666666666666,
+          19.692333333333334,
+          20.074
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00143.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01580.mp4"
+      },
+      {
+        "pair_id": "661c87933a4aaa4e",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.167,
+          18.589000000000002,
+          19.011,
+          19.433
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00233.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01277.mp4"
+      },
+      {
+        "pair_id": "a2bf6fc7adfd3e7e",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Industrial"
+        ],
+        "times_sec": [
+          9.067,
+          9.255666666666666,
+          9.444333333333333,
+          9.633
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\01031.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01926.mp4"
+      },
+      {
+        "pair_id": "d0447ea8ab688b93",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.4,
+          18.788999999999998,
+          19.178,
+          19.567
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00047.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01727.mp4"
+      },
+      {
+        "pair_id": "a4e5401385a807ee",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          15.159,
+          15.721666666666668,
+          16.284333333333336,
+          16.847
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00387.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02104.mp4"
+      },
+      {
+        "pair_id": "5c508b237eb983a3",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.091,
+          17.646333333333335,
+          18.201666666666668,
+          18.757
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00636.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01263.mp4"
+      },
+      {
+        "pair_id": "6b5220eadbf9afca",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          15.449,
+          16.806,
+          18.163,
+          19.52
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00819.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01717.mp4"
+      },
+      {
+        "pair_id": "349579bc22e22158",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          9.164,
+          9.530666666666667,
+          9.897333333333332,
+          10.264
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00414.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01625.mp4"
+      },
+      {
+        "pair_id": "ac17f6b6bd802cba",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.1,
+          17.489,
+          17.878,
+          18.267
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\01034.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01539.mp4"
+      },
+      {
+        "pair_id": "eedcf949ed1e4f83",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          9.059,
+          9.392,
+          9.725,
+          10.058
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00417.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01240.mp4"
+      },
+      {
+        "pair_id": "c4ad694d0af66f81",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          18.799,
+          19.088333333333335,
+          19.377666666666666,
+          19.667
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00589.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01085.mp4"
+      },
+      {
+        "pair_id": "432f6d4210777063",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          19.033,
+          19.599666666666668,
+          20.166333333333334,
+          20.733
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00703.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01550.mp4"
+      },
+      {
+        "pair_id": "2dbe3991245c58f6",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.667,
+          18.278000000000002,
+          18.889,
+          19.5
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00928.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02088.mp4"
+      },
+      {
+        "pair_id": "f71d028986929d84",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          17.934,
+          18.639,
+          19.344,
+          20.049
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00181.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01500.mp4"
+      },
+      {
+        "pair_id": "252d120d970b2d45",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          11.469,
+          12.710666666666667,
+          13.952333333333334,
+          15.194
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00733.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01564.mp4"
+      },
+      {
+        "pair_id": "7f98cce091596fe6",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          19.367,
+          19.722333333333335,
+          20.077666666666666,
+          20.433
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00731.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01760.mp4"
+      },
+      {
+        "pair_id": "a57dadf30ed79a7d",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          16.11,
+          17.316,
+          18.522000000000002,
+          19.728
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00966.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01420.mp4"
+      },
+      {
+        "pair_id": "06a59e30e971755a",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          8.863,
+          8.996333333333332,
+          9.129666666666667,
+          9.263
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00043.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01326.mp4"
+      },
+      {
+        "pair_id": "4b0aa81a0d8db9e0",
+        "environment": [
+          "Normal",
+          "Clear",
+          "Highway"
+        ],
+        "times_sec": [
+          18.63,
+          18.902666666666665,
+          19.175333333333334,
+          19.448
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00952.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01388.mp4"
+      }
+    ],
+    "server_seed_c_nosupport": [
+      {
+        "pair_id": "d831b6dbd42a9e7f",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.567,
+          18.778,
+          18.989,
+          19.2
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00481.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01049.mp4"
+      },
+      {
+        "pair_id": "aeaa20f7b861c01d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.167,
+          18.489,
+          18.811,
+          19.133
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00295.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01825.mp4"
+      },
+      {
+        "pair_id": "b607c1ad3e64c35d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.933,
+          19.499666666666666,
+          20.066333333333333,
+          20.633
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00562.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01599.mp4"
+      },
+      {
+        "pair_id": "3079d358174c882c",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.967,
+          19.42233333333333,
+          19.877666666666666,
+          20.333
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00415.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01437.mp4"
+      },
+      {
+        "pair_id": "52be3770708ad36e",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          19.067,
+          19.422333333333334,
+          19.777666666666665,
+          20.133
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00245.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01603.mp4"
+      },
+      {
+        "pair_id": "33920659f3e35cc2",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          19.1,
+          20.011,
+          20.922,
+          21.833
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00889.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01250.mp4"
+      },
+      {
+        "pair_id": "91a154e2f6cd9a6b",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          18.867,
+          19.522333333333332,
+          20.177666666666667,
+          20.833
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00645.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01646.mp4"
+      },
+      {
+        "pair_id": "562402f8b01defae",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          17.861,
+          18.497666666666667,
+          19.134333333333334,
+          19.771
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00016.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02046.mp4"
+      },
+      {
+        "pair_id": "2bac5a1156051441",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.0,
+          18.311,
+          18.622,
+          18.933
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00078.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01434.mp4"
+      },
+      {
+        "pair_id": "5d9420b4c6d67e1c",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          16.033,
+          17.155333333333335,
+          18.277666666666665,
+          19.4
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00503.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02135.mp4"
+      },
+      {
+        "pair_id": "4ee80a4df018dae8",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          16.9,
+          17.910999999999998,
+          18.922,
+          19.933
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00879.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01584.mp4"
+      },
+      {
+        "pair_id": "2e98222ab7bcd10d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          18.929,
+          19.310666666666666,
+          19.692333333333334,
+          20.074
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00143.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01580.mp4"
+      },
+      {
+        "pair_id": "661c87933a4aaa4e",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.167,
+          18.589000000000002,
+          19.011,
+          19.433
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00233.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01277.mp4"
+      },
+      {
+        "pair_id": "a2bf6fc7adfd3e7e",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Industrial"
+        ],
+        "times_sec": [
+          9.067,
+          9.255666666666666,
+          9.444333333333333,
+          9.633
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\01031.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01926.mp4"
+      },
+      {
+        "pair_id": "d0447ea8ab688b93",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.4,
+          18.788999999999998,
+          19.178,
+          19.567
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00047.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01727.mp4"
+      },
+      {
+        "pair_id": "78e293a654892d41",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          17.333,
+          17.872,
+          18.410999999999998,
+          18.95
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00252.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01493.mp4"
+      },
+      {
+        "pair_id": "26758534622750bf",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.312,
+          18.825333333333333,
+          19.33866666666667,
+          19.852
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00361.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01995.mp4"
+      },
+      {
+        "pair_id": "da1fd5a9520e05b4",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.3,
+          18.933333333333334,
+          19.566666666666666,
+          20.2
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00754.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01490.mp4"
+      },
+      {
+        "pair_id": "da3ff966cbb090ca",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          18.4,
+          18.622333333333334,
+          18.844666666666665,
+          19.067
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00014.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01673.mp4"
+      },
+      {
+        "pair_id": "6c335ec114b74210",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          18.267,
+          18.989,
+          19.711,
+          20.433
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00792.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01362.mp4"
+      },
+      {
+        "pair_id": "b7b02b0b9ba3779c",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          14.601,
+          15.591666666666667,
+          16.582333333333334,
+          17.573
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00638.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01806.mp4"
+      },
+      {
+        "pair_id": "7a91c80957777aa9",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          18.933,
+          19.511,
+          20.089000000000002,
+          20.667
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00266.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01910.mp4"
+      },
+      {
+        "pair_id": "b9c4cf0759a955f0",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          19.598,
+          19.91433333333333,
+          20.230666666666668,
+          20.547
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00449.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01501.mp4"
+      },
+      {
+        "pair_id": "0b973ae2d5ec137d",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          15.812,
+          17.097,
+          18.382,
+          19.667
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00847.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01904.mp4"
+      },
+      {
+        "pair_id": "9e7e3799573810a1",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          17.867,
+          18.567,
+          19.267,
+          19.967
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00372.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01783.mp4"
+      },
+      {
+        "pair_id": "da44df48f3677d80",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          17.833,
+          18.299666666666667,
+          18.766333333333332,
+          19.233
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00329.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01511.mp4"
+      },
+      {
+        "pair_id": "fd2f1330b43a40ad",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Sub-urban"
+        ],
+        "times_sec": [
+          19.346,
+          19.91433333333333,
+          20.482666666666667,
+          21.051
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00875.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\02029.mp4"
+      },
+      {
+        "pair_id": "19658e6782119aa8",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          16.892,
+          17.899333333333335,
+          18.906666666666666,
+          19.914
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00608.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01643.mp4"
+      },
+      {
+        "pair_id": "d9aa0610bb6d1c08",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          16.785,
+          17.644666666666666,
+          18.504333333333335,
+          19.364
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00916.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01621.mp4"
+      },
+      {
+        "pair_id": "e4fa7966ceaf5f57",
+        "environment": [
+          "Normal",
+          "Cloudy",
+          "Urban"
+        ],
+        "times_sec": [
+          17.7,
+          18.444333333333333,
+          19.188666666666666,
+          19.933
+        ],
+        "risk_video": "C:\\nexar_collision_prediction\\train\\positive\\00046.mp4",
+        "normal_video": "C:\\nexar_collision_prediction\\train\\negative\\01916.mp4"
+      }
+    ]
+  },
+  "audit": {
+    "status": "pass",
+    "fixed_pool_unique_videos": 200,
+    "fixed_pool_overlap_count": 0,
+    "coverage": {
+      "server_seed_c_high": {
+        "pairs": 30,
+        "target_pairs": 15
+      },
+      "server_seed_c_recomp": {
+        "pairs": 30,
+        "target_pairs": 0
+      },
+      "server_seed_c_nosupport": {
+        "pairs": 30,
+        "target_pairs": 0
+      }
+    },
+    "intentional_server_condition_nesting": true
+  },
+  "allocation_sha256": "ee1a63eda634dc065fc4ffd188a44f1e1b3fdd290389d634e388781015769284"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-08-05T08:42:14.755Z",
+  "workspace": "C:\\Python\\実験_修正\\tmp\\presentations\\adaptation_consistency_0805",
+  "finalPptx": "C:\\Python\\実験_修正\\output\\presentation\\Adaptation_Consistency_三層処理フロー_0805.pptx",
+  "starterPptx": "C:\\Python\\実験_修正\\tmp\\presentations\\adaptation_consistency_0805\\template-starter.pptx",
+  "mapPath": "C:\\Python\\実験_修正\\tmp\\presentations\\adaptation_consistency_0805\\template-frame-map.json",
+  "starterLayoutDir": "C:\\Python\\実験_修正\\tmp\\presentations\\adaptation_consistency_0805\\template-starter-layout",
+  "finalLayoutDir": "C:\\Python\\実験_修正\\tmp\\presentations\\adaptation_consistency_0805\\final-layout",
+  "editDir": "C:\\Python\\実験_修正\\tmp\\presentations\\adaptation_consistency_0805",
+  "issueCount": 0,
+  "issues": []
+}

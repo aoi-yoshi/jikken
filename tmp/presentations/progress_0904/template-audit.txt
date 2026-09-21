@@ -1,0 +1,39 @@
+Source deck: C:/Users/aoi7y/OneDrive - 国立大学法人東海国立大学機構/folder/卒研_明光/進捗会0731_吉村有生.pptx
+Slide count: 11
+Canvas: 1280 x 720
+
+Communication job:
+By the end, the professor and laboratory members should understand how FedPACT transfers private local-adaptation behavior through three layers, what information crosses the client/cloud boundary, and how the work will proceed from the local prototype to the full experiment.
+
+Narrative:
+1. State the research objective and the two technical obstacles.
+2. Show the three-layer end-to-end flow.
+3. Explain Layer 1 data ownership and transmission.
+4. Explain the iterative proxy search in Layer 2.
+5. Explain proxy-pair selection and foundation-model distillation.
+6. Close with the four-stage experimental roadmap and the method's central contribution.
+
+Reusable source patterns:
+- Slide 1: title slide with centered title, meeting date, presenter, and affiliation.
+- Slide 4: content slide with inherited title, page marker, and one large image slot; suitable for replacing the legacy image with editable diagrams.
+- Slide 2: title plus a large inherited body slot; suitable for a short research-purpose slide and the four-stage roadmap.
+- Slide 10: title plus a large inherited body slot; suitable for concise opening and closing claims.
+
+Visual rules:
+- White background, dark navy text (#203864), Arial/Calibri family.
+- Keep the top-left inherited research icon and the top-right navy page marker.
+- Keep inherited 48 px slide titles and existing title-slide hierarchy.
+- Diagram palette: cloud light blue, client light orange, data light green, key outputs pale yellow, future extensions light gray.
+- Use flat shapes, thin borders, and concise labels. No decorative imagery.
+
+Insertion contract:
+- Every output slide duplicates a mapped source slide.
+- Existing inherited title/page/body/image elements are rewritten or deleted explicitly.
+- New diagram primitives are confined to the mapped content zone below the inherited title and do not overlap inherited chrome.
+- No inherited master or layout objects are modified.
+
+Master/layout notes:
+- Title slide uses the source title layout and inherited navy footer bars.
+- Content slides use the source master with the top-left icon and top-right page marker.
+- Page markers are slide-local editable placeholders.
+

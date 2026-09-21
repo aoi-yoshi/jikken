@@ -1,0 +1,6 @@
+Visual QA completed on all eight source slides and all eight final slides at full resolution.
+The first final render exposed duplicated bullet glyphs on slides 4, 7, and 8 and an overflowing final row on slide 6; both were corrected and re-rendered.
+The final slide 6 table shows all five process rows, including global-surrogate re-forward before the (x-tilde, z-tilde) pair is passed to layer 3.
+Template fidelity check: PASS, issueCount=0.
+The canvas overflow helper reports slides 2-8. Running the same helper on the unedited source deck reports the identical slide set. Inspection of the padded renders shows this is inherited source-placeholder geometry at the left edge, not new clipping introduced by this revision. The normal 2x final renders show all audience-facing text and tables legibly.
+No new images, charts, shapes, connectors, or overlays were added.

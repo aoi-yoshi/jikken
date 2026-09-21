@@ -1,0 +1,411 @@
+{"kind":"deck","id":"pr/1sn4xu","name":"Deck"}
+{"kind":"layout","layoutId":"278cc6b1-f1a0-409a-b734-deee8c5d0de7","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"01393840-63a2-4d13-bdb2-dd0817b07bfc","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/905bis","slide":1,"title":"FedPACT / NEXAR concrete case","textShapes":5}
+{"kind":"shape","id":"sh/z21c3u9o","slide":1,"bbox":[0,0,650,720]}
+{"kind":"shape","id":"sh/y1svups3","slide":1,"bbox":[594,0,56,720]}
+{"kind":"textbox","id":"sh/983e9orq","slide":1,"text":"FedPACT / NEXAR concrete case","textPreview":"FedPACT / NEXAR concrete case","textChars":29,"textLines":1,"bbox":[66,62,490,34]}
+{"kind":"textbox","id":"sh/87ud0ja5","slide":1,"text":"Layer 2 動作確認と\n局所更新の\n順序依存性","textPreview":"Layer 2 動作確認と | 局所更新の | 順序依存性","textChars":25,"textLines":3,"bbox":[66,128,500,245]}
+{"kind":"textbox","id":"sh/n61w7e9k","slide":1,"text":"実動画の反応変化から、\n代理データ候補へ至る過程を追う","textPreview":"実動画の反応変化から、 | 代理データ候補へ至る過程を追う","textChars":27,"textLines":2,"bbox":[70,410,470,78]}
+{"kind":"textbox","id":"sh/m5svy9sz","slide":1,"text":"研究会説明用・診断実験","textPreview":"研究会説明用・診断実験","textChars":11,"textLines":1,"bbox":[70,584,360,26]}
+{"kind":"textbox","id":"sh/pczuxkrm","slide":1,"text":"YOSHIMURA Aoi   2026.09.13","textPreview":"YOSHIMURA Aoi   2026.09.13","textChars":26,"textLines":1,"bbox":[70,635,420,26]}
+{"kind":"image","id":"im/xs769cnm","slide":1,"name":"","geometry":"rect","alt":"NEXAR評価用risk動画の最終フレーム。夜間交差点で左右から車両が接近している","bbox":[650,0,630,720]}
+{"kind":"notes","id":"nt/905bis","slide":1,"text":"つかみ：現場の生映像をcloudへ集めず、局所適応で得た挙動だけを代理データへ変換したい。\nただし、代理化の入力となる局所更新自体が不安定なら、Layer 2が忠実でも有用な知識転移にはならない。\n今回はNEXARの具体的な動画と実測値を使い、Layer 2の経路と、その前段で見つかった問題を説明する。\nSource: notes/advisor/CURRENT.md; docs/fedpact_nexar_concrete_case_20260913.md"}
+{"kind":"slide","id":"sl/vypoft","slide":2,"title":"同じ局所学習で、risk動画もnormal動画もrisk確率が下がった","textShapes":22}
+{"kind":"textbox","id":"sh/kzetovet","slide":2,"text":"同じ局所学習で、risk動画もnormal動画もrisk確率が下がった","textPreview":"同じ局所学習で、risk動画もnormal動画もrisk確率が下がった","textChars":35,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/zy5cvqx8","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/yxwbmlwn","slide":2,"bbox":[64,105,1152,0]}
+{"kind":"textbox","id":"sh/94nu10fa","slide":2,"text":"評価用動画6本のうちrisk／normal各1本を例示。映像内容の違いより、共通方向の出力移動が目立つ。","textPreview":"評価用動画6本のうちrisk／normal各1本を例示。映像内容の違いより、共通方向の出力移動が目立つ。","textChars":52,"textLines":1,"bbox":[64,120,1140,32]}
+{"kind":"textbox","id":"sh/83etsve5","slide":2,"text":"risk動画 / 評価用","textPreview":"risk動画 / 評価用","textChars":12,"textLines":1,"bbox":[64,170,310,28]}
+{"kind":"shape","id":"sh/i5gzmxs7","slide":2,"bbox":[64,378,540,23]}
+{"kind":"shape","id":"sh/j6p0f2ts","slide":2,"bbox":[64,378,148.66,23]}
+{"kind":"shape","id":"sh/47yho7ad","slide":2,"bbox":[212.66,378,391.34,23]}
+{"kind":"textbox","id":"sh/587ihcby","slide":2,"text":"normal 0.275","textPreview":"normal 0.275","textChars":12,"textLines":1,"bbox":[64,353,270,22]}
+{"kind":"textbox","id":"sh/69gzqhs3","slide":2,"text":"risk 0.725","textPreview":"risk 0.725","textChars":10,"textLines":1,"bbox":[334,353,270,22]}
+{"kind":"textbox","id":"sh/ra90jmto","slide":2,"text":"局所学習前","textPreview":"局所学習前","textChars":5,"textLines":1,"bbox":[64,334,130,24]}
+{"kind":"shape","id":"sh/sbihsra9","slide":2,"bbox":[64,457,540,23]}
+{"kind":"shape","id":"sh/dcrilwbu","slide":2,"bbox":[64,457,209.08,23]}
+{"kind":"shape","id":"sh/ed0juhsf","slide":2,"bbox":[273.08,457,330.92,23]}
+{"kind":"textbox","id":"sh/fe90nmt0","slide":2,"text":"normal 0.387","textPreview":"normal 0.387","textChars":12,"textLines":1,"bbox":[64,432,270,22]}
+{"kind":"textbox","id":"sh/b2tgbmps","slide":2,"text":"risk 0.613","textPreview":"risk 0.613","textChars":10,"textLines":1,"bbox":[334,432,270,22]}
+{"kind":"textbox","id":"sh/ahkz218n","slide":2,"text":"局所学習後","textPreview":"局所学習後","textChars":5,"textLines":1,"bbox":[64,413,130,24]}
+{"kind":"textbox","id":"sh/x4bydw7y","slide":2,"text":"Δq(risk) = -0.112","textPreview":"Δq(risk) = -0.112","textChars":17,"textLines":1,"bbox":[64,495,540,40]}
+{"kind":"textbox","id":"sh/c32h4rqd","slide":2,"text":"normal動画 / 評価用","textPreview":"normal動画 / 評価用","textChars":14,"textLines":1,"bbox":[650,170,310,28]}
+{"kind":"shape","id":"sh/fa9g32p0","slide":2,"bbox":[650,378,540,23]}
+{"kind":"shape","id":"sh/e9gzuh8f","slide":2,"bbox":[650,378,394.22,23]}
+{"kind":"shape","id":"sh/4fed436x","slide":2,"bbox":[1044.22,378,145.78,23]}
+{"kind":"textbox","id":"sh/5gned8ni","slide":2,"text":"normal 0.730","textPreview":"normal 0.730","textChars":12,"textLines":1,"bbox":[650,353,270,22]}
+{"kind":"textbox","id":"sh/idwv2do7","slide":2,"text":"risk 0.270","textPreview":"risk 0.270","textChars":10,"textLines":1,"bbox":[920,353,270,22]}
+{"kind":"textbox","id":"sh/je5wbi5s","slide":2,"text":"局所学習前","textPreview":"局所学習前","textChars":5,"textLines":1,"bbox":[650,334,130,24]}
+{"kind":"shape","id":"sh/sjyx8n69","slide":2,"bbox":[650,457,540,23]}
+{"kind":"shape","id":"sh/tk7ehsnu","slide":2,"bbox":[650,457,455.75,23]}
+{"kind":"shape","id":"sh/6hwv6do3","slide":2,"bbox":[1105.75,457,84.25,23]}
+{"kind":"textbox","id":"sh/ripwfi5o","slide":2,"text":"normal 0.844","textPreview":"normal 0.844","textChars":12,"textLines":1,"bbox":[650,432,270,22]}
+{"kind":"textbox","id":"sh/8nudwj65","slide":2,"text":"risk 0.156","textPreview":"risk 0.156","textChars":10,"textLines":1,"bbox":[920,432,270,22]}
+{"kind":"textbox","id":"sh/9o3e5ona","slide":2,"text":"局所学習後","textPreview":"局所学習後","textChars":5,"textLines":1,"bbox":[650,413,130,24]}
+{"kind":"textbox","id":"sh/14f65onu","slide":2,"text":"Δq(risk) = -0.114","textPreview":"Δq(risk) = -0.114","textChars":17,"textLines":1,"bbox":[650,495,540,40]}
+{"kind":"shape","id":"sh/0j65cj69","slide":2,"bbox":[64,566,1126,72]}
+{"kind":"textbox","id":"sh/fixo3e5o","slide":2,"text":"この時点で「risk知識を学べた」とは言えない。まず局所更新の健全性を診断する必要がある。","textPreview":"この時点で「risk知識を学べた」とは言えない。まず局所更新の健全性を診断する必要がある。","textChars":45,"textLines":1,"bbox":[86,586,1082,34]}
+{"kind":"textbox","id":"sh/ehonato3","slide":2,"text":"評価用動画の例 / order seed 101","textPreview":"評価用動画の例 / order seed 101","textChars":24,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/dgf61oni","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"image","id":"im/6x0v6xkr","slide":2,"name":"","geometry":"rect","alt":"risk動画 / 評価用 1/4","bbox":[64,208,128,112]}
+{"kind":"image","id":"im/ry9wzi1c","slide":2,"name":"","geometry":"rect","alt":"risk動画 / 評価用 2/4","bbox":[199,208,128,112]}
+{"kind":"image","id":"im/83edw32d","slide":2,"name":"","geometry":"rect","alt":"risk動画 / 評価用 3/4","bbox":[334,208,128,112]}
+{"kind":"image","id":"im/94nup8jy","slide":2,"name":"","geometry":"rect","alt":"risk動画 / 評価用 4/4","bbox":[469,208,128,112]}
+{"kind":"image","id":"im/87u5czml","slide":2,"name":"","geometry":"rect","alt":"normal動画 / 評価用 1/4","bbox":[650,208,128,112]}
+{"kind":"image","id":"im/983654n6","slide":2,"name":"","geometry":"rect","alt":"normal動画 / 評価用 2/4","bbox":[785,208,128,112]}
+{"kind":"image","id":"im/m5snap4f","slide":2,"name":"","geometry":"rect","alt":"normal動画 / 評価用 3/4","bbox":[920,208,128,112]}
+{"kind":"image","id":"im/n61o3u50","slide":2,"name":"","geometry":"rect","alt":"normal動画 / 評価用 4/4","bbox":[1055,208,128,112]}
+{"kind":"notes","id":"nt/vypoft","slide":2,"text":"左はpositiveラベルの評価用動画a8adfca63e、右はnegativeラベルの評価用動画1db89ecde7。どちらも局所学習、prototype作成、server検索には未使用。\n左はq(risk) 0.725→0.613、右は0.270→0.156。\n単一フレームの見た目から因果特徴を断定しない。ここで言えるのは出力確率の変化だけ。\nSource: artifacts/runs/fedpact_nexar_example/run_20260913_balanced_order101_risk_fullgrid/client_local/eval_trace.json; artifacts/datasets/frames/train/<sample_id>"}
+{"kind":"slide","id":"sl/rzxz7m","slide":3,"title":"固定したデータ分割と、今回動かした範囲","textShapes":16}
+{"kind":"textbox","id":"sh/8nuxcrit","slide":3,"text":"固定したデータ分割と、今回動かした範囲","textPreview":"固定したデータ分割と、今回動かした範囲","textChars":19,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/7m1g3mh8","slide":3,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/mlsfah03","slide":3,"bbox":[64,105,1152,0]}
+{"kind":"shape","id":"sh/hc3y9wzq","slide":3,"bbox":[64,136,480,382]}
+{"kind":"textbox","id":"sh/wbuxgri5","slide":3,"text":"CLIENT PRIVATE TRAIN","textPreview":"CLIENT PRIVATE TRAIN","textChars":20,"textLines":1,"bbox":[82,154,362,30]}
+{"kind":"textbox","id":"sh/valg76hk","slide":3,"text":"6本","textPreview":"6本","textChars":2,"textLines":1,"bbox":[444,150,80,36]}
+{"kind":"shape","id":"sh/u9cfe10z","slide":3,"bbox":[570,136,270,382]}
+{"kind":"textbox","id":"sh/5gnydgzm","slide":3,"text":"CLIENT 評価用","textPreview":"CLIENT 評価用","textChars":10,"textLines":1,"bbox":[588,154,152,30]}
+{"kind":"textbox","id":"sh/4fexkbi1","slide":3,"text":"6本","textPreview":"6本","textChars":2,"textLines":1,"bbox":[740,150,80,36]}
+{"kind":"shape","id":"sh/il4zidgv","slide":3,"bbox":[866,136,350,382]}
+{"kind":"textbox","id":"sh/jmdgrih0","slide":3,"text":"SERVER SEED","textPreview":"SERVER SEED","textChars":11,"textLines":1,"bbox":[884,154,232,30]}
+{"kind":"textbox","id":"sh/4nmhknyl","slide":3,"text":"8本","textPreview":"8本","textChars":2,"textLines":1,"bbox":[1116,150,80,36]}
+{"kind":"textbox","id":"sh/nutgjyh8","slide":3,"text":"risk ×3","textPreview":"risk ×3","textChars":7,"textLines":1,"bbox":[82,188,120,22]}
+{"kind":"textbox","id":"sh/bypwrux0","slide":3,"text":"normal ×3","textPreview":"normal ×3","textChars":9,"textLines":1,"bbox":[82,334,120,22]}
+{"kind":"textbox","id":"sh/czydkze5","slide":3,"text":"risk ×3 / normal ×3\n学習・prototype・\nserver検索に未使用","textPreview":"risk ×3 / normal ×3 | 学習・prototype・ | server検索に未使用","textChars":46,"textLines":3,"bbox":[590,338,232,100]}
+{"kind":"textbox","id":"sh/nq9wzexs","slide":3,"text":"risk ×4 / normal ×4\nclientへ配布しないcloud-only pool","textPreview":"risk ×4 / normal ×4 | clientへ配布しないcloud-only pool","textChars":47,"textLines":2,"bbox":[886,456,310,56]}
+{"kind":"shape","id":"sh/mp0vq9wn","slide":3,"bbox":[64,548,1152,90]}
+{"kind":"textbox","id":"sh/kza147qt","slide":3,"text":"Qwen2.5-VL-3B / fixed checkpoint  |  split seed 42  |  LoRA + classification head更新","textPreview":"Qwen2.5-VL-3B / fixed checkpoint  |  split seed 42  |  LoRA + classification head更新","textChars":83,"textLines":1,"bbox":[84,563,1110,28]}
+{"kind":"textbox","id":"sh/50j2xcre","slide":3,"text":"Step I-A → I-B  |  q・μᵖᵒˢᵗ = softmax確率、Δq・Δμ = その差  |  λ_post = λ_Δ = 1","textPreview":"Step I-A → I-B  |  q・μᵖᵒˢᵗ = softmax確率、Δq・Δμ = その差  |  λ_post = λ_Δ = 1","textChars":71,"textLines":1,"bbox":[84,602,1110,26]}
+{"kind":"textbox","id":"sh/ix8j2h8n","slide":3,"text":"固定split・ID重複なし・private raw data非送信","textPreview":"固定split・ID重複なし・private raw data非送信","textChars":34,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/jy1kv298","slide":3,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"image","id":"im/ixgj6d8n","slide":3,"name":"","geometry":"rect","alt":"private risk 1","bbox":[82,210,138,100]}
+{"kind":"image","id":"im/hw72d872","slide":3,"name":"","geometry":"rect","alt":"private normal 1","bbox":[82,356,138,100]}
+{"kind":"image","id":"im/wvy143qh","slide":3,"name":"","geometry":"rect","alt":"private risk 2","bbox":[231,210,138,100]}
+{"kind":"image","id":"im/vu50bypw","slide":3,"name":"","geometry":"rect","alt":"private normal 2","bbox":[231,356,138,100]}
+{"kind":"image","id":"im/utwj2t8b","slide":3,"name":"","geometry":"rect","alt":"private risk 3","bbox":[380,210,138,100]}
+{"kind":"image","id":"im/98ni9o7q","slide":3,"name":"","geometry":"rect","alt":"private normal 3","bbox":[380,356,138,100]}
+{"kind":"image","id":"im/lcr2pofm","slide":3,"name":"","geometry":"rect","alt":"評価用risk動画の例","bbox":[590,220,110,90]}
+{"kind":"image","id":"im/y90jetgb","slide":3,"name":"","geometry":"rect","alt":"評価用normal動画の例","bbox":[712,220,110,90]}
+{"kind":"image","id":"im/cny1cjy5","slide":3,"name":"","geometry":"rect","alt":"server seed 1","bbox":[885,214,142,104]}
+{"kind":"image","id":"im/d872lofq","slide":3,"name":"","geometry":"rect","alt":"server seed 2","bbox":[1039,214,142,104]}
+{"kind":"image","id":"im/qlgja9gz","slide":3,"name":"","geometry":"rect","alt":"server seed 3","bbox":[885,342,142,104]}
+{"kind":"image","id":"im/bmpkjexk","slide":3,"name":"","geometry":"rect","alt":"server seed 4","bbox":[1039,342,142,104]}
+{"kind":"notes","id":"nt/rzxz7m","slide":3,"text":"今回の該当範囲はFedPACT実験計画の第I段階、Step I-AとStep I-Bの縦切り確認。三層3〜5 round接続やLayer 3更新は未実施。\nclient学習用、client評価用、server seedは同一split seed 42で固定し、ID重複なし。評価用動画は局所学習、prototype作成、server検索に使わない。\n今回のserver payloadにはtrainable update（client LoRA＋classification head）とclass-wise μ_post、Δμ、π、class_countを含める。private raw frameとsample IDは含めない。\nPDFの基本protocolで用いる重みはπ。class_countは今回の実装schemaに併記した監査用fieldで、現runではπと同値。\nSource: notes/advisor/sources/raw/2026-09-01/FedPACT実験計画260901.pdf pp.3-4; artifacts/runs/fedpact_nexar_example/run_20260913_balanced_order101_risk_fullgrid/client_local/data_splits.json; client_upload/server_payload.json"}
+{"kind":"slide","id":"sl/v3vger","slide":4,"title":"order 101では、12本すべてがnormal側へ移動した","textShapes":23}
+{"kind":"textbox","id":"sh/vapkfa1o","slide":4,"text":"order 101では、12本すべてがnormal側へ移動した","textPreview":"order 101では、12本すべてがnormal側へ移動した","textChars":31,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/wbyl8f29","slide":4,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/xc72hkju","slide":4,"bbox":[64,105,1152,0]}
+{"kind":"textbox","id":"sh/ixg3ap0f","slide":4,"text":"private train 6本","textPreview":"private train 6本","textChars":16,"textLines":1,"bbox":[64,135,540,30]}
+{"kind":"shape","id":"sh/jypkju1k","slide":4,"bbox":[124,525,435,0]}
+{"kind":"textbox","id":"sh/kzylczi5","slide":4,"text":"0.0","textPreview":"0.0","textChars":3,"textLines":1,"bbox":[64,515,50,20]}
+{"kind":"shape","id":"sh/50r2l4jq","slide":4,"bbox":[124,353,435,0]}
+{"kind":"textbox","id":"sh/6103ep0b","slide":4,"text":"0.5","textPreview":"0.5","textChars":3,"textLines":1,"bbox":[64,343,50,20]}
+{"kind":"shape","id":"sh/729knu1w","slide":4,"bbox":[124,181,435,0]}
+{"kind":"textbox","id":"sh/76lkryh4","slide":4,"text":"1.0","textPreview":"1.0","textChars":3,"textLines":1,"bbox":[64,171,50,20]}
+{"kind":"textbox","id":"sh/65cjid0j","slide":4,"text":"q(risk)","textPreview":"q(risk)","textChars":7,"textLines":1,"bbox":[66,151,70,22]}
+{"kind":"textbox","id":"sh/ts32t8za","slide":4,"text":"qᵖʳᵉ","textPreview":"qᵖʳᵉ","textChars":4,"textLines":1,"bbox":[146,539,58,24]}
+{"kind":"textbox","id":"sh/s7u1k3ip","slide":4,"text":"qᵖᵒˢᵗ","textPreview":"qᵖᵒˢᵗ","textChars":5,"textLines":1,"bbox":[498,539,68,24]}
+{"kind":"shape","id":"sh/j2lknyh8","slide":4,"bbox":[174,259.81,358,6.14]}
+{"kind":"shape","id":"sh/y1sjet0n","slide":4,"bbox":[169,254.81,10,10]}
+{"kind":"shape","id":"sh/5432p8zy","slide":4,"bbox":[527,260.95,10,10]}
+{"kind":"shape","id":"sh/k3u1g3id","slide":4,"bbox":[174,332.86,358,40.54]}
+{"kind":"shape","id":"sh/3y5kzihc","slide":4,"bbox":[169,327.86,10,10]}
+{"kind":"shape","id":"sh/2xw3qx0r","slide":4,"bbox":[527,368.4,10,10]}
+{"kind":"shape","id":"sh/y50velob","slide":4,"bbox":[174,439.81,358,38.96]}
+{"kind":"shape","id":"sh/z6tw7q5w","slide":4,"bbox":[169,434.81,10,10]}
+{"kind":"shape","id":"sh/072dgv6h","slide":4,"bbox":[527,473.78,10,10]}
+{"kind":"shape","id":"sh/l8be90nm","slide":4,"bbox":[174,475.36,358,31.84]}
+{"kind":"shape","id":"sh/mtkvi5o7","slide":4,"bbox":[169,470.36,10,10]}
+{"kind":"shape","id":"sh/nutwbq5s","slide":4,"bbox":[527,502.2,10,10]}
+{"kind":"shape","id":"sh/8v2dkv6d","slide":4,"bbox":[174,275.13,358,45.85]}
+{"kind":"shape","id":"sh/9wbed0ny","slide":4,"bbox":[169,270.13,10,10]}
+{"kind":"shape","id":"sh/2xgv61o3","slide":4,"bbox":[527,315.98,10,10]}
+{"kind":"shape","id":"sh/3ypcz65o","slide":4,"bbox":[174,308.16,358,72.96]}
+{"kind":"shape","id":"sh/5sfy5476","slide":4,"bbox":[169,303.16,10,10]}
+{"kind":"shape","id":"sh/kr6hczql","slide":4,"bbox":[527,376.13,10,10]}
+{"kind":"textbox","id":"sh/jqxg3up0","slide":4,"text":"評価用動画 6本","textPreview":"評価用動画 6本","textChars":8,"textLines":1,"bbox":[668,135,540,30]}
+{"kind":"shape","id":"sh/ipozap8f","slide":4,"bbox":[728,525,435,0]}
+{"kind":"textbox","id":"sh/twfy9o72","slide":4,"text":"0.0","textPreview":"0.0","textChars":3,"textLines":1,"bbox":[668,515,50,20]}
+{"kind":"shape","id":"sh/sv6hgjqh","slide":4,"bbox":[728,353,435,0]}
+{"kind":"textbox","id":"sh/ruxg7epc","slide":4,"text":"0.5","textPreview":"0.5","textChars":3,"textLines":1,"bbox":[668,343,50,20]}
+{"kind":"shape","id":"sh/6toze98r","slide":4,"bbox":[728,181,435,0]}
+{"kind":"textbox","id":"sh/90vyxk7y","slide":4,"text":"1.0","textPreview":"1.0","textChars":3,"textLines":1,"bbox":[668,171,50,20]}
+{"kind":"textbox","id":"sh/8zmx4fqd","slide":4,"text":"q(risk)","textPreview":"q(risk)","textChars":7,"textLines":1,"bbox":[670,151,70,22]}
+{"kind":"textbox","id":"sh/cfa1cna1","slide":4,"text":"qᵖʳᵉ","textPreview":"qᵖʳᵉ","textChars":4,"textLines":1,"bbox":[750,539,58,24]}
+{"kind":"textbox","id":"sh/dg32lsrm","slide":4,"text":"qᵖᵒˢᵗ","textPreview":"qᵖᵒˢᵗ","textChars":5,"textLines":1,"bbox":[1102,539,68,24]}
+{"kind":"shape","id":"sh/qdsjadsv","slide":4,"bbox":[778,275.7,358,38.49]}
+{"kind":"shape","id":"sh/be1kji9g","slide":4,"bbox":[773,270.7,10,10]}
+{"kind":"shape","id":"sh/ora18nap","slide":4,"bbox":[1131,309.19,10,10]}
+{"kind":"shape","id":"sh/pcj2h8ra","slide":4,"bbox":[778,432.13,358,39.19]}
+{"kind":"shape","id":"sh/2psj6dsz","slide":4,"bbox":[773,427.13,10,10]}
+{"kind":"shape","id":"sh/3q1kfi9k","slide":4,"bbox":[1131,466.33,10,10]}
+{"kind":"shape","id":"sh/gnq143at","slide":4,"bbox":[778,448.04,358,40.01]}
+{"kind":"shape","id":"sh/1ozid8re","slide":4,"bbox":[773,443.04,10,10]}
+{"kind":"shape","id":"sh/jihknyt0","slide":4,"bbox":[1131,483.05,10,10]}
+{"kind":"shape","id":"sh/ih83etcf","slide":4,"bbox":[778,465.52,358,25.36]}
+{"kind":"shape","id":"sh/5kz2p8b6","slide":4,"bbox":[773,460.52,10,10]}
+{"kind":"shape","id":"sh/4jqlg3ul","slide":4,"bbox":[1131,485.88,10,10]}
+{"kind":"shape","id":"sh/rmhkritc","slide":4,"bbox":[778,346.52,358,53.72]}
+{"kind":"shape","id":"sh/6l83idcr","slide":4,"bbox":[773,341.52,10,10]}
+{"kind":"shape","id":"sh/toz2t8bi","slide":4,"bbox":[1131,395.24,10,10]}
+{"kind":"shape","id":"sh/snqlk3ux","slide":4,"bbox":[778,337.79,358,41.62]}
+{"kind":"shape","id":"sh/fq1kvit8","slide":4,"bbox":[773,332.79,10,10]}
+{"kind":"shape","id":"sh/eps3mdcn","slide":4,"bbox":[1131,374.41,10,10]}
+{"kind":"shape","id":"sh/q5cnehwv","slide":4,"bbox":[64,574,1144,64]}
+{"kind":"textbox","id":"sh/b6lonmdg","slide":4,"text":"平均Δq(risk)","textPreview":"平均Δq(risk)","textChars":10,"textLines":1,"bbox":[90,592,160,26]}
+{"kind":"textbox","id":"sh/c7u5gre1","slide":4,"text":"train normal −0.139\ntrain risk −0.090","textPreview":"train normal −0.139 | train risk −0.090","textChars":37,"textLines":2,"bbox":[270,584,350,48]}
+{"kind":"textbox","id":"sh/d8n6pwvm","slide":4,"text":"評価用 normal −0.101\n評価用 risk −0.130","textPreview":"評価用 normal −0.101 | 評価用 risk −0.130","textChars":33,"textLines":2,"bbox":[690,584,420,48]}
+{"kind":"textbox","id":"sh/2hcnahwz","slide":4,"text":"risk label","textPreview":"risk label","textChars":10,"textLines":1,"bbox":[510,118,90,20]}
+{"kind":"textbox","id":"sh/3il4j2dk","slide":4,"text":"normal label","textPreview":"normal label","textChars":12,"textLines":1,"bbox":[1096,118,112,20]}
+{"kind":"textbox","id":"sh/oju5c7e5","slide":4,"text":"赤=risk label　青=normal label　縦軸=q(risk)","textPreview":"赤=risk label　青=normal label　縦軸=q(risk)","textChars":38,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/pk36lcvq","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"notes","id":"nt/v3vger","slide":4,"text":"個別sampleをすべて表示し、平均だけの印象操作を避ける。order 101では学習用6本・評価用6本がすべてnormal方向へ移動した。\nただし、この1順序だけでクラス非選択性を断定しない。次slideで学習順を変えた結果を示す。\nSource: artifacts/runs/fedpact_nexar_example/run_20260913_balanced_order101_risk_fullgrid/client_local/private_trace.json; client_local/eval_trace.json"}
+{"kind":"slide","id":"sl/ujlhvw","slide":5,"title":"学習順だけでΔqの符号が反転した","textShapes":55}
+{"kind":"textbox","id":"sh/ix8vexsj","slide":5,"text":"学習順だけでΔqの符号が反転した","textPreview":"学習順だけでΔqの符号が反転した","textChars":16,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/5kzepcba","slide":5,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/kjqdg7ap","slide":5,"bbox":[64,105,1152,0]}
+{"kind":"shape","id":"sh/7m1wr2tg","slide":5,"bbox":[64,145,190,55]}
+{"kind":"textbox","id":"sh/6lsvihsv","slide":5,"text":"平均q(risk)","textPreview":"平均q(risk)","textChars":9,"textLines":1,"bbox":[70,151,178,45]}
+{"kind":"shape","id":"sh/tojetcb6","slide":5,"bbox":[254,145,110,55]}
+{"kind":"textbox","id":"sh/snadk7a1","slide":5,"text":"pre","textPreview":"pre","textChars":3,"textLines":1,"bbox":[260,151,98,45]}
+{"kind":"shape","id":"sh/fq1wvmtc","slide":5,"bbox":[364,145,210,55]}
+{"kind":"textbox","id":"sh/upsvmhsr","slide":5,"text":"order 101","textPreview":"order 101","textChars":9,"textLines":1,"bbox":[370,151,198,45]}
+{"kind":"shape","id":"sh/wb25sfmt","slide":5,"bbox":[574,145,210,55]}
+{"kind":"textbox","id":"sh/hcb6lk3e","slide":5,"text":"order 202","textPreview":"order 202","textChars":9,"textLines":1,"bbox":[580,151,198,45]}
+{"kind":"shape","id":"sh/u90nq54n","slide":5,"bbox":[784,145,210,55]}
+{"kind":"textbox","id":"sh/vatojal8","slide":5,"text":"order 303","textPreview":"order 303","textChars":9,"textLines":1,"bbox":[790,151,198,45]}
+{"kind":"shape","id":"sh/4z25wfm5","slide":5,"bbox":[994,145,222,55]}
+{"kind":"textbox","id":"sh/50b6pk3q","slide":5,"text":"full-batch","textPreview":"full-batch","textChars":10,"textLines":1,"bbox":[1000,151,210,45]}
+{"kind":"shape","id":"sh/idknup4z","slide":5,"bbox":[64,200,190,55]}
+{"kind":"textbox","id":"sh/jetonulk","slide":5,"text":"train normal","textPreview":"train normal","textChars":12,"textLines":1,"bbox":[70,206,178,45]}
+{"kind":"shape","id":"sh/s3mpkzm1","slide":5,"bbox":[254,200,110,55]}
+{"kind":"textbox","id":"sh/t4v6t43m","slide":5,"text":"0.341","textPreview":"0.341","textChars":5,"textLines":1,"bbox":[260,206,98,45]}
+{"kind":"shape","id":"sh/1kr6d4vq","slide":5,"bbox":[364,200,210,55]}
+{"kind":"textbox","id":"sh/0ji54ze5","slide":5,"text":"0.201 (-0.139)","textPreview":"0.201 (-0.139)","textChars":14,"textLines":1,"bbox":[370,206,198,45]}
+{"kind":"shape","id":"sh/fy9obudk","slide":5,"bbox":[574,200,210,55]}
+{"kind":"textbox","id":"sh/ex0n2pwz","slide":5,"text":"0.403 (+0.062)","textPreview":"0.403 (+0.062)","textChars":14,"textLines":1,"bbox":[580,206,198,45]}
+{"kind":"shape","id":"sh/pob6h4v2","slide":5,"bbox":[784,200,210,55]}
+{"kind":"textbox","id":"sh/oni58zeh","slide":5,"text":"0.150 (-0.191)","textPreview":"0.150 (-0.191)","textChars":14,"textLines":1,"bbox":[790,206,198,45]}
+{"kind":"shape","id":"sh/nm9ofudw","slide":5,"bbox":[994,200,222,55]}
+{"kind":"textbox","id":"sh/2l0n69wb","slide":5,"text":"0.300 (-0.041)","textPreview":"0.300 (-0.041)","textChars":14,"textLines":1,"bbox":[1000,206,210,45]}
+{"kind":"shape","id":"sh/5s7m5kvi","slide":5,"bbox":[64,255,190,55]}
+{"kind":"textbox","id":"sh/4ry5wfex","slide":5,"text":"train risk","textPreview":"train risk","textChars":10,"textLines":1,"bbox":[70,261,178,45]}
+{"kind":"shape","id":"sh/ulcbqh8j","slide":5,"bbox":[254,255,110,55]}
+{"kind":"textbox","id":"sh/vmlcjmp4","slide":5,"text":"0.685","textPreview":"0.685","textChars":5,"textLines":1,"bbox":[260,261,98,45]}
+{"kind":"shape","id":"sh/wnutsrqp","slide":5,"bbox":[364,255,210,55]}
+{"kind":"textbox","id":"sh/ho3ulw7a","slide":5,"text":"0.596 (-0.090)","textPreview":"0.596 (-0.090)","textChars":14,"textLines":1,"bbox":[370,261,198,45]}
+{"kind":"shape","id":"sh/ipcbu18v","slide":5,"bbox":[574,255,210,55]}
+{"kind":"textbox","id":"sh/jqlcnmpg","slide":5,"text":"0.845 (+0.160)","textPreview":"0.845 (+0.160)","textChars":14,"textLines":1,"bbox":[580,261,198,45]}
+{"kind":"shape","id":"sh/4redwrql","slide":5,"bbox":[784,255,210,55]}
+{"kind":"textbox","id":"sh/5snupw76","slide":5,"text":"0.491 (-0.194)","textPreview":"0.491 (-0.194)","textChars":14,"textLines":1,"bbox":[790,261,198,45]}
+{"kind":"shape","id":"sh/ytsbix8b","slide":5,"bbox":[994,255,222,55]}
+{"kind":"textbox","id":"sh/zu1cb2pw","slide":5,"text":"0.698 (+0.013)","textPreview":"0.698 (+0.013)","textChars":14,"textLines":1,"bbox":[1000,261,210,45]}
+{"kind":"shape","id":"sh/fqtsfy10","slide":5,"bbox":[64,310,190,55]}
+{"kind":"textbox","id":"sh/epkrmt0f","slide":5,"text":"評価用 normal","textPreview":"評価用 normal","textChars":10,"textLines":1,"bbox":[70,316,178,45]}
+{"kind":"shape","id":"sh/1cbahojq","slide":5,"bbox":[254,310,110,55]}
+{"kind":"textbox","id":"sh/0r29o3i5","slide":5,"text":"0.222","textPreview":"0.222","textChars":5,"textLines":1,"bbox":[260,316,98,45]}
+{"kind":"shape","id":"sh/netsjy1w","slide":5,"bbox":[364,310,210,55]}
+{"kind":"textbox","id":"sh/2dkrqt0b","slide":5,"text":"0.121 (-0.101)","textPreview":"0.121 (-0.101)","textChars":14,"textLines":1,"bbox":[370,316,198,45]}
+{"kind":"shape","id":"sh/pgval8z2","slide":5,"bbox":[574,310,210,55]}
+{"kind":"textbox","id":"sh/of29s3ih","slide":5,"text":"0.297 (+0.075)","textPreview":"0.297 (+0.075)","textChars":14,"textLines":1,"bbox":[580,316,198,45]}
+{"kind":"shape","id":"sh/bidsnihs","slide":5,"bbox":[784,310,210,55]}
+{"kind":"textbox","id":"sh/ah4rud0n","slide":5,"text":"0.080 (-0.143)","textPreview":"0.080 (-0.143)","textChars":14,"textLines":1,"bbox":[790,316,198,45]}
+{"kind":"shape","id":"sh/8n694nyl","slide":5,"bbox":[994,310,222,55]}
+{"kind":"textbox","id":"sh/tofqdsf6","slide":5,"text":"0.201 (-0.021)","textPreview":"0.201 (-0.021)","textChars":14,"textLines":1,"bbox":[1000,316,210,45]}
+{"kind":"shape","id":"sh/6l4r2dgf","slide":5,"bbox":[64,365,190,55]}
+{"kind":"textbox","id":"sh/7md8bix0","slide":5,"text":"評価用 risk","textPreview":"評価用 risk","textChars":8,"textLines":1,"bbox":[70,371,178,45]}
+{"kind":"shape","id":"sh/kjm903yp","slide":5,"bbox":[254,365,110,55]}
+{"kind":"textbox","id":"sh/lkvq98fa","slide":5,"text":"0.596","textPreview":"0.596","textChars":5,"textLines":1,"bbox":[260,371,98,45]}
+{"kind":"shape","id":"sh/yh4rytgj","slide":5,"bbox":[364,365,210,55]}
+{"kind":"textbox","id":"sh/jid87yx4","slide":5,"text":"0.466 (-0.130)","textPreview":"0.466 (-0.130)","textChars":14,"textLines":1,"bbox":[370,371,198,45]}
+{"kind":"shape","id":"sh/cfmpw3yd","slide":5,"bbox":[574,365,210,55]}
+{"kind":"textbox","id":"sh/xgvq58fy","slide":5,"text":"0.707 (+0.111)","textPreview":"0.707 (+0.111)","textChars":14,"textLines":1,"bbox":[580,371,198,45]}
+{"kind":"shape","id":"sh/d03yt03q","slide":5,"bbox":[784,365,210,55]}
+{"kind":"textbox","id":"sh/szuxkvm5","slide":5,"text":"0.350 (-0.246)","textPreview":"0.350 (-0.246)","textChars":14,"textLines":1,"bbox":[790,371,198,45]}
+{"kind":"shape","id":"sh/rylgrqlk","slide":5,"bbox":[994,365,222,55]}
+{"kind":"textbox","id":"sh/qxsfil4z","slide":5,"text":"0.576 (-0.020)","textPreview":"0.576 (-0.020)","textChars":14,"textLines":1,"bbox":[1000,371,210,45]}
+{"kind":"textbox","id":"sh/5wjepg3e","slide":5,"text":"class間差 = mean q(risk | risk) − mean q(risk | normal)","textPreview":"class間差 = mean q(risk | risk) − mean q(risk | normal)","textChars":53,"textLines":1,"bbox":[64,445,650,28]}
+{"kind":"shape","id":"sh/4vaxgbmt","slide":5,"bbox":[64,480,180,42]}
+{"kind":"textbox","id":"sh/3a1wn658","slide":5,"text":"class間差","textPreview":"class間差","textChars":7,"textLines":1,"bbox":[70,486,168,32]}
+{"kind":"shape","id":"sh/i9sfel43","slide":5,"bbox":[244,480,110,42]}
+{"kind":"textbox","id":"sh/psnylk3y","slide":5,"text":"pre","textPreview":"pre","textChars":3,"textLines":1,"bbox":[250,486,98,32]}
+{"kind":"shape","id":"sh/orexsfmd","slide":5,"bbox":[354,480,130,42]}
+{"kind":"textbox","id":"sh/6dovmhkv","slide":5,"text":"101","textPreview":"101","textChars":3,"textLines":1,"bbox":[360,486,118,32]}
+{"kind":"shape","id":"sh/7excfm10","slide":5,"bbox":[484,480,130,42]}
+{"kind":"textbox","id":"sh/8fqdo72l","slide":5,"text":"202","textPreview":"202","textChars":3,"textLines":1,"bbox":[490,486,118,32]}
+{"kind":"shape","id":"sh/tgzuhcj6","slide":5,"bbox":[614,480,130,42]}
+{"kind":"textbox","id":"sh/y9obixkj","slide":5,"text":"303","textPreview":"303","textChars":3,"textLines":1,"bbox":[620,486,118,32]}
+{"kind":"shape","id":"sh/jaxcb2l4","slide":5,"bbox":[744,480,140,42]}
+{"kind":"textbox","id":"sh/kb6dk72p","slide":5,"text":"full-batch","textPreview":"full-batch","textChars":10,"textLines":1,"bbox":[750,486,128,32]}
+{"kind":"shape","id":"sh/lcfudc3a","slide":5,"bbox":[64,522,180,42]}
+{"kind":"textbox","id":"sh/i58vu1k3","slide":5,"text":"train","textPreview":"train","textChars":5,"textLines":1,"bbox":[70,528,168,32]}
+{"kind":"shape","id":"sh/361cn618","slide":5,"bbox":[244,522,110,42]}
+{"kind":"textbox","id":"sh/rmxc7mtc","slide":5,"text":"0.345","textPreview":"0.345","textChars":5,"textLines":1,"bbox":[250,528,98,32]}
+{"kind":"shape","id":"sh/q1ove1c7","slide":5,"bbox":[354,522,130,42]}
+{"kind":"textbox","id":"sh/dofu9wbi","slide":5,"text":"0.394","textPreview":"0.394","textChars":5,"textLines":1,"bbox":[360,528,118,32]}
+{"kind":"shape","id":"sh/cn6dgrux","slide":5,"bbox":[484,522,130,42]}
+{"kind":"textbox","id":"sh/3ydc3mtg","slide":5,"text":"0.442","textPreview":"0.442","textChars":5,"textLines":1,"bbox":[490,528,118,32]}
+{"kind":"shape","id":"sh/2x4bahcv","slide":5,"bbox":[614,522,130,42]}
+{"kind":"textbox","id":"sh/p0vu5wbm","slide":5,"text":"0.342","textPreview":"0.342","textChars":5,"textLines":1,"bbox":[620,528,118,32]}
+{"kind":"shape","id":"sh/4zmtcru1","slide":5,"bbox":[744,522,140,42]}
+{"kind":"textbox","id":"sh/fudcz2tk","slide":5,"text":"0.398","textPreview":"0.398","textChars":5,"textLines":1,"bbox":[750,528,128,32]}
+{"kind":"shape","id":"sh/utkb6xcz","slide":5,"bbox":[64,564,180,42]}
+{"kind":"textbox","id":"sh/kzi903ah","slide":5,"text":"評価用","textPreview":"評価用","textChars":3,"textLines":1,"bbox":[70,570,168,32]}
+{"kind":"shape","id":"sh/50ra98r2","slide":5,"bbox":[244,564,110,42]}
+{"kind":"textbox","id":"sh/ix0rydsr","slide":5,"text":"0.374","textPreview":"0.374","textChars":5,"textLines":1,"bbox":[250,570,98,32]}
+{"kind":"shape","id":"sh/jy9s7y9c","slide":5,"bbox":[354,564,130,42]}
+{"kind":"textbox","id":"sh/s3294nat","slide":5,"text":"0.345","textPreview":"0.345","textChars":5,"textLines":1,"bbox":[360,570,118,32]}
+{"kind":"shape","id":"sh/t4badsre","slide":5,"bbox":[484,564,130,42]}
+{"kind":"textbox","id":"sh/610r2dsn","slide":5,"text":"0.409","textPreview":"0.409","textChars":5,"textLines":1,"bbox":[490,570,118,32]}
+{"kind":"shape","id":"sh/72tsbi98","slide":5,"bbox":[614,564,130,42]}
+{"kind":"textbox","id":"sh/o7y98jap","slide":5,"text":"0.271","textPreview":"0.271","textChars":5,"textLines":1,"bbox":[620,570,118,32]}
+{"kind":"shape","id":"sh/987q1oru","slide":5,"bbox":[744,564,140,42]}
+{"kind":"textbox","id":"sh/6tk725wf","slide":5,"text":"0.375","textPreview":"0.375","textChars":5,"textLines":1,"bbox":[750,570,128,32]}
+{"kind":"shape","id":"sh/7utobax0","slide":5,"bbox":[914,466,302,156]}
+{"kind":"textbox","id":"sh/8v2p4fel","slide":5,"text":"診断","textPreview":"診断","textChars":2,"textLines":1,"bbox":[936,483,80,25]}
+{"kind":"textbox","id":"sh/twb6dkf6","slide":5,"text":"batch 1：順序で符号反転\n6本同時：shift縮小\n原因は未分離","textPreview":"batch 1：順序で符号反転 | 6本同時：shift縮小 | 原因は未分離","textChars":35,"textLines":3,"bbox":[936,514,258,92]}
+{"kind":"textbox","id":"sh/uxk76pwr","slide":5,"text":"同じsplit・checkpoint・sample exposure=6 / class間差は非丸め値から算出","textPreview":"同じsplit・checkpoint・sample exposure=6 / class間差は非丸め値から算出","textChars":55,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/vyt8fuxw","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"notes","id":"nt/ujlhvw","slide":5,"text":"order 101は最初に詳細追跡用として固定し、202と303はその後に学習順感度を確認するため追加した。\nbatch size 1ではq_postとΔqの符号が学習順で反転。評価用動画のclass間差も改善・悪化が一貫しない。\nbatch size 1は6 optimizer steps、full-batch相当は6動画を同時に1 optimizer stepで更新した。総sample exposureは6に揃えたが、batch構成とoptimizer step数が交絡している。\n共通方向shiftが小さくなった事実は示せるが、batch化が原因とはまだ言えない。次実験でoptimizer step数を記録・統制して切り分ける。\nSource: run_20260913_balanced_order101_risk_fullgrid; run_20260913_balanced_order202_diagnostic; run_20260913_balanced_order303_diagnostic; run_20260913_balanced_fullbatch_diagnostic"}
+{"kind":"slide","id":"sl/l20502","slide":6,"title":"risk 3本の反応を平均し、送信prototypeを作る","textShapes":21}
+{"kind":"textbox","id":"sh/36lcz2t4","slide":6,"text":"risk 3本の反応を平均し、送信prototypeを作る","textPreview":"risk 3本の反応を平均し、送信prototypeを作る","textChars":29,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/47ed87up","slide":6,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/p8nu1sba","slide":6,"bbox":[64,105,1152,0]}
+{"kind":"textbox","id":"sh/f2lcvid8","slide":6,"text":"d626422e71","textPreview":"d626422e71","textChars":10,"textLines":1,"bbox":[64,310,244,22]}
+{"kind":"textbox","id":"sh/g3ut4nut","slide":6,"text":"0.771 → 0.753","textPreview":"0.771 → 0.753","textChars":13,"textLines":1,"bbox":[64,342,244,32]}
+{"kind":"textbox","id":"sh/h43uxsbe","slide":6,"text":"Δq(risk) -0.018","textPreview":"Δq(risk) -0.018","textChars":15,"textLines":1,"bbox":[64,380,244,26]}
+{"kind":"textbox","id":"sh/zypc7mtc","slide":6,"text":"95c3bf1ba2","textPreview":"95c3bf1ba2","textChars":10,"textLines":1,"bbox":[334,310,244,22]}
+{"kind":"textbox","id":"sh/f6psn2tk","slide":6,"text":"0.559 → 0.441","textPreview":"0.559 → 0.441","textChars":13,"textLines":1,"bbox":[334,342,244,32]}
+{"kind":"textbox","id":"sh/elgruhcz","slide":6,"text":"Δq(risk) -0.118","textPreview":"Δq(risk) -0.118","textChars":15,"textLines":1,"bbox":[334,380,244,26]}
+{"kind":"textbox","id":"sh/07ytw7a5","slide":6,"text":"06e20a0fd0","textPreview":"06e20a0fd0","textChars":10,"textLines":1,"bbox":[604,310,244,22]}
+{"kind":"textbox","id":"sh/na9srmtw","slide":6,"text":"0.726 → 0.593","textPreview":"0.726 → 0.593","textChars":13,"textLines":1,"bbox":[604,342,244,32]}
+{"kind":"textbox","id":"sh/29gbyhsb","slide":6,"text":"Δq(risk) -0.133","textPreview":"Δq(risk) -0.133","textChars":15,"textLines":1,"bbox":[604,380,244,26]}
+{"kind":"shape","id":"sh/pcratwbm","slide":6,"bbox":[892,144,324,288]}
+{"kind":"textbox","id":"sh/obit0ra1","slide":6,"text":"risk prototype / order 101","textPreview":"risk prototype / order 101","textChars":26,"textLines":1,"bbox":[914,166,280,28]}
+{"kind":"textbox","id":"sh/be9sv6ts","slide":6,"text":"μᵖᵒˢᵗₖ,ᵣ = [0.404, 0.596]","textPreview":"μᵖᵒˢᵗₖ,ᵣ = [0.404, 0.596]","textChars":25,"textLines":1,"bbox":[914,222,280,36]}
+{"kind":"textbox","id":"sh/ad0b21s7","slide":6,"text":"Δμₖ,ᵣ = [+0.090, −0.090]","textPreview":"Δμₖ,ᵣ = [+0.090, −0.090]","textChars":24,"textLines":1,"bbox":[914,278,280,36]}
+{"kind":"textbox","id":"sh/694vu5cf","slide":6,"text":"πₖ,ᵣ = 3","textPreview":"πₖ,ᵣ = 3","textChars":8,"textLines":1,"bbox":[914,336,280,34]}
+{"kind":"textbox","id":"sh/7adwnqd0","slide":6,"text":"πは平均に寄与したrisk動画数","textPreview":"πは平均に寄与したrisk動画数","textChars":16,"textLines":1,"bbox":[914,384,280,24]}
+{"kind":"shape","id":"sh/8bmdwvul","slide":6,"bbox":[64,462,1128,78]}
+{"kind":"textbox","id":"sh/twvep0v6","slide":6,"text":"注意：risk prototypeでもrisk確率は平均0.090低下。Layer 2は、この局所挙動の有用性までは保証しない。","textPreview":"注意：risk prototypeでもrisk確率は平均0.090低下。Layer 2は、この局所挙動の有用性までは保証しない。","textChars":64,"textLines":1,"bbox":[86,486,1084,34]}
+{"kind":"textbox","id":"sh/y5kvqlcj","slide":6,"text":"normal側も送信： μᵖᵒˢᵗ=[0.799, 0.201]　Δμ=[+0.139, -0.139]　π=3","textPreview":"normal側も送信： μᵖᵒˢᵗ=[0.799, 0.201]　Δμ=[+0.139, -0.139]　π=3","textChars":56,"textLines":1,"bbox":[76,574,1110,32]}
+{"kind":"textbox","id":"sh/z6tcjqd4","slide":6,"text":"今回の送信：trainable update（client LoRA + classification head）+ μᵖᵒˢᵗ + Δμ + π + class count\n非送信：raw video・frame・sample ID・独立したμᵖʳᵉ","textPreview":"今回の送信：trainable update（client LoRA + classification head）+ μᵖᵒˢᵗ + Δμ + π + class count | 非送信：raw video・frame・sample ID・独立したμᵖʳᵉ","textChars":126,"textLines":2,"bbox":[76,607,1110,46]}
+{"kind":"textbox","id":"sh/k72dsvu9","slide":6,"text":"成分順：[normal, risk] / q・μᵖᵒˢᵗはsoftmax確率、Δq・Δμはその差","textPreview":"成分順：[normal, risk] / q・μᵖᵒˢᵗはsoftmax確率、Δq・Δμはその差","textChars":48,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/l8bul0vu","slide":6,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"image","id":"im/321c3ed0","slide":6,"name":"","geometry":"rect","alt":"private risk sample d626422e71","bbox":[64,150,244,150]}
+{"kind":"image","id":"im/ny5cfit4","slide":6,"name":"","geometry":"rect","alt":"private risk sample 95c3bf1ba2","bbox":[334,150,244,150]}
+{"kind":"image","id":"im/ulgjut83","slide":6,"name":"","geometry":"rect","alt":"private risk sample 06e20a0fd0","bbox":[604,150,244,150]}
+{"kind":"notes","id":"nt/l20502","slide":6,"text":"3本それぞれのq_pre、q_post、Δqを先に示し、その平均がprototypeになることを明示する。\n左からd626..., 95c3..., 06e2...。数値はriskクラス確率。μ_postとΔμは2クラス確率ベクトル。\nπ=3はrisk prototypeの平均に寄与したprivate sample数。−0.090だけを送るのではなく、確率和0を保つ2成分vector[+0.090,−0.090]として扱う。\n実装payloadはtrainable updateにclient LoRAとclassification headを含み、prototypeにはπ（frequency）とclass_countを併記する。class_countはPDFの基本protocolにはない実装上の監査field。\nSource: artifacts/runs/fedpact_nexar_example/run_20260913_balanced_order101_risk_fullgrid/client_local/private_trace.json; client_upload/server_payload.json; summary.json"}
+{"kind":"slide","id":"sl/a7nrdw","slide":7,"title":"μᵖᵒˢᵗの検索1位は、L_matchの全体最小ではなかった","textShapes":23}
+{"kind":"textbox","id":"sh/p4red8ry","slide":7,"text":"μᵖᵒˢᵗの検索1位は、L_matchの全体最小ではなかった","textPreview":"μᵖᵒˢᵗの検索1位は、L_matchの全体最小ではなかった","textChars":30,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/21gvit8n","slide":7,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/n2pwby98","slide":7,"bbox":[64,105,1152,0]}
+{"kind":"textbox","id":"sh/crido3qp","slide":7,"text":"検索距離：Dₖₗ( μᵖᵒˢᵗₖ,ᵣ  ||  p_Gᵗ⁺¹(s) )　— seed画像そのものではなく、連合集約後モデルの反応を比較","textPreview":"検索距離：Dₖₗ( μᵖᵒˢᵗₖ,ᵣ  ||  p_Gᵗ⁺¹(s) )　— seed画像そのものではなく、連合集約後モデルの反応を比較","textChars":67,"textLines":1,"bbox":[64,122,1140,34]}
+{"kind":"shape","id":"sh/xsreh87a","slide":7,"bbox":[64,176,260,344]}
+{"kind":"textbox","id":"sh/b69wfyp4","slide":7,"text":"retrieval rank 1","textPreview":"retrieval rank 1","textChars":16,"textLines":1,"bbox":[80,352,228,26]}
+{"kind":"textbox","id":"sh/sbedcjql","slide":7,"text":"Dₖₗ = 0.000789","textPreview":"Dₖₗ = 0.000789","textChars":14,"textLines":1,"bbox":[80,389,228,24]}
+{"kind":"textbox","id":"sh/dwnu54rq","slide":7,"text":"best transform\nbrightness 1.1","textPreview":"best transform | brightness 1.1","textChars":29,"textLines":2,"bbox":[80,426,228,46]}
+{"kind":"textbox","id":"sh/lg3qpcjq","slide":7,"text":"L_match(min)\n0.000697","textPreview":"L_match(min) | 0.000697","textChars":21,"textLines":2,"bbox":[80,468,228,48]}
+{"kind":"shape","id":"sh/kfu9g7i5","slide":7,"bbox":[350,176,260,344]}
+{"kind":"textbox","id":"sh/ydsreh0f","slide":7,"text":"retrieval rank 2","textPreview":"retrieval rank 2","textChars":16,"textLines":1,"bbox":[366,352,228,26]}
+{"kind":"textbox","id":"sh/tk3atwj2","slide":7,"text":"Dₖₗ = 0.006646","textPreview":"Dₖₗ = 0.006646","textChars":14,"textLines":1,"bbox":[366,389,228,24]}
+{"kind":"textbox","id":"sh/8ju9krih","slide":7,"text":"best transform\nbrightness 1.1","textPreview":"best transform | brightness 1.1","textChars":29,"textLines":2,"bbox":[366,426,228,46]}
+{"kind":"textbox","id":"sh/7il8rm1w","slide":7,"text":"L_match(min)\n0.000774","textPreview":"L_match(min) | 0.000774","textChars":21,"textLines":2,"bbox":[366,468,228,48]}
+{"kind":"shape","id":"sh/6hcrih0b","slide":7,"bbox":[636,176,260,344]}
+{"kind":"textbox","id":"sh/g7e9orid","slide":7,"text":"retrieval rank 3","textPreview":"retrieval rank 3","textChars":16,"textLines":1,"bbox":[652,352,228,26]}
+{"kind":"textbox","id":"sh/03mlgzu1","slide":7,"text":"Dₖₗ = 0.009779","textPreview":"Dₖₗ = 0.009779","textChars":14,"textLines":1,"bbox":[652,389,228,24]}
+{"kind":"textbox","id":"sh/14f294bm","slide":7,"text":"best transform\ncenter_crop 0.85","textPreview":"best transform | center_crop 0.85","textChars":31,"textLines":2,"bbox":[652,426,228,46]}
+{"kind":"textbox","id":"sh/e14jepcv","slide":7,"text":"L_match(min)\n0.005256","textPreview":"L_match(min) | 0.005256","textChars":21,"textLines":2,"bbox":[652,468,228,48]}
+{"kind":"shape","id":"sh/f2dk7utg","slide":7,"bbox":[922,176,260,344]}
+{"kind":"textbox","id":"sh/psf2dobi","slide":7,"text":"retrieval rank 6","textPreview":"retrieval rank 6","textChars":16,"textLines":1,"bbox":[938,352,228,26]}
+{"kind":"textbox","id":"sh/2po3i9cr","slide":7,"text":"Dₖₗ = 0.061598","textPreview":"Dₖₗ = 0.061598","textChars":14,"textLines":1,"bbox":[938,389,228,24]}
+{"kind":"textbox","id":"sh/nqxkbetc","slide":7,"text":"best transform\ncenter_crop 0.85","textPreview":"best transform | center_crop 0.85","textChars":31,"textLines":2,"bbox":[938,426,228,46]}
+{"kind":"textbox","id":"sh/4v218fut","slide":7,"text":"L_match(min)\n0.000279","textPreview":"L_match(min) | 0.000279","textChars":21,"textLines":2,"bbox":[938,468,228,48]}
+{"kind":"shape","id":"sh/5wv21kve","slide":7,"bbox":[64,548,1144,88]}
+{"kind":"textbox","id":"sh/7q1o7idw","slide":7,"text":"top-1内の最小 0.000697　→　8×10全探索の最小 0.000279（rank 6 seed）","textPreview":"top-1内の最小 0.000697　→　8×10全探索の最小 0.000279（rank 6 seed）","textChars":53,"textLines":1,"bbox":[88,566,1096,32]}
+{"kind":"textbox","id":"sh/mpsnedwb","slide":7,"text":"小規模な8 seedだからこそ、top-N比較より先に全探索で見落としを確認できる","textPreview":"小規模な8 seedだからこそ、top-N比較より先に全探索で見落としを確認できる","textChars":41,"textLines":1,"bbox":[88,604,1096,24]}
+{"kind":"textbox","id":"sh/9sj69svm","slide":7,"text":"risk prototype / 8 seed × 10 transformations = 80 candidates","textPreview":"risk prototype / 8 seed × 10 transformations = 80 candidates","textChars":60,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/8ra5gneh","slide":7,"text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"image","id":"im/jqtgzits","slide":7,"name":"","geometry":"rect","alt":"server seed rank 1","bbox":[76,190,236,150]}
+{"kind":"image","id":"im/s7ixs32d","slide":7,"name":"","geometry":"rect","alt":"server seed rank 2","bbox":[362,190,236,150]}
+{"kind":"image","id":"im/2xkfyd0f","slide":7,"name":"","geometry":"rect","alt":"server seed rank 3","bbox":[648,190,236,150]}
+{"kind":"image","id":"im/retwbyhw","slide":7,"name":"","geometry":"rect","alt":"server seed rank 6","bbox":[934,190,236,150]}
+{"kind":"notes","id":"nt/a7nrdw","slide":7,"text":"retrieval distanceはμ_postと連合集約後global surrogate M_G^{t+1}上のseed出力p_G^{t+1}(s)とのKL。画像空間の近さではなく、post behaviorの近さで順位付けする。\nM_G^tは連合集約前、M_G^{t+1}は連合集約後のglobal surrogate。今回は1 clientなのでM_G^{t+1}は局所学習後surrogateと一致する。\n全80候補を評価した結果、retrieval rank 6の4b8432de81 + center_crop(0.85)がL_match最小。\nこの結果はtop-1 retrievalを採用すべきでない可能性を示すが、seed数8の診断に限定される。大規模候補集合での効率評価は未実施。\nSource: artifacts/runs/fedpact_nexar_example/run_20260913_balanced_order101_risk_fullgrid/server/layer2_trace.json; summary.json"}
+{"kind":"slide","id":"sl/layh1o","slide":8,"title":"rank 6 seedを変換し、postとdeltaの再現誤差を比較","textShapes":18}
+{"kind":"textbox","id":"sh/sb2d4vax","slide":8,"text":"rank 6 seedを変換し、postとdeltaの再現誤差を比較","textPreview":"rank 6 seedを変換し、postとdeltaの再現誤差を比較","textChars":34,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/7atcbats","slide":8,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/690b25s7","slide":8,"bbox":[64,105,1152,0]}
+{"kind":"shape","id":"sh/h0buhkbu","slide":8,"bbox":[48,148,226,390]}
+{"kind":"textbox","id":"sh/fytcfato","slide":8,"text":"identity","textPreview":"identity","textChars":8,"textLines":1,"bbox":[60,322,202,48]}
+{"kind":"textbox","id":"sh/uxkv65s3","slide":8,"text":"post KL  0.061598\ndelta MSE  0.000658\nL_match  0.062256","textPreview":"post KL  0.061598 | delta MSE  0.000658 | L_match  0.062256","textChars":55,"textLines":3,"bbox":[62,386,198,96]}
+{"kind":"shape","id":"sh/x4ru5gba","slide":8,"bbox":[293,148,226,390]}
+{"kind":"textbox","id":"sh/29kfu103","slide":8,"text":"brightness\n0.75","textPreview":"brightness | 0.75","textChars":15,"textLines":2,"bbox":[305,322,202,48]}
+{"kind":"textbox","id":"sh/3atgn61o","slide":8,"text":"post KL  0.088164\ndelta MSE  0.001812\nL_match  0.089976","textPreview":"post KL  0.088164 | delta MSE  0.001812 | L_match  0.089976","textChars":55,"textLines":3,"bbox":[307,386,198,96]}
+{"kind":"shape","id":"sh/ovmxwbi9","slide":8,"bbox":[538,148,226,390]}
+{"kind":"textbox","id":"sh/qx4fyl0f","slide":8,"text":"contrast\n1.2","textPreview":"contrast | 1.2","textChars":12,"textLines":2,"bbox":[550,322,202,48]}
+{"kind":"textbox","id":"sh/bydgrq10","slide":8,"text":"post KL  0.049697\ndelta MSE  0.003053\nL_match  0.052749","textPreview":"post KL  0.049697 | delta MSE  0.003053 | L_match  0.052749","textChars":55,"textLines":3,"bbox":[552,386,198,96]}
+{"kind":"shape","id":"sh/czmx0vi5","slide":8,"bbox":[783,148,226,390]}
+{"kind":"textbox","id":"sh/y14f2l0b","slide":8,"text":"center_crop\n0.85","textPreview":"center_crop | 0.85","textChars":16,"textLines":2,"bbox":[795,322,202,48]}
+{"kind":"textbox","id":"sh/z2xgvq1w","slide":8,"text":"post KL  0.000109\ndelta MSE  0.000169\nL_match  0.000279","textPreview":"post KL  0.000109 | delta MSE  0.000169 | L_match  0.000279","textChars":55,"textLines":3,"bbox":[797,386,198,96]}
+{"kind":"textbox","id":"sh/v6xwjqh4","slide":8,"text":"数値上の最小","textPreview":"数値上の最小","textChars":6,"textLines":1,"bbox":[805,497,182,24]}
+{"kind":"shape","id":"sh/a5ofqlgj","slide":8,"bbox":[1028,148,226,390]}
+{"kind":"textbox","id":"sh/w76xsvyp","slide":8,"text":"gaussian_blur\n0.75","textPreview":"gaussian_blur | 0.75","textChars":18,"textLines":2,"bbox":[1040,322,202,48]}
+{"kind":"textbox","id":"sh/n2xwfqhs","slide":8,"text":"post KL  0.039934\ndelta MSE  0.000833\nL_match  0.040767","textPreview":"post KL  0.039934 | delta MSE  0.000833 | L_match  0.040767","textChars":55,"textLines":3,"bbox":[1042,386,198,96]}
+{"kind":"textbox","id":"sh/m14vmlg7","slide":8,"text":"L_match = KL( μᵖᵒˢᵗₖ,ᵣ || p_Gᵗ⁺¹(x̃ₖ,ᵣ) ) + MSE( Δμₖ,ᵣ , p_Gᵗ⁺¹(x̃ₖ,ᵣ) − p_Gᵗ(x̃ₖ,ᵣ) )","textPreview":"L_match = KL( μᵖᵒˢᵗₖ,ᵣ || p_Gᵗ⁺¹(x̃ₖ,ᵣ) ) + MSE( Δμₖ,ᵣ , p_Gᵗ⁺¹(x̃ₖ,ᵣ) − p_Gᵗ(x̃ₖ,ᵣ) )","textChars":86,"textLines":1,"bbox":[64,548,1152,32]}
+{"kind":"textbox","id":"sh/94feh0zy","slide":8,"text":"M_Gᵗ = 連合集約前、M_Gᵗ⁺¹ = 連合集約後（今回は1 clientのため局所学習後surrogateと一致）","textPreview":"M_Gᵗ = 連合集約前、M_Gᵗ⁺¹ = 連合集約後（今回は1 clientのため局所学習後surrogateと一致）","textChars":60,"textLines":1,"bbox":[64,584,1152,24]}
+{"kind":"shape","id":"sh/836xovyd","slide":8,"bbox":[126,616,1028,42]}
+{"kind":"textbox","id":"sh/zydwb6hw","slide":8,"text":"λ_post=λ_Δ=1、L_reg・Qinv未導入。数値最小でも意味的に妥当とはまだ言えない。","textPreview":"λ_post=λ_Δ=1、L_reg・Qinv未導入。数値最小でも意味的に妥当とはまだ言えない。","textChars":48,"textLines":1,"bbox":[148,626,984,24]}
+{"kind":"textbox","id":"sh/yx4vi1gb","slide":8,"text":"source seed 4b8432de81 / retrieval rank 6","textPreview":"source seed 4b8432de81 / retrieval rank 6","textChars":41,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/o32ts7e9","slide":8,"text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"image","id":"im/t83q5k7a","slide":8,"name":"","geometry":"rect","alt":"seed変換候補 identity","bbox":[58,160,206,150]}
+{"kind":"image","id":"im/hcnq9476","slide":8,"name":"","geometry":"rect","alt":"seed変換候補 brightness\n0.75","bbox":[303,160,206,150]}
+{"kind":"image","id":"im/qhsrqp43","slide":8,"name":"","geometry":"rect","alt":"seed変換候補 contrast\n1.2","bbox":[548,160,206,150]}
+{"kind":"image","id":"im/elsru94z","slide":8,"name":"","geometry":"rect","alt":"seed変換候補 center_crop\n0.85","bbox":[793,160,206,150]}
+{"kind":"image","id":"im/m9cry5wr","slide":8,"name":"","geometry":"rect","alt":"seed変換候補 gaussian_blur\n0.75","bbox":[1038,160,206,150]}
+{"kind":"notes","id":"nt/layh1o","slide":8,"text":"各候補は同じseed動画の全8フレームへ同一変換を適用している。ここでは説明用に最終フレームを表示。\n選択基準はλ_post=λ_delta=1のL_matchのみ。proxy側のdeltaはp_G^{t+1}(x_tilde)-p_G^t(x_tilde)であり、client側のq^{post}-q^{pre}とは記号を分ける。\nseed逸脱、自然性、時間一貫性、多様性のL_regとQinvは未導入。\nしたがってcenter crop 0.85は、定義した数値目的に最も近い候補であって、意味的妥当性が保証された代理画像ではない。\nSource: artifacts/runs/fedpact_nexar_example/run_20260913_balanced_order101_risk_fullgrid/server/transformation_candidates; server/layer2_trace.json"}
+{"kind":"slide","id":"sl/zppsra","slide":9,"title":"risk / normal両prototypeでproxy pairまで生成した","textShapes":12}
+{"kind":"textbox","id":"sh/87yh0zql","slide":9,"text":"risk / normal両prototypeでproxy pairまで生成した","textPreview":"risk / normal両prototypeでproxy pairまで生成した","textChars":40,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/n6p0ru90","slide":9,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/m5wzypsf","slide":9,"bbox":[64,105,1152,0]}
+{"kind":"textbox","id":"sh/l4nipkru","slide":9,"text":"risk prototype","textPreview":"risk prototype","textChars":14,"textLines":1,"bbox":[64,132,520,30]}
+{"kind":"textbox","id":"sh/50ri1ore","slide":9,"text":"μᵖᵒˢᵗ = [0.404, 0.596]\nΔμ = [+0.090, -0.090]　π=3","textPreview":"μᵖᵒˢᵗ = [0.404, 0.596] | Δμ = [+0.090, -0.090]　π=3","textChars":48,"textLines":2,"bbox":[64,326,520,68]}
+{"kind":"textbox","id":"sh/kzi18jqt","slide":9,"text":"seed 4b8432de81 / seed label=0\ncenter_crop(0.85)\npost KL 0.000109　delta MSE 0.000169\nL_match 0.000279","textPreview":"seed 4b8432de81 / seed label=0 | center_crop(0.85) | post KL 0.000109　delta MSE 0.000169 | L_match 0.000279","textChars":101,"textLines":4,"bbox":[64,414,520,104]}
+{"kind":"textbox","id":"sh/ep0vyton","slide":9,"text":"normal prototype","textPreview":"normal prototype","textChars":16,"textLines":1,"bbox":[654,132,520,30]}
+{"kind":"textbox","id":"sh/qlgvutob","slide":9,"text":"μᵖᵒˢᵗ = [0.799, 0.201]\nΔμ = [+0.139, -0.139]　π=3","textPreview":"μᵖᵒˢᵗ = [0.799, 0.201] | Δμ = [+0.139, -0.139]　π=3","textChars":48,"textLines":2,"bbox":[654,326,520,68]}
+{"kind":"textbox","id":"sh/rmpwny5w","slide":9,"text":"seed 17c2e0d437 / seed label=0\nbrightness(0.75)\npost KL 0.000080　delta MSE 0.000389\nL_match 0.000468","textPreview":"seed 17c2e0d437 / seed label=0 | brightness(0.75) | post KL 0.000080　delta MSE 0.000389 | L_match 0.000468","textChars":100,"textLines":4,"bbox":[654,414,520,104]}
+{"kind":"shape","id":"sh/snydw36h","slide":9,"bbox":[64,542,1120,84]}
+{"kind":"textbox","id":"sh/dorepon2","slide":9,"text":"Pₖ,ᵣ = ( x̃ₖ,ᵣ , μᵖᵒˢᵗₖ,ᵣ ) をLayer 3へ渡せる","textPreview":"Pₖ,ᵣ = ( x̃ₖ,ᵣ , μᵖᵒˢᵗₖ,ᵣ ) をLayer 3へ渡せる","textChars":40,"textLines":1,"bbox":[90,557,1070,32]}
+{"kind":"textbox","id":"sh/ahkv6dov","slide":9,"text":"ただしrisk側の数値最小候補はnormalラベルseed。L_matchだけでは意味的妥当性を保証できない。","textPreview":"ただしrisk側の数値最小候補はnormalラベルseed。L_matchだけでは意味的妥当性を保証できない。","textChars":55,"textLines":1,"bbox":[90,596,1070,24]}
+{"kind":"textbox","id":"sh/bitwzi5g","slide":9,"text":"数値上のproxy candidate。foundation transferは未実施","textPreview":"数値上のproxy candidate。foundation transferは未実施","textChars":43,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/72lsrals","slide":9,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"image","id":"im/5gnex0nm","slide":9,"name":"","geometry":"rect","alt":"risk prototype proxy frame 2","bbox":[64,178,164,126]}
+{"kind":"image","id":"im/idwv254v","slide":9,"name":"","geometry":"rect","alt":"risk prototype proxy frame 3","bbox":[238,178,164,126]}
+{"kind":"image","id":"im/je5wva5g","slide":9,"name":"","geometry":"rect","alt":"risk prototype proxy frame 4","bbox":[412,178,164,126]}
+{"kind":"image","id":"im/0vyp0zax","slide":9,"name":"","geometry":"rect","alt":"normal prototype proxy frame 2","bbox":[654,178,164,126]}
+{"kind":"image","id":"im/fupo7utc","slide":9,"name":"","geometry":"rect","alt":"normal prototype proxy frame 3","bbox":[828,178,164,126]}
+{"kind":"image","id":"im/etg7ypsr","slide":9,"name":"","geometry":"rect","alt":"normal prototype proxy frame 4","bbox":[1002,178,164,126]}
+{"kind":"notes","id":"nt/zppsra","slide":9,"text":"riskとnormalの双方でclass-wise prototypeと数値上の最小proxy候補を生成し、P=(x_tilde, μ_post)として保存した。\nrisk側ではnormalラベルseed 4b8432de81が全80候補中のL_match最小。これはL_matchが意味的ラベル整合性を含まないことを示す。\nここから、same-class retrieval制約やL_reg / quality screeningを今後検討する根拠が得られた。ただし具体方式は未確定。\nSource: run_20260913_balanced_order101_risk_fullgrid/server/proxy_pair.json; run_20260913_balanced_order101_normal_fullgrid/server/proxy_pair.json; summaries"}
+{"kind":"slide","id":"sl/3zarjq","slide":10,"title":"実装上は経路が通った。研究上はStep I-Aの安定化が先","textShapes":15}
+{"kind":"textbox","id":"sh/vm14rypc","slide":10,"text":"実装上は経路が通った。研究上はStep I-Aの安定化が先","textPreview":"実装上は経路が通った。研究上はStep I-Aの安定化が先","textChars":29,"textLines":1,"bbox":[64,42,1080,54]}
+{"kind":"textbox","id":"sh/gna5036x","slide":10,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1158,48,62,26]}
+{"kind":"shape","id":"sh/hojmt87i","slide":10,"bbox":[64,105,1152,0]}
+{"kind":"shape","id":"sh/ipsn2don","slide":10,"bbox":[64,142,536,290]}
+{"kind":"textbox","id":"sh/3q14vip8","slide":10,"text":"確認できたこと","textPreview":"確認できたこと","textChars":7,"textLines":1,"bbox":[88,164,240,32]}
+{"kind":"textbox","id":"sh/4ra5436t","slide":10,"text":"1　balanced private 6本でqᵖʳᵉ / qᵖᵒˢᵗ / Δqを保存\n2　risk / normalの両prototypeをprivate raw dataなしで送信\n3　8 seed × 10変換を全探索しproxy pairを生成\n4　top-1固定の見落としを実測","textPreview":"1　balanced private 6本でqᵖʳᵉ / qᵖᵒˢᵗ / Δqを保存 | 2　risk / normalの両prototypeをprivate raw dataなしで送信 | 3　8 seed × 10変換を全探索しproxy pairを生成 | 4　top...","textChars":143,"textLines":4,"bbox":[90,215,480,184]}
+{"kind":"shape","id":"sh/5sjmx87e","slide":10,"bbox":[630,142,586,290]}
+{"kind":"textbox","id":"sh/yto3q98j","slide":10,"text":"まだ解けていないこと","textPreview":"まだ解けていないこと","textChars":10,"textLines":1,"bbox":[654,164,280,32]}
+{"kind":"textbox","id":"sh/jux4jep4","slide":10,"text":"• batch size 1の局所更新は順序依存\n• 未見動画のclass分離改善は一貫しない\n• 数値最小proxyの意味的妥当性は未保証\n• L_reg / Qinv / 2-client / Layer 3 / 3〜5 roundは未実施","textPreview":"• batch size 1の局所更新は順序依存 | • 未見動画のclass分離改善は一貫しない | • 数値最小proxyの意味的妥当性は未保証 | • L_reg / Qinv / 2-client / Layer 3 / 3〜5 roundは未実施","textChars":122,"textLines":4,"bbox":[658,215,520,176]}
+{"kind":"textbox","id":"sh/be54rmd0","slide":10,"text":"次にやる実験","textPreview":"次にやる実験","textChars":6,"textLines":1,"bbox":[64,466,220,32]}
+{"kind":"shape","id":"sh/adc3yhcv","slide":10,"bbox":[66,512,34,34]}
+{"kind":"textbox","id":"sh/x0nmtcb6","slide":10,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[66,518,34,22]}
+{"kind":"textbox","id":"sh/cfel07ul","slide":10,"text":"更新parameter・head状態・各更新量・全runのqᵖʳᵉ一致を監査","textPreview":"更新parameter・head状態・各更新量・全runのqᵖʳᵉ一致を監査","textChars":38,"textLines":1,"bbox":[118,512,1068,36]}
+{"kind":"shape","id":"sh/nalkn2d4","slide":10,"bbox":[66,562,34,34]}
+{"kind":"textbox","id":"sh/29c3uxcj","slide":10,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[66,568,34,22]}
+{"kind":"textbox","id":"sh/pc3mpcva","slide":10,"text":"optimizer step数とsample exposureを記録し、層化mini-batch / gradient accumulationを比較","textPreview":"optimizer step数とsample exposureを記録し、層化mini-batch / gradient accumulationを比較","textChars":75,"textLines":1,"bbox":[118,562,1068,36]}
+{"kind":"shape","id":"sh/obulw7up","slide":10,"bbox":[66,612,34,34]}
+{"kind":"textbox","id":"sh/f6lkjid8","slide":10,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[66,618,34,22]}
+{"kind":"textbox","id":"sh/e5s3qxcn","slide":10,"text":"order 101 / 202 / 303で安定性確認後、2-client → Layer 3 → 3〜5 round","textPreview":"order 101 / 202 / 303で安定性確認後、2-client → Layer 3 → 3〜5 round","textChars":59,"textLines":1,"bbox":[118,612,1068,36]}
+{"kind":"textbox","id":"sh/ihs32dwf","slide":10,"text":"Layer 2は入力された局所挙動を追う。入力信号の質は別途保証が必要","textPreview":"Layer 2は入力された局所挙動を追う。入力信号の質は別途保証が必要","textChars":35,"textLines":1,"bbox":[64,682,1040,20]}
+{"kind":"textbox","id":"sh/3214vix0","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1160,680,56,22]}
+{"kind":"notes","id":"nt/3zarjq","slide":10,"text":"結論を実装上と研究上に分ける。Layer 2の処理経路は通ったが、有用な知識転移を示してはいない。\n最初に更新parameter、classification headの状態、各parameterの更新量、全runのq_pre一致を監査する。\nその後、optimizer step数と総sample exposureを記録しながら層化mini-batchとgradient accumulationをscreeningする。multiple epochを先に増やさない。\n複数学習順で安定性を確認し、安定してから2-clientとLayer 3へ進む。\nSource: docs/fedpact_nexar_concrete_case_20260913.md; notes/advisor/sources/raw/2026-09-01/FedPACT実験計画260901.pdf"}

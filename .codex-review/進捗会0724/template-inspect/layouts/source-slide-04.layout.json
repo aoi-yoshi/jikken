@@ -1,0 +1,2267 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/jyx0ra1s",
+    "id": "jyx0ra1s",
+    "slide": 4,
+    "layoutId": "/ppt/slideLayouts/slideLayout3.xml",
+    "layoutName": "ユーザー設定レイアウト",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office テーマ",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "fontScheme": {
+      "name": "ユーザー定義 1",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout3.xml",
+      "name": "ユーザー設定レイアウト",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout3.xml/3",
+          "id": "3",
+          "name": "スライド番号プレースホルダー 2",
+          "bbox": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            0,
+            141.12,
+            1280,
+            578.88
+          ],
+          "geometry": "rect",
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            88,
+            19.95,
+            1104,
+            98.13
+          ],
+          "geometry": "rect",
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/4",
+          "id": "4",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            755.43,
+            19.95,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1cj2d8b6",
+      "id": "2",
+      "name": "スライド番号プレースホルダー 1",
+      "bbox": [
+        755.43,
+        19.95,
+        436.57,
+        37.17
+      ],
+      "text": "4",
+      "textPreview": "4",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": {
+          "type": "theme",
+          "value": "tx1",
+          "transform": {
+            "lighten": 0.25
+          }
+        },
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "4"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "4",
+          "runs": [
+            {
+              "index": 1,
+              "text": "4"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 3,
+        "row": 1,
+        "column": 3,
+        "overlap": 0.81
+      }
+    },
+    {
+      "order": 2,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/tsz6dsr2",
+      "id": "85",
+      "name": "表 2",
+      "bbox": [
+        0,
+        -0.21,
+        1280,
+        720
+      ],
+      "text": "基盤\nクライアント",
+      "textPreview": "基盤 | クライアント",
+      "rows": 2,
+      "cols": 3,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            0,
+            -0.21,
+            59.73,
+            360
+          ],
+          "text": "基盤",
+          "textPreview": "基盤",
+          "fillColor": "bg1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "基盤",
+              "resolvedTextStyle": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "基盤",
+                  "color": "tx1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            59.73,
+            -0.21,
+            777.82,
+            360
+          ],
+          "fillColor": "bg1",
+          "ownedElementAids": [
+            "sh/doj29oba",
+            "sh/sna103ap",
+            "sh/3ihk3et8",
+            "sh/p0batw72",
+            "sh/jm5gze1g",
+            "sh/6psve183",
+            "sh/bylsf2t8"
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            837.55,
+            -0.21,
+            442.45,
+            360
+          ],
+          "fillColor": "bg1",
+          "ownedElementAids": [
+            "sh/1cj2d8b6",
+            "sh/3ytsrmpw",
+            "sh/8jq9c72t",
+            "sh/3ilwvqpw"
+          ]
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            0,
+            359.79,
+            59.73,
+            360
+          ],
+          "text": "クライアント",
+          "textPreview": "クライアント",
+          "fillColor": "bg1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "クライアント",
+              "resolvedTextStyle": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "クライアント",
+                  "color": "tx1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            59.73,
+            359.79,
+            777.82,
+            360
+          ],
+          "fillColor": "bg1",
+          "ownedElementAids": [
+            "sh/rm1k7yt4",
+            "sh/ql8jytsj",
+            "sh/5cva1cfq",
+            "sh/x8vaxsfe"
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            837.55,
+            359.79,
+            442.45,
+            360
+          ],
+          "fillColor": "bg1",
+          "ownedElementAids": [
+            "sh/rilczq5s"
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rm1k7yt4",
+      "id": "4",
+      "name": "テキスト ボックス 3",
+      "bbox": [
+        72.63,
+        375.63,
+        339.1,
+        332.82
+      ],
+      "geometry": "rect",
+      "text": "②クライアント局所適応\n入力：クライアントLoRA＋分類ヘッド、端末固有データ\n処理：端末固有データに対して予測し， の勾配を用いてクライアントLoRAと分類ヘッドを更新\n損失：タスク損失 \n更新対象：クライアントLoRA、分類ヘッド\n出力：局所適応後のクライアントパラメータ",
+      "textPreview": "②クライアント局所適応 | 入力：クライアントLoRA＋分類ヘッド、端末固有データ | 処理：端末固有データに対して予測し， の勾配を用いてクライアントLoRAと分類ヘッドを更新 | 損失：タスク損失  | 更新対象：クライアントLoRA、分類ヘッド | 出力：局所適応後の...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 13,
+        "lines": [
+          {
+            "index": 1,
+            "text": "②クライアント局所適応"
+          },
+          {
+            "index": 2,
+            "text": "入力："
+          },
+          {
+            "index": 3,
+            "text": "クライアントLoRA＋分類ヘッド、端末"
+          },
+          {
+            "index": 4,
+            "text": "固有データ"
+          },
+          {
+            "index": 5,
+            "text": "処理："
+          },
+          {
+            "index": 6,
+            "text": "端末固有データに対して予測し，"
+          },
+          {
+            "index": 7,
+            "text": "の勾配を用いてクライアントLoRAと分"
+          },
+          {
+            "index": 8,
+            "text": "類ヘッドを更新"
+          },
+          {
+            "index": 9,
+            "text": "損失：タスク損失"
+          },
+          {
+            "index": 10,
+            "text": "更新対象："
+          },
+          {
+            "index": 11,
+            "text": "クライアントLoRA、分類ヘッド"
+          },
+          {
+            "index": 12,
+            "text": "出力："
+          },
+          {
+            "index": 13,
+            "text": "局所適応後のクライアントパラメータ"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "②クライアント局所適応",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "②",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": "クライアント局所適応",
+              "fontSize": 21.33,
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "入力：クライアントLoRA＋分類ヘッド、端末固有データ\n処理：端末固有データに対して予測し， の勾配を用いてクライアントLoRAと分類ヘッドを更新\n損失：タスク損失 \n更新対象：クライアントLoRA、分類ヘッド\n出力：局所適応後のクライアントパラメータ",
+          "runs": [
+            {
+              "index": 1,
+              "text": "入力：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": "クライアントLoRA＋分類ヘッド、端末固有データ",
+              "fontSize": 21.33
+            },
+            {
+              "index": 3,
+              "text": "\n"
+            },
+            {
+              "index": 4,
+              "text": "処理",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 5,
+              "text": "：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 6,
+              "text": "端末固有データに対して予測し，",
+              "fontSize": 21.33
+            },
+            {
+              "index": 7,
+              "text": " の勾配を用いてクライアントLoRAと分類ヘッドを更新",
+              "fontSize": 21.33
+            },
+            {
+              "index": 8,
+              "text": "\n"
+            },
+            {
+              "index": 9,
+              "text": "損失：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 10,
+              "text": "タスク損失 ",
+              "fontSize": 21.33
+            },
+            {
+              "index": 11,
+              "text": "\n"
+            },
+            {
+              "index": 12,
+              "text": "更新対象：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 13,
+              "text": "クライアントLoRA、分類ヘッド",
+              "fontSize": 21.33
+            },
+            {
+              "index": 14,
+              "text": "\n"
+            },
+            {
+              "index": 15,
+              "text": "出力：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 16,
+              "text": "局所適応後のクライアントパラメータ",
+              "fontSize": 21.33
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 5,
+        "row": 2,
+        "column": 2,
+        "overlap": 1
+      }
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ql8jytsj",
+      "id": "5",
+      "name": "テキスト ボックス 4",
+      "bbox": [
+        463.6,
+        375.76,
+        356.97,
+        242.34
+      ],
+      "geometry": "rect",
+      "text": "③surrogate適応情報の計算・送信\n入力：局所適応後のクライアントモデル\n利用モデル：surrogate＋クライアントLoRA＋分類ヘッド\n利用データ：整合用データ\n出力・送信：logits、勾配方向、適応後挙動など\n更新対象：なし",
+      "textPreview": "③surrogate適応情報の計算・送信 | 入力：局所適応後のクライアントモデル | 利用モデル：surrogate＋クライアントLoRA＋分類ヘッド | 利用データ：整合用データ | 出力・送信：logits、勾配方向、適応後挙動など | 更新対象：なし",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 9,
+        "lines": [
+          {
+            "index": 1,
+            "text": "③surrogate適応情報の計算・送信"
+          },
+          {
+            "index": 2,
+            "text": "入力：局所適応後のクライアントモデル"
+          },
+          {
+            "index": 3,
+            "text": "利用モデル："
+          },
+          {
+            "index": 4,
+            "text": "surrogate＋クライアントLoRA＋分類ヘッ"
+          },
+          {
+            "index": 5,
+            "text": "ド"
+          },
+          {
+            "index": 6,
+            "text": "利用データ：整合用データ"
+          },
+          {
+            "index": 7,
+            "text": "出力・送信："
+          },
+          {
+            "index": 8,
+            "text": "logits、勾配方向、適応後挙動など"
+          },
+          {
+            "index": 9,
+            "text": "更新対象：なし"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "③surrogate適応情報の計算・送信",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "③",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": "surrogate適応情報の計算・送信",
+              "fontSize": 21.33,
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "入力：局所適応後のクライアントモデル\n利用モデル：surrogate＋クライアントLoRA＋分類ヘッド\n利用データ：整合用データ\n出力・送信：logits、勾配方向、適応後挙動など\n更新対象：なし",
+          "runs": [
+            {
+              "index": 1,
+              "text": "入力：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": "局所適応後のクライアントモデル",
+              "fontSize": 21.33
+            },
+            {
+              "index": 3,
+              "text": "\n"
+            },
+            {
+              "index": 4,
+              "text": "利用モデル：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 5,
+              "text": "surrogate＋クライアントLoRA＋分類ヘッド",
+              "fontSize": 21.33
+            },
+            {
+              "index": 6,
+              "text": "\n"
+            },
+            {
+              "index": 7,
+              "text": "利用データ：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 8,
+              "text": "整合用データ",
+              "fontSize": 21.33
+            },
+            {
+              "index": 9,
+              "text": "\n"
+            },
+            {
+              "index": 10,
+              "text": "出力・送信：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 11,
+              "text": "logits、勾配方向、適応後挙動など",
+              "fontSize": 21.33
+            },
+            {
+              "index": 12,
+              "text": "\n"
+            },
+            {
+              "index": 13,
+              "text": "更新対象：なし",
+              "fontSize": 21.33
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 5,
+        "row": 2,
+        "column": 2,
+        "overlap": 1
+      }
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/doj29oba",
+      "id": "6",
+      "name": "テキスト ボックス 5",
+      "bbox": [
+        68.83,
+        57.12,
+        342.91,
+        216.49
+      ],
+      "geometry": "rect",
+      "text": "①クライアントへの配布\n入力：⑥で生成した次ラウンド用知識\n処理：対象クライアントへ、クライアントLoRA＋分類ヘッドを送信\n出力：ラウンド の初期クライアントパラメータ\n更新対象：なし",
+      "textPreview": "①クライアントへの配布 | 入力：⑥で生成した次ラウンド用知識 | 処理：対象クライアントへ、クライアントLoRA＋分類ヘッドを送信 | 出力：ラウンド の初期クライアントパラメータ | 更新対象：なし",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 8,
+        "lines": [
+          {
+            "index": 1,
+            "text": "①クライアントへの配布"
+          },
+          {
+            "index": 2,
+            "text": "入力："
+          },
+          {
+            "index": 3,
+            "text": "⑥で生成した次ラウンド用知識"
+          },
+          {
+            "index": 4,
+            "text": "処理：対象クライアントへ、"
+          },
+          {
+            "index": 5,
+            "text": "クライアントLoRA＋分類ヘッドを送信"
+          },
+          {
+            "index": 6,
+            "text": "出力：ラウンド"
+          },
+          {
+            "index": 7,
+            "text": "の初期クライアントパラメータ"
+          },
+          {
+            "index": 8,
+            "text": "更新対象：なし"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "①クライアントへの配布",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "①",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": "クライアントへの配布",
+              "fontSize": 21.33,
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "入力：⑥で生成した次ラウンド用知識\n処理：対象クライアントへ、クライアントLoRA＋分類ヘッドを送信\n出力：ラウンド の初期クライアントパラメータ\n更新対象：なし",
+          "runs": [
+            {
+              "index": 1,
+              "text": "入力：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": "⑥で生成した次ラウンド用知識",
+              "fontSize": 21.33
+            },
+            {
+              "index": 3,
+              "text": "\n"
+            },
+            {
+              "index": 4,
+              "text": "処理：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 5,
+              "text": "対象クライアントへ",
+              "fontSize": 21.33
+            },
+            {
+              "index": 6,
+              "text": "、",
+              "fontSize": 21.33
+            },
+            {
+              "index": 7,
+              "text": "クライアントLoRA＋分類ヘッド",
+              "fontSize": 21.33
+            },
+            {
+              "index": 8,
+              "text": "を",
+              "fontSize": 21.33
+            },
+            {
+              "index": 9,
+              "text": "送信",
+              "fontSize": 21.33
+            },
+            {
+              "index": 10,
+              "text": "\n"
+            },
+            {
+              "index": 11,
+              "text": "出力：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 12,
+              "text": "ラウンド ",
+              "fontSize": 21.33
+            },
+            {
+              "index": 13,
+              "text": "の初期クライアントパラメータ",
+              "fontSize": 21.33
+            },
+            {
+              "index": 14,
+              "text": "\n"
+            },
+            {
+              "index": 15,
+              "text": "更新対象：なし",
+              "fontSize": 21.33
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 2,
+        "row": 1,
+        "column": 2,
+        "overlap": 1
+      }
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sna103ap",
+      "id": "7",
+      "name": "直線矢印コネクタ 6",
+      "bbox": [
+        240.28,
+        273.61,
+        1.9,
+        102.02
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 2,
+        "row": 1,
+        "column": 2,
+        "overlap": 0.84
+      }
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ihk3et8",
+      "id": "8",
+      "name": "テキスト ボックス 7",
+      "bbox": [
+        157.41,
+        290.49,
+        161.39,
+        54.93
+      ],
+      "geometry": "rect",
+      "text": "次ラウンド初期パラメータ",
+      "textPreview": "次ラウンド初期パラメータ",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "次ラウンド初期パラ"
+          },
+          {
+            "index": 2,
+            "text": "メータ"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "次ラウンド初期パラメータ",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "次ラウンド初期パラメータ",
+              "fontSize": 18.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "bg1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 2,
+        "row": 1,
+        "column": 2,
+        "overlap": 1
+      }
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5cva1cfq",
+      "id": "11",
+      "name": "直線矢印コネクタ 10",
+      "bbox": [
+        411.74,
+        496.93,
+        51.86,
+        45.12
+      ],
+      "verticalFlip": true,
+      "geometry": "straightConnector1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 5,
+        "row": 2,
+        "column": 2,
+        "overlap": 1
+      }
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x8vaxsfe",
+      "id": "15",
+      "name": "テキスト ボックス 14",
+      "bbox": [
+        373.68,
+        613.17,
+        114.44,
+        54.93
+      ],
+      "geometry": "rect",
+      "text": "局所適応後\nパラメータ",
+      "textPreview": "局所適応後 | パラメータ",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "局所適応後"
+          },
+          {
+            "index": 2,
+            "text": "パラメータ"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "局所適応後",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "局所適応後",
+              "fontSize": 18.67
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "パラメータ",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "パラメータ",
+              "fontSize": 18.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "bg1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 5,
+        "row": 2,
+        "column": 2,
+        "overlap": 1
+      }
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p0batw72",
+      "id": "20",
+      "name": "テキスト ボックス 19",
+      "bbox": [
+        459.43,
+        56.56,
+        361.14,
+        219.73
+      ],
+      "geometry": "rect",
+      "text": "④複数端末情報の集約\n入力：各端末から受信したsurrogate適応情報\n処理：端末間で対応する情報を統合\n出力：集約teacherまたは集約参照情報\n更新対象：なし\n集約方法：重み付き平均など",
+      "textPreview": "④複数端末情報の集約 | 入力：各端末から受信したsurrogate適応情報 | 処理：端末間で対応する情報を統合 | 出力：集約teacherまたは集約参照情報 | 更新対象：なし | 集約方法：重み付き平均など",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 8,
+        "lines": [
+          {
+            "index": 1,
+            "text": "④複数端末情報の集約"
+          },
+          {
+            "index": 2,
+            "text": "入力："
+          },
+          {
+            "index": 3,
+            "text": "各端末から受信したsurrogate適応情報"
+          },
+          {
+            "index": 4,
+            "text": "処理：端末間で対応する情報を統合"
+          },
+          {
+            "index": 5,
+            "text": "出力："
+          },
+          {
+            "index": 6,
+            "text": "集約teacherまたは集約参照情報"
+          },
+          {
+            "index": 7,
+            "text": "更新対象：なし"
+          },
+          {
+            "index": 8,
+            "text": "集約方法：重み付き平均など"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "④複数端末情報の集約",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "④",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": "複数端末情報の集約",
+              "fontSize": 21.33,
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "入力：各端末から受信したsurrogate適応情報\n処理：端末間で対応する情報を統合\n出力：集約teacherまたは集約参照情報\n更新対象：なし\n集約方法：重み付き平均など",
+          "runs": [
+            {
+              "index": 1,
+              "text": "入力：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": "各端末から受信したsurrogate適応情報",
+              "fontSize": 21.33
+            },
+            {
+              "index": 3,
+              "text": "\n"
+            },
+            {
+              "index": 4,
+              "text": "処理：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 5,
+              "text": "端末間で対応する情報を統合",
+              "fontSize": 21.33
+            },
+            {
+              "index": 6,
+              "text": "\n"
+            },
+            {
+              "index": 7,
+              "text": "出力：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 8,
+              "text": "集約teacherまたは集約参照情報",
+              "fontSize": 21.33
+            },
+            {
+              "index": 9,
+              "text": "\n"
+            },
+            {
+              "index": 10,
+              "text": "更新対象：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 11,
+              "text": "なし",
+              "fontSize": 21.33
+            },
+            {
+              "index": 12,
+              "text": "\n"
+            },
+            {
+              "index": 13,
+              "text": "集約方法：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 14,
+              "text": "重み付き",
+              "fontSize": 21.33
+            },
+            {
+              "index": 15,
+              "text": "平均など",
+              "fontSize": 21.33
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 2,
+        "row": 1,
+        "column": 2,
+        "overlap": 1
+      }
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ytsrmpw",
+      "id": "22",
+      "name": "テキスト ボックス 21",
+      "bbox": [
+        863.58,
+        29.77,
+        397.76,
+        270.64
+      ],
+      "geometry": "rect",
+      "text": "⑤集約情報による基盤LoRA更新\n入力：集約teacher／参照情報、整合用データ、現在の基盤LoRA\n利用モデル：基盤モデル＋基盤LoRA\n処理：基盤モデル自身の出力または更新挙動を計算\n損失：、、\n更新対象：基盤LoRAのみ\n凍結対象：基盤モデル本体\n出力：更新済み基盤LoRA",
+      "textPreview": "⑤集約情報による基盤LoRA更新 | 入力：集約teacher／参照情報、整合用データ、現在の基盤LoRA | 利用モデル：基盤モデル＋基盤LoRA | 処理：基盤モデル自身の出力または更新挙動を計算 | 損失：、、 | 更新対象：基盤LoRAのみ | 凍結対象：基盤モデル...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 12,
+        "lines": [
+          {
+            "index": 1,
+            "text": "⑤集約情報による基盤LoRA更新"
+          },
+          {
+            "index": 2,
+            "text": "入力："
+          },
+          {
+            "index": 3,
+            "text": "集約teacher／参照情報、整合用データ、現"
+          },
+          {
+            "index": 4,
+            "text": "在の基盤LoRA"
+          },
+          {
+            "index": 5,
+            "text": "利用モデル：基盤モデル＋基盤LoRA"
+          },
+          {
+            "index": 6,
+            "text": "処理："
+          },
+          {
+            "index": 7,
+            "text": "基盤モデル自身の出力または更新挙動を計"
+          },
+          {
+            "index": 8,
+            "text": "算"
+          },
+          {
+            "index": 9,
+            "text": "損失：、、"
+          },
+          {
+            "index": 10,
+            "text": "更新対象：基盤LoRAのみ"
+          },
+          {
+            "index": 11,
+            "text": "凍結対象：基盤モデル本体"
+          },
+          {
+            "index": 12,
+            "text": "出力：更新済み基盤LoRA"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "⑤集約情報による基盤LoRA更新",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "⑤",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": "集約情報による基盤LoRA更新",
+              "fontSize": 21.33,
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "入力：集約teacher／参照情報、整合用データ、現在の基盤LoRA\n利用モデル：基盤モデル＋基盤LoRA\n処理：基盤モデル自身の出力または更新挙動を計算\n損失：、、\n更新対象：基盤LoRAのみ\n凍結対象：基盤モデル本体\n出力：更新済み基盤LoRA",
+          "runs": [
+            {
+              "index": 1,
+              "text": "入力：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": "集約teacher／参照情報、整合用データ、現在の基盤LoRA",
+              "fontSize": 21.33
+            },
+            {
+              "index": 3,
+              "text": "\n"
+            },
+            {
+              "index": 4,
+              "text": "利用モデル：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 5,
+              "text": "基盤モデル＋基盤LoRA",
+              "fontSize": 21.33
+            },
+            {
+              "index": 6,
+              "text": "\n"
+            },
+            {
+              "index": 7,
+              "text": "処理：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 8,
+              "text": "基盤モデル自身の出力または更新挙動を計算",
+              "fontSize": 21.33
+            },
+            {
+              "index": 9,
+              "text": "\n"
+            },
+            {
+              "index": 10,
+              "text": "損失：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 11,
+              "text": "、",
+              "fontSize": 21.33
+            },
+            {
+              "index": 12,
+              "text": "、",
+              "fontSize": 21.33
+            },
+            {
+              "index": 13,
+              "text": "\n"
+            },
+            {
+              "index": 14,
+              "text": "更新対象：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 15,
+              "text": "基盤LoRAのみ",
+              "fontSize": 21.33
+            },
+            {
+              "index": 16,
+              "text": "\n"
+            },
+            {
+              "index": 17,
+              "text": "凍結対象：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 18,
+              "text": "基盤モデル本体",
+              "fontSize": 21.33
+            },
+            {
+              "index": 19,
+              "text": "\n"
+            },
+            {
+              "index": 20,
+              "text": "出力：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 21,
+              "text": "更新済み基盤LoRA",
+              "fontSize": 21.33
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 3,
+        "row": 1,
+        "column": 3,
+        "overlap": 1
+      }
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jm5gze1g",
+      "id": "31",
+      "name": "直線矢印コネクタ 30",
+      "bbox": [
+        640,
+        276.29,
+        2.09,
+        99.47
+      ],
+      "horizontalFlip": true,
+      "verticalFlip": true,
+      "geometry": "straightConnector1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 2,
+        "row": 1,
+        "column": 2,
+        "overlap": 0.84
+      }
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rilczq5s",
+      "id": "44",
+      "name": "テキスト ボックス 43",
+      "bbox": [
+        858.91,
+        374.06,
+        407.11,
+        294.04
+      ],
+      "geometry": "rect",
+      "text": "⑥ 次ラウンド用知識の生成・蒸留更新\n入力：基盤モデル＋更新済み基盤LoRA\n利用データ：(還元用の)整合データ\n処理1：基盤モデルがteacher logitsを生成\n処理2：teacher logitsを用いて次ラウンド用クライアントLoRAを蒸留更新\n損失：蒸留損失 \n更新対象：クライアントLoRA、分類ヘッド\n出力：次ラウンド用クライアントパラメータ",
+      "textPreview": "⑥ 次ラウンド用知識の生成・蒸留更新 | 入力：基盤モデル＋更新済み基盤LoRA | 利用データ：(還元用の)整合データ | 処理1：基盤モデルがteacher logitsを生成 | 処理2：teacher logitsを用いて次ラウンド用クライアントLoRAを蒸留更新 ...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 10,
+        "lines": [
+          {
+            "index": 1,
+            "text": "⑥ 次ラウンド用知識の生成・蒸留更新"
+          },
+          {
+            "index": 2,
+            "text": "入力：基盤モデル＋更新済み基盤LoRA"
+          },
+          {
+            "index": 3,
+            "text": "利用データ：(還元用の)整合データ"
+          },
+          {
+            "index": 4,
+            "text": "処理1：基盤モデルがteacher logitsを生成"
+          },
+          {
+            "index": 5,
+            "text": "処理2：teacher"
+          },
+          {
+            "index": 6,
+            "text": "logitsを用いて次ラウンド用クライアントLoRAを"
+          },
+          {
+            "index": 7,
+            "text": "蒸留更新"
+          },
+          {
+            "index": 8,
+            "text": "損失：蒸留損失"
+          },
+          {
+            "index": 9,
+            "text": "更新対象：クライアントLoRA、分類ヘッド"
+          },
+          {
+            "index": 10,
+            "text": "出力：次ラウンド用クライアントパラメータ"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "⑥ 次ラウンド用知識の生成・蒸留更新",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "⑥ 次ラウンド用知識の生成・蒸留更新",
+              "fontSize": 21.33,
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "入力：基盤モデル＋更新済み基盤LoRA\n利用データ：(還元用の)整合データ\n処理1：基盤モデルがteacher logitsを生成\n処理2：teacher logitsを用いて次ラウンド用クライアントLoRAを蒸留更新\n損失：蒸留損失 \n更新対象：クライアントLoRA、分類ヘッド\n出力：次ラウンド用クライアントパラメータ",
+          "runs": [
+            {
+              "index": 1,
+              "text": "入力：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": "基盤モデル＋更新済み基盤LoRA",
+              "fontSize": 21.33
+            },
+            {
+              "index": 3,
+              "text": "\n"
+            },
+            {
+              "index": 4,
+              "text": "利用データ",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 5,
+              "text": "：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 6,
+              "text": "(",
+              "fontSize": 21.33
+            },
+            {
+              "index": 7,
+              "text": "還元用の",
+              "fontSize": 21.33
+            },
+            {
+              "index": 8,
+              "text": ")",
+              "fontSize": 21.33
+            },
+            {
+              "index": 9,
+              "text": "整合データ",
+              "fontSize": 21.33
+            },
+            {
+              "index": 10,
+              "text": "\n"
+            },
+            {
+              "index": 11,
+              "text": "処理1",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 12,
+              "text": "：基盤モデルがteacher logitsを生成",
+              "fontSize": 21.33
+            },
+            {
+              "index": 13,
+              "text": "\n"
+            },
+            {
+              "index": 14,
+              "text": "処理2",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 15,
+              "text": "：teacher logitsを用いて次ラウンド用クライアントLoRAを蒸留更新",
+              "fontSize": 21.33
+            },
+            {
+              "index": 16,
+              "text": "\n"
+            },
+            {
+              "index": 17,
+              "text": "損失：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 18,
+              "text": "蒸留損失 ",
+              "fontSize": 21.33
+            },
+            {
+              "index": 19,
+              "text": "\n"
+            },
+            {
+              "index": 20,
+              "text": "更新対象：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 21,
+              "text": "クライアントLoRA、分類ヘッド",
+              "fontSize": 21.33
+            },
+            {
+              "index": 22,
+              "text": "\n"
+            },
+            {
+              "index": 23,
+              "text": "出力：",
+              "fontSize": 21.33,
+              "bold": true
+            },
+            {
+              "index": 24,
+              "text": "次ラウンド用クライアントパラメータ",
+              "fontSize": 21.33
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 6,
+        "row": 2,
+        "column": 3,
+        "overlap": 1
+      }
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8jq9c72t",
+      "id": "50",
+      "name": "直線矢印コネクタ 49",
+      "bbox": [
+        820.57,
+        165.09,
+        43.01,
+        1.34
+      ],
+      "verticalFlip": true,
+      "geometry": "straightConnector1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 3,
+        "row": 1,
+        "column": 3,
+        "overlap": 0.61
+      }
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6psve183",
+      "id": "70",
+      "name": "テキスト ボックス 69",
+      "bbox": [
+        556.8,
+        292.79,
+        166.39,
+        54.93
+      ],
+      "geometry": "rect",
+      "text": "各端末の\nsurrogate適応情報",
+      "textPreview": "各端末の | surrogate適応情報",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "各端末の"
+          },
+          {
+            "index": 2,
+            "text": "surrogate適応情報"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "各端末の",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "各端末の",
+              "fontSize": 18.67
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "surrogate適応情報",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "surrogate適応情報",
+              "fontSize": 18.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "bg1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 2,
+        "row": 1,
+        "column": 2,
+        "overlap": 1
+      }
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/velcrqpk",
+      "id": "75",
+      "name": "直線矢印コネクタ 74",
+      "bbox": [
+        1062.46,
+        300.41,
+        0,
+        73.65
+      ],
+      "horizontalFlip": true,
+      "geometry": "straightConnector1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ilwvqpw",
+      "id": "79",
+      "name": "テキスト ボックス 78",
+      "bbox": [
+        955.54,
+        307.35,
+        200.09,
+        32.31
+      ],
+      "geometry": "rect",
+      "text": "更新済み基盤LoRA",
+      "textPreview": "更新済み基盤LoRA",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "更新済み基盤LoRA"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "更新済み基盤LoRA",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "更新済み基盤LoRA",
+              "fontSize": 18.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "bg1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 3,
+        "row": 1,
+        "column": 3,
+        "overlap": 1
+      }
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/29srixcr",
+      "id": "81",
+      "name": "直線矢印コネクタ 80",
+      "bbox": [
+        1062.46,
+        669.7,
+        0,
+        73.65
+      ],
+      "horizontalFlip": true,
+      "geometry": "straightConnector1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pcjadsb2",
+      "id": "82",
+      "name": "直線矢印コネクタ 81",
+      "bbox": [
+        229.71,
+        -17.09,
+        0,
+        73.65
+      ],
+      "horizontalFlip": true,
+      "geometry": "straightConnector1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bylsf2t8",
+      "id": "84",
+      "name": "テキスト ボックス 83",
+      "bbox": [
+        206.52,
+        1.24,
+        46.4,
+        32.31
+      ],
+      "geometry": "rect",
+      "text": "⑥",
+      "textPreview": "⑥",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "⑥"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "⑥",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "⑥",
+              "fontSize": 18.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "bg1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33,
+      "tableCell": {
+        "tableAid": "tb/tsz6dsr2",
+        "cellIndex": 2,
+        "row": 1,
+        "column": 2,
+        "overlap": 1
+      }
+    }
+  ],
+  "composeRuns": []
+}

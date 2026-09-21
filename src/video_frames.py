@@ -60,6 +60,13 @@ def video_duration_sec(video_path: Path) -> float:
     return float(n) / fps
 
 
+def video_frame_info(video_path: Path) -> Tuple[int, float, float]:
+    """Return total frame count, FPS, and duration for manifest traceability."""
+    cap, n, fps = _open(video_path)
+    cap.release()
+    return int(n), float(fps), float(n) / float(fps)
+
+
 def clamp_times_to_duration(times_sec: List[float], duration_sec: float) -> List[float]:
     end = max(0.0, duration_sec - 1e-3)
     return [max(0.0, min(end, float(t))) for t in times_sec]

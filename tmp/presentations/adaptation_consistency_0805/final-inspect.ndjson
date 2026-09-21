@@ -1,0 +1,45 @@
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"","type":"master","placeholders":[{"name":"body","type":"body","textPreview":"マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル"},{"name":"title","type":"title","textPreview":"マスター タイトルの書式設定"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"タイトル スライド","type":"title","placeholders":[{"name":"title","type":"title","textPreview":"マスター タイトル"},{"name":"subtitle","type":"subtitle","textPreview":"マスター サブタイトルの書式設定"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout2.xml","name":"タイトルとコンテンツ","placeholders":[{"name":"title","type":"title","textPreview":"マスター タイトルの書式設定"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"},{"name":"content placeholder 2","textPreview":"マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout3.xml","name":"ユーザー設定レイアウト","placeholders":[{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"Adaptation Consistencyの再設計","textShapes":4}
+{"kind":"textbox","id":"sh/547294r6","slide":1,"name":"タイトル 1","placeholder":"title","text":"Adaptation Consistencyの再設計\n共有データなしの三層構造","textPreview":"Adaptation Consistencyの再設計 | 共有データなしの三層構造","textChars":39,"textLines":2,"bbox":[27.92,206.1,1223.12,153.9]}
+{"kind":"textbox","id":"sh/k3yl0zql","slide":1,"name":"字幕 2","placeholder":"subtitle","text":"名古屋大学\n情報学研究科\n知能システム学専攻　1年","textPreview":"名古屋大学 | 情報学研究科 | 知能システム学専攻　1年","textChars":25,"textLines":3,"bbox":[323.22,540.74,911.46,153.9]}
+{"kind":"textbox","id":"sh/7qp4be9c","slide":1,"name":"タイトル 1","text":"吉村　有生","textPreview":"吉村　有生","textChars":5,"textLines":1,"bbox":[205.18,411.89,868.61,153.9]}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"name":"タイトル 1","text":"8月5日検討版","textPreview":"8月5日検討版","textChars":7,"textLines":1,"bbox":[194.46,343.67,890.03,153.9]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":"[Sources]\n- User-provided research direction, 2026-08-05.\n[/Sources]"}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"方向修正の結論","textShapes":3}
+{"kind":"textbox","id":"sh/9072xkry","slide":2,"name":"タイトル 1","placeholder":"title","text":"方向修正の結論","textPreview":"方向修正の結論","textChars":7,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/ozy1ofad","slide":2,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/b29kza94","slide":2,"name":"コンテンツ プレースホルダー 3","text":"Lpred・Lgrad・Lpostの並列構成をやめ，役割を三層に分離する\n更新方向と忘却は，同一構造のsurrogate間のFL／FCLで扱う\n異種モデル間は，共通出力空間のlogits蒸留に限定する\n研究の中心は，何を代理ペアとして選び，何を再現するかである","textPreview":"Lpred・Lgrad・Lpostの並列構成をやめ，役割を三層に分離する | 更新方向と忘却は，同一構造のsurrogate間のFL／FCLで扱う | 異種モデル間は，共通出力空間のlogits蒸留に限定する | 研究の中心は，何を代理ペアとして選び，何を再現するかである","textChars":130,"textLines":4,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":"[Sources]\n- User-provided research direction, 2026-08-05.\n[/Sources]"}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"近い先行研究と，本研究の焦点","textShapes":2}
+{"kind":"textbox","id":"sh/cza94vmx","slide":3,"name":"タイトル 1","placeholder":"title","text":"近い先行研究と，本研究の焦点","textPreview":"近い先行研究と，本研究の焦点","textChars":14,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/d0jax03i","slide":3,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/juho7qhg","slide":3,"name":"表 5","rows":6,"cols":4,"preview":"手法 | 共有入力 | サーバ側の知識化 | 本研究との差","bbox":[263.97,270.94,752.06,405.78]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":"[Sources]\n- FedMD: https://arxiv.org/abs/1910.03581\n- FedDF: https://proceedings.neurips.cc/paper/2020/hash/18df51b97ccd68128e994804f3eccc87-Abstract.html\n- FedDGM: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09992.pdf\n- User-provided research direction, 2026-08-05.\n[/Sources]"}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"Adaptation Consistencyの再定義","textShapes":3}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"name":"タイトル 1","placeholder":"title","text":"Adaptation Consistencyの再定義","textPreview":"Adaptation Consistencyの再定義","textChars":26,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/0ba143al","slide":4,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/rm1k7yt4","slide":4,"name":"コンテンツ プレースホルダー 3","text":"privateデータで局所適応したsurrogate LoRAの出力挙動を，\nデータを送らずglobal surrogateへ連合統合する\nクラウドで（代理入力，teacher logits）の対応ペアへ変換する\n共通出力空間から異種の大型基盤LoRA上に再現する","textPreview":"privateデータで局所適応したsurrogate LoRAの出力挙動を， | データを送らずglobal surrogateへ連合統合する | クラウドで（代理入力，teacher logits）の対応ペアへ変換する | 共通出力空間から異種の大型基盤LoRA上に再現する","textChars":132,"textLines":4,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":"[Sources]\n- User-provided research direction, 2026-08-05.\n[/Sources]"}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"成功条件は，各層とend-to-endで分けて測る","textShapes":2}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":5,"name":"タイトル 1","placeholder":"title","text":"成功条件は，各層とend-to-endで分けて測る","textPreview":"成功条件は，各層とend-to-endで分けて測る","textChars":25,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/cf2tcr61","slide":5,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/m94nadsn","slide":5,"name":"コンテンツ プレースホルダー 4","rows":10,"cols":4,"preview":"評価対象 | 主指標 | 比較基準 | 成功判定","bbox":[75.7,129.48,1128.59,519.84]}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":"[Sources]\n- User-provided research direction, 2026-08-05.\n[/Sources]"}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"三層処理フロー：場所と受け渡し","textShapes":2}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"name":"タイトル 1","placeholder":"title","text":"三層処理フロー：場所と受け渡し","textPreview":"三層処理フロー：場所と受け渡し","textChars":15,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/zi98nu94","slide":6,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/5gzmp4vu","slide":6,"name":"表 5","rows":6,"cols":4,"preview":"段階 | 場所 | 入力 → 処理 | 出力 → 次","bbox":[263.97,270.94,752.06,405.78]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":6,"text":"[Sources]\n- User-provided research direction, 2026-08-05.\n[/Sources]"}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"検証は三層を切り分ける","textShapes":3}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"name":"タイトル 1","placeholder":"title","text":"検証は三層を切り分ける","textPreview":"検証は三層を切り分ける","textChars":11,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/dcbud0ra","slide":7,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/ydkbm5sv","slide":7,"name":"コンテンツ プレースホルダー 3","text":"段階1：FedAvg基準で第1層の精度・drift・forgettingを確認する\n段階2：server seedの選択＋global surrogate再forwardでpairを作る\n段階3：固定server data上界と比較し，3B→7Bの蒸留損失を測る\n段階4：diversity・replay・出力統計・生成器を一つずつ追加する","textPreview":"段階1：FedAvg基準で第1層の精度・drift・forgettingを確認する | 段階2：server seedの選択＋global surrogate再forwardでpairを作る | 段階3：固定server data上界と比較し，3B→7Bの蒸留損失を測る |...","textChars":170,"textLines":4,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":7,"text":"[Sources]\n- User-provided research direction, 2026-08-05.\n[/Sources]"}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"次に固定する4点","textShapes":3}
+{"kind":"textbox","id":"sh/18byd4zy","slide":8,"name":"タイトル 1","placeholder":"title","text":"次に固定する4点","textPreview":"次に固定する4点","textChars":8,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/g72x4zyd","slide":8,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/ri9g7uhw","slide":8,"name":"コンテンツ プレースホルダー 3","text":"共通出力空間：分類logitsか，生成出力の意味表現か\n局所logits：送らない／集約統計だけ送る／別方式か\n代理入力：server seedから選択するか，生成器で作るか\n下り経路：大型基盤の知識をclientへ還元するか","textPreview":"共通出力空間：分類logitsか，生成出力の意味表現か | 局所logits：送らない／集約統計だけ送る／別方式か | 代理入力：server seedから選択するか，生成器で作るか | 下り経路：大型基盤の知識をclientへ還元するか","textChars":113,"textLines":4,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/fu1gfa1s","slide":8,"text":"[Sources]\n- User-provided research direction, 2026-08-05.\n[/Sources]"}

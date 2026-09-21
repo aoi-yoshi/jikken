@@ -1,0 +1,46 @@
+{"kind":"deck","id":"pr/ip8xr1","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"","type":"master","placeholders":[{"name":"body","type":"body","textPreview":"マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル"},{"name":"title","type":"title","textPreview":"マスター タイトルの書式設定"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"タイトル スライド","type":"title","placeholders":[{"name":"title","type":"title","textPreview":"マスター タイトル"},{"name":"subtitle","type":"subtitle","textPreview":"マスター サブタイトルの書式設定"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout2.xml","name":"タイトルとコンテンツ","placeholders":[{"name":"title","type":"title","textPreview":"マスター タイトルの書式設定"},{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"},{"name":"content placeholder 2","textPreview":"マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout3.xml","name":"ユーザー設定レイアウト","placeholders":[{"name":"slideNumber","type":"slideNumber","textPreview":"‹#›"}]}
+{"kind":"slide","id":"sl/aciq8b","slide":1,"title":"従来手法との差、評価方針の整理","textShapes":4}
+{"kind":"textbox","id":"sh/pcvul0ry","slide":1,"name":"タイトル 1","placeholder":"title","text":"\n従来手法との差、評価方針の整理\n共通処理フローとLpredによる基盤LoRA更新フローの整理surrogate適応情報を用いた基盤モデル更新","textPreview":"| 従来手法との差、評価方針の整理 | 共通処理フローとLpredによる基盤LoRA更新フローの整理surrogate適応情報を用いた基盤モデル更新","textChars":71,"textLines":3,"bbox":[27.92,206.1,1223.12,153.9]}
+{"kind":"textbox","id":"sh/obmtsvad","slide":1,"name":"字幕 2","placeholder":"subtitle","text":"名古屋大学\n情報学研究科\n知能システム学専攻　1年","textPreview":"名古屋大学 | 情報学研究科 | 知能システム学専攻　1年","textChars":25,"textLines":3,"bbox":[323.22,540.74,911.46,153.9]}
+{"kind":"textbox","id":"sh/bexcna94","slide":1,"name":"タイトル 1","text":"吉村　有生","textPreview":"吉村　有生","textChars":5,"textLines":1,"bbox":[205.18,411.89,868.61,153.9]}
+{"kind":"textbox","id":"sh/dgfup0ra","slide":1,"name":"タイトル 1","text":"7月31日報告会","textPreview":"7月31日報告会","textChars":8,"textLines":1,"bbox":[194.46,343.67,890.03,153.9]}
+{"kind":"notes","id":"nt/aciq8b","slide":1,"text":""}
+{"kind":"slide","id":"sl/ls1czq","slide":2,"title":"今後","textShapes":3}
+{"kind":"textbox","id":"sh/tkji1wji","slide":2,"name":"タイトル 1","placeholder":"title","text":"今後","textPreview":"今後","textChars":2,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/sja1srix","slide":2,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/jeh0v21g","slide":2,"name":"コンテンツ プレースホルダー 3","text":"規模の異なる同一系統モデル間で、更新後の基盤LoRAからサロゲートLoRAへ、どのように知識を移転すれば、精度・収束速度・エッジ計算量を両立できるか\nどの情報を移転するか\nサイズ差をどう吸収するか\nどうすれば速く収束するか\nエッジ上で本当に利益があるか","textPreview":"規模の異なる同一系統モデル間で、更新後の基盤LoRAからサロゲートLoRAへ、どのように知識を移転すれば、精度・収束速度・エッジ計算量を両立できるか | どの情報を移転するか | サイズ差をどう吸収するか | どうすれば速く収束するか | エッジ上で本当に利益があるか","textChars":126,"textLines":5,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/ls1czq","slide":2,"text":""}
+{"kind":"slide","id":"sl/459pio","slide":3,"title":"クラウド側基盤LoRA更新の詳細フロー","textShapes":2}
+{"kind":"textbox","id":"sh/n2dw76h0","slide":3,"name":"タイトル 1","placeholder":"title","text":"クラウド側基盤LoRA更新の詳細フロー","textPreview":"クラウド側基盤LoRA更新の詳細フロー","textChars":19,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/m14ve10f","slide":3,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"image","id":"im/ofa1c7ex","slide":3,"name":"コンテンツ プレースホルダー 22","bbox":[189,94.95,796.5,625.05]}
+{"kind":"notes","id":"nt/459pio","slide":3,"text":""}
+{"kind":"slide","id":"sl/omcekm","slide":4,"title":"クラウド側基盤LoRA更新の詳細フロー","textShapes":2}
+{"kind":"textbox","id":"sh/hcr2tg7e","slide":4,"name":"タイトル 1","placeholder":"title","text":"クラウド側基盤LoRA更新の詳細フロー","textPreview":"クラウド側基盤LoRA更新の詳細フロー","textChars":19,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/gbi1kbqt","slide":4,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"image","id":"im/6x8361sj","slide":4,"name":"コンテンツ プレースホルダー 22","bbox":[189,94.95,796.5,625.05]}
+{"kind":"notes","id":"nt/omcekm","slide":4,"text":""}
+{"kind":"slide","id":"sl/9khwq4","slide":5,"title":"クラウド側基盤LoRA更新の詳細フロー","textShapes":2}
+{"kind":"textbox","id":"sh/5gbytsn2","slide":5,"name":"タイトル 1","placeholder":"title","text":"クラウド側基盤LoRA更新の詳細フロー","textPreview":"クラウド側基盤LoRA更新の詳細フロー","textChars":19,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/4f2x0nmh","slide":5,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"image","id":"im/e943ulgz","slide":5,"name":"コンテンツ プレースホルダー 22","bbox":[189,94.95,796.5,625.05]}
+{"kind":"notes","id":"nt/9khwq4","slide":5,"text":""}
+{"kind":"slide","id":"sl/uyyfge","slide":6,"title":"クラウド側基盤LoRA更新の詳細フロー","textShapes":2}
+{"kind":"textbox","id":"sh/ulwja5w7","slide":6,"name":"タイトル 1","placeholder":"title","text":"クラウド側基盤LoRA更新の詳細フロー","textPreview":"クラウド側基盤LoRA更新の詳細フロー","textChars":19,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/fm503ads","slide":6,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"image","id":"im/98zm1c7a","slide":6,"name":"コンテンツ プレースホルダー 22","bbox":[189,94.95,796.5,625.05]}
+{"kind":"notes","id":"nt/uyyfge","slide":6,"text":""}
+{"kind":"slide","id":"sl/mh4vmn","slide":7,"title":"目次","textShapes":3}
+{"kind":"textbox","id":"sh/tofixobm","slide":7,"name":"タイトル 1","placeholder":"title","text":"目次","textPreview":"目次","textChars":2,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/sn61oja1","slide":7,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/fqx0zyts","slide":7,"name":"コンテンツ プレースホルダー 3","text":"全体処理フロー\n基盤LoRA更新の処理フロー\n評価方針の整理","textPreview":"全体処理フロー | 基盤LoRA更新の処理フロー | 評価方針の整理","textChars":30,"textLines":3,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/mh4vmn","slide":7,"text":""}
+{"kind":"slide","id":"sl/tz0r2f","slide":8,"title":"今後","textShapes":3}
+{"kind":"textbox","id":"sh/h8rixoba","slide":8,"name":"タイトル 1","placeholder":"title","text":"今後","textPreview":"今後","textChars":2,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/w7i14jap","slide":8,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/7ip0ret8","slide":8,"name":"コンテンツ プレースホルダー 3","text":"規模の異なる同一系統モデル間で、更新後の基盤LoRAからサロゲートLoRAへ、どのように知識を移転すれば、精度・収束速度・エッジ計算量を両立できるか\nどの情報を移転するか\nサイズ差をどう吸収するか\nどうすれば速く収束するか\nエッジ上で本当に利益があるか","textPreview":"規模の異なる同一系統モデル間で、更新後の基盤LoRAからサロゲートLoRAへ、どのように知識を移転すれば、精度・収束速度・エッジ計算量を両立できるか | どの情報を移転するか | サイズ差をどう吸収するか | どうすれば速く収束するか | エッジ上で本当に利益があるか","textChars":126,"textLines":5,"bbox":[0,0,0,0]}
+{"kind":"notes","id":"nt/tz0r2f","slide":8,"text":""}

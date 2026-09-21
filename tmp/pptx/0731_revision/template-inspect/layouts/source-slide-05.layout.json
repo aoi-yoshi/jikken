@@ -1,0 +1,1658 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/i107q5of",
+    "id": "i107q5of",
+    "slide": 5,
+    "layoutId": "/ppt/slideLayouts/slideLayout2.xml",
+    "layoutName": "タイトルとコンテンツ",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office テーマ",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "fontScheme": {
+      "name": "ユーザー定義 1",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout2.xml",
+      "name": "タイトルとコンテンツ",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/4",
+          "id": "4",
+          "name": "四角形: 角を丸くする 3",
+          "bbox": [
+            1192,
+            0,
+            34.98,
+            69.01
+          ],
+          "geometry": "roundRect",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "verticalAlignment": "middle"
+          },
+          "fillColor": "#203864",
+          "lineColor": "#203864",
+          "lineWidth": 1.33
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/2",
+          "id": "2",
+          "name": "Title 1",
+          "bbox": [
+            88,
+            9.25,
+            1104,
+            69.01
+          ],
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText"
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/5",
+          "id": "5",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            798.17,
+            7.77,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/7",
+          "id": "7",
+          "name": "グラフィックス 6",
+          "bbox": [
+            5.82,
+            13.17,
+            61.09,
+            57.77
+          ],
+          "contentType": "image/svg+xml",
+          "asset": {
+            "assetId": "/ppt/media/image.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          }
+        },
+        {
+          "order": 5,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/6",
+          "id": "6",
+          "name": "Content Placeholder 2",
+          "bbox": [
+            0,
+            85.22,
+            1280,
+            634.78
+          ],
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            0,
+            141.12,
+            1280,
+            578.88
+          ],
+          "geometry": "rect",
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            88,
+            19.95,
+            1104,
+            98.13
+          ],
+          "geometry": "rect",
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/4",
+          "id": "4",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            755.43,
+            19.95,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dgbulwnm",
+      "id": "2",
+      "name": "タイトル 1",
+      "bbox": [
+        88,
+        9.25,
+        1104,
+        69.01
+      ],
+      "text": "成功条件：同等性能で資源・共有データを減らす",
+      "textPreview": "成功条件：同等性能で資源・共有データを減らす",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 48,
+        "typeface": "Arial",
+        "color": "#203864",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "成功条件：同等性能で資源・共有データを減らす"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "成功条件：同等性能で資源・共有データを減らす",
+          "runs": [
+            {
+              "index": 1,
+              "text": "成功条件：同等性能で資源・共有データを減らす"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cf2tcr61",
+      "id": "3",
+      "name": "スライド番号プレースホルダー 2",
+      "bbox": [
+        798.17,
+        7.77,
+        436.57,
+        37.17
+      ],
+      "text": "5",
+      "textPreview": "5",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": {
+          "type": "theme",
+          "value": "bg1",
+          "transform": {
+            "lighten": 0.25
+          }
+        },
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "5"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "5",
+          "runs": [
+            {
+              "index": 1,
+              "text": "5"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/m94nadsn",
+      "id": "4",
+      "name": "コンテンツ プレースホルダー 4",
+      "bbox": [
+        75.7,
+        129.48,
+        1128.6,
+        516.33
+      ],
+      "text": "評価軸 | 測定 | 比較基準 | 成功判定\nserver性能 | Accuracy／F1 | server単独 | 改善\nclient性能 | 次round後F1 | client単独 | 非劣化／改善\n収束 | 目標F1到達round | logits蒸留 | 少ないround\n端末memory | peak GPU memory | 7B端末 | 3Bで削減\n端末時間 | 学習秒／round | 7B端末 | 短縮\n通信 | bytes／round | LoRA／logits | 同等性能で削減\n共有data | |D_align|・属性 | 固定公開data | 小規模化\nモデル差 | 3B/3B vs 7B/3B | 同サイズ | 異サイズでも成立\n新知識 | client-only test F1 | server単独 | client知識を反映",
+      "textPreview": "評価軸 | 測定 | 比較基準 | 成功判定 | server性能 | Accuracy／F1 | server単独 | 改善 | client性能 | 次round後F1 | client単独 | 非劣化／改善 | 収束 | 目標F1到達round | logits蒸留 ...",
+      "rows": 10,
+      "cols": 4,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            75.7,
+            129.48,
+            282.15,
+            33.86
+          ],
+          "text": "評価軸",
+          "textPreview": "評価軸",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "評価軸",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "評価軸",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            357.85,
+            129.48,
+            282.15,
+            33.86
+          ],
+          "text": "測定",
+          "textPreview": "測定",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "測定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "測定",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            640,
+            129.48,
+            282.15,
+            33.86
+          ],
+          "text": "比較基準",
+          "textPreview": "比較基準",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "比較基準",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "比較基準",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            922.15,
+            129.48,
+            282.15,
+            33.86
+          ],
+          "text": "成功判定",
+          "textPreview": "成功判定",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "成功判定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "成功判定",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            75.7,
+            163.34,
+            282.15,
+            59.25
+          ],
+          "text": "server性能",
+          "textPreview": "server性能",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "server性能",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "server性能",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            357.85,
+            163.34,
+            282.15,
+            59.25
+          ],
+          "text": "Accuracy／F1",
+          "textPreview": "Accuracy／F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Accuracy／F1",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Accuracy／F1",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            640,
+            163.34,
+            282.15,
+            59.25
+          ],
+          "text": "server単独",
+          "textPreview": "server単独",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "server単独",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "server単独",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            922.15,
+            163.34,
+            282.15,
+            59.25
+          ],
+          "text": "改善",
+          "textPreview": "改善",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "改善",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "改善",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            75.7,
+            222.59,
+            282.15,
+            84.64
+          ],
+          "text": "client性能",
+          "textPreview": "client性能",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "client性能",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "client性能",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            357.85,
+            222.59,
+            282.15,
+            84.64
+          ],
+          "text": "次round後F1",
+          "textPreview": "次round後F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "次round後F1",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "次round後F1",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            640,
+            222.59,
+            282.15,
+            84.64
+          ],
+          "text": "client単独",
+          "textPreview": "client単独",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "client単独",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "client単独",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            922.15,
+            222.59,
+            282.15,
+            84.64
+          ],
+          "text": "非劣化／改善",
+          "textPreview": "非劣化／改善",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "非劣化／改善",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "非劣化／改善",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            75.7,
+            307.23,
+            282.15,
+            33.86
+          ],
+          "text": "収束",
+          "textPreview": "収束",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "収束",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "収束",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            357.85,
+            307.23,
+            282.15,
+            33.86
+          ],
+          "text": "目標F1到達round",
+          "textPreview": "目標F1到達round",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "目標F1到達round",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "目標F1到達round",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            640,
+            307.23,
+            282.15,
+            33.86
+          ],
+          "text": "logits蒸留",
+          "textPreview": "logits蒸留",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "logits蒸留",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "logits蒸留",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            922.15,
+            307.23,
+            282.15,
+            33.86
+          ],
+          "text": "少ないround",
+          "textPreview": "少ないround",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "少ないround",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "少ないround",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            75.7,
+            341.09,
+            282.15,
+            33.86
+          ],
+          "text": "端末memory",
+          "textPreview": "端末memory",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "端末memory",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "端末memory",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            357.85,
+            341.09,
+            282.15,
+            33.86
+          ],
+          "text": "peak GPU memory",
+          "textPreview": "peak GPU memory",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "peak GPU memory",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "peak GPU memory",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            640,
+            341.09,
+            282.15,
+            33.86
+          ],
+          "text": "7B端末",
+          "textPreview": "7B端末",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "7B端末",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "7B端末",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            922.15,
+            341.09,
+            282.15,
+            33.86
+          ],
+          "text": "3Bで削減",
+          "textPreview": "3Bで削減",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "3Bで削減",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "3Bで削減",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            75.7,
+            374.95,
+            282.15,
+            59.25
+          ],
+          "text": "端末時間",
+          "textPreview": "端末時間",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "端末時間",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "端末時間",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            357.85,
+            374.95,
+            282.15,
+            59.25
+          ],
+          "text": "学習秒／round",
+          "textPreview": "学習秒／round",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "学習秒／round",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "学習秒／round",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 6,
+          "column": 3,
+          "bbox": [
+            640,
+            374.95,
+            282.15,
+            59.25
+          ],
+          "text": "7B端末",
+          "textPreview": "7B端末",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "7B端末",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "7B端末",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 6,
+          "column": 4,
+          "bbox": [
+            922.15,
+            374.95,
+            282.15,
+            59.25
+          ],
+          "text": "短縮",
+          "textPreview": "短縮",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "短縮",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "短縮",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "row": 7,
+          "column": 1,
+          "bbox": [
+            75.7,
+            434.2,
+            282.15,
+            33.86
+          ],
+          "text": "通信",
+          "textPreview": "通信",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "通信",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "通信",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "row": 7,
+          "column": 2,
+          "bbox": [
+            357.85,
+            434.2,
+            282.15,
+            33.86
+          ],
+          "text": "bytes／round",
+          "textPreview": "bytes／round",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "bytes／round",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "bytes／round",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "row": 7,
+          "column": 3,
+          "bbox": [
+            640,
+            434.2,
+            282.15,
+            33.86
+          ],
+          "text": "LoRA／logits",
+          "textPreview": "LoRA／logits",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "LoRA／logits",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "LoRA／logits",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "row": 7,
+          "column": 4,
+          "bbox": [
+            922.15,
+            434.2,
+            282.15,
+            33.86
+          ],
+          "text": "同等性能で削減",
+          "textPreview": "同等性能で削減",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "同等性能で削減",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "同等性能で削減",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "row": 8,
+          "column": 1,
+          "bbox": [
+            75.7,
+            468.06,
+            282.15,
+            59.25
+          ],
+          "text": "共有data",
+          "textPreview": "共有data",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "共有data",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "共有data",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "row": 8,
+          "column": 2,
+          "bbox": [
+            357.85,
+            468.06,
+            282.15,
+            59.25
+          ],
+          "text": "|D_align|・属性",
+          "textPreview": "|D_align|・属性",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "|D_align|・属性",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "|D_align|・属性",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 31,
+          "row": 8,
+          "column": 3,
+          "bbox": [
+            640,
+            468.06,
+            282.15,
+            59.25
+          ],
+          "text": "固定公開data",
+          "textPreview": "固定公開data",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "固定公開data",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "固定公開data",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 32,
+          "row": 8,
+          "column": 4,
+          "bbox": [
+            922.15,
+            468.06,
+            282.15,
+            59.25
+          ],
+          "text": "小規模化",
+          "textPreview": "小規模化",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "小規模化",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "小規模化",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 33,
+          "row": 9,
+          "column": 1,
+          "bbox": [
+            75.7,
+            527.31,
+            282.15,
+            59.25
+          ],
+          "text": "モデル差",
+          "textPreview": "モデル差",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "モデル差",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "モデル差",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 34,
+          "row": 9,
+          "column": 2,
+          "bbox": [
+            357.85,
+            527.31,
+            282.15,
+            59.25
+          ],
+          "text": "3B/3B vs 7B/3B",
+          "textPreview": "3B/3B vs 7B/3B",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "3B/3B vs 7B/3B",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "3B/3B vs 7B/3B",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 35,
+          "row": 9,
+          "column": 3,
+          "bbox": [
+            640,
+            527.31,
+            282.15,
+            59.25
+          ],
+          "text": "同サイズ",
+          "textPreview": "同サイズ",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "同サイズ",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "同サイズ",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 36,
+          "row": 9,
+          "column": 4,
+          "bbox": [
+            922.15,
+            527.31,
+            282.15,
+            59.25
+          ],
+          "text": "異サイズでも成立",
+          "textPreview": "異サイズでも成立",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "異サイズでも成立",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "異サイズでも成立",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 37,
+          "row": 10,
+          "column": 1,
+          "bbox": [
+            75.7,
+            586.56,
+            282.15,
+            59.25
+          ],
+          "text": "新知識",
+          "textPreview": "新知識",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "新知識",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "新知識",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 38,
+          "row": 10,
+          "column": 2,
+          "bbox": [
+            357.85,
+            586.56,
+            282.15,
+            59.25
+          ],
+          "text": "client-only test F1",
+          "textPreview": "client-only test F1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "client-only test F1",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "client-only test F1",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 39,
+          "row": 10,
+          "column": 3,
+          "bbox": [
+            640,
+            586.56,
+            282.15,
+            59.25
+          ],
+          "text": "server単独",
+          "textPreview": "server単独",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "server単独",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "server単独",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 40,
+          "row": 10,
+          "column": 4,
+          "bbox": [
+            922.15,
+            586.56,
+            282.15,
+            59.25
+          ],
+          "text": "client知識を反映",
+          "textPreview": "client知識を反映",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "client知識を反映",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "client知識を反映",
+                  "fontSize": 21.33
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,0 +1,254 @@
+{"kind":"deck","id":"pr/o25j27","name":"Deck"}
+{"kind":"layout","layoutId":"fbe2d5d0-405a-4865-904f-a5be9e6094c8","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"63e8c4ae-b5b6-4493-a43c-a4dfe4680afe","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/rz88ch","slide":1,"title":"複数の現場で得た経験を、中央側AIへ生かす","textShapes":26}
+{"kind":"shape","id":"sh/fu1s3ulg","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/0vu9czm1","slide":1,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/1w3a5k3m","slide":1,"text":"複数の現場で得た経験を、中央側AIへ生かす","textPreview":"複数の現場で得た経験を、中央側AIへ生かす","textChars":21,"textLines":1,"bbox":[62,34,1110,62]}
+{"kind":"textbox","id":"sh/2xcrep4r","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1187,45,45,28]}
+{"kind":"shape","id":"sh/nyls7ulc","slide":1,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/ozu9gzmx","slide":1,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,760,18]}
+{"kind":"textbox","id":"sh/p03a943i","slide":1,"text":"1 / 8","textPreview":"1 / 8","textChars":5,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/fqpkj29c","slide":1,"text":"現場A　昼間・市街地","textPreview":"現場A　昼間・市街地","textChars":10,"textLines":1,"bbox":[62,278,260,24]}
+{"kind":"textbox","id":"sh/epgjqx8r","slide":1,"text":"現場B　夜間・道路","textPreview":"現場B　夜間・道路","textChars":9,"textLines":1,"bbox":[338,278,260,24]}
+{"kind":"textbox","id":"sh/1c72lcr2","slide":1,"text":"同じ危険判定でも、場所・時間・天候により経験する動画が異なる","textPreview":"同じ危険判定でも、場所・時間・天候により経験する動画が異なる","textChars":30,"textLines":1,"bbox":[70,318,520,70]}
+{"kind":"textbox","id":"sh/0by1s7qh","slide":1,"text":"価値","textPreview":"価値","textChars":2,"textLines":1,"bbox":[74,410,72,28]}
+{"kind":"textbox","id":"sh/rm5kf290","slide":1,"text":"各現場が学んだ判定の変化を、サービス全体の更新に使う","textPreview":"各現場が学んだ判定の変化を、サービス全体の更新に使う","textChars":26,"textLines":1,"bbox":[74,445,510,66]}
+{"kind":"shape","id":"sh/qlwjmx8f","slide":1,"bbox":[636,122,2,408]}
+{"kind":"textbox","id":"sh/do72hcr6","slide":1,"text":"現在の接続問題","textPreview":"現在の接続問題","textChars":7,"textLines":1,"bbox":[674,122,240,34]}
+{"kind":"textbox","id":"sh/sne1o7ql","slide":1,"text":"連合平均","textPreview":"連合平均","textChars":4,"textLines":1,"bbox":[680,188,140,48]}
+{"kind":"textbox","id":"sh/3i50bi94","slide":1,"text":"同じ構造の小型AI同士はまとめられる","textPreview":"同じ構造の小型AI同士はまとめられる","textChars":18,"textLines":1,"bbox":[842,188,330,52]}
+{"kind":"textbox","id":"sh/ihwjid8j","slide":1,"text":"しかし","textPreview":"しかし","textChars":3,"textLines":1,"bbox":[681,264,94,30]}
+{"kind":"textbox","id":"sh/6dc3udcb","slide":1,"text":"構造や規模が異なる中央側AIへ、更新値をそのまま渡せない","textPreview":"構造や規模が異なる中央側AIへ、更新値をそのまま渡せない","textChars":28,"textLines":1,"bbox":[681,302,480,78]}
+{"kind":"textbox","id":"sh/7elknitw","slide":1,"text":"現場動画を中央へ集めない条件では、共通の入力を使った橋渡しも難しい","textPreview":"現場動画を中央へ集めない条件では、共通の入力を使った橋渡しも難しい","textChars":33,"textLines":1,"bbox":[681,406,480,64]}
+{"kind":"shape","id":"sh/8fulwnah","slide":1,"bbox":[675,495,500,72]}
+{"kind":"textbox","id":"sh/tg32psb2","slide":1,"text":"FedPACT：現場で生じた判定の変化を、中央側の動画上に表して学習へ使う","textPreview":"FedPACT：現場で生じた判定の変化を、中央側の動画上に表して学習へ使う","textChars":37,"textLines":1,"bbox":[700,511,450,43]}
+{"kind":"textbox","id":"sh/uhw3yxs7","slide":1,"text":"発表の順番","textPreview":"発表の順番","textChars":5,"textLines":1,"bbox":[66,589,150,25]}
+{"kind":"shape","id":"sh/vi5kr2ts","slide":1,"bbox":[224,579,42,42]}
+{"kind":"textbox","id":"sh/gjel0nad","slide":1,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[224,584,42,30]}
+{"kind":"textbox","id":"sh/hkn2tsby","slide":1,"text":"変化を測る","textPreview":"変化を測る","textChars":5,"textLines":1,"bbox":[278,583,175,36]}
+{"kind":"shape","id":"sh/ilw32xsj","slide":1,"bbox":[437,599,28,2]}
+{"kind":"shape","id":"sh/3m5kv2t4","slide":1,"bbox":[472,579,42,42]}
+{"kind":"textbox","id":"sh/dgr6lwv6","slide":1,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[472,584,42,30]}
+{"kind":"textbox","id":"sh/sfy5srul","slide":1,"text":"複数動画を要約","textPreview":"複数動画を要約","textChars":7,"textLines":1,"bbox":[526,583,175,36]}
+{"kind":"shape","id":"sh/rep4j6d0","slide":1,"bbox":[685,599,28,2]}
+{"kind":"shape","id":"sh/qdgnq1cf","slide":1,"bbox":[720,579,42,42]}
+{"kind":"textbox","id":"sh/14r6pgv2","slide":1,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[720,584,42,30]}
+{"kind":"textbox","id":"sh/03i5wbux","slide":1,"text":"中央側の動画上に表す","textPreview":"中央側の動画上に表す","textChars":10,"textLines":1,"bbox":[774,583,175,36]}
+{"kind":"shape","id":"sh/fi9on6dc","slide":1,"bbox":[933,599,28,2]}
+{"kind":"shape","id":"sh/eh0nu1cr","slide":1,"bbox":[968,579,42,42]}
+{"kind":"textbox","id":"sh/p8b6tgve","slide":1,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[968,584,42,30]}
+{"kind":"textbox","id":"sh/o7i50but","slide":1,"text":"中央側AIを更新","textPreview":"中央側AIを更新","textChars":8,"textLines":1,"bbox":[1022,583,175,36]}
+{"kind":"textbox","id":"sh/k3m9sfe1","slide":1,"text":"対象は共通タスク上の予測挙動。映像の意味内容全体や危険原因の説明は対象外","textPreview":"対象は共通タスク上の予測挙動。映像の意味内容全体や危険原因の説明は対象外","textChars":36,"textLines":1,"bbox":[90,638,1100,28]}
+{"kind":"image","id":"im/v6ls3i1c","slide":1,"name":"","alt":"昼間の市街地を走るNEXAR映像","bbox":[62,122,260,146]}
+{"kind":"image","id":"im/ulcrudkr","slide":1,"name":"","alt":"夜間の道路を走るNEXAR映像","bbox":[338,122,260,146]}
+{"kind":"notes","id":"nt/rz88ch","slide":1,"text":"【目安 0:00–1:10】\n今回は、複数の自動運転車やロボットが、同じ危険判定を行う場面を想定しています。判定内容は共通でも、場所や時間、天候が違うため、それぞれが経験する動画は異なります。ある現場で得た経験をサービス全体へ反映できれば、中央側のAIも継続的に更新できます。しかし、現場の動画をそのまま中央へ集めることは難しく、連合平均でまとめた小型AIの更新を、構造や規模が異なる中央側AIへ直接渡すこともできません。そこでFedPACTでは、現場でAIの判定がどのように変わったかを数値で受け取り、その変化を中央側が持つ動画上に表して学習へ使います。この後は、変化を測る、複数動画をまとめる、中央側の動画上に表す、中央側AIを更新する、という順番で説明します。\n\n【根拠】\nnotes/advisor/sources/raw/2026-09-16/slack_zettsu_reply_to_chen_ja_date_unknown_received_2026-09-16.md（利用場面、接続問題、適用範囲）\nnotes/advisor/sources/raw/2026-09-01/FedPACT手法提案260901.pdf（研究目的、三層構造）\n画像: artifacts/datasets/frames/train/003d6c3909/003.jpg, artifacts/datasets/frames/train/b82e955a9fdf13e2/003.jpg"}
+{"kind":"slide","id":"sl/bvj4w4","slide":2,"title":"1本の動画で、学習前後の判定変化を測る","textShapes":19}
+{"kind":"shape","id":"sh/hkn6xkji","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/uhwn2507","slide":2,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/vi5ova1s","slide":2,"text":"1本の動画で、学習前後の判定変化を測る","textPreview":"1本の動画で、学習前後の判定変化を測る","textChars":19,"textLines":1,"bbox":[62,34,1110,62]}
+{"kind":"textbox","id":"sh/47yp8zi9","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1187,45,45,28]}
+{"kind":"shape","id":"sh/587614ju","slide":2,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/ilgn6p03","slide":2,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,760,18]}
+{"kind":"textbox","id":"sh/3mpozu1o","slide":2,"text":"2 / 8","textPreview":"2 / 8","textChars":5,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/lc36p0jq","slide":2,"text":"危険区間の開始","textPreview":"危険区間の開始","textChars":7,"textLines":1,"bbox":[58,285,270,24]}
+{"kind":"textbox","id":"sh/knqps3yx","slide":2,"text":"約33%","textPreview":"約33%","textChars":4,"textLines":1,"bbox":[354,285,270,24]}
+{"kind":"textbox","id":"sh/yl87qtg7","slide":2,"text":"約67%","textPreview":"約67%","textChars":4,"textLines":1,"bbox":[650,285,270,24]}
+{"kind":"textbox","id":"sh/8bapw3y9","slide":2,"text":"危険事象の時点","textPreview":"危険事象の時点","textChars":7,"textLines":1,"bbox":[946,285,270,24]}
+{"kind":"textbox","id":"sh/7q183yho","slide":2,"text":"q = [通常の確率, 危険の確率]　この例では危険の確率だけを表示","textPreview":"q = [通常の確率, 危険の確率]　この例では危険の確率だけを表示","textChars":34,"textLines":1,"bbox":[76,325,1128,30]}
+{"kind":"textbox","id":"sh/6ps7utg3","slide":2,"text":"学習前  qᵖʳᵉ","textPreview":"学習前  qᵖʳᵉ","textChars":9,"textLines":1,"bbox":[98,385,300,32]}
+{"kind":"textbox","id":"sh/hg3q98fq","slide":2,"text":"0.349","textPreview":"0.349","textChars":5,"textLines":1,"bbox":[98,424,300,68]}
+{"kind":"textbox","id":"sh/gfap0ny5","slide":2,"text":"局所学習前の危険確率","textPreview":"局所学習前の危険確率","textChars":10,"textLines":1,"bbox":[98,493,300,36]}
+{"kind":"shape","id":"sh/0v21sbat","slide":2,"bbox":[438,393,2,135]}
+{"kind":"textbox","id":"sh/1wbilgre","slide":2,"text":"学習後  qᵖᵒˢᵗ","textPreview":"学習後  qᵖᵒˢᵗ","textChars":10,"textLines":1,"bbox":[488,385,300,32]}
+{"kind":"textbox","id":"sh/etkjqlsn","slide":2,"text":"0.644","textPreview":"0.644","textChars":5,"textLines":1,"bbox":[488,424,300,68]}
+{"kind":"textbox","id":"sh/zut0j698","slide":2,"text":"同じ動画を学習後に再判定","textPreview":"同じ動画を学習後に再判定","textChars":12,"textLines":1,"bbox":[488,493,300,36]}
+{"kind":"shape","id":"sh/ozm1wvap","slide":2,"bbox":[828,393,2,135]}
+{"kind":"textbox","id":"sh/90vip0ra","slide":2,"text":"変化量  Δq","textPreview":"変化量  Δq","textChars":7,"textLines":1,"bbox":[878,385,300,32]}
+{"kind":"textbox","id":"sh/mx4julsz","slide":2,"text":"+0.295","textPreview":"+0.295","textChars":6,"textLines":1,"bbox":[878,424,300,68]}
+{"kind":"textbox","id":"sh/nyd0nq94","slide":2,"text":"危険側へ動いた量","textPreview":"危険側へ動いた量","textChars":8,"textLines":1,"bbox":[878,493,300,36]}
+{"kind":"shape","id":"sh/43ihkral","slide":2,"bbox":[74,569,1132,70]}
+{"kind":"textbox","id":"sh/p4ridwr6","slide":2,"text":"ここで分かるのは、同じ入力への判定が危険側へ動いたことまで。危険理由や性能向上はまだ分からない。","textPreview":"ここで分かるのは、同じ入力への判定が危険側へ動いたことまで。危険理由や性能向上はまだ分からない。","textChars":48,"textLines":1,"bbox":[100,582,1080,48]}
+{"kind":"shape","id":"sh/7yh4juto","slide":2,"bbox":[40,36,7,54]}
+{"kind":"image","id":"im/90net4bq","slide":2,"name":"","alt":"白い車が横から接近するrisk動画のフレーム1","bbox":[58,122,270,152]}
+{"kind":"image","id":"im/2dkv6lcj","slide":2,"name":"","alt":"白い車が横から接近するrisk動画のフレーム2","bbox":[354,122,270,152]}
+{"kind":"image","id":"im/of2d8vu9","slide":2,"name":"","alt":"白い車が横から接近するrisk動画のフレーム3","bbox":[650,122,270,152]}
+{"kind":"image","id":"im/qhkva5cf","slide":2,"name":"","alt":"白い車が横から接近するrisk動画のフレーム4","bbox":[946,122,270,152]}
+{"kind":"notes","id":"nt/bvj4w4","slide":2,"text":"【目安 1:10–2:10】\nここでは、白い車が横から接近する危険動画を例にします。この実験では、AIが出した通常と危険の確率を記録しています。q^{pre}は局所学習前、q^{post}は局所学習後に同じ動画を判定した結果です。この動画では、危険確率が0.349から0.644へ変わり、Δqはプラス0.295でした。つまり、この入力に対するAIの出力が危険側へ動いたことが分かります。ただし、この値だけから危険を正しく学習した、あるいは危険原因を理解したとは言えません。次に、このような1本ごとの反応を複数動画からまとめます。\n\n【根拠】\nartifacts/runs/fedpact_stage1/p1d_layer1_20260917_01/client_local/client-0/private_trace.json（sample 15a4f810cc4c2aef）\nartifacts/datasets/fedpact_stage1/manifest_paired_alert_quartiles.jsonl（危険区間、4フレーム）"}
+{"kind":"slide","id":"sl/8syfha","slide":3,"title":"複数動画の反応を、3つの値に要約する","textShapes":24}
+{"kind":"shape","id":"sh/x0jatwjy","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/ad8bi107","slide":3,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/by1srm1s","slide":3,"text":"複数動画の反応を、3つの値に要約する","textPreview":"複数動画の反応を、3つの値に要約する","textChars":18,"textLines":1,"bbox":[62,34,1110,62]}
+{"kind":"textbox","id":"sh/k3atobi9","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1187,45,45,28]}
+{"kind":"shape","id":"sh/l4juxgju","slide":3,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/y1sbm103","slide":3,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,760,18]}
+{"kind":"textbox","id":"sh/j21cv61o","slide":3,"text":"3 / 8","textPreview":"3 / 8","textChars":5,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/07qtc7i5","slide":3,"text":"同じ現場側AIの危険動画3本","textPreview":"同じ現場側AIの危険動画3本","textChars":14,"textLines":1,"bbox":[64,112,630,30]}
+{"kind":"textbox","id":"sh/1svad4r6","slide":3,"text":"学習後 危険 0.600\n変化量 +0.336","textPreview":"学習後 危険 0.600 | 変化量 +0.336","textChars":23,"textLines":2,"bbox":[64,272,190,53]}
+{"kind":"textbox","id":"sh/fqdsbu90","slide":3,"text":"学習後 危険 0.644\n変化量 +0.295","textPreview":"学習後 危険 0.644 | 変化量 +0.295","textChars":23,"textLines":2,"bbox":[274,272,190,53]}
+{"kind":"textbox","id":"sh/pwfah4r2","slide":3,"text":"学習後 危険 0.929\n変化量 +0.082","textPreview":"学習後 危険 0.929 | 変化量 +0.082","textChars":23,"textLines":2,"bbox":[484,272,190,53]}
+{"kind":"shape","id":"sh/ov6tozqh","slide":3,"bbox":[271,151,196,113]}
+{"kind":"textbox","id":"sh/3uxsfu9w","slide":3,"text":"2枚目の動画","textPreview":"2枚目の動画","textChars":6,"textLines":1,"bbox":[278,158,92,22]}
+{"kind":"shape","id":"sh/2tobmp8r","slide":3,"bbox":[710,118,2,260]}
+{"kind":"textbox","id":"sh/d0falore","slide":3,"text":"3本を平均して作る Qₖ,ᵣ","textPreview":"3本を平均して作る Qₖ,ᵣ","textChars":14,"textLines":1,"bbox":[750,118,450,34]}
+{"kind":"textbox","id":"sh/cz6tsjqt","slide":3,"text":"μᵖᵒˢᵗₖ,ᵣ","textPreview":"μᵖᵒˢᵗₖ,ᵣ","textChars":8,"textLines":1,"bbox":[770,181,180,30]}
+{"kind":"textbox","id":"sh/w3edonyp","slide":3,"text":"0.724","textPreview":"0.724","textChars":5,"textLines":1,"bbox":[770,218,180,56]}
+{"kind":"textbox","id":"sh/x4nuhsfa","slide":3,"text":"学習後の危険確率","textPreview":"学習後の危険確率","textChars":8,"textLines":1,"bbox":[770,278,180,26]}
+{"kind":"textbox","id":"sh/a1wvmdgz","slide":3,"text":"Δμₖ,ᵣ","textPreview":"Δμₖ,ᵣ","textChars":5,"textLines":1,"bbox":[990,181,180,30]}
+{"kind":"textbox","id":"sh/b25cfixk","slide":3,"text":"+0.238","textPreview":"+0.238","textChars":6,"textLines":1,"bbox":[990,218,180,56]}
+{"kind":"textbox","id":"sh/k7yds7y1","slide":3,"text":"平均した変化量","textPreview":"平均した変化量","textChars":7,"textLines":1,"bbox":[990,278,180,26]}
+{"kind":"textbox","id":"sh/ls7elsfm","slide":3,"text":"πₖ,ᵣ = 3　まとめた動画の本数","textPreview":"πₖ,ᵣ = 3　まとめた動画の本数","textChars":18,"textLines":1,"bbox":[770,324,400,38]}
+{"kind":"textbox","id":"sh/y5gvqxgv","slide":3,"text":"k：現場側AI　　r：通常・危険の動画群","textPreview":"k：現場側AI　　r：通常・危険の動画群","textChars":20,"textLines":1,"bbox":[765,369,410,24]}
+{"kind":"shape","id":"sh/j6pcj2xg","slide":3,"bbox":[64,400,1140,1.5]}
+{"kind":"textbox","id":"sh/0budg3yx","slide":3,"text":"中央側へ送る","textPreview":"中央側へ送る","textChars":6,"textLines":1,"bbox":[90,435,240,30]}
+{"kind":"textbox","id":"sh/1w3up8z2","slide":3,"text":"小型AIの更新情報","textPreview":"小型AIの更新情報","textChars":9,"textLines":1,"bbox":[92,485,300,48]}
+{"kind":"textbox","id":"sh/3qtgv6hk","slide":3,"text":"Qₖ,ᵣ = ( μᵖᵒˢᵗₖ,ᵣ,  Δμₖ,ᵣ,  πₖ,ᵣ )","textPreview":"Qₖ,ᵣ = ( μᵖᵒˢᵗₖ,ᵣ,  Δμₖ,ᵣ,  πₖ,ᵣ )","textChars":34,"textLines":1,"bbox":[420,485,490,48]}
+{"kind":"textbox","id":"sh/2pkfm10f","slide":3,"text":"中央側へ送らない","textPreview":"中央側へ送らない","textChars":8,"textLines":1,"bbox":[930,435,240,30]}
+{"kind":"textbox","id":"sh/psbyxgzq","slide":3,"text":"元動画・画像・動画ごとの識別情報","textPreview":"元動画・画像・動画ごとの識別情報","textChars":16,"textLines":1,"bbox":[930,485,250,52]}
+{"kind":"textbox","id":"sh/4r2xobi5","slide":3,"text":"小型AIの更新は連合平均へ、Qₖ,ᵣは代理データ生成へ。Qₖ,ᵣ自体は平均しない。","textPreview":"小型AIの更新は連合平均へ、Qₖ,ᵣは代理データ生成へ。Qₖ,ᵣ自体は平均しない。","textChars":41,"textLines":1,"bbox":[100,587,1080,40]}
+{"kind":"image","id":"im/s3qds32h","slide":3,"name":"","alt":"client-0のrisk動画1","bbox":[64,154,190,107]}
+{"kind":"image","id":"im/radsnipc","slide":3,"name":"","alt":"client-0のrisk動画2","bbox":[274,154,190,107]}
+{"kind":"image","id":"im/tcvap87i","slide":3,"name":"","alt":"client-0のrisk動画3","bbox":[484,154,190,107]}
+{"kind":"notes","id":"nt/8syfha","slide":3,"text":"【目安 2:10–3:10】\n1本の動画の結果をそのまま中央側へ送るわけではありません。先ほどの動画を含む危険動画3本について、学習後の危険確率を平均すると0.724になります。これがμ^{post}_{k,r}です。学習前後の変化量の平均はプラス0.238で、これがΔμ_{k,r}です。まとめた本数π_{k,r}は3です。この三つをQ_{k,r}として送ります。中央側へ送るのは、この要約と小型AIの更新情報です。元の動画、画像、動画ごとの識別情報は送りません。また、小型AIの更新は連合平均へ渡しますが、Q_{k,r}は平均せず、次の代理データ生成へ渡します。\n\n【根拠】\nartifacts/runs/fedpact_stage1/p1d_layer1_20260917_01/client_local/client-0/private_trace.json\nartifacts/runs/fedpact_stage1/p1d_layer1_20260917_01/communication/client-0/payload.json（r1-client-0-class1）\nnotes/advisor/sources/raw/2026-09-16/slack_zettsu_flow_feedback_date_unknown_received_2026-09-16.md（Q生成と別経路）"}
+{"kind":"slide","id":"sl/7ky7sd","slide":4,"title":"中央側の動画から、代理データを選ぶ","textShapes":23}
+{"kind":"shape","id":"sh/x87i9kvu","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/a5gjy5w3","slide":4,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/v6p07ado","slide":4,"text":"中央側の動画から、代理データを選ぶ","textPreview":"中央側の動画から、代理データを選ぶ","textChars":17,"textLines":1,"bbox":[62,34,1110,62]}
+{"kind":"textbox","id":"sh/kvi14fe5","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1187,45,45,28]}
+{"kind":"shape","id":"sh/5wr2dkvq","slide":4,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/i9gj25wf","slide":4,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,760,18]}
+{"kind":"textbox","id":"sh/ju9kbadk","slide":4,"text":"4 / 8","textPreview":"4 / 8","textChars":5,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/szi18zeh","slide":4,"text":"入力","textPreview":"入力","textChars":2,"textLines":1,"bbox":[64,112,120,28]}
+{"kind":"textbox","id":"sh/t0r2h4v2","slide":4,"text":"Qₖ,ᵣ","textPreview":"Qₖ,ᵣ","textChars":4,"textLines":1,"bbox":[66,153,180,54]}
+{"kind":"textbox","id":"sh/p4vqhc3e","slide":4,"text":"危険 0.724\n変化 +0.238","textPreview":"危険 0.724 | 変化 +0.238","textChars":18,"textLines":2,"bbox":[66,220,180,66]}
+{"kind":"shape","id":"sh/o3m9o7m9","slide":4,"bbox":[269,181,52,3]}
+{"kind":"textbox","id":"sh/32d8f2lo","slide":4,"text":"中央側の候補動画 60本","textPreview":"中央側の候補動画 60本","textChars":12,"textLines":1,"bbox":[338,123,260,35]}
+{"kind":"textbox","id":"sh/21krmx43","slide":4,"text":"通常30本　危険30本","textPreview":"通常30本　危険30本","textChars":11,"textLines":1,"bbox":[338,162,260,28]}
+{"kind":"textbox","id":"sh/c7m9srm5","slide":4,"text":"検索1位：正解ラベルは通常","textPreview":"検索1位：正解ラベルは通常","textChars":13,"textLines":1,"bbox":[346,355,245,24]}
+{"kind":"shape","id":"sh/b6d8jmlk","slide":4,"bbox":[614,181,52,3]}
+{"kind":"textbox","id":"sh/q54rqh4z","slide":4,"text":"上位3本を5通りに変換","textPreview":"上位3本を5通りに変換","textChars":11,"textLines":1,"bbox":[684,123,505,35]}
+{"kind":"textbox","id":"sh/tcbq9snm","slide":4,"text":"1つのQにつき15候補　4つのQで合計60候補","textPreview":"1つのQにつき15候補　4つのQで合計60候補","textChars":23,"textLines":1,"bbox":[684,162,505,28]}
+{"kind":"shape","id":"sh/kfm9wnux","slide":4,"bbox":[664,205,108,78]}
+{"kind":"textbox","id":"sh/5gfq5sv2","slide":4,"text":"変更なし","textPreview":"変更なし","textChars":4,"textLines":1,"bbox":[663,291,110,38]}
+{"kind":"textbox","id":"sh/jud83idc","slide":4,"text":"暗くする","textPreview":"暗くする","textChars":4,"textLines":1,"bbox":[774,291,110,38]}
+{"kind":"textbox","id":"sh/tkfq9cve","slide":4,"text":"明るくする","textPreview":"明るくする","textChars":5,"textLines":1,"bbox":[885,291,110,38]}
+{"kind":"textbox","id":"sh/7ix872d8","slide":4,"text":"コントラスト","textPreview":"コントラスト","textChars":6,"textLines":1,"bbox":[996,291,110,38]}
+{"kind":"textbox","id":"sh/hozadcba","slide":4,"text":"中央を切り出す","textPreview":"中央を切り出す","textChars":7,"textLines":1,"bbox":[1107,291,110,38]}
+{"kind":"shape","id":"sh/bulkja1o","slide":4,"bbox":[64,403,1140,1.5]}
+{"kind":"textbox","id":"sh/atc3q50j","slide":4,"text":"選択基準","textPreview":"選択基準","textChars":4,"textLines":1,"bbox":[70,430,160,28]}
+{"kind":"textbox","id":"sh/xg32lkju","slide":4,"text":"① 学習後の判定が 0.724 に近い","textPreview":"① 学習後の判定が 0.724 に近い","textChars":19,"textLines":1,"bbox":[80,478,350,48]}
+{"kind":"textbox","id":"sh/cvulsfi9","slide":4,"text":"② 連合平均前後の変化が +0.238 に近い","textPreview":"② 連合平均前後の変化が +0.238 に近い","textChars":23,"textLines":1,"bbox":[462,478,420,48]}
+{"kind":"shape","id":"sh/nq1kfq1s","slide":4,"bbox":[902,501,45,3]}
+{"kind":"textbox","id":"sh/2ps3ml07","slide":4,"text":"Pₖ,ᵣ = ( x̃ₖ,ᵣ,\nμᵖᵒˢᵗₖ,ᵣ )","textPreview":"Pₖ,ᵣ = ( x̃ₖ,ᵣ, | μᵖᵒˢᵗₖ,ᵣ )","textChars":26,"textLines":2,"bbox":[966,456,238,92]}
+{"kind":"textbox","id":"sh/ps32h0jy","slide":4,"text":"x̃ₖ,ᵣ：選ばれた変換後動画","textPreview":"x̃ₖ,ᵣ：選ばれた変換後動画","textChars":15,"textLines":1,"bbox":[966,555,238,24]}
+{"kind":"textbox","id":"sh/oralovid","slide":4,"text":"変化量は候補選択に使い、πₖ,ᵣは学習時の重みに使う。教師値は学習後の判定 0.724","textPreview":"変化量は候補選択に使い、πₖ,ᵣは学習時の重みに使う。教師値は学習後の判定 0.724","textChars":43,"textLines":1,"bbox":[110,600,1060,42]}
+{"kind":"shape","id":"sh/7m54ruhw","slide":4,"bbox":[40,36,7,54]}
+{"kind":"image","id":"im/exsjaxsn","slide":4,"name":"","alt":"検索で1位になった中央側動画","bbox":[346,208,245,138]}
+{"kind":"image","id":"im/ru10fi9w","slide":4,"name":"","alt":"中央側動画の変換候補: 変更なし","bbox":[667,208,102,72]}
+{"kind":"image","id":"im/h0zypo7u","slide":4,"name":"","alt":"中央側動画の変換候補: 暗くする","bbox":[778,208,102,72]}
+{"kind":"image","id":"im/32hgryp0","slide":4,"name":"","alt":"中央側動画の変換候補: 明るくする","bbox":[889,208,102,72]}
+{"kind":"image","id":"im/54zyt87q","slide":4,"name":"","alt":"中央側動画の変換候補: コントラスト","bbox":[1000,208,102,72]}
+{"kind":"image","id":"im/j6dgfupg","slide":4,"name":"","alt":"中央側動画の変換候補: 中央を切り出す","bbox":[1111,208,102,72]}
+{"kind":"notes","id":"nt/7ky7sd","slide":4,"text":"【目安 3:10–4:35】\nここでも、2枚目と3枚目で追った同じr1-client-0-class1を使います。中央側には通常動画30本と危険動画30本、合計60本を用意しています。これは現場の知識そのものではなく、現場側の判定変化を表すための材料です。まず、連合平均後の小型AIを使い、μ^{post}_{k,r}に近い判定を出す動画を探します。上位3本について、変更なし、暗くする、明るくする、コントラストを上げる、中央を切り出す、という5種類を試します。一つのQにつき15候補で、四つのQでは合計60候補です。候補を選ぶときは、学習後の判定だけでなく、連合平均前後の変化がΔμ_{k,r}に近いかも確認します。選んだ入力x̃_{k,r}と学習後の目標値μ^{post}_{k,r}からP_{k,r}を作ります。\n\n【根拠】\nartifacts/runs/fedpact_stage1/p1d_full_20260917_02/server/layer2_trace.json（60 seed、top 3、5変換、選択）\nartifacts/runs/fedpact_stage1/p1d_full_20260917_02/server/proxy_pairs.json（Pの構成）\n画像: artifacts/runs/fedpact_stage1/p1d_full_20260917_02/server/transformation_candidates/r1-client-0-class1-rank01-*"}
+{"kind":"slide","id":"sl/we5142","slide":5,"title":"FedPACT全体フローと今回の実験位置","textShapes":13}
+{"kind":"shape","id":"sh/2d4j21g3","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/pgvidwfu","slide":5,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/ofm14ry9","slide":5,"text":"FedPACT全体フローと今回の実験位置","textPreview":"FedPACT全体フローと今回の実験位置","textChars":20,"textLines":1,"bbox":[62,34,1110,62]}
+{"kind":"textbox","id":"sh/bid0f6x0","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1187,45,45,28]}
+{"kind":"shape","id":"sh/qh4j61gf","slide":5,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/dkfihgfq","slide":5,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,760,18]}
+{"kind":"textbox","id":"sh/cjm18by5","slide":5,"text":"5 / 8","textPreview":"5 / 8","textChars":5,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"shape","id":"sh/z6xk3qxw","slide":5,"bbox":[74,120,1132,440]}
+{"kind":"textbox","id":"sh/ylojalwb","slide":5,"text":"ここに9月16日Slack共有版の\nフローチャートを挿入","textPreview":"ここに9月16日Slack共有版の | フローチャートを挿入","textChars":28,"textLines":2,"bbox":[235,284,810,96]}
+{"kind":"textbox","id":"sh/krqdkjep","slide":5,"text":"差し替え時の確認","textPreview":"差し替え時の確認","textChars":8,"textLines":1,"bbox":[94,138,200,28]}
+{"kind":"textbox","id":"sh/5szetovu","slide":5,"text":"小型AIの更新と Qₖ,ᵣ を別経路で表示　／　Layer 2を今回の中心として表示","textPreview":"小型AIの更新と Qₖ,ᵣ を別経路で表示　／　Layer 2を今回の中心として表示","textChars":42,"textLines":1,"bbox":[306,140,850,24]}
+{"kind":"textbox","id":"sh/ipovi9wj","slide":5,"text":"今回の確認範囲","textPreview":"今回の確認範囲","textChars":7,"textLines":1,"bbox":[82,592,190,28]}
+{"kind":"textbox","id":"sh/jqhwred4","slide":5,"text":"Layer 1\n2台の小型AIを連合平均","textPreview":"Layer 1 | 2台の小型AIを連合平均","textChars":20,"textLines":2,"bbox":[282,578,195,64]}
+{"kind":"shape","id":"sh/sfqdo3ul","slide":5,"bbox":[484,609,25,2]}
+{"kind":"textbox","id":"sh/tgzexov6","slide":5,"text":"Layer 2\n代理データを生成","textPreview":"Layer 2 | 代理データを生成","textChars":16,"textLines":2,"bbox":[517,578,195,64]}
+{"kind":"shape","id":"sh/6d8vmtwf","slide":5,"bbox":[719,609,25,2]}
+{"kind":"textbox","id":"sh/7ehwvyd0","slide":5,"text":"Layer 3\n中央側AIを更新","textPreview":"Layer 3 | 中央側AIを更新","textChars":16,"textLines":2,"bbox":[752,578,195,64]}
+{"kind":"shape","id":"sh/gjads3ux","slide":5,"bbox":[954,609,25,2]}
+{"kind":"textbox","id":"sh/hkje18v2","slide":5,"text":"次のラウンド\n状態を引き継ぐ","textPreview":"次のラウンド | 状態を引き継ぐ","textChars":14,"textLines":2,"bbox":[987,578,195,64]}
+{"kind":"textbox","id":"sh/p0fel8n6","slide":5,"text":"合格条件：3層と次のラウンドが正しくつながり、入力・出力・状態をログから追えること","textPreview":"合格条件：3層と次のラウンドが正しくつながり、入力・出力・状態をログから追えること","textChars":41,"textLines":1,"bbox":[100,646,1080,26]}
+{"kind":"notes","id":"nt/we5142","slide":5,"text":"【目安 4:35–5:30】\nここまでの処理を全体図の中で整理します。第1層では二つの現場側AIが局所学習を行い、小型AIの更新情報を連合平均します。一方、判定の変化をまとめたQ_{k,r}は別経路で第2層へ渡します。第2層が本研究の中心で、Q_{k,r}を中央側が持つ動画上の代理データとして表します。第3層ではP_{k,r}を使って中央側AIを更新し、その状態を次のラウンドへ引き継ぎます。今回の合格は処理の接続に対するものであり、性能の良さを示すものではありません。\n\n【根拠】\nnotes/advisor/sources/raw/2026-09-16/slack_zettsu_flow_feedback_date_unknown_received_2026-09-16.md\nnotes/advisor/sources/raw/2026-09-16/slack_zettsu_experiment_feedback_date_unknown_received_2026-09-16.md"}
+{"kind":"slide","id":"sl/4ujluo","slide":6,"title":"学習後の判定は一致したが、変化量には差が残った","textShapes":19}
+{"kind":"shape","id":"sh/xwbel4v6","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/a90fapwf","slide":6,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/bu9wjud0","slide":6,"text":"学習後の判定は一致したが、変化量には差が残った","textPreview":"学習後の判定は一致したが、変化量には差が残った","textChars":23,"textLines":1,"bbox":[62,34,1110,62]}
+{"kind":"textbox","id":"sh/kz2xgzeh","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1187,45,45,28]}
+{"kind":"shape","id":"sh/l0bep4v2","slide":6,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/yxkfepwr","slide":6,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,760,18]}
+{"kind":"textbox","id":"sh/jytwnudw","slide":6,"text":"6 / 8","textPreview":"6 / 8","textChars":5,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/ja1cv65w","slide":6,"text":"4枚目で選んだ中央側動画：正解ラベルは通常、変換なし","textPreview":"4枚目で選んだ中央側動画：正解ラベルは通常、変換なし","textChars":26,"textLines":1,"bbox":[58,284,1158,24]}
+{"kind":"textbox","id":"sh/y9svm1ob","slide":6,"text":"学習後の危険確率","textPreview":"学習後の危険確率","textChars":8,"textLines":1,"bbox":[90,350,470,34]}
+{"kind":"textbox","id":"sh/t0ju1gny","slide":6,"text":"現場側の目標","textPreview":"現場側の目標","textChars":6,"textLines":1,"bbox":[110,409,180,28]}
+{"kind":"textbox","id":"sh/8zadsb6d","slide":6,"text":"0.724","textPreview":"0.724","textChars":5,"textLines":1,"bbox":[110,444,180,56]}
+{"kind":"textbox","id":"sh/7y1czq5s","slide":6,"text":"代理データ","textPreview":"代理データ","textChars":5,"textLines":1,"bbox":[355,409,180,28]}
+{"kind":"textbox","id":"sh/6xsvqlo7","slide":6,"text":"0.724","textPreview":"0.724","textChars":5,"textLines":1,"bbox":[355,444,180,56]}
+{"kind":"textbox","id":"sh/h43ep0nu","slide":6,"text":"ほぼ一致","textPreview":"ほぼ一致","textChars":4,"textLines":1,"bbox":[220,513,220,32]}
+{"kind":"shape","id":"sh/g3udwv69","slide":6,"bbox":[620,345,2,210]}
+{"kind":"textbox","id":"sh/072xszel","slide":6,"text":"学習による危険方向の変化","textPreview":"学習による危険方向の変化","textChars":12,"textLines":1,"bbox":[660,350,520,34]}
+{"kind":"textbox","id":"sh/18be14v6","slide":6,"text":"現場側の目標","textPreview":"現場側の目標","textChars":6,"textLines":1,"bbox":[690,409,190,28]}
+{"kind":"textbox","id":"sh/e5kfqpwf","slide":6,"text":"+0.238","textPreview":"+0.238","textChars":6,"textLines":1,"bbox":[690,444,190,56]}
+{"kind":"textbox","id":"sh/f6twzud0","slide":6,"text":"代理データ","textPreview":"代理データ","textChars":5,"textLines":1,"bbox":[950,409,190,28]}
+{"kind":"textbox","id":"sh/ob2xwjuh","slide":6,"text":"+0.051","textPreview":"+0.051","textChars":6,"textLines":1,"bbox":[950,444,190,56]}
+{"kind":"textbox","id":"sh/pcvy5ov2","slide":6,"text":"0.673 から 0.724","textPreview":"0.673 から 0.724","textChars":14,"textLines":1,"bbox":[948,505,195,25]}
+{"kind":"textbox","id":"sh/29kfu9wr","slide":6,"text":"差が残る","textPreview":"差が残る","textChars":4,"textLines":1,"bbox":[825,532,190,30]}
+{"kind":"shape","id":"sh/natw3edc","slide":6,"bbox":[78,589,1124,62]}
+{"kind":"textbox","id":"sh/4fixkfed","slide":6,"text":"最終的な判定の一致だけでは、現場で生じた学習変化を再現できたとは判断できない","textPreview":"最終的な判定の一致だけでは、現場で生じた学習変化を再現できたとは判断できない","textChars":38,"textLines":1,"bbox":[105,604,1070,35]}
+{"kind":"shape","id":"sh/5gretkvy","slide":6,"bbox":[40,36,7,54]}
+{"kind":"image","id":"im/10nutov6","slide":6,"name":"","alt":"選ばれた代理データのフレーム1","bbox":[58,122,270,152]}
+{"kind":"image","id":"im/gzedk3ul","slide":6,"name":"","alt":"選ばれた代理データのフレーム2","bbox":[354,122,270,152]}
+{"kind":"image","id":"im/ax07m10r","slide":6,"name":"","alt":"選ばれた代理データのフレーム3","bbox":[650,122,270,152]}
+{"kind":"image","id":"im/by98v6hc","slide":6,"name":"","alt":"選ばれた代理データのフレーム4","bbox":[946,122,270,152]}
+{"kind":"notes","id":"nt/4ujluo","slide":6,"text":"【目安 5:30–6:50】\n2枚目から追ってきた危険動画3本の要約を、そのまま追跡します。現場側で求めた学習後の危険確率は0.724でした。中央側で選んだ代理データについて、連合平均後の小型AIが出した危険確率も0.724で、学習後の判定はほぼ一致しています。一方、現場側の変化量はプラス0.238でしたが、代理データでは危険確率が0.673から0.724へ変化しており、その差はプラス0.051でした。方向は同じですが、変化量は十分に再現できていません。また、元動画の正解ラベルは通常でした。ただし、中央側の60本では正解ラベルと小型AIの判定が一致したものが43本だけなので、通常動画が選ばれた原因を検索処理だけに求めることはできません。\n\n【根拠】\nartifacts/runs/fedpact_stage1/p1d_full_20260917_02/server/layer2_trace.json（r1-client-0-class1）\nartifacts/runs/fedpact_stage1/p1d_full_20260917_02/server/proxy_pairs.json\nartifacts/reports/fedpact_stage1_20260917/slack_report.md（labelと予測の一致43/60）"}
+{"kind":"slide","id":"sl/fnganu","slide":7,"title":"3ラウンドの状態継承を確認、性能改善は未確認","textShapes":10}
+{"kind":"shape","id":"sh/583qlcbq","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/i5c7qxsz","slide":7,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/j6l8j2tk","slide":7,"text":"3ラウンドの状態継承を確認、性能改善は未確認","textPreview":"3ラウンドの状態継承を確認、性能改善は未確認","textChars":22,"textLines":1,"bbox":[62,34,1110,62]}
+{"kind":"textbox","id":"sh/sbe9w7a1","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1187,45,45,28]}
+{"kind":"shape","id":"sh/tcnqpcbm","slide":7,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/69cruhsb","slide":7,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,760,18]}
+{"kind":"textbox","id":"sh/7al8nmtg","slide":7,"text":"7 / 8","textPreview":"7 / 8","textChars":5,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/9gjqdsbi","slide":7,"text":"各ラウンドで代理データが異なるため、ずれの値をラウンド間の性能推移として比較しない","textPreview":"各ラウンドで代理データが異なるため、ずれの値をラウンド間の性能推移として比較しない","textChars":41,"textLines":1,"bbox":[90,390,1100,28]}
+{"kind":"shape","id":"sh/p0japcfa","slide":7,"bbox":[72,440,520,132]}
+{"kind":"textbox","id":"sh/oza9g7ep","slide":7,"text":"確認できたこと","textPreview":"確認できたこと","textChars":7,"textLines":1,"bbox":[98,459,460,28]}
+{"kind":"textbox","id":"sh/ny1sn2xk","slide":7,"text":"2台の更新は毎回ゼロではない\n連合平均を別計算で再現\n小型AIと中央側AIの状態が次回へ一致","textPreview":"2台の更新は毎回ゼロではない | 連合平均を別計算で再現 | 小型AIと中央側AIの状態が次回へ一致","textChars":46,"textLines":3,"bbox":[98,499,460,60]}
+{"kind":"shape","id":"sh/2d8rexwz","slide":7,"bbox":[624,440,584,132]}
+{"kind":"textbox","id":"sh/x4jatwvm","slide":7,"text":"残った診断点","textPreview":"残った診断点","textChars":6,"textLines":1,"bbox":[650,459,520,28]}
+{"kind":"textbox","id":"sh/c3atkre1","slide":7,"text":"1ラウンド目は変化の方向が4件中3件一致\n3ラウンド目は中央側AIのずれが増加","textPreview":"1ラウンド目は変化の方向が4件中3件一致 | 3ラウンド目は中央側AIのずれが増加","textChars":39,"textLines":2,"bbox":[650,499,520,60]}
+{"kind":"textbox","id":"sh/b21srmxg","slide":7,"text":"今回の合格は『実行・接続・状態継承』。代理データの品質や学習効果の合格ではない。","textPreview":"今回の合格は『実行・接続・状態継承』。代理データの品質や学習効果の合格ではない。","textChars":40,"textLines":1,"bbox":[96,613,1088,36]}
+{"kind":"table","id":"tb/5wbi9gfq","slide":7,"name":"","rows":4,"cols":5,"preview":"ラウンド | 2台の局所更新 | 連合平均の再計算差 | 次回入力との照合 | 中央側AI更新（同じ4組）","bbox":[65,132,1150,244]}
+{"kind":"notes","id":"nt/fnganu","slide":7,"text":"【目安 6:50–8:35】\n3ラウンド全体の結果です。各ラウンドで二つの現場側AIが同じ状態から開始し、両方の小型AIが実際に更新されたことを確認しました。連合平均を別に再計算した差は、最大でも約1.16掛ける10のマイナス10でした。また、前のラウンドの出力と次のラウンドの入力が一致していることを、モデルの照合値から確認しました。一方、代理データの再現結果には問題が残っています。1ラウンド目では四つのうち三つで変化の方向が一致しましたが、一つは逆方向でした。さらに3ラウンド目では、中央側AIを更新した後のずれが16.1307から16.1776へ増加しました。今回確認できたのは3ラウンドの処理と状態継承であり、性能が改善した、安定して知識を移せた、という結論ではありません。\n\n【根拠】\nartifacts/reports/fedpact_stage1_20260917/three_round_state_lineage.md\nartifacts/reports/fedpact_stage1_20260917/three_round_state_lineage.json\nartifacts/reports/fedpact_stage1_20260917/slack_report.md"}
+{"kind":"slide","id":"sl/ko0c0l","slide":8,"title":"結論と今後","textShapes":19}
+{"kind":"shape","id":"sh/vadgfe9o","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/wbmhojq9","slide":8,"bbox":[40,36,7,54]}
+{"kind":"textbox","id":"sh/xcvihoru","slide":8,"text":"結論と今後","textPreview":"結論と今後","textChars":5,"textLines":1,"bbox":[62,34,1110,62]}
+{"kind":"textbox","id":"sh/mlkzi9s7","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1187,45,45,28]}
+{"kind":"shape","id":"sh/nmtgbe9s","slide":8,"bbox":[48,680,1184,1.5]}
+{"kind":"textbox","id":"sh/8n2hkjad","slide":8,"text":"FedPACT / NEXAR　研究会　2026.09.18","textPreview":"FedPACT / NEXAR　研究会　2026.09.18","textChars":30,"textLines":1,"bbox":[52,687,760,18]}
+{"kind":"textbox","id":"sh/9obyd4ri","slide":8,"text":"8 / 8","textPreview":"8 / 8","textChars":5,"textLines":1,"bbox":[1100,687,126,18]}
+{"kind":"textbox","id":"sh/6h4zut8b","slide":8,"text":"今回確認できたこと","textPreview":"今回確認できたこと","textChars":9,"textLines":1,"bbox":[76,118,500,34]}
+{"kind":"textbox","id":"sh/7ix0ny9w","slide":8,"text":"・代表動画の反応を要約し、代理データへ対応付け\n・3層を接続して中央側AIを更新\n・3ラウンドの状態をログから追跡","textPreview":"・代表動画の反応を要約し、代理データへ対応付け | ・3層を接続して中央側AIを更新 | ・3ラウンドの状態をログから追跡","textChars":57,"textLines":3,"bbox":[82,172,500,150]}
+{"kind":"shape","id":"sh/nqpg3i1s","slide":8,"bbox":[622,118,2,220]}
+{"kind":"textbox","id":"sh/2pgfadk7","slide":8,"text":"まだ言えないこと","textPreview":"まだ言えないこと","textChars":8,"textLines":1,"bbox":[664,118,500,34]}
+{"kind":"textbox","id":"sh/ps7y58jy","slide":8,"text":"・性能向上と未知動画への転移\n・代理データが現場の学習を十分に再現したこと\n・構造や規模が異なるAI間の転移\n・情報漏えいへの形式的保証","textPreview":"・性能向上と未知動画への転移 | ・代理データが現場の学習を十分に再現したこと | ・構造や規模が異なるAI間の転移 | ・情報漏えいへの形式的保証","textChars":68,"textLines":4,"bbox":[670,172,500,165]}
+{"kind":"shape","id":"sh/oryxc32d","slide":8,"bbox":[72,366,1136,1.5]}
+{"kind":"textbox","id":"sh/bupg7i14","slide":8,"text":"今後の順序","textPreview":"今後の順序","textChars":5,"textLines":1,"bbox":[78,391,200,30]}
+{"kind":"shape","id":"sh/atgfedkj","slide":8,"bbox":[84,438,42,42]}
+{"kind":"textbox","id":"sh/xgry9sju","slide":8,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[84,443,42,30]}
+{"kind":"textbox","id":"sh/cfixgn29","slide":8,"text":"中央側AIの更新方向を確認","textPreview":"中央側AIの更新方向を確認","textChars":13,"textLines":1,"bbox":[150,436,330,34]}
+{"kind":"textbox","id":"sh/zi9gb210","slide":8,"text":"同じ4組を固定し、ごく小さい1回の更新でずれが減るかを確認","textPreview":"同じ4組を固定し、ごく小さい1回の更新でずれが減るかを確認","textChars":29,"textLines":1,"bbox":[492,436,680,42]}
+{"kind":"shape","id":"sh/yh0fixkf","slide":8,"bbox":[84,504,42,42]}
+{"kind":"textbox","id":"sh/up4rql8z","slide":8,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[84,509,42,30]}
+{"kind":"textbox","id":"sh/vqdszqpk","slide":8,"text":"問題解消後に5ラウンド","textPreview":"問題解消後に5ラウンド","textChars":11,"textLines":1,"bbox":[150,502,330,34]}
+{"kind":"textbox","id":"sh/grm9svq5","slide":8,"text":"同じ記録形式で、三層の接続と次回への状態継承を確認","textPreview":"同じ記録形式で、三層の接続と次回への状態継承を確認","textChars":25,"textLines":1,"bbox":[492,502,680,42]}
+{"kind":"shape","id":"sh/hsfa107q","slide":8,"bbox":[84,570,42,42]}
+{"kind":"textbox","id":"sh/6l4rml8n","slide":8,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[84,575,42,30]}
+{"kind":"textbox","id":"sh/7md8v6p8","slide":8,"text":"第II段階で比較・独立評価","textPreview":"第II段階で比較・独立評価","textChars":13,"textLines":1,"bbox":[150,568,330,34]}
+{"kind":"textbox","id":"sh/8nm9obqt","slide":8,"text":"中央側動画のみ、学習後、学習後＋変化を未使用動画で比較","textPreview":"中央側動画のみ、学習後、学習後＋変化を未使用動画で比較","textChars":27,"textLines":1,"bbox":[492,568,680,42]}
+{"kind":"shape","id":"sh/tovaxg7e","slide":8,"bbox":[72,633,1136,38]}
+{"kind":"textbox","id":"sh/qhory587","slide":8,"text":"到達点：効果を正しく検証できる土台と、次に確認すべき失敗箇所を特定した","textPreview":"到達点：効果を正しく検証できる土台と、次に確認すべき失敗箇所を特定した","textChars":35,"textLines":1,"bbox":[92,640,1096,24]}
+{"kind":"shape","id":"sh/rixs7aps","slide":8,"bbox":[40,36,7,54]}
+{"kind":"notes","id":"nt/ko0c0l","slide":8,"text":"【目安 8:35–10:00】\n今回の第I段階では、代表動画の学習前後の判定からQ_{k,r}を作り、中央側で代理データを生成し、中央側AIを更新して次のラウンドへ状態を渡すところまでを対応付けました。三層の処理と3ラウンドの状態継承を、ログから追跡できるようになったことは言えます。一方で、性能向上、代理データの品質、未知動画への転移はまだ言えません。今回の第I段階は同じ3B基盤を使用しているため、構造や規模の異なるAI間で移せたとも言えません。今後は、まず同じ四つの教師データを固定し、ごく小さい1回の更新で中央側AIのずれが減ることを確認します。問題を解消した後に5ラウンドの接続と状態継承を確認します。その後、第II段階で中央側動画だけの場合、学習後の判定を使う場合、学習前後の変化も使う場合を同じ条件で比較し、選択に使っていない動画で評価します。最後に構造や規模が異なるAIへ進みます。\n\n【根拠】\nnotes/advisor/sources/raw/2026-09-16/slack_zettsu_experiment_feedback_date_unknown_received_2026-09-16.md\nnotes/advisor/sources/raw/2026-09-16/slack_zettsu_reply_to_chen_ja_date_unknown_received_2026-09-16.md\nartifacts/reports/fedpact_stage1_20260917/three_round_state_lineage.md"}

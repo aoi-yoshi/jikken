@@ -1,0 +1,21 @@
+{
+  "schema": "fedpact-stage2-video16-lora-compare",
+  "num_frames": 16,
+  "sampling_rule": "risk_alert_event_uniform_16_shared_absolute_seconds",
+  "task": "alert-interval clip classification, not early prediction",
+  "counts": {
+    "client_train": 32,
+    "d_server_lab": 60,
+    "confirmation": 30,
+    "retention": 40
+  },
+  "pair_overlap": {
+    "client_train__d_server_lab": [],
+    "client_train__confirmation": [],
+    "client_train__retention": [],
+    "d_server_lab__confirmation": [],
+    "d_server_lab__retention": [],
+    "confirmation__retention": []
+  },
+  "selection_source": "C:\\Python\\実験_修正\\artifacts\\runs\\fedpact_stage2\\stage2_data_count_preflight_20260921_01\\split.json"
+}

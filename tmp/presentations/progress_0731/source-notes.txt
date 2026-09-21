@@ -1,0 +1,16 @@
+Local sources:
+- C:/Users/aoi7y/OneDrive - 国立大学法人東海国立大学機構/folder/卒研_明光/研究会_0724.pdf
+- C:/Users/aoi7y/OneDrive - 国立大学法人東海国立大学機構/folder/卒研_明光/進捗会0724_吉村有生.pptx
+- C:/Users/aoi7y/OneDrive - 国立大学法人東海国立大学機構/folder/卒研_明光/進捗会0717_吉村有生.pptx
+
+Primary research sources:
+- FedMD: https://arxiv.org/abs/1910.03581
+- FedDF: https://arxiv.org/abs/2006.07242
+- Fed-ET: https://www.ijcai.org/proceedings/2022/399
+- FedMKT: https://aclanthology.org/2025.coling-main.17/
+
+Claim handling:
+- Literature comparisons are conservative and distinguish existing capability from the proposed evaluation focus.
+- The proposed central claim is labeled provisional because the novelty audit is not complete.
+- Success criteria and experiment order are derived from the professor's 2026-07-24 dialogue.
+

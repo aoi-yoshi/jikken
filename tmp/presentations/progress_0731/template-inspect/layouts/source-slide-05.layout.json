@@ -1,0 +1,1890 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/i107q5of",
+    "id": "i107q5of",
+    "slide": 5,
+    "layoutId": "/ppt/slideLayouts/slideLayout2.xml",
+    "layoutName": "タイトルとコンテンツ",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office テーマ",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "fontScheme": {
+      "name": "ユーザー定義 1",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout2.xml",
+      "name": "タイトルとコンテンツ",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/4",
+          "id": "4",
+          "name": "四角形: 角を丸くする 3",
+          "bbox": [
+            1192,
+            0,
+            34.98,
+            69.01
+          ],
+          "geometry": "roundRect",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "verticalAlignment": "middle"
+          },
+          "fillColor": "#203864",
+          "lineColor": "#203864",
+          "lineWidth": 1.33
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/2",
+          "id": "2",
+          "name": "Title 1",
+          "bbox": [
+            88,
+            9.25,
+            1104,
+            69.01
+          ],
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText"
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/5",
+          "id": "5",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            798.17,
+            7.77,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/7",
+          "id": "7",
+          "name": "グラフィックス 6",
+          "bbox": [
+            5.82,
+            13.17,
+            61.09,
+            57.77
+          ],
+          "contentType": "image/svg+xml",
+          "asset": {
+            "assetId": "/ppt/media/image1.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          }
+        },
+        {
+          "order": 5,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/6",
+          "id": "6",
+          "name": "Content Placeholder 2",
+          "bbox": [
+            0,
+            85.22,
+            1280,
+            634.78
+          ],
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            0,
+            141.12,
+            1280,
+            578.88
+          ],
+          "geometry": "rect",
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            88,
+            19.95,
+            1104,
+            98.13
+          ],
+          "geometry": "rect",
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/4",
+          "id": "4",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            755.43,
+            19.95,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dgbulwnm",
+      "id": "2",
+      "name": "タイトル 1",
+      "bbox": [
+        88,
+        9.25,
+        1104,
+        69.01
+      ],
+      "text": "クラウド側基盤LoRA更新の詳細フロー",
+      "textPreview": "クラウド側基盤LoRA更新の詳細フロー",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 48,
+        "typeface": "Arial",
+        "color": "#203864",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "クラウド側基盤LoRA更新の詳細フロー"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "クラウド側基盤LoRA更新の詳細フロー",
+          "runs": [
+            {
+              "index": 1,
+              "text": "クラウド側基盤LoRA更新の詳細フロー"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cf2tcr61",
+      "id": "3",
+      "name": "スライド番号プレースホルダー 2",
+      "bbox": [
+        798.17,
+        7.77,
+        436.57,
+        37.17
+      ],
+      "text": "5",
+      "textPreview": "5",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": {
+          "type": "theme",
+          "value": "bg1",
+          "transform": {
+            "lighten": 0.25
+          }
+        },
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "5"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "5",
+          "runs": [
+            {
+              "index": 1,
+              "text": "5"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/98v6l8fy",
+      "id": "49",
+      "name": "表 5",
+      "bbox": [
+        7.38,
+        218.41,
+        405.03,
+        87.05
+      ],
+      "text": "端末logitsの確率分布化・集約\n入力：各端末のlogits、端末重み\n処理：各端末の出力分布を集約teacher分布へ変換する\n出力：集約teacher分布",
+      "textPreview": "端末logitsの確率分布化・集約 | 入力：各端末のlogits、端末重み | 処理：各端末の出力分布を集約teacher分布へ変換する | 出力：集約teacher分布",
+      "rows": 1,
+      "cols": 1,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            7.38,
+            218.41,
+            405.03,
+            87.05
+          ],
+          "text": "端末logitsの確率分布化・集約\n入力：各端末のlogits、端末重み\n処理：各端末の出力分布を集約teacher分布へ変換する\n出力：集約teacher分布",
+          "textPreview": "端末logitsの確率分布化・集約 | 入力：各端末のlogits、端末重み | 処理：各端末の出力分布を集約teacher分布へ変換する | 出力：集約teacher分布",
+          "fillColor": "bg1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "端末logitsの確率分布化・集約",
+              "resolvedTextStyle": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "端末",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "logits",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 3,
+                  "text": "の確率分布化・集約",
+                  "color": "tx1",
+                  "bold": true
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "入力：各端末のlogits、端末重み",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "入力：",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 2,
+                  "text": "各端末の",
+                  "color": "tx1"
+                },
+                {
+                  "index": 3,
+                  "text": "logits",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "、端末重み",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "処理：各端末の出力分布を集約teacher分布へ変換する",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "処理",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：",
+                  "color": "tx1"
+                },
+                {
+                  "index": 3,
+                  "text": "各端末の出力分布を集約teacher分布へ変換する",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "出力：集約teacher分布",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "出力：",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 2,
+                  "text": "集約teacher分布",
+                  "color": "tx1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/r2t8vyh0",
+      "id": "50",
+      "name": "表 7",
+      "bbox": [
+        7.38,
+        452.32,
+        405.03,
+        38.93
+      ],
+      "text": "基盤側予測分布の計算\n入力：整合用データ，現在の基盤モデル＋基盤LoRA＋分類ヘッド\n処理：基盤モデル + 基盤LoRAに整合用データを入力し、基盤側の出力分布または更新挙動を計算する\n出力：基盤側の出力分布",
+      "textPreview": "基盤側予測分布の計算 | 入力：整合用データ，現在の基盤モデル＋基盤LoRA＋分類ヘッド | 処理：基盤モデル + 基盤LoRAに整合用データを入力し、基盤側の出力分布または更新挙動を計算する | 出力：基盤側の出力分布",
+      "rows": 1,
+      "cols": 1,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            7.38,
+            452.32,
+            405.03,
+            38.93
+          ],
+          "text": "基盤側予測分布の計算\n入力：整合用データ，現在の基盤モデル＋基盤LoRA＋分類ヘッド\n処理：基盤モデル + 基盤LoRAに整合用データを入力し、基盤側の出力分布または更新挙動を計算する\n出力：基盤側の出力分布",
+          "textPreview": "基盤側予測分布の計算 | 入力：整合用データ，現在の基盤モデル＋基盤LoRA＋分類ヘッド | 処理：基盤モデル + 基盤LoRAに整合用データを入力し、基盤側の出力分布または更新挙動を計算する | 出力：基盤側の出力分布",
+          "fillColor": "bg1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "基盤側予測分布の計算",
+              "resolvedTextStyle": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "基盤側予測分布の計算",
+                  "fontSize": 24,
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "入力：整合用データ，現在の基盤モデル＋基盤LoRA＋分類ヘッド",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "入力",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 3,
+                  "text": "整合用データ，現在の基盤モデル＋基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "LoRA",
+                  "color": "tx1"
+                },
+                {
+                  "index": 5,
+                  "text": "＋分類ヘッド",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "処理：基盤モデル + 基盤LoRAに整合用データを入力し、基盤側の出力分布または更新挙動を計算する",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "処理",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：基盤モデル ",
+                  "color": "tx1"
+                },
+                {
+                  "index": 3,
+                  "text": "+ ",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 5,
+                  "text": "LoRA",
+                  "color": "tx1"
+                },
+                {
+                  "index": 6,
+                  "text": "に整合用データを入力し、基盤側の出力分布または更新挙動を計算する",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "出力：基盤側の出力分布",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "出力：",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 2,
+                  "text": "基盤側の出力分布",
+                  "fontSize": 24,
+                  "color": "tx1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/qhk7mt0f",
+      "id": "51",
+      "name": "表 9",
+      "bbox": [
+        437.49,
+        112.06,
+        405.03,
+        38.93
+      ],
+      "text": "集約teacherとの整合損失を計算\n\n入力：集約teacher分布＋基盤側の出力分布\n処理：集約teacher分布をteacher、基盤側分布をstudentとして\nを計算する\n出力：整合損失",
+      "textPreview": "集約teacherとの整合損失を計算 |  | 入力：集約teacher分布＋基盤側の出力分布 | 処理：集約teacher分布をteacher、基盤側分布をstudentとして | を計算する | 出力：整合損失",
+      "rows": 1,
+      "cols": 1,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            437.49,
+            112.06,
+            405.03,
+            38.93
+          ],
+          "text": "集約teacherとの整合損失を計算\n\n入力：集約teacher分布＋基盤側の出力分布\n処理：集約teacher分布をteacher、基盤側分布をstudentとして\nを計算する\n出力：整合損失",
+          "textPreview": "集約teacherとの整合損失を計算 |  | 入力：集約teacher分布＋基盤側の出力分布 | 処理：集約teacher分布をteacher、基盤側分布をstudentとして | を計算する | 出力：整合損失",
+          "fillColor": "bg1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "集約teacherとの整合損失を計算",
+              "resolvedTextStyle": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "集約",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 2,
+                  "text": "teacher",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 3,
+                  "text": "との整合損失を計算",
+                  "fontSize": 24,
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "入力：集約teacher分布＋基盤側の出力分布",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "入力",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 3,
+                  "text": "集約",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "teacher",
+                  "color": "tx1"
+                },
+                {
+                  "index": 5,
+                  "text": "分布＋基盤側の出力分布",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "処理：集約teacher分布をteacher、基盤側分布をstudentとして\nを計算する",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "処理",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：",
+                  "color": "tx1"
+                },
+                {
+                  "index": 3,
+                  "text": "集約teacher分布をteacher、基盤側分布をstudentとして",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "\n",
+                  "alignment": "left"
+                },
+                {
+                  "index": 5,
+                  "text": "を計算する",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "出力：整合損失",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "出力：",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 2,
+                  "text": "整合損失",
+                  "fontSize": 24,
+                  "color": "tx1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/d4bqx8z6",
+      "id": "52",
+      "name": "表 11",
+      "bbox": [
+        437.49,
+        391,
+        405.03,
+        38.93
+      ],
+      "text": "基盤側パラメータの勾配計算\n入力：現在の基盤LoRA・分類ヘッド\n処理：を基盤側パラメータについて微分\n出力：基盤LoRA・分類ヘッドの勾配\n凍結対象：\n・基盤モデル本体 \n・集約teacher／参照情報 ",
+      "textPreview": "基盤側パラメータの勾配計算 | 入力：現在の基盤LoRA・分類ヘッド | 処理：を基盤側パラメータについて微分 | 出力：基盤LoRA・分類ヘッドの勾配 | 凍結対象： | ・基盤モデル本体  | ・集約teacher／参照情報",
+      "rows": 1,
+      "cols": 1,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            437.49,
+            391,
+            405.03,
+            38.93
+          ],
+          "text": "基盤側パラメータの勾配計算\n入力：現在の基盤LoRA・分類ヘッド\n処理：を基盤側パラメータについて微分\n出力：基盤LoRA・分類ヘッドの勾配\n凍結対象：\n・基盤モデル本体 \n・集約teacher／参照情報 ",
+          "textPreview": "基盤側パラメータの勾配計算 | 入力：現在の基盤LoRA・分類ヘッド | 処理：を基盤側パラメータについて微分 | 出力：基盤LoRA・分類ヘッドの勾配 | 凍結対象： | ・基盤モデル本体  | ・集約teacher／参照情報",
+          "fillColor": "bg1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "基盤側パラメータの勾配計算",
+              "resolvedTextStyle": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "基盤側パラメータの勾配計算",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "入力：現在の基盤LoRA・分類ヘッド",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "入力",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 3,
+                  "text": "現在の基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "LoRA",
+                  "color": "tx1"
+                },
+                {
+                  "index": 5,
+                  "text": "・分類ヘッド",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "処理：を基盤側パラメータについて微分",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "処理",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：",
+                  "color": "tx1"
+                },
+                {
+                  "index": 3,
+                  "text": "を基盤側パラメータについて微分",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "出力：基盤LoRA・分類ヘッドの勾配",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "出力：",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 2,
+                  "text": "基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 3,
+                  "text": "LoRA",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "・分類ヘッドの勾配",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "凍結対象：",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "凍結対象",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：",
+                  "color": "tx1",
+                  "bold": true
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "text": "・基盤モデル本体 ",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "・",
+                  "color": "tx1"
+                },
+                {
+                  "index": 2,
+                  "text": "基盤モデル本体 ",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 7,
+              "text": "・集約teacher／参照情報 ",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "・",
+                  "color": "tx1"
+                },
+                {
+                  "index": 2,
+                  "text": "集約teacher／参照情報 ",
+                  "color": "tx1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/c32po3il",
+      "id": "53",
+      "name": "表 13",
+      "bbox": [
+        867.6,
+        112.06,
+        405.03,
+        38.93
+      ],
+      "text": "optimizerで基盤LoRAを更新\n入力：基盤LoRAに対する勾配＋現在の基盤LoRA\n処理：optimizer（Adam, FedAdamなど）を用いて基盤LoRAを更新する出力：更新済み基盤LoRA\n更新対象：基盤LoRA\n凍結対象：基盤モデル本体",
+      "textPreview": "optimizerで基盤LoRAを更新 | 入力：基盤LoRAに対する勾配＋現在の基盤LoRA | 処理：optimizer（Adam, FedAdamなど）を用いて基盤LoRAを更新する出力：更新済み基盤LoRA | 更新対象：基盤LoRA | 凍結対象：基盤モデル本体",
+      "rows": 1,
+      "cols": 1,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            867.6,
+            112.06,
+            405.03,
+            38.93
+          ],
+          "text": "optimizerで基盤LoRAを更新\n入力：基盤LoRAに対する勾配＋現在の基盤LoRA\n処理：optimizer（Adam, FedAdamなど）を用いて基盤LoRAを更新する出力：更新済み基盤LoRA\n更新対象：基盤LoRA\n凍結対象：基盤モデル本体",
+          "textPreview": "optimizerで基盤LoRAを更新 | 入力：基盤LoRAに対する勾配＋現在の基盤LoRA | 処理：optimizer（Adam, FedAdamなど）を用いて基盤LoRAを更新する出力：更新済み基盤LoRA | 更新対象：基盤LoRA | 凍結対象：基盤モデル本体",
+          "fillColor": "bg1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "optimizerで基盤LoRAを更新",
+              "resolvedTextStyle": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "optimizer",
+                  "color": "tx1"
+                },
+                {
+                  "index": 2,
+                  "text": "で基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 3,
+                  "text": "LoRA",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "を更新",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "入力：基盤LoRAに対する勾配＋現在の基盤LoRA",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "入力",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 3,
+                  "text": "基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "LoRA",
+                  "color": "tx1"
+                },
+                {
+                  "index": 5,
+                  "text": "に対する勾配＋現在の基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 6,
+                  "text": "LoRA",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "処理：optimizer（Adam, FedAdamなど）を用いて基盤LoRAを更新する出力：更新済み基盤LoRA",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "処理",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：",
+                  "color": "tx1"
+                },
+                {
+                  "index": 3,
+                  "text": "optimizer",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "（",
+                  "color": "tx1"
+                },
+                {
+                  "index": 5,
+                  "text": "Adam, ",
+                  "color": "tx1"
+                },
+                {
+                  "index": 6,
+                  "text": "FedAdam",
+                  "color": "tx1"
+                },
+                {
+                  "index": 7,
+                  "text": "など）を用いて基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 8,
+                  "text": "LoRA",
+                  "color": "tx1"
+                },
+                {
+                  "index": 9,
+                  "text": "を更新する",
+                  "color": "tx1"
+                },
+                {
+                  "index": 10,
+                  "text": "出力：",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 11,
+                  "text": "更新済み基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 12,
+                  "text": "LoRA",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "更新対象：基盤LoRA",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "更新対象",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 3,
+                  "text": "基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "LoRA",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "凍結対象：基盤モデル本体",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "凍結対象",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：基盤モデル本体",
+                  "color": "tx1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/58vehgvy",
+      "id": "15",
+      "name": "直線矢印コネクタ 14",
+      "bbox": [
+        209.89,
+        144.06,
+        0,
+        74.35
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/i54fmlc7",
+      "id": "16",
+      "name": "テキスト ボックス 15",
+      "bbox": [
+        154.35,
+        162.08,
+        111.09,
+        32.31
+      ],
+      "geometry": "rect",
+      "text": "端末logits",
+      "textPreview": "端末logits",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "端末logits"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "端末logits",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "端末logits",
+              "fontSize": 18.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "bg1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gfi5grih",
+      "id": "21",
+      "name": "テキスト ボックス 20",
+      "bbox": [
+        119.66,
+        113.97,
+        180.46,
+        32.31
+      ],
+      "geometry": "rect",
+      "text": "クライアント側",
+      "textPreview": "クライアント側",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
+        "wrap": "square",
+        "autoFit": "resizeShapeToFitText",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "クライアント側"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "クライアント側",
+          "resolvedTextStyle": {
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "クライアント側",
+              "fontSize": 18.67
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "bg1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fe94nm1w",
+      "id": "22",
+      "name": "直線矢印コネクタ 21",
+      "bbox": [
+        209.89,
+        372.01,
+        0,
+        80.3
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 12,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/z6t8zihw",
+      "id": "54",
+      "name": "表 25",
+      "bbox": [
+        867.6,
+        385.85,
+        405.03,
+        38.93
+      ],
+      "text": "次ラウンド用知識の生成・蒸留更新\n入力：更新済み基盤モデル，還元用整合データ，クライアントモデル\n処理：基盤teacher logitsを生成し，クライアントへ蒸留\n出力：更新済み基盤LoRA\n更新対象：基盤LoRA\n凍結対象：基盤モデル本体",
+      "textPreview": "次ラウンド用知識の生成・蒸留更新 | 入力：更新済み基盤モデル，還元用整合データ，クライアントモデル | 処理：基盤teacher logitsを生成し，クライアントへ蒸留 | 出力：更新済み基盤LoRA | 更新対象：基盤LoRA | 凍結対象：基盤モデル本体",
+      "rows": 1,
+      "cols": 1,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            867.6,
+            385.85,
+            405.03,
+            38.93
+          ],
+          "text": "次ラウンド用知識の生成・蒸留更新\n入力：更新済み基盤モデル，還元用整合データ，クライアントモデル\n処理：基盤teacher logitsを生成し，クライアントへ蒸留\n出力：更新済み基盤LoRA\n更新対象：基盤LoRA\n凍結対象：基盤モデル本体",
+          "textPreview": "次ラウンド用知識の生成・蒸留更新 | 入力：更新済み基盤モデル，還元用整合データ，クライアントモデル | 処理：基盤teacher logitsを生成し，クライアントへ蒸留 | 出力：更新済み基盤LoRA | 更新対象：基盤LoRA | 凍結対象：基盤モデル本体",
+          "fillColor": "bg1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "次ラウンド用知識の生成・蒸留更新",
+              "resolvedTextStyle": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "次ラウンド用知識の生成・蒸留更新",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "入力：更新済み基盤モデル，還元用整合データ，クライアントモデル",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "入力",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 3,
+                  "text": "更新済み基盤モデル，還元用整合データ，クライアントモデル",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "処理：基盤teacher logitsを生成し，クライアントへ蒸留",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "処理",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 3,
+                  "text": "teacher logits",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "を生成し，クライアントへ蒸留",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "出力：更新済み基盤LoRA",
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "出力：",
+                  "fontSize": 24,
+                  "color": "tx1"
+                },
+                {
+                  "index": 2,
+                  "text": "更新済み基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 3,
+                  "text": "LoRA",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "更新対象：基盤LoRA",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "更新対象",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 3,
+                  "text": "基盤",
+                  "color": "tx1"
+                },
+                {
+                  "index": 4,
+                  "text": "LoRA",
+                  "color": "tx1"
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "text": "凍結対象：基盤モデル本体",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "凍結対象",
+                  "color": "tx1",
+                  "bold": true
+                },
+                {
+                  "index": 2,
+                  "text": "：基盤モデル本体",
+                  "color": "tx1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vu5kbihc",
+      "id": "31",
+      "name": "コネクタ: カギ線 30",
+      "bbox": [
+        30.91,
+        273.04,
+        569.45,
+        211.5
+      ],
+      "rotation": 90,
+      "horizontalFlip": true,
+      "verticalFlip": true,
+      "geometry": "bentConnector3",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ji5kf2ho",
+      "id": "35",
+      "name": "コネクタ: カギ線 34",
+      "bbox": [
+        421.39,
+        94.06,
+        218.61,
+        17.99
+      ],
+      "geometry": "bentConnector2",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zmlk3yhk",
+      "id": "39",
+      "name": "直線矢印コネクタ 38",
+      "bbox": [
+        640,
+        357.19,
+        0,
+        33.82
+      ],
+      "horizontalFlip": true,
+      "geometry": "straightConnector1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ehkzepsn",
+      "id": "41",
+      "name": "直線矢印コネクタ 40",
+      "bbox": [
+        1070.11,
+        352.06,
+        0,
+        33.8
+      ],
+      "horizontalFlip": true,
+      "geometry": "straightConnector1",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3md0bu94",
+      "id": "44",
+      "name": "コネクタ: カギ線 43",
+      "bbox": [
+        445.91,
+        288.15,
+        599.67,
+        211.5
+      ],
+      "rotation": 90,
+      "horizontalFlip": true,
+      "verticalFlip": true,
+      "geometry": "bentConnector3",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bqx0fe9g",
+      "id": "48",
+      "name": "コネクタ: カギ線 47",
+      "bbox": [
+        851.5,
+        97.03,
+        218.61,
+        15.02
+      ],
+      "geometry": "bentConnector2",
+      "lineColor": "tx1",
+      "lineWidth": 1.33
+    }
+  ],
+  "composeRuns": []
+}

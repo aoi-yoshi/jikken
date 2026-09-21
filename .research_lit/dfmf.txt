@@ -1,0 +1,652 @@
+                    This CVPR Workshop paper is the Open Access version, provided by the Computer Vision Foundation.
+                                     Except for this watermark, it is identical to the accepted version;
+                               the final published version of the proceedings is available on IEEE Xplore.
+
+
+
+
+                        Data-free Model Fusion with Generator Assistants
+
+                     Luyao Shi Prashanth Vijayaraghavan Ehsan Degan
+                   IBM Research, Almaden Research Center, San Jose, CA, USA
+           luyao.shi@ibm.com prashanthv@ibm.com edehgha@us.ibm.com
+
+
+                         Abstract                                   for training a model. Therefore, distributed learning mech-
+                                                                    anisms such a federated learning and model fusion have
+    In a Model Marketplace, multiple parties may submit             gained a lot of attention. A related scenario is a Model
+pretrained neural networks that accomplish similar tasks.           Marketplace, where multiple parties can submit their pre-
+These networks usually have different architectures and are         trained AI models to be used by other users for inference.
+trained on different datasets. It would be significantly ben-       In a Model Marketplace it is common to have multiple pre-
+eficial to fuse all these models into a single model with su-       trained models with different architectures, trained by dif-
+perior performance and lower cost of execution. However,            ferent parties using different datasets that perform a similar
+the training parties may be unwilling to share their train-         task. If users want to use these models for inference, they
+ing data, due to data privacy and confidentiality, and may          should either choose one of the models without knowing
+not agree to participate in a federated learning collabora-         which model would perform the best on their data or use
+tion. As an alternative, we propose a data-free model fu-           multiple models in an ensemble [20, 21] and incur higher
+sion framework, based on knowledge distillation, to com-            cost. Model ensembling is also less interpretable compared
+bine several pretrained models into a superior model with-          to a single model. It would be greatly beneficial if the
+out the need for the raw training data. We employ a gen-            marketplace owner could fuse all these models into a sin-
+erative approach to synthesize data for knowledge distilla-         gle model to provide the users with superior performance
+tion. The data generator needs to be trained to produce a           and lower cost of execution. As mentioned, it might be im-
+diverse set of samples that have a similar distribution to that     possible to obtain the training data of each model due to
+of the training data. Generating samples that cause student-        privacy and confidentiality issues. In addition, the training
+teacher disagreement can expand the coverage of the data            parties may not agree to participate in a federated learning
+distribution, reduce chance of mode collapse and, improve           collaboration [12], where they need to retrain a model, re-
+data-free knowledge distillation. However, we found that            peatedly. As a practical solution, we propose a data-free
+in a multi-teacher setting, encouraging disagreements be-           model fusion framework, based on knowledge distillation,
+tween the teachers and the student causes confusion for the         that can be used to combine pretrained models into one su-
+generators and deteriorates the results. To tackle this, we         perior model in terms of performance (accuracy, robustness,
+introduce Generator Assistants (GA), which keep the gen-            scalability) and infrastructure usage (time, memory, number
+erators evolving without causing confusion. Experiments             of GPUs), without the need for the raw training data.
+on CIFAR-10, CIFAR-100 and Stanford Dogs datasets show
+that our method greatly improves the data-free model fusion             We propose to treat this problem as a Data-free Knowl-
+performance compared to the prior art.                              edge Distillation (DFKD) with multiple teachers, where
+                                                                    synthesized samples are used for distillation. We consider
+                                                                    a general case in which the teachers are trained on dif-
+1. Introduction                                                     ferent datasets and may have different architectures. For
+                                                                    data synthesis, we employ a generative approach where we
+Recent years have witnessed an unprecedented develop-               train a dedicated generator for each teacher. Each gener-
+ment and usage of deep Convolutional Neural Networks                ator needs to synthesize samples that have a distribution
+(CNNs) that achieved state-of-the-art results in various            similar to that of the original training data of its corre-
+computer vision tasks, including classification and segmen-         sponding teacher (i.e. have similar statistics to that of the
+tation. In order to achieve generalizable models, a diverse         training data). The samples should also be diverse to suffi-
+set of data from various sources is required. However, due          ciently cover the training distribution and avoid mode col-
+to privacy and security concerns, data sets from various            lapse. Several loss functions have been proposed to sat-
+sources often cannot be moved to a centralized database             isfy these conditions. Among them, the adversarial (ADV)
+
+
+
+                                                                  7731
+loss [3, 5, 25] is especially effective in producing statisti-      original data during KD usually leads to unsatisfactory re-
+cally diverse samples for single-teacher knowledge distil-          sults. Therefore, data-free model fusion using synthetic
+lation. The ADV loss encourages the generator to synthe-            samples is the only practical solution in many cases.
+size images that cause student-teacher disagreement, which
+iteratively expands the distributional coverage of the sam-             Data-free model fusion can be achieved via Data-free
+ples during training. However, expanding the ADV loss to            Knowledge Distillation (DFKD). These methods synthe-
+a multi-teacher setting is not a trivial problem. Our exper-        size samples for KD using: (1) the non-generative ap-
+iments show that rewarding dissimilarity between multiple           proaches [5, 6, 25] that produce data samples, batch-by-
+teachers and one student causes confusion for the generators        batch, based on model inversion, or (2) the generative ap-
+and deteriorates the results. Without the adversarial loss,         proaches [2, 3, 7, 16, 17, 26] that train a generative model
+the generator does not expand the distributional coverage of        for synthesis. DeepInversion [25] “inverts” a trained net-
+the generated images which results in sub-optimal perfor-           work (teacher) to synthesize class-conditional images start-
+mance. We address this problem by introducing Generator             ing from random noise. A BatchNorm feature distribution
+Assistants (GA), and extend the application of adversarial          regularization loss (BN loss) was proposed to optimize the
+loss to multi-teacher settings. Each Generator Assistant is         input while regularizing the distribution of intermediate fea-
+a dedicated model to a teacher-generator pair and is trained        ture maps using information stored in the batch normaliza-
+to mimic a teacher using samples synthesized by its corre-          tion layers of the teacher. An iterative competition scheme
+sponding generator. Therefore, it can be used to calculate a        using an adversarial (ADV) loss was also proposed to en-
+meaningful adversarial loss to train a generator to produce         courage the synthesized images to cause student-teacher
+diverse samples and mitigate mode-collapse.                         disagreement and improve sample diversity. CMI [5] im-
+    We summarize our novelty and contribution here: 1) Al-          proves data diversity using a contrastive learning objective
+though DFKD has been well studied, Data-free Model Fu-              that encourages the newly synthesized instances to be dis-
+sion (DFMF) with multi-talent teachers and different archi-         tinguishable from the ones synthesized in previous batches.
+tectures are not well explored in the literature. Through ex-       Although impressive image synthesis and KD results were
+tensive experiments, we illustrate the superior performance         obtained, these methods suffer from long image synthesis
+of our DFMF over several compared methods, and the fused            time, making them less practical. An alternative line of
+model attains greater accuracy when compared to individual          work focuses on training a generator that can synthesize
+teacher networks; 2) Our main novel contribution is the in-         samples with faster speed. In DAFL [2], a generator was
+troduction of Generator Assistant (GA) to address the chal-         trained to take random noise as input and generate images
+lenge that uniquely exists in data-free model fusion.               that can produce strong one-hot predictions with the teacher
+                                                                    classifier. KEGNET [26] is similar to DAFL but used a
+2. Related Work                                                     class-conditional generator. They further introduced a de-
+                                                                    coder to recover the input noise from the generated images,
+Knowledge Distillation (KD) [9] was originally proposed             and preventing the generator from converging to a naı̈ve so-
+to learn a compact student model from a large teacher               lution, with a collapsed mode. ZSKT [17] trains an adver-
+model. Instead of learning directly from labeled data, the          sarial generator to search for images on which the student
+student can learn from the soft labels generated by the             poorly matches the teacher. Han et al. [7] attempted to in-
+teacher on unlabeled data. Later, training a student us-            crease the diversity of the generated images by proposing
+ing multiple teachers was also proposed where the student           diversity seeking regularization. Since these works mainly
+either learns from the ensemble of the teachers’ outputs            rely on one-hot prediction of the teacher classifier as regu-
+[14, 19, 22, 27, 28] or the output of the most confident            larization, the generated samples do not necessarily follow
+one [23]. To improve learning efficiency and effectiveness,         the same distribution as the original training data and could
+most of these methods also proposed various losses to in-           result in degraded KD performance. To alleviate this prob-
+corporate learning from the intermediate features, in addi-         lem, in [3, 16], the authors introduced a batch normalization
+tion to the final soft labels. In [14, 19, 27, 28] the teachers     (BN) loss to train generators that are able to produce higher-
+are trained on the same dataset, while in [22, 23] the teach-       quality and more realistic images. In [16], multiple class-
+ers are trained on different ones (multi-talent teachers). Al-      conditional generators were trained for each class to address
+though these methods do not require labeled datasets, they          the mode-collapse problem. However, this method does not
+all use real data for knowledge distillation. In fact, most of      scale well when there are many classes. In DFQ [3], class-
+these methods used the original training data of the teachers       unconditional generators were trained that scale well with
+[14, 19, 27, 28]. As discussed before, in many applications,        the number of classes. ADV loss was used to iteratively
+the raw training data are not accessible for model fusion.          improve the generators. Variational Information Distilla-
+It should be mentioned that using out-of-domain or even             tion (VID) loss [1] was also used to improve student learn-
+same-domain but out-of-distribution data as replacement for         ing efficiency and effectiveness by matching intermediate
+
+
+
+                                                                  7732
+layer outputs the student and the teacher. The latest work in        3.1. Training the Student
+DFKD is FastDFKD [6], which learns a meta-synthesizer
+                                                                     The student Sϕ learns from multiple teachers through KD
+that seeks common features as the initialization for the fast
+                                                                     using the synthetic samples produced by all of the genera-
+data synthesis and significantly accelerate DFKD.
+                                                                     tors. The student is updated by minimizing the loss below:
+    There are studies exploring data-free model fusion us-
+ing other approaches. In [24], the authors constructed
+group-stack generative adversarial networks with dual gen-
+erators. The target network is obtained by regrouping the              \begin {gathered} L_{\phi }^S= \mathbb {E}_x \Big [\mathcal {D} \big (\sum _{k=1}^K w_k T_{\theta _k^*}(x), S_{\phi }(x) \big ) +\beta \sum _{k=1}^K w_k L_{\phi , \theta _k^*}^{\mathrm {VID}}(x) \Big ], \\ x \in \bigcup _{k=1}^K G_{\psi _k}(z) \end {gathered} \label {eq:S loss} 
+trained dual part generator. Although multiple teachers
+were present, only one generator was trained. Additionally,
+BN regularization was not used for training the dual gen-
+erators. One limitation of this approach is that the teacher
+                                                                                                                                 (1)
+and target network should have similar architecture with the
+                                                                     In this equation, x is an image generated by one of the gen-
+same number of block numbers. In their study, the same ar-
+                                                                     erators, Tθk∗ (x) and Sϕ (x) are the soft labels produced by
+chitecture is used for all the networks.
+                                                                     the k-th teacher and the student, respectively where a soft-
+                                                                     max with temperature τ is applied to the teachers and the
+3. Methods                                                           students outputs. E represents expected value and D stands
+                                                                     for Kullback-Leibler (KL) divergence. In addition to the KL
+Let Tθk and θk represent the k-th teacher and its learnable          divergence loss, we also use variational information distil-
+parameters and K be the number of teachers. The pre-                 lation (VID) to match intermediate layer outputs between
+trained teacher Tθ∗ , with parameters θ∗ , is trained on its         the teachers and the student. LVIDϕ,θ ∗ is the VID loss which
+corresponding labeled dataset and will not be updated dur-           is one of the state-of-the-art KD variants that formulates
+ing model fusion. Let Sϕ be the student with learnable pa-           knowledge transfer as maximizing the mutual information
+rameters ϕ. For simplicity, we assume that all the teachers          between the teacher and the student networks, which yields
+and the student are trained for the same task of C-category          better student accuracy with faster convergence. Details
+classification. Since the teachers are pretrained on different       about VID loss can be found at [1].
+datasets, for each teacher we train a corresponding genera-              Additionally, β is a weighting factor for the VID loss, wk
+tor network Gψk to synthesize samples with a distribution            is the weight to control theP importance of the k-th teacher
+similar to that of the teacher’s training data. To help with                                         K
+                                                                     in the learning process and k=1 wk = 1. z is the random
+the process, for each teacher, we train a generator assis-           input to a generator and p(z) is its Gaussian probability dis-
+tant (GA) network Aχk , with learnable parameters χk . A             tribution. Gψk (z) is the image produced by the k-th gener-
+diagram of our data-free model fusion scheme is given in             ator. Here we use the union of all the generators’ outputs as
+Fig. 1.                                                              the input images x for KD. This means that an image pro-
+                                                                     duced by any of the generators goes through all the teachers
+                                                                     during the KD process.
+                                                                     3.2. Training the GAs
+                                                                     Each GA Aχk learns from its matched teacher Tθk∗ through
+                                                                     knowledge distillation using the synthetic samples gener-
+                                                                     ated by its corresponding generator Gψk . Each GA is up-
+                                                                     dated by minimizing the following loss:
+
+                                                                                       \begin {gathered} L_{\chi _k}^A= \mathbb {E}_{x_k}[\mathcal {D}(T_{\theta _k^*}(x_k), A_{\chi _k}(x_k)) +\beta L_{\chi _k, \theta _k^*}^{\mathrm {VID}}(x_k)], \end {gathered} \label {eq:GA loss}  (2)
+
+                                                                     where xk is an image produced by the k-th generator and
+                                                                     Aχk (xk ) is the output of the k-th GA, where a softmax with
+                                                                     temperature τ is applied to the teacher and GA’s outputs.
+                                                                     3.3. Training the Generators
+Figure 1. A diagram of our DFMF scheme. Only 2 teachers are          The loss function to update the generators is comprised of
+included in this example. The colored arrows indicate which net-     two parts: fidelity loss and adversarial loss. The fidelity
+works the loss functions are trying to minimize or maximize.
+                                                                     loss encourages each generator to synthesize samples that
+                                                                     are similar to the training data of its corresponding teacher.
+
+
+
+                                                                   7733
+The fidelity loss is further comprised of Batch Normaliza-                                                                                                                                                                                                                                                                                                            over the batch. As suggested in [3], we perform warm-
+tion (BN) loss, Instance Categorical Entropy (ICE) loss and                                                                                                                                                                                                                                                                                                           up training for the generators using only the fidelity loss
+Batch Categorical Entropy (BCE) loss [3] as in:                                                                                                                                                                                                                                                                                                                       in Eq. (3). The pre-training procedure reduces generation
+                                                                                                                                                                                                                                                                                                                                                                      of unreliable samples in the early phase. The number of
+      \begin {gathered} L_{\psi _k}^F=\mathbb {E}_{p(z)} \Big [ \sum _{l} \mathcal {D}_\mathcal {N}((\hat {\mu }_{l,\psi _k} (z), \hat {\sigma }^2_{l,\psi _k} (z)),(\mu _l, \sigma _l^2))\Big ] \\ + \mathbb {E}_{p(z)}[H(T_{\theta _k^*}(G_{\psi _k}(z)))] - H(\mathbb {E}_{p(z)}[T_{\theta _k^*}(G_{\psi _k}(z))]). \end {gathered} \label {eq:fidelity loss}      epochs for warm-up and main training are Nwarm−up and
+                                                                                                                                                                                                                                                                                                                                                                      N , respectively. M is the overall number of iterations per
+                                                                                                                                                                                                                                                                                                                                                                      epoch. We update the student more frequently than the gen-
+                                                           (3)                                                                                                                                                                                                                                                                                                        erators to reduce the chance of falling into local minima,
+The first term in Eq. (3) is the BN loss which encourages                                                                                                                                                                                                                                                                                                             which is controlled by MS . By adjusting MGA , we also
+the generator to produce samples that result in features with                                                                                                                                                                                                                                                                                                         update GAs less frequently than the student to balance be-
+the same mean and variance values as those stored in the                                                                                                                                                                                                                                                                                                              tween speed and performance, as GAs only help the gener-
+BN layers of the teacher. Here, µl and σl2 are the mean and                                                                                                                                                                                                                                                                                                           ators and do not need to be as high-quality as the student.
+variance values stored in the l-th normalization layer and,
+hence, are learned from the original training data. µ̂l,ψk (z)                                                                                                                                                                                                                                                                                                        Algorithm 1 Data-free model fusion
+      2
+and σ̂l,ψ  (z) are the corresponding mean and variance com-                                                                                                                                                                                                                                                                                                           Input: Pretrained teachers {Tθ∗ }K     , randomly initialized student Sϕ
+         k                                                                                                                                                                                                                                                                                                                                                                                           k k=1
+puted over the synthesized samples Gψk (z). We assume                                                                                                                                                                                                                                                                                                                 Output: An optimized student Sϕ∗
+                                                                                                                                                                                                                                                                                                                                                                       1: Randomly initialize generators {Gψk }K                k=1 and GAs {Aχk }k=1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              K
+the distributions are Gaussian and use the Kullback-Leibler
+                                                                                                                                                                                                                                                                                                                                                                       2: b ← ⌊B/K⌋
+(KL) divergence between two Gaussian distributions as:                                                                                                                                                                                                                                                                                                                 3: for k: 1 to K do                     \triangleright  Warm-up training for generators
+                                                                                                                                                                                                                                                                                                                                                                       4:     for n: 1 to Nwarm−up do
+                                                                                                                                                                                                                                                                                                                                                                       5:         for m: 1 to M do
+   \mathcal {D}_\mathcal {N}((\hat {\mu }, \hat {\sigma }^2),(\mu , \sigma ^2)) = \frac {(\hat {\mu }-\mu )^2+\hat {\sigma }^2}{2\sigma ^2}-log\frac {\hat {\sigma }}{\sigma }-\frac {1}{2}. \label {eq:KL loss}  (4)                                                                                                                                                  6:             z B ← [N (0, I)]B
+                                                                                                                                                                                                                                                                                                                                                                       7:             ψk ← ψk − ηG ∇ψk LF      ψk (z )
+                                                                                                                                                                                                                                                                                                                                                                                                                                 B
+
+    The second term in Eq. (3) minimizes the instance cat-                                                                                                                                                                                                                                                                                                             8:         end for
+                                                                                                                                                                                                                                                                                                                                                                       9:     end for
+egorical entropy, denoted by H(·). Assuming the teacher                                                                                                                                                                                                                                                                                                               10: end for
+is well trained for accurate classification, a good genera-                                                                                                                                                                                                                                                                                                           11: for n: 1 to N do
+tor should produce samples that yield low entropy outputs                                                                                                                                                                                                                                                                                                             12:     for m: 1 to M do
+from the teacher (the probability for one category should                                                                                                                                                                                                                                                                                                             13:         for k: 1 to K do                                        \triangleright  Update generators
+                                                                                                                                                                                                                                                                                                                                                                      14:             z B ← [N (0, I)]B
+be high). The third term maximizes the batch categori-                                                                                                                                                                                                                                                                                                                                ψk ← ψk − ηG ∇ψk LF                        B
+                                                                                                                                                                                                                                                                                                                                                                      15:                                      ψk (z )
+cal entropy. Because there is no prior knowledge for the                                                                                                                                                                                                                                                                                                              16:         end for
+categorical probability distribution of the original training                                                                                                                                                                                                                                                                                                         17:         for k: 1 to K do
+data, it is reasonable to assume the classes appearing in the                                                                                                                                                                                                                                                                                                         18:             for m: 1 to MGA do                                                                   \triangleright  Update GAs
+                                                                                                                                                                                                                                                                                                                                                                      19:                 z B ← [N (0, I)]B
+dataset follow uniform distribution. This prevents the gen-                                                                                                                                                                                                                                                                                                                               χk ← χk − ηA ∇χk LA                        B
+                                                                                                                                                                                                                                                                                                                                                                      20:                                                       χk (z )
+erator from producing samples of only one or a few classes,                                                                                                                                                                                                                                                                                                           21:             end for
+and is achieved by maximizing the entropy of the teacher’s                                                                                                                                                                                                                                                                                                            22:         end for
+averaged outputs over any batch.                                                                                                                                                                                                                                                                                                                                      23:         for m: 1 to MS do                                                        \triangleright  Update student
+                                                                                                                                                                                                                                                                                                                                                                      24:             for k: 1 to K do
+    The adversarial loss encourages a generator to produce                                                                                                                                                                                                                                                                                                            25:                 z b ← [N (0, I)]b
+samples that cause disagreement between each teacher and                                                                                                                                                                                                                                                                                                              26:                 xbk ← concatenate(xb(k−1) , Gψk (z b ))
+its corresponding GA and hence, avoid producing repeated                                                                                                                                                                                                                                                                                                              27:             end for
+                                                                                                                                                                                                                                                                                                                                                                      28:             ϕ ← ϕ − ηS ∇ϕ LS   ϕ (x
+                                                                                                                                                                                                                                                                                                                                                                                                              bK )
+or similar samples. This expands the distribution of the gen-
+                                                                                                                                                                                                                                                                                                                                                                      29:         end for
+erated images and helps with mitigating the mode collapse                                                                                                                                                                                                                                                                                                             30:     end for
+problem. The adversarial loss is given by:                                                                                                                                                                                                                                                                                                                            31: end for
+                                                                                                                                                                                                                                                                                                                                                                      32: ϕ∗ ← ϕ
+                L_{\psi _k}^{A}= -\mathbb {E}_{p(z)}[\mathcal {D}(T_{\theta _k^*}(G_{\psi _k}(z)), A_{\chi _k}(G_{\psi _k}(z)))] \label {eq:adversarial loss}                                                                                                                                                                                                 (5)
+
+The overall loss to train a generator is given by:                                                                                                                                                                                                                                                                                                                    4. Experiments and Results
+                                                                                                                L_{\psi _k}^G= L_{\psi _k}^A + \alpha L_{\psi _k}^F, \label {eq:G loss}                                                                                                                                                                       (6)     4.1. Experimental Settings
+                                                                                                                                                                                                                                                                                                                                                                      Datasets. We evaluated our method on CIFAR-10 (10 cat-
+where α ≥ 0 is a weighting factor.                                                                                                                                                                                                                                                                                                                                    egories), CIFAR-100 (100 categories) [13] and Stanford
+                                                                                                                                                                                                                                                                                                                                                                      Dogs (120 categories) [10] datasets to demonstrate the effi-
+3.4. Implementation
+                                                                                                                                                                                                                                                                                                                                                                      cacy of our method in fusing models with different number
+Our proposed data-free model fusion scheme is summarized                                                                                                                                                                                                                                                                                                              of output labels and input image resolution. Each CIFAR
+in Algorithm 1. z B denotes the random input batch of size                                                                                                                                                                                                                                                                                                            dataset contains 50,000 training samples and 10,000 test-
+B to the generators, and L(z B ) denotes the loss averaged                                                                                                                                                                                                                                                                                                            ing samples with image resolution of 32 × 32. Stanford
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                    7734
+Dogs consists of 12,000 training samples and 8,580 test-                      Method            BN    ICE   BCE    ADV     ACT    CR    GA
+                                                                              ZSKT              -     -     -      ✓       -      -     -
+ing samples, with image resolution of 200 × 200 or larger
+                                                                              DAFL              -     ✓     ✓      -       ✓      -     -
+that are resized to 224 × 224 in our study 1 . The train-                     DFQ (w/o ADV)     ✓     ✓     ✓      -       -      -     -
+ing samples are only used to train the teacher networks, and                  DFQ               ✓     ✓     ✓      ✓       -      -     -
+the testing data are used to evaluate model accuracy. The                     CMI               ✓     ✓     -      ✓       -      ✓     -
+CIFAR datasets are used to investigate two-party (K = 2)                      CMI (w/ GA)       ✓     ✓     -      ✓       -      ✓     ✓
+                                                                              DFMF (ours)       ✓     ✓     ✓      ✓       -      -     ✓
+scenario, whereas the Stanford Dogs dataset is used to in-
+vestigate both two-party and four-party (K = 2 and K = 4)                    Table 1. Comparison of different methods based on usage of vari-
+scenarios. We also investigated balanced (BL) and imbal-                     ous loss functions and generator assistants.
+anced (IBL) data split modes. In the BL data split, the
+dataset is evenly split between multiple parties hence, class
+distribution imbalance between parties is unlikely (roughly
+                                                                             and GAs for each method. All the loss functions can be
+same number of samples per party for each class). The IBL
+                                                                             found in Sec. 3 except for the activation loss (ACT) used in
+mode simulates imbalanced class distribution where each
+                                                                             DAFL and the contrastive learning loss (CR) used in CMI,
+pretrained teacher is better at some classes than the other
+                                                                             which can be found in [2] and [5], respectively. Note that
+ones. For each party, 1/K of all the classes are selected as
+                                                                             DFQ is essentially the ablation study of our DFMF without
+the frequent classes and the remaining classes are the infre-
+                                                                             GA. For fair comparison, VID loss is used in all the genera-
+quent classes. For each selected frequent class, p samples
+                                                                             tive methods, even though it is not originally used by ZSKT
+are selected for this party and the remaining samples (used
+                                                                             and DAFL. For all the methods, we combine all the gener-
+as infrequent class samples for the other parties) are evenly
+                                                                             ators’ synthesized samples as a batch for KD, as described
+split between the other K − 1 parties so that each one con-
+                                                                             in Sec. 3.1.
+tains q samples. We investigated different imbalance ratios
+where the imbalance ratio r is defined as r = p/q. This way                      Implementation details. We use ResNet-18, ResNet-34
+we make sure that there is no data overlap for each party nor                and ResNet-50 [8] for our teachers and students. For our
+missing data for the whole training set. For example, when                   generators, we use the same architecture as in [3] which
+K = 2 and r = 3, the first party is composed of 75% of the                   is one fully connected layer followed by three upsampling
+data for the first half of the classes and 25% of the data for               (nearest neighbor interpolation) plus convolutional layers.
+the last half of the classes (r = 75%/25% = 3), whereas                      For pre-training the teacher networks, we use Nesterov ac-
+the second part keeps the rest of the data. When K = 4 and                   celerated gradient [18] with weight decay and the momen-
+r = 10, the first party is composed of 76.9% of the data for                 tum set to 5 × 10−4 and 0.9, respectively, as suggested by
+the first quarter of the classes and 7.69% of the data for the               [2]. We train the teacher networks for 200 epochs. For the
+rest of the classes; the second party is composed of 76.9%                   CIFAR datasets, the teachers are trained from scratch with a
+of the data for the second quarter of the classes and 7.69%                  batch size of 256. The learning rate is initialized at 0.1 and
+of the data for the rest of the classes, etc. In this paper, we              divided by 10 at epochs 80 and 120. Stanford Dogs dataset
+use r = 3 in the CIFAR studies. For the Stanford Dogs                        has only 100 images per class in its training set. Training
+study, we use different values for r ∈ {3, 10, 20}.                          each teacher from scratch using only a portion of this data
+                                                                             set results in poor performance. To improve performance,
+   Compared methods. Since there are limited studies ex-
+                                                                             we use ImageNet [4] pretrained ResNet weights as initial-
+ploring data-free model fusion, we scaled up various DFKD
+                                                                             ization before training the teacher models on the Stanford
+methods from a single-teacher context to a multi-teacher
+                                                                             Dogs samples. A batch size of 64 is used. The learning rate
+scenario, and compared our method with them. Our base-
+                                                                             is initialized at 0.01 and divided by 10 at epochs 50, 100 and
+lines include generative DFKD methods such as ZSKT [17],
+                                                                             150. For training the generators, we use the Adam optimizer
+DAFL [2] and DFQ [3], and also the state-of-the-art non-
+                                                                             [11] with learning rate of ηG = 10−3 and momentum of 0.5.
+generative method CMI [5]. We notice that when we apply
+                                                                             Similar to the teachers, the GAs and the student are initial-
+the state-of-the-art generative DFKD method, DFQ, to the
+                                                                             ized with ImageNet pretrained weights before training on
+multi-teacher setting, the ADV loss causes confusion and
+                                                                             the Stanford Dogs data set, but are trained from scratch for
+leads to worse results. Therefore, we also compare to DFQ
+                                                                             CIFAR studies. We use Nesterov accelerated gradient with
+without ADV loss (w/o ADV). Since the non-generative
+                                                                             cosine decaying [15] learning rate of ηA = ηS = 0.05 and
+method CMI also uses the ADV loss, we took one step fur-
+                                                                             momentum 0.9. Random rotation, crop, flipping and color
+ther and applied GAs to CMI (w/ GA) as well for com-
+                                                                             jitter (details provided in Supplementary Material) are used
+parison. Tab. 1 shows the usage of different loss functions
+                                                                             on the generated images for data augmentation. The origi-
+    1 Due to our organization’s internal policies we cannot use ImageNet     nal VID loss [1] was proposed to match every intermediate
+for evaluation. We use the Stanford Dogs dataset as an alternative for a     layer between the teacher and the student. In this study, we
+more challenging dataset than the CIFAR datasets.                            only match the last convolutional layer outputs between the
+
+
+
+                                                                           7735
+                                         Accuracy (%)
+   Dataset        Method
+                                    BL split     IBL split (r=3)
+              Gold Standard                   94.92
+              Teachers            92.41/92.26      90.43/89.79
+              Teacher Ensemble       93.85            93.12
+              ZSKT               56.34±11.61      63.44±16.36
+              DAFL                89.04±2.87       89.76±0.24
+  CIFAR10
+              DFQ (w/o ADV)      92.66±0.10        91.81±0.09
+              DFQ                90.64±1.47        88.12±2.42
+              CMI                92.89±0.07        91.74±0.11
+              CMI (w/ GA)        92.99±0.06        92.02±0.12
+              DFMF (ours)         93.10±0.11       92.27±0.19        Figure 2. Example images produced by one of the generators from
+              Gold Standard                   76.85                  different methods in the CIFAR-100 ‘IBL split (r=3)’ experiment.
+              Teachers             67.9/68.6       65.22/65.48       Sample images from generators after warm-up training and at the
+              Teacher Ensemble       73.04             73.3          end of the training process are compared.
+              ZSKT               41.13±0.77        36.04±6.60
+              DAFL               67.46±0.15        63.98±4.69
+ CIFAR100
+              DFQ (w/o ADV)      67.75±0.21        66.97±0.04
+              DFQ                57.73±2.87        57.26±2.06
+                                                                     Two teachers are trained on half of the training data each.
+              CMI                68.46±0.24        67.57±0.18        Teacher Ensemble is the ensemble of the two teachers.
+              CMI (w/ GA)        69.10±0.37        68.32±0.25            Our proposed DFMF with GAs produces the best results
+              DFMF (ours)         70.05±0.13       69.67±0.09        compared to the other data free fusion methods. The fused
+                                                                     model accuracy is also substantially higher than either of
+Table 2. Data-free model fusion results with homogeneous net-        the teachers. Although an ensemble shows higher accu-
+works on CIFAR-10 and CIFAR-100 datasets. The two teachers
+                                                                     racy than a fused model, it is more expensive in terms of
+and the student are all using the ResNet-18 architecture.
+                                                                     inference time and computational resources. Among all the
+                                                                     compared methods, ZSKT performs the worst. This is ex-
+                                                                     pected because ZSKT only uses ADV loss to update the
+teacher and the student (or GA) as these models can have
+                                                                     generators. Although using the ADV loss alone works fine
+different number of layers. Here, we use uniform weights
+                                                                     in the single-teacher setting, introducing disagreements be-
+of wk = 1/K in Eq. (1). The remaining hyperparameters
+                                                                     tween multiple teachers and one student causes confusion
+for our DFMF are: Nwarm−up = 50, N = 200, M = 400,
+                                                                     for the generators and worsens the results. DAFL performs
+MGA = 5, MS = 10, B = 256, α = 0.1, β = 1.0 and
+                                                                     better than ZSKT, but its performance is limited due to the
+τ = 3.0. For the compared generative methods (ZSKT,
+                                                                     lack of the BN loss. Without using GAs, DFQ also performs
+DAFL, DFQ) listed in Sec. 3, we used the same parameters
+                                                                     poorly with the ADV loss. DFQ (w/o ADV) performs much
+Nwarm−up , N , M , MS and B for warm-up and knowledge
+                                                                     better than DFQ, however its performance is still limited as
+distillation. The weights to balance different loss function
+                                                                     the generator will no longer expand the distributional cover-
+terms are equal to the ones described in their original pa-
+                                                                     age of the generated images. CMI performs better than the
+pers. Note that for DFQ (w/o ADV), we found that pre-
+                                                                     other generative baseline methods, and adding the GAs fur-
+training the generators sufficiently and keeping them frozen
+                                                                     ther improves its performance. This suggests that GAs can
+during KD performs better as compared to updating the gen-
+                                                                     help the non-generative methods as well. Note that the per-
+erators iteratively. To have a fair comparison with the same
+                                                                     formance improvement is more substantial on CIFAR-100
+number of generator updates, for DFQ (w/o ADV) we use
+                                                                     compared to CIFAR-10. We also plot the fused model accu-
+Nwarm−up = 250 in the warm-up training stage and keep
+                                                                     racy over training epochs for different methods in the Sup-
+the generators frozen later on. For CMI, we used the hy-
+                                                                     plementary Material, where we show that DFMF training is
+perparameters in the authors’ GitHub implementation [6].
+                                                                     more stable and converges faster than the other generative
+For CMI with GAs, we used 200 iterations to update the
+                                                                     methods.
+GAs and 400 iterations to update the student in each epoch.
+                                                                         Fig. 2 shows a few example images produced by one
+For each method, we trained all the models three times and
+                                                                     of the generators from different generative methods in the
+reported the results as mean ± (sample) standard deviation.
+                                                                     CIFAR-100 ‘IBL split (r=3)’ experiment. Sample images
+4.2. Performance on CIFAR-10 and CIFAR-100                           from generators after warm-up training and at the end of
+                                                                     the training process are compared (CMI samples are not
+Homogeneous Network Results. In this section, the teach-             shown here as CMI is a non-generative method and does
+ers, GAs and the student all use ResNet-18 architecture.             not fit into this paradigm). It can be observed that both
+DFMF is compared with other methods and the results are              ZSKT and DAFL produce unrealistic images due to incom-
+shown in Tab. 2. Gold Standard is the result of a ResNet-18          plete fidelity losses. DFQ generator produces good images
+network trained on all the training data without data split.         after warm-up training without the ADV loss, but the im-
+
+
+
+                                                                   7736
+                                    Accuracy (%)
+    Method
+                               BL split   IBL split (r=3)
+    Teachers 1 (ResNet18)       67.90         65.22
+    Teachers 2 (ResNet34)       67.80         61.50
+    Teacher Ensemble            73.15         71.70
+    DFMF (GA=T)              71.16±0.08    69.05±0.22
+    DFMF (GA=S)              70.50±0.68    67.54±1.33
+
+Table 3. Data-free model fusion results with heterogeneous net-
+works on the CIFAR-100 dataset. The two teachers are using          Figure 3. Example images produced by one of the DFMF gener-
+ResNet-18 and ResNet-34, and the student is using ResNet-50.        ators in the Dogs ‘IBL split (r=3)’ experiment with 2 parties, as
+                                                                    compared to the original Stanford Dogs images.
+
+age quality deteriorates towards the end of training because
+of the ADV loss limitation in the multi-teacher setting. Our        all the classes. Fig. 3 shows that DFMF can still produce
+DFMF generators manage to produce high-quality synthetic            high-quality synthetic images when the images have higher
+images throughout the whole training process.                       resolution.
+   Heterogeneous Network Results. In real-world ap-
+plications, it is not uncommon for the pretrained teacher           5. Discussion
+networks to have different architectures. Depending on
+                                                                    Our experiments showed that, in a multi-teacher setting
+our needs and available computational resources, we might
+                                                                    without generator assistants, using an adversarial loss to
+need a large and powerful or a compressed student network.
+                                                                    train the generators deteriorates the results. This was
+Therefore, we also investigate the performance of DFMF
+                                                                    demonstrated by lower performance of DFQ with adversar-
+under the heterogeneous network scenario, where the teach-
+                                                                    ial loss in Tab. 2. In a single-teacher KD scenario, after
+ers and the student have different network architectures. In
+                                                                    some epochs, the student learns to follow the teacher very
+such a setting, we can use GAs that have a network archi-
+                                                                    closely on samples similar to the ones that have been used
+tecture similar to their corresponding teacher (GA=T) or to
+                                                                    for KD up to that point. Therefore, dissimilarity between
+the student (GA=S). We conducted experiments to investi-
+                                                                    the outputs of the teacher and the student for an input sam-
+gate the performance of the student in each of these scenar-
+                                                                    ple is an indicator of the sample novelty for the student. As
+ios. To this end, we use ResNet-18 and ResNet-34 for the
+                                                                    a result, we can use adversarial loss to encourage the gen-
+two teachers and ResNet-50 for the student. We run DFMF
+                                                                    erator to produce samples that cause dissimilarity between
+(GA=T) and DFMF (GA=S) on CIFAR-100 dataset three
+                                                                    the student and the teacher, and hence, produce a more di-
+times and show the mean ± (sample) standard deviation re-
+                                                                    verse set of samples. This will improve the coverage of
+sults. Tab. 3 suggests that GAs with similar architectures
+                                                                    the original training data distribution and decrease chances
+to their corresponding teachers result in improved perfor-
+                                                                    of mode collapse. However, in model fusion as a multi-
+mance. Similar to the homogeneous case, the fused model
+                                                                    teacher KD scenario, the student cannot closely resemble
+using DFMF outperforms each of the pretrained teachers.
+                                                                    all of the teachers, as the teachers’ outputs may be differ-
+                                                                    ent from each other for any given sample. Therefore, there
+4.3. Performance on Stanford Dogs
+                                                                    is always some dissimilarity between each teacher and the
+In this section, ResNet-18 is used for all the teachers, GAs        student regardless of the novelty of the input sample. As
+and the student. The DFMF performance is shown in Tab. 4.           such, encouraging the generators to produce samples that
+It can be seen that on a more challenging dataset with more         result in more student-teacher dissimilarity does not lead to
+classes, higher image resolution, and a larger number of par-       better coverage of the original training data distribution or
+ties (teachers), our DFMF still produces outstanding results        enhanced KD.
+significantly outperforming the teachers and CMI (w/ GA).               This is illustrated in in Fig. 4 where we plot the ADV
+In BL and IBL studies with a mild imbalance ratio (r = 3),          loss (averaged across multiple parties) vs. training epochs
+our DFMF outperforms the gold standard. As we further in-           for DFQ and DFMF in a multi-teacher setting. Only one
+crease the imbalance ratio (r = 10 and r = 20), DFMF still          training session is shown for each method for better il-
+produces results close to the gold standard and ensemble re-        lustration. The ADV loss between the teachers and the
+sults. More detailed analysis regarding the model accuracy          student for DFQ (loss T S DFQ) shows abnormally (neg-
+on different class-based subsets are provided in the Supple-        ative) large values with significant fluctuations as the stu-
+mentary Material, where we show that the teacher models             dent cannot resemble all of the teachers. Rewarding this
+are only specialized at certain classes, whereas our DFMF,          dramatic dissimilarity between multiple teachers and one
+like the gold standard and ensemble models, are good at             student causes confusion for the generators and deterio-
+
+
+
+                                                                  7737
+                         Party                                            Accuracy (%)
+                                     Method
+                         Num.                        BL split                       IBL split
+                                                                       r=3            r=10             r=20
+                           1      Gold Standard                               79.50
+                                    Teachers       76.82/76.98     75.69/74.30    70.00/67.25      61.12/57.94
+                                   Ensemble           80.56           80.71           79.90           78.81
+                           2
+                                  CMI (w/ GA)      75.60±0.09      75.11±0.04     73.34±0.01       72.65±0.22
+                                  DFMF (ours)      80.44±0.15      80.78±0.15     79.45±0.13       78.60±0.23
+                                                   74.14/74.15/    72.30/72.74/ 54.02/55.48/       54.02/55.48/
+                                    Teachers
+                                                   73.60/74.84     70.87/72.30    49.77/54.95      49.77/54.95
+                           4       Ensemble           81.33           81.08           79.45           78.76
+                                  CMI (w/ GA)      76.22±0.13      76.11±0.20     74.33±0.09       73.64±0.28
+                                  DFMF (ours)      81.01±0.23      80.75±0.15     78.94±0.07       78.31±0.06
+
+Table 4. Data-free model fusion results on the Stanford Dogs dataset with 2 and 4 parties. The teachers and the student are all using the
+ResNet-18 architecture.
+
+
+rate the results. In comparison, the ADV loss between                  heterogeneous network settings beyond ResNets.
+the teachers and GAs (loss T A DFMF) shows manageably
+                                                                          In our experiments we update GAs with half the fre-
+small values with minimal fluctuations, which also leads
+                                                                       quency of the student update (MGA = 5, MS = 10)
+to much more mild ADV loss plots between the teachers
+                                                                       to reach a balance between computation speed and perfor-
+and the student (loss T S DFMF, only calculated for com-
+                                                                       mance, as GAs only help with the generators and do not
+parison purpose but not contributing to back-propagation
+                                                                       need to have the same high quality as the student. We tried
+here) compared with the DFQ plots, suggesting more sta-
+                                                                       updating GAs with the same frequency as the student but
+bilized student training. This supports our approach to pair
+                                                                       got similar results (see Supplementary Material for numer-
+each teacher with a generator assistant to resemble a single-
+                                                                       ical results). As a next step, we will investigate whether
+teacher KD scenario for each generator and bring back the
+                                                                       further reducing MGA can still maintain the same perfor-
+benefits of the adversarial loss.
+                                                                       mance. In this study, we used uniform weights for wk in
+                                                                       Eq. (1), where wk = 1/K. In more complicated scenarios
+                                                                       where there are mixed-quality teachers, adaptive sample-
+                                                                       wise weight assignment [28] may be beneficial. For ex-
+                                                                       ample, teacher predictions close to one-hot labels can be
+                                                                       assigned with larger weights.
+                                                                          Last but not least, we focused on the scenario where the
+                                                                       teachers are all trained to predict the same classes in this
+                                                                       study. DFMF with multi-talent teachers that specialize on
+                                                                       different classification tasks is our on-going research, where
+                                                                       we expect the GAs will also be helpful.
+
+
+                                                                       6. Conclusion
+
+                                                                       In this paper, we present a novel data-free model fusion
+                                                                       method (DFMF) that combines multiple pretrained models
+Figure 4. Examples of ADV loss vs. training epochs for DFQ and         into one model for superior performance without the need
+DFMF (loss T S DFQ is multipled by 0.1 for better illustration).       for the raw training data. We propose to use generator as-
+                                                                       sistants to improve the generators for producing adversar-
+    In this study, we use the VID loss by only matching the            ial samples, which are helpful for multi-teacher knowledge
+last convolutional layer outputs between the teacher and the           distillation. Experiments on the CIFAR-10, CIFAR-100
+student (or GA). Although this might sacrifice performance             and Stanford Dogs datasets demonstrate that our proposed
+slightly, it has the potential for better scalability when the         DFMF achieves substantial improvement compared to the
+teachers and student have different architectures and layer-           prior art. We also show that the proposed DFMF works well
+wise matching is difficult. In the future, we will explore             on both homogeneous and heterogeneous network settings.
+
+
+
+                                                                    7738
+References                                                             [15] Ilya Loshchilov and Frank Hutter.          Sgdr: Stochas-
+                                                                            tic gradient descent with warm restarts. arXiv preprint
+ [1] Sungsoo Ahn, Shell Xu Hu, Andreas Damianou, Neil D                     arXiv:1608.03983, 2016. 5
+     Lawrence, and Zhenwen Dai. Variational information dis-
+                                                                       [16] Liangchen Luo, Mark Sandler, Zi Lin, Andrey Zhmoginov,
+     tillation for knowledge transfer. In Proceedings of the
+                                                                            and Andrew Howard. Large-scale generative data-free distil-
+     IEEE/CVF Conference on Computer Vision and Pattern
+                                                                            lation. arXiv preprint arXiv:2012.05578, 2020. 2
+     Recognition, pages 9163–9171, 2019. 2, 3, 5
+                                                                       [17] Paul Micaelli and Amos J Storkey. Zero-shot knowledge
+ [2] Hanting Chen, Yunhe Wang, Chang Xu, Zhaohui Yang,
+                                                                            transfer via adversarial belief matching. Advances in Neu-
+     Chuanjian Liu, Boxin Shi, Chunjing Xu, Chao Xu, and Qi
+                                                                            ral Information Processing Systems, 32, 2019. 2, 5
+     Tian. Data-free learning of student networks. In Proceedings
+                                                                       [18] Yurii Nesterov. A method for unconstrained convex mini-
+     of the IEEE/CVF International Conference on Computer Vi-
+                                                                            mization problem with the rate of convergence o (1/kˆ 2). In
+     sion, pages 3514–3522, 2019. 2, 5
+                                                                            Doklady an ussr, pages 543–547, 1983. 5
+ [3] Yoojin Choi, Jihwan Choi, Mostafa El-Khamy, and Jungwon
+     Lee. Data-free network quantization with adversarial knowl-       [19] SeongUk Park and Nojun Kwak. Feature-level ensemble
+     edge distillation. In Proceedings of the IEEE/CVF Con-                 knowledge distillation for aggregating knowledge from mul-
+     ference on Computer Vision and Pattern Recognition Work-               tiple networks. In ECAI 2020, pages 1411–1418. IOS Press,
+     shops, pages 710–711, 2020. 2, 4, 5                                    2020. 2
+ [4] J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei.     [20] Robi Polikar. Ensemble based systems in decision making.
+     ImageNet: A Large-Scale Hierarchical Image Database. In                IEEE Circuits and systems magazine, 6(3):21–45, 2006. 1
+     CVPR09, 2009. 5                                                   [21] Lior Rokach. Ensemble-based classifiers. Artificial intelli-
+ [5] Gongfan Fang, Jie Song, Xinchao Wang, Chengchao Shen,                  gence review, 33(1):1–39, 2010. 1
+     Xingen Wang, and Mingli Song. Contrastive model inver-            [22] Chengchao Shen, Xinchao Wang, Jie Song, Li Sun, and Min-
+     sion for data-free knowledge distillation. arXiv preprint              gli Song. Amalgamating knowledge towards comprehensive
+     arXiv:2105.08584, 2021. 2, 5                                           classification. In Proceedings of the AAAI Conference on
+ [6] Gongfan Fang, Kanya Mo, Xinchao Wang, Jie Song, Shitao                 Artificial Intelligence, pages 3068–3075, 2019. 2
+     Bei, Haofei Zhang, and Mingli Song. Up to 100x faster data-       [23] Chengchao Shen, Mengqi Xue, Xinchao Wang, Jie Song, Li
+     free knowledge distillation. In Proceedings of the AAAI Con-           Sun, and Mingli Song. Customizing student networks from
+     ference on Artificial Intelligence, pages 6597–6604, 2022. 2,          heterogeneous teachers via adaptive knowledge amalgama-
+     3, 6                                                                   tion. In Proceedings of the IEEE/CVF International Confer-
+ [7] Pengchao Han, Jihong Park, Shiqiang Wang, and Yejun Liu.               ence on Computer Vision, pages 3504–3513, 2019. 2
+     Robustness and diversity seeking data-free knowledge dis-         [24] Jingwen Ye, Yixin Ji, Xinchao Wang, Xin Gao, and Min-
+     tillation. In ICASSP 2021-2021 IEEE International Confer-              gli Song. Data-free knowledge amalgamation via group-
+     ence on Acoustics, Speech and Signal Processing (ICASSP),              stack dual-gan. In Proceedings of the IEEE/CVF Conference
+     pages 2740–2744. IEEE, 2021. 2                                         on Computer Vision and Pattern Recognition, pages 12516–
+ [8] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.                 12525, 2020. 3
+     Deep residual learning for image recognition. In Proceed-         [25] Hongxu Yin, Pavlo Molchanov, Jose M Alvarez, Zhizhong
+     ings of the IEEE Conference on Computer Vision and Pattern             Li, Arun Mallya, Derek Hoiem, Niraj K Jha, and Jan Kautz.
+     Recognition (CVPR), 2016. 5                                            Dreaming to distill: Data-free knowledge transfer via deep-
+ [9] Geoffrey Hinton, Oriol Vinyals, Jeff Dean, et al. Distill-             inversion. In Proceedings of the IEEE/CVF Conference
+     ing the knowledge in a neural network. arXiv preprint                  on Computer Vision and Pattern Recognition, pages 8715–
+     arXiv:1503.02531, 2(7), 2015. 2                                        8724, 2020. 2
+[10] Aditya Khosla, Nityananda Jayadevaprakash, Bangpeng               [26] Jaemin Yoo, Minyong Cho, Taebum Kim, and U Kang.
+     Yao, and Li Fei-Fei. Novel dataset for fine-grained image              Knowledge extraction with no observable data. Advances
+     categorization. In First Workshop on Fine-Grained Visual               in Neural Information Processing Systems, 32, 2019. 2
+     Categorization, IEEE Conference on Computer Vision and            [27] Shan You, Chang Xu, Chao Xu, and Dacheng Tao. Learning
+     Pattern Recognition, Colorado Springs, CO, 2011. 4                     from multiple teacher networks. In Proceedings of the 23rd
+[11] Diederik P. Kingma and Jimmy Ba. Adam: A method for                    ACM SIGKDD International Conference on Knowledge Dis-
+     stochastic optimization. CoRR, abs/1412.6980, 2015. 5                  covery and Data Mining, pages 1285–1294, 2017. 2
+[12] Jakub Konečnỳ, H Brendan McMahan, Felix X Yu, Peter             [28] Hailin Zhang, Defang Chen, and Can Wang. Confidence-
+     Richtárik, Ananda Theertha Suresh, and Dave Bacon. Fed-               aware multi-teacher knowledge distillation. In ICASSP
+     erated learning: Strategies for improving communication ef-            2022-2022 IEEE International Conference on Acoustics,
+     ficiency. arXiv preprint arXiv:1610.05492, 2016. 1                     Speech and Signal Processing (ICASSP), pages 4498–4502.
+[13] A. Krizhevsky and G. Hinton. Learning multiple layers of               IEEE, 2022. 2, 8
+     features from tiny images. Master’s thesis, Department of
+     Computer Science, University of Toronto, 2009. 4
+[14] Yuang Liu, Wei Zhang, and Jun Wang. Adaptive multi-
+     teacher multi-level knowledge distillation. Neurocomputing,
+     415:106–113, 2020. 2
+
+
+
+
+                                                                     7739
+

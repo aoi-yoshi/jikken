@@ -1,0 +1,74 @@
+                                                                                                                        2026.09.01 版
+
+•     必要に応じて temperature smoothing，clipping，quantization，LoRA update clipping 等を候補とする．
+•     残差経路で client 固有 LoRA を server 上に再構成する場合は，計算コストだけでなく追加のプライバシーリスクも明
+      示する．
+
+
+8．FedPACT 手法 Phase との対応
+                    FedPACT Phase                                                        対応段階
+
+
+                Phase 1．基本連合 LoRA                    第 I 段階 I-A／I-C，第 II〜IV 段階の第 1 層．
+
+
+    Phase 2．private logit prototype                                             第 I 段階 I-B，第 II 段階 II-1．
+
+
+    Phase 3．seed retrieval                                                      第 I 段階 I-B，第 II 段階 II-2．
+
+
+    Phase 4．proxy generation                         第 I 段階 I-B，第 II 段階 II-2／II-3．
+
+
+    Phase 5．foundation LoRA distillation             第 I 段階 I-B／I-C，第 II 段階 II-1〜II-5．
+
+
+    Phase 6．continual learning                                                         第 III 段階．
+
+
+                                                     第 II 段階の failure analysis を踏まえ，第 III 段階で導入判断し，第 IV 段階で必要時のみ
+    Phase 7．residual path 及び高度化
+                                                     評価．
+
+
+
+9．実験を進める際の基本原則
+    各 Step で説明できるようにする事項
+    入力，その処理が必要な理由，計算又は更新対象，出力と次処理での利用方法，正しく動作したと判断するための数
+    値又はログを明確にする．
+    記録は「目的 → FedPACT 案の参照箇所 → 実験条件 → 入力 → 処理 → 出力 → 評価指標 → 結果 → 考察」の順で残す．
+
+実装方法は，必要に応じて関連論文，ライブラリの公式文書及び既存実装を自分で調査する．単にプログラムが停
+止せず動作したことを成功とはしない．また，最終的な Accuracy 及び F1 だけではなく，private 局所適応 → logit
+prototype → proxy 生成 → proxy 選択 → foundation 更新の各段階で知識がどの程度保持されているかを追跡し，改善
+又は失敗の原因を特定できるようにする．
+
+10．保存する基本ログと成果物
+                  単位                                                              保存項目
+
+
+                                       config，random seed，model revision，LoRA recipe，data split ID，library version，hardware／GCP
+               実験全体
+                                       instance．
+
+
+                                       global surrogate／foundation LoRA state，surrogate F1，foundation F1／AUC，通信量，総処理時間，
+                 round
+                                       round 別性能推移．
+
+
+                                       local loss／F1，LoRA update norm，使用 data 数，post／delta prototype，frequency，source seed ID，
+    client／prototype／proxy
+                                       transformation parameters，post-logit KL，delta error，Qinv，selection result．
+
+
+                                       client→server 送信ログ，server-side file list，private sample ID 照合結果，proxy fidelity 分布，fidelity-
+             監査／可視化
+                                       transfer scatter，per-client 比較，per-round cost．
+
+
+
+
+                                                                    10
+

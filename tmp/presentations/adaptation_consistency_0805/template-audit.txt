@@ -1,0 +1,16 @@
+Source deck: C:\Python\実験_修正\output\presentation\進捗会0731_吉村有生.pptx
+Slides: 8, 16:9, white background with dark navy typography and page rail.
+Typography: Japanese text uses the inherited Japanese theme font; body slides use a large title and either one large body placeholder or a centered native table.
+Reusable patterns:
+- Slide 1: title slide with title, date, presenter, affiliation.
+- Slides 2, 4, 7, 8: title + large content placeholder.
+- Slides 3, 5, 6: title + native table.
+Inherited structure:
+- Slides 2-8 contain filled slide-number placeholders; all remain filled and are updated intentionally.
+- No empty visible prompt text appears in the source render.
+Insertion contract:
+- Keep all eight source slide patterns and their masters/layouts.
+- Rewrite inherited title/body/table/page-number elements only.
+- Do not add slide-local design elements or overlays.
+- Preserve source font sizes, spacing, page rail, colors, and table geometry.
+Communication job: By the end, the research group should be able to read the revised Adaptation Consistency definition, the three-layer interfaces, and the next experimental decisions without relying on the legacy parallel Lpred/Lgrad/Lpost explanation.

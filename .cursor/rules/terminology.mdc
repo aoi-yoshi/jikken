@@ -22,8 +22,23 @@ alwaysApply: true
 # 使わない
 
 - **集約 LoRA** — 研究提案・実験計画 PDF にない **プロジェクト独自語**。上記 **FedAvg 後の重み** またはファイル名を使う。
+- **重み系 / 情報系 / 重みベース / 情報ベース / 重みパイプライン** — 会話内だけの二分法。**教授・コード非共有者に通じない**。下記「比較の言い方」で書く。
 - F / S（単独略称）、AC（単独）、surrogate（ユーザー向け説明）、代理 LoRA
 - global / global checkpoint（曖昧）— **`step05_fedavg_global.pt`** または **FedAvg 後の重み**
+
+# 比較の言い方（独自分類の代わり）
+
+2 方式を対比するときは、**何を送り・何を更新し・何を配布するか** を正規用語で書く。
+
+| 比較対象 | 端末→クラウド（適応情報） | クラウドの更新 | クラウド→端末（配布） | レパートリー例 |
+|----------|---------------------------|----------------|------------------------|----------------|
+| 従来 FL（FedAvg 型） | **クライアント LoRA + 分類ヘッド**（Flower 上の重みベクトル） | **基盤 LoRA 整合なし**。**FedAvg 後の重み** を作る | **FedAvg 後の重み** を端末へ書き込む | `baseline_fedavg` |
+| FedProx 型 | 同上 | 同上 + 端末側 proximal | 同上 | `baseline_fedprox` |
+| FedOpt / FedACG（文献） | 端末更新の差分（擬似勾配）＝実質 **クライアント LoRA + 分類ヘッド** | 平均した更新に adaptive optimizer / momentum 等 | 更新後の **クライアント LoRA + 分類ヘッド** | 文献参照。`ac_lpred_fedopt` は **FedAdam 係数のみ借用**（FedOpt の重み集約経路そのものではない） |
+| 提案（Adaptation Consistency） | **logits**（＋必要なら **勾配ベクトル** / **適応後 logits**）を sidecar で送る | **基盤 LoRA** を **Lpred / Lgrad / Lpost** で更新。**FedAvg 後の重みはサーバ更新に使わない** | **distill 配布**（**server_train** 上の **logits** 手本） | `ac_lpred_df` 等 |
+
+- **FedAvg / FedOpt / FedProx** はいずれも **クライアント LoRA + 分類ヘッドの重み** を扱う比較手法。名称が違うだけで「FedAvg だけが重みを使う」わけではない。
+- 提案では **logits 等** で **基盤 LoRA** を更新する。**クライアント LoRA の重みベクトルはサーバ整合の入力に使わない**（Flower 通信に載ることはあるが `weights_used_by_server: false`）。
 
 # Step 5 の事実
 
@@ -34,4 +49,15 @@ alwaysApply: true
 
 - Step 5 の **FedAvg 後の重みをそのまま配布する代わりに**、**FedAvg 後の重み** と **基盤 LoRA** を **整合損失** で揃え、**更新した基盤 LoRA をクライアントに配布**する。
 
+# Step 7 ラウンド流れ・蒸留の表現
+
+**比較パターン ①②③**（実験条件）と **工程 ②〜⑤**（共通パイプライン段）を混同しない。  
+**「蒸留」= 工程⑤ 蒸留配布（クラウド→端末）のみ**。工程④ Lpred は **クラウド基盤整合** と呼び、「基盤 logits へ蒸留」と書かない。
+
+詳細: **`step07_flow_terminology.mdc`**（必読）
+
 詳細: `docs/terminology.md`
+
+# かみ砕き（先生報告・ユーザー説明）
+
+専門用語の平易な言い換え・Step 7 の流れの説明方針は **`plain_language.mdc`** を参照。コード・ログでは本ファイルの正規用語を使う。

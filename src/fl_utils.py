@@ -144,14 +144,20 @@ def load_fl_checkpoint(path: Path) -> Tuple[List[str], np.ndarray, Dict[str, Any
     return names, vec, meta
 
 
-def build_initial_fl_state(cfg: Dict[str, Any], device: torch.device) -> Tuple[List[str], np.ndarray]:
+def build_initial_fl_state(
+    cfg: Dict[str, Any],
+    device: torch.device,
+    *,
+    model_id: str | None = None,
+) -> Tuple[List[str], np.ndarray]:
     """共有初期パラメータ（classifier + client LoRA）を生成する。"""
     from src.metrics import set_seed
     from src.peft_setup import attach_dual_lora
     from src.vl_model import build_model, unfreeze_backbone
 
     set_seed(int(cfg["train"]["seed"]))
-    model, _ = build_model(cfg, device)
+    mid = model_id or str(cfg.get("model", {}).get("client_id") or cfg["model"]["id"])
+    model, _ = build_model(cfg, device, model_id=mid)
     unfreeze_backbone(model)
     model.backbone = attach_dual_lora(model.backbone, cfg, client="client", surrogate="surrogate")
     model.backbone.set_adapter("client")

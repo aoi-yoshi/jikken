@@ -1,0 +1,476 @@
+{
+  "schema": "fedpact.stage1.three_round_summary.v1",
+  "status": "pass",
+  "scope": "Three-round execution and state-lineage verification; not a performance result.",
+  "rounds": [
+    {
+      "round": 1,
+      "run_ids": {
+        "layer1": "p1d_layer1_20260917_01",
+        "full": "p1d_full_20260917_02"
+      },
+      "status": {
+        "layer1": "pass",
+        "full": "pass"
+      },
+      "global_surrogate": {
+        "before_state_id": "M_G^0",
+        "after_state_id": "M_G^1",
+        "before_digests": {
+          "global_surrogate_lora": "1a9aa42cd0377517be1973fe2dccceac9a222fd98b087024ca9c5fb0566724ed",
+          "classification_head": "7483851d1efff37a9b6d1489a3b2ad44fec6cfe05be79a92d98ef23b80e3c474"
+        },
+        "after_digests": {
+          "global_surrogate_lora": "1ac6d505c8b0c1b38ff4eed6a3a40afc9559f5d34c83105e69704ab8721c3e4d",
+          "classification_head": "478ad3d1f9af6e946b2e748a98868344cdb41876e6c788aa4ef0275c8073fa4f"
+        },
+        "before_checkpoint_sha256": "f1f1d07bab10de3bf4a8031eae45c89e698a1c75fcf45fc65bb8c954402b3faa",
+        "after_checkpoint_sha256": "cfd9e8de47c24bee183ddf9620e3bdbab4a97eb3e2dedca8f9030056d04a57a8",
+        "client_lora_update_norms": [
+          0.3460928797721863,
+          0.2916244566440582
+        ],
+        "client_head_update_norms": [
+          0.012344702146947384,
+          0.009559542872011662
+        ],
+        "fedavg_max_abs_diff_offline_recompute": 5.820766091346741e-11,
+        "redistribution_digest_match": true
+      },
+      "layer2": {
+        "server_seed_count": 60,
+        "server_seed_label_counts": {
+          "0": 30,
+          "1": 30
+        },
+        "class_unrestricted_retrieval": true,
+        "proxy_candidate_count": 60,
+        "proxy_pair_count": 4,
+        "retrieval_used_updated_global": true,
+        "delta_used_round_before_after_global": true,
+        "seed_label_vs_updated_global_prediction": {
+          "agreement": 43,
+          "total": 60
+        },
+        "selected_pair_diagnostics": {
+          "pairs": [
+            {
+              "prototype_id": "r1-client-0-class0",
+              "prototype_class": 0,
+              "seed_id": "6d24134fb5a44162",
+              "seed_label": 1,
+              "seed_label_matches_prototype_class": false,
+              "target_delta_risk": 0.09378650970342017,
+              "proxy_delta_risk": 0.07155492265789443,
+              "delta_direction_matches": true,
+              "post_kl": 0.00020442177113674277,
+              "delta_mse": 0.0004942434625627894,
+              "L_match": 0.0006986652336995322
+            },
+            {
+              "prototype_id": "r1-client-0-class1",
+              "prototype_class": 1,
+              "seed_id": "4d02e2a2eeb2b840",
+              "seed_label": 0,
+              "seed_label_matches_prototype_class": false,
+              "target_delta_risk": 0.23770272679602045,
+              "proxy_delta_risk": 0.05091160264452843,
+              "delta_direction_matches": true,
+              "post_kl": 8.353912555983422e-10,
+              "delta_mse": 0.034890924061778114,
+              "L_match": 0.03489092489716937
+            },
+            {
+              "prototype_id": "r1-client-1-class0",
+              "prototype_class": 0,
+              "seed_id": "216b13e807f983fa",
+              "seed_label": 1,
+              "seed_label_matches_prototype_class": false,
+              "target_delta_risk": -0.10266765914431768,
+              "proxy_delta_risk": 0.055874232649231415,
+              "delta_direction_matches": false,
+              "post_kl": 0.0003509866095614579,
+              "delta_mse": 0.025135531453477425,
+              "L_match": 0.025486518063038883
+            },
+            {
+              "prototype_id": "r1-client-1-class1",
+              "prototype_class": 1,
+              "seed_id": "702b63924e5f828f",
+              "seed_label": 0,
+              "seed_label_matches_prototype_class": false,
+              "target_delta_risk": 0.0054599645501661005,
+              "proxy_delta_risk": 0.009676621744982739,
+              "delta_direction_matches": true,
+              "post_kl": 9.449005575006258e-05,
+              "delta_mse": 1.7780197898599427e-05,
+              "L_match": 0.000112270253648662
+            }
+          ],
+          "seed_label_match_count": 0,
+          "delta_direction_match_count": 3
+        }
+      },
+      "foundation": {
+        "before_state_id": "F^0",
+        "after_state_id": "F^1",
+        "before_digest": "68734a11bab91fad99fac117e2d8e47b2cb9614b4f18dbbee4b4c8107af7fdbb",
+        "after_digest": "0a7605ec726dd630e8957ad4ca143b7a866dcbfa2865cfd366ac51d1e3866209",
+        "acceptance_policy": "nonincrease",
+        "accepted_learning_rate": 1e-06,
+        "weighted_loss_before": 0.054041728377342224,
+        "weighted_loss_after": 0.053430989384651184,
+        "weighted_loss_nonincrease": true,
+        "update_l2_norm_fp32": 0.0013567089335992932,
+        "classification_head_unchanged": true,
+        "non_target_parameter_versions_unchanged": true
+      },
+      "privacy": {
+        "raw_data_non_transmission_audit": true,
+        "client_payload_audits": [
+          "pass",
+          "pass"
+        ]
+      },
+      "timings_sec": {
+        "layer1_parent": {
+          "prepare_and_split": 1.342454400000861,
+          "model_load": 13.601109599985648,
+          "client_local_updates": 96.45090989998425,
+          "fedavg_and_redistribution": 0.9749403999885544
+        },
+        "layer2_model_load": 20.096418900007848,
+        "server_seed_retrieval": 28.614769700012403,
+        "proxy_transform_and_save": 4.049571600015042,
+        "proxy_before_after_and_objective": 52.85131840000395,
+        "foundation_load_and_update": 171.8038098999823,
+        "p1d_layer2_and_layer3_elapsed": 279.05058989999816
+      }
+    },
+    {
+      "round": 2,
+      "run_ids": {
+        "layer1": "p1d_round2_layer1_20260917_01",
+        "full": "p1d_round2_full_20260917_01"
+      },
+      "status": {
+        "layer1": "pass",
+        "full": "pass"
+      },
+      "global_surrogate": {
+        "before_state_id": "M_G^1",
+        "after_state_id": "M_G^2",
+        "before_digests": {
+          "global_surrogate_lora": "1ac6d505c8b0c1b38ff4eed6a3a40afc9559f5d34c83105e69704ab8721c3e4d",
+          "classification_head": "478ad3d1f9af6e946b2e748a98868344cdb41876e6c788aa4ef0275c8073fa4f"
+        },
+        "after_digests": {
+          "global_surrogate_lora": "1852d0b3759fa844bce9f9026634780620eb12cea98a6809d44051aeaeb33df1",
+          "classification_head": "85badc8f4e99306054c7ac0514d8fe7f72a58335834cc4f2e2d5fa5275d7e725"
+        },
+        "before_checkpoint_sha256": "cfd9e8de47c24bee183ddf9620e3bdbab4a97eb3e2dedca8f9030056d04a57a8",
+        "after_checkpoint_sha256": "b410c637863de3a6af1b51f115ddd3b6a1317828664b9bf0e1f0a472b27a6a39",
+        "client_lora_update_norms": [
+          0.3227636218070984,
+          0.2802909016609192
+        ],
+        "client_head_update_norms": [
+          0.011065730825066566,
+          0.00949548464268446
+        ],
+        "fedavg_max_abs_diff_offline_recompute": 5.820766091346741e-11,
+        "redistribution_digest_match": true
+      },
+      "layer2": {
+        "server_seed_count": 60,
+        "server_seed_label_counts": {
+          "0": 30,
+          "1": 30
+        },
+        "class_unrestricted_retrieval": true,
+        "proxy_candidate_count": 60,
+        "proxy_pair_count": 4,
+        "retrieval_used_updated_global": true,
+        "delta_used_round_before_after_global": true,
+        "seed_label_vs_updated_global_prediction": {
+          "agreement": 44,
+          "total": 60
+        },
+        "selected_pair_diagnostics": {
+          "pairs": [
+            {
+              "prototype_id": "r2-client-0-class0",
+              "prototype_class": 0,
+              "seed_id": "9644808c5dea498c",
+              "seed_label": 1,
+              "seed_label_matches_prototype_class": false,
+              "target_delta_risk": 0.03447916683836053,
+              "proxy_delta_risk": 0.013430685238159934,
+              "delta_direction_matches": true,
+              "post_kl": 2.2683928234667203e-07,
+              "delta_mse": 0.0004430385776739871,
+              "L_match": 0.00044326541695633375
+            },
+            {
+              "prototype_id": "r2-client-0-class1",
+              "prototype_class": 1,
+              "seed_id": "43f469714bc67bda",
+              "seed_label": 1,
+              "seed_label_matches_prototype_class": true,
+              "target_delta_risk": 0.17457572115731992,
+              "proxy_delta_risk": 0.005163913820418697,
+              "delta_direction_matches": true,
+              "post_kl": 2.6729101646894102e-05,
+              "delta_mse": 0.02870036046515535,
+              "L_match": 0.028727089566802245
+            },
+            {
+              "prototype_id": "r2-client-1-class0",
+              "prototype_class": 0,
+              "seed_id": "d8f5b87007a62eb2",
+              "seed_label": 0,
+              "seed_label_matches_prototype_class": true,
+              "target_delta_risk": -0.1113662950730202,
+              "proxy_delta_risk": 0.0051140067792819766,
+              "delta_direction_matches": false,
+              "post_kl": 9.148788066352942e-05,
+              "delta_mse": 0.013567660719603442,
+              "L_match": 0.013659148600266971
+            },
+            {
+              "prototype_id": "r2-client-1-class1",
+              "prototype_class": 1,
+              "seed_id": "aba5cb020d90378b",
+              "seed_label": 1,
+              "seed_label_matches_prototype_class": true,
+              "target_delta_risk": -0.006966849224888698,
+              "proxy_delta_risk": 0.008823320712068594,
+              "delta_direction_matches": false,
+              "post_kl": 0.0001164434904712781,
+              "delta_mse": 0.000249329466637991,
+              "L_match": 0.0003657729571092691
+            }
+          ],
+          "seed_label_match_count": 3,
+          "delta_direction_match_count": 2
+        }
+      },
+      "foundation": {
+        "before_state_id": "F^1",
+        "after_state_id": "F^2",
+        "before_digest": "0a7605ec726dd630e8957ad4ca143b7a866dcbfa2865cfd366ac51d1e3866209",
+        "after_digest": "3db53ea01b35f2b86c1b96325341266d463d12009a3e6a6f1b833160a5cf8d9b",
+        "acceptance_policy": "nonincrease",
+        "accepted_learning_rate": 1e-06,
+        "weighted_loss_before": 18.478321075439453,
+        "weighted_loss_after": 18.339014053344727,
+        "weighted_loss_nonincrease": true,
+        "update_l2_norm_fp32": 0.0013574656331911683,
+        "classification_head_unchanged": true,
+        "non_target_parameter_versions_unchanged": true
+      },
+      "privacy": {
+        "raw_data_non_transmission_audit": true,
+        "client_payload_audits": [
+          "pass",
+          "pass"
+        ]
+      },
+      "timings_sec": {
+        "layer1_parent": {
+          "prepare_and_split": 1.328108899993822,
+          "model_load": 13.549406899983296,
+          "client_local_updates": 97.13805239999783,
+          "fedavg_and_redistribution": 0.975318500015419
+        },
+        "layer2_model_load": 13.552350200014189,
+        "server_seed_retrieval": 26.974570699996548,
+        "proxy_transform_and_save": 4.148220800008858,
+        "proxy_before_after_and_objective": 52.69164600002114,
+        "foundation_load_and_update": 173.57468639998115,
+        "p1d_layer2_and_layer3_elapsed": 272.5149623999896
+      }
+    },
+    {
+      "round": 3,
+      "run_ids": {
+        "layer1": "p1d_round3_layer1_20260917_01",
+        "full": "p1d_round3_full_20260917_02"
+      },
+      "status": {
+        "layer1": "pass",
+        "full": "pass"
+      },
+      "global_surrogate": {
+        "before_state_id": "M_G^2",
+        "after_state_id": "M_G^3",
+        "before_digests": {
+          "global_surrogate_lora": "1852d0b3759fa844bce9f9026634780620eb12cea98a6809d44051aeaeb33df1",
+          "classification_head": "85badc8f4e99306054c7ac0514d8fe7f72a58335834cc4f2e2d5fa5275d7e725"
+        },
+        "after_digests": {
+          "global_surrogate_lora": "523973f2b7e4eb18fbc4fa910ff0aff60fd682dbca21e2c6678e271772302f4a",
+          "classification_head": "e1f126cdad5ed177c54ec41d6554bb8f54df2bd1065db21175c57486b184e32e"
+        },
+        "before_checkpoint_sha256": "b410c637863de3a6af1b51f115ddd3b6a1317828664b9bf0e1f0a472b27a6a39",
+        "after_checkpoint_sha256": "43e17f6b5c03f688e1e83ae619f25c70d40e755c9afea74ca5afb2dfa2814131",
+        "client_lora_update_norms": [
+          0.32021334767341614,
+          0.28036296367645264
+        ],
+        "client_head_update_norms": [
+          0.010753595270216465,
+          0.009461126290261745
+        ],
+        "fedavg_max_abs_diff_offline_recompute": 1.1641532182693481e-10,
+        "redistribution_digest_match": true
+      },
+      "layer2": {
+        "server_seed_count": 60,
+        "server_seed_label_counts": {
+          "0": 30,
+          "1": 30
+        },
+        "class_unrestricted_retrieval": true,
+        "proxy_candidate_count": 60,
+        "proxy_pair_count": 4,
+        "retrieval_used_updated_global": true,
+        "delta_used_round_before_after_global": true,
+        "seed_label_vs_updated_global_prediction": {
+          "agreement": 43,
+          "total": 60
+        },
+        "selected_pair_diagnostics": {
+          "pairs": [
+            {
+              "prototype_id": "r3-client-0-class0",
+              "prototype_class": 0,
+              "seed_id": "905ad9657aad3903",
+              "seed_label": 1,
+              "seed_label_matches_prototype_class": false,
+              "target_delta_risk": 0.007234739925766741,
+              "proxy_delta_risk": -0.006032878824346222,
+              "delta_direction_matches": false,
+              "post_kl": 2.5466052234023127e-05,
+              "delta_mse": 0.0001760297072983498,
+              "L_match": 0.00020149575953237292
+            },
+            {
+              "prototype_id": "r3-client-0-class1",
+              "prototype_class": 1,
+              "seed_id": "d0c4296c68c2984c",
+              "seed_label": 1,
+              "seed_label_matches_prototype_class": true,
+              "target_delta_risk": 0.14805289096790927,
+              "proxy_delta_risk": 0.00013386260590353416,
+              "delta_direction_matches": true,
+              "post_kl": 8.303851388604452e-05,
+              "delta_mse": 0.02188003895155986,
+              "L_match": 0.021963077465445905
+            },
+            {
+              "prototype_id": "r3-client-1-class0",
+              "prototype_class": 0,
+              "seed_id": "2ee53695737c7e78",
+              "seed_label": 0,
+              "seed_label_matches_prototype_class": true,
+              "target_delta_risk": -0.1153795305598762,
+              "proxy_delta_risk": -0.025655076022051526,
+              "delta_direction_matches": true,
+              "post_kl": 0.0004622607521548427,
+              "delta_mse": 0.008050477742110172,
+              "L_match": 0.008512738494265015
+            },
+            {
+              "prototype_id": "r3-client-1-class1",
+              "prototype_class": 1,
+              "seed_id": "aba5cb020d90378b",
+              "seed_label": 1,
+              "seed_label_matches_prototype_class": true,
+              "target_delta_risk": -0.012287138601752456,
+              "proxy_delta_risk": 0.0008065565464203672,
+              "delta_direction_matches": false,
+              "post_kl": 0.00047414952430666936,
+              "delta_mse": 0.00017144485263328454,
+              "L_match": 0.0006455943769399538
+            }
+          ],
+          "seed_label_match_count": 3,
+          "delta_direction_match_count": 2
+        }
+      },
+      "foundation": {
+        "before_state_id": "F^2",
+        "after_state_id": "F^3",
+        "before_digest": "3db53ea01b35f2b86c1b96325341266d463d12009a3e6a6f1b833160a5cf8d9b",
+        "after_digest": "0c7eee96fc308824e9af7ef99a6399aed5e6cb92c3b1b1a265f9a8c29ed944fe",
+        "acceptance_policy": "execution",
+        "accepted_learning_rate": 1e-06,
+        "weighted_loss_before": 16.130657196044922,
+        "weighted_loss_after": 16.177555084228516,
+        "weighted_loss_nonincrease": false,
+        "update_l2_norm_fp32": 0.0013574586482718587,
+        "classification_head_unchanged": true,
+        "non_target_parameter_versions_unchanged": true
+      },
+      "privacy": {
+        "raw_data_non_transmission_audit": true,
+        "client_payload_audits": [
+          "pass",
+          "pass"
+        ]
+      },
+      "timings_sec": {
+        "layer1_parent": {
+          "prepare_and_split": 1.7031267000129446,
+          "model_load": 14.883396499993978,
+          "client_local_updates": 130.9881527000107,
+          "fedavg_and_redistribution": 1.0932552000158466
+        },
+        "layer2_model_load": 13.556896699999925,
+        "server_seed_retrieval": 27.13388660000055,
+        "proxy_transform_and_save": 4.180238999979338,
+        "proxy_before_after_and_objective": 52.65709819999756,
+        "foundation_load_and_update": 178.20727479999186,
+        "p1d_layer2_and_layer3_elapsed": 277.3112356000056
+      }
+    }
+  ],
+  "continuity": [
+    {
+      "transition": "round 1 -> 2",
+      "global_surrogate_digest_match": true,
+      "global_surrogate_checkpoint_sha256_match": true,
+      "foundation_lora_digest_match": true,
+      "pass": true
+    },
+    {
+      "transition": "round 2 -> 3",
+      "global_surrogate_digest_match": true,
+      "global_surrogate_checkpoint_sha256_match": true,
+      "foundation_lora_digest_match": true,
+      "pass": true
+    }
+  ],
+  "retained_diagnostic_failure": {
+    "run_id": "p1d_round3_full_20260917_01",
+    "gate": "P1-D",
+    "status": "error",
+    "error_type": "AssertionError",
+    "error": "no non-increasing P1-D foundation step found: [{'attempt': 1, 'learning_rate': 1e-06, 'weighted_loss_after': 16.177555084228516, 'optimizer_state_entries_at_start': 0, 'accepted': False}, {'attempt': 2, 'learning_rate': 1e-07, 'weighted_loss_after': 16.19727897644043, 'optimizer_state_entries_at_start': 0, 'accepted': False}, {'attempt': 3, 'learning_rate': 1.0000000000000002e-08, 'weighted_loss_after': 16.164945602416992, 'optimizer_state_entries_at_start': 0, 'accepted': False}, {'attempt': 4, 'learning_rate': 1.0000000000000003e-09, 'weighted_loss_after': 16.141056060791016, 'optimizer_state_entries_at_start': 0, 'accepted': False}, {'attempt': 5, 'learning_rate': 1.0000000000000002e-10, 'weighted_loss_after': 16.15608024597168, 'optimizer_state_entries_at_start': 0, 'accepted': False}, {'attempt': 6, 'learning_rate': 1.0000000000000003e-11, 'weighted_loss_after': 16.14348602294922, 'optimizer_state_entries_at_start': 0, 'accepted': False}]",
+    "finished_at": "2026-09-17T08:57:42.414150+00:00"
+  },
+  "claim_boundary": {
+    "supported": [
+      "The two clients started each round from the same redistributed global surrogate state.",
+      "Client LoRA and classification-head updates, FedAvg, class-unrestricted retrieval, proxy generation, and foundation LoRA updates executed for three consecutive rounds.",
+      "Global-surrogate and foundation-LoRA digests match at both round transitions."
+    ],
+    "not_supported": [
+      "FedPACT improves predictive performance.",
+      "The selected proxies faithfully reproduce every prototype delta.",
+      "The method transfers to an unseen or heterogeneous foundation model.",
+      "The communication audit constitutes a formal privacy guarantee."
+    ]
+  }
+}

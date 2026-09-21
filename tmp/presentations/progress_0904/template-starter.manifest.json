@@ -1,0 +1,101 @@
+{
+  "sourcePptx": "C:\\Users\\aoi7y\\OneDrive - 国立大学法人東海国立大学機構\\folder\\卒研_明光\\進捗会0731_吉村有生.pptx",
+  "mapPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-frame-map.json",
+  "output": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter.pptx",
+  "outputBytes": 117577,
+  "sourceSlideCount": 11,
+  "slideCount": 8,
+  "previewDir": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-preview",
+  "layoutDir": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-layout",
+  "contactSheet": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-contact-sheet.png",
+  "slides": [
+    {
+      "outputSlide": 1,
+      "sourceSlide": 1,
+      "narrativeRole": "opening title",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-preview\\starter-slide-01.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-01.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-layout\\starter-slide-01.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-01.layout.json"
+    },
+    {
+      "outputSlide": 2,
+      "sourceSlide": 10,
+      "narrativeRole": "research objective and problem",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 3,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-preview\\starter-slide-02.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-02.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-layout\\starter-slide-02.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-02.layout.json"
+    },
+    {
+      "outputSlide": 3,
+      "sourceSlide": 4,
+      "narrativeRole": "overall three-layer method flow",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-preview\\starter-slide-03.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-03.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-layout\\starter-slide-03.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-03.layout.json"
+    },
+    {
+      "outputSlide": 4,
+      "sourceSlide": 4,
+      "narrativeRole": "layer one data ownership and transmission",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-preview\\starter-slide-04.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-04.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-layout\\starter-slide-04.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-04.layout.json"
+    },
+    {
+      "outputSlide": 5,
+      "sourceSlide": 4,
+      "narrativeRole": "layer two iterative proxy generation",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-preview\\starter-slide-05.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-05.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-layout\\starter-slide-05.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-05.layout.json"
+    },
+    {
+      "outputSlide": 6,
+      "sourceSlide": 4,
+      "narrativeRole": "proxy selection and foundation distillation",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 4,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-preview\\starter-slide-06.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-06.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-layout\\starter-slide-06.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-06.layout.json"
+    },
+    {
+      "outputSlide": 7,
+      "sourceSlide": 2,
+      "narrativeRole": "future four-stage roadmap",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 3,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-preview\\starter-slide-07.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-07.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-layout\\starter-slide-07.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-07.layout.json"
+    },
+    {
+      "outputSlide": 8,
+      "sourceSlide": 10,
+      "narrativeRole": "closing synthesis",
+      "reuseMode": "duplicate-slide",
+      "editTargetCount": 3,
+      "previewPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-preview\\starter-slide-08.png",
+      "previewRelativePath": "template-starter-preview/starter-slide-08.png",
+      "layoutPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0904\\template-starter-layout\\starter-slide-08.layout.json",
+      "layoutRelativePath": "template-starter-layout/starter-slide-08.layout.json"
+    }
+  ]
+}

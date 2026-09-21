@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "fixed_pool_unique_videos": 292,
+  "fixed_pool_overlap_count": 0,
+  "coverage": {
+    "s_seed_c_high": {
+      "pairs": 30,
+      "target_pairs": 15,
+      "cloudy_pairs": 15,
+      "highway_pairs": 15
+    },
+    "s_seed_c_factor_separated": {
+      "pairs": 30,
+      "target_pairs": 0,
+      "cloudy_pairs": 15,
+      "highway_pairs": 15
+    },
+    "s_seed_c_nosupport": {
+      "pairs": 30,
+      "target_pairs": 0,
+      "cloudy_pairs": 15,
+      "highway_pairs": 0
+    }
+  },
+  "intentional_server_condition_nesting": true,
+  "selected_unique_pairs": 146,
+  "selected_unique_videos": 292,
+  "source_content_hash_count": 292,
+  "prior_checkpoint_content_hash_blacklist_count": 300,
+  "risk_frames_inside_alert_event_rate": 1.0,
+  "missing_frame_count": 0,
+  "manifests": {
+    "client_train": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_client_train.jsonl",
+    "gate_validation": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_gate_validation.jsonl",
+    "target_test": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_target_test.jsonl",
+    "seed_a_target": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_seed_a_target.jsonl",
+    "dserver_lab_b_cloudy": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_dserver_lab_b_cloudy.jsonl",
+    "seed_b_cloudy": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_seed_b_cloudy.jsonl",
+    "dserver_lab_c_highway": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_dserver_lab_c_highway.jsonl",
+    "seed_c_highway": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_seed_c_highway.jsonl",
+    "seed_d_neither": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_seed_d_neither.jsonl",
+    "retention_test": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_retention_test.jsonl",
+    "d_server_lab": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_d_server_lab.jsonl",
+    "s_seed_c_high": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_s_seed_c_high.jsonl",
+    "s_seed_c_factor_separated": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_s_seed_c_factor_separated.jsonl",
+    "s_seed_c_nosupport": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_s_seed_c_nosupport.jsonl",
+    "master": "C:\\Python\\実験_修正\\artifacts\\datasets\\fedpact_stage2_coverage_v2_20260920\\manifest_master.jsonl"
+  },
+  "allocation_sha256": "5790d05569c311aca8df5e686766c84bb03b05e4d1efe20dc4702065201606a6",
+  "master_manifest_sha256": "65f5293b58ec70e4378c2840511d1e80487c601307d6299f3de4afe3d521ceae"
+}

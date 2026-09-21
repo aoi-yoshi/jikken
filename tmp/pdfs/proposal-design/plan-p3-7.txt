@@ -1,0 +1,337 @@
+                                                                                       2026.09.01 版
+
+
+
+3．第 I 段階．ローカル FedPACT プロトタイプ開発
+3.1．第 I 段階の目的
+既に実施済みの Qwen-3B，NEXAR，LoRA，Flower による server 1，client 2 の FedPEFT 環境を FedPACT 第 1 層の
+たたき台として利用する．その上で第 2 層及び第 3 層を追加し，FedPACT の「ラウンドごとの全体処理フロー」を
+3〜5 ラウンド連続して実行できる状態を作る．
+
+ 第 I 段階の完成イメージ
+ この段階では，FedPACT が既存手法より高性能であることを示す必要はない．
+ 各処理が設計通りに実行され，各 round の入力，出力，モデル状態，損失，評価値及び通信内容を追跡できることを
+ 完成条件とする．
+
+
+
+Step I-A．既存 FedPEFT の固定と再現確認
+既に動作している FedPEFT 環境を，FedPACT 開発の基準となる再現可能な状態として固定する．新しい比較実験を
+行うのではなく，最低限の再実行で実装状態を確認する．
+1．使用モデル，ライブラリ及びバージョンを記録する．
+2．NEXAR 前処理，frame sampling，label mapping を記録する．
+3．LoRA recipe を保存する．
+4．Flower server 1，client 2 を起動し，FedAvg による global LoRA 更新と次 round への再配布を確認する．
+5．同一設定を再実行できることを確認し，round 別の loss，F1，LoRA 更新量及び実行時間を保存する．
+
+     確認区分                                                   確認事項
+
+                   現在の Flower 実装のどの処理が FedPACT 第 1 層に相当するか．LoRA のどのパラメータを集約してい
+      実装前
+                   るか．再実行に必要な設定は何か．
+
+                   2 client が毎 round 参加しているか．global LoRA が更新されているか．集約後 LoRA が次 round へ配布
+      実装後
+                   されているか．同じ設定から再現できるか．
+
+                   round，client ID，データ数，local loss，local F1，LoRA 更新量，global surrogate F1，学習時間，設定フ
+       保存
+                   ァイル，LoRA recipe，実行ログ．
+
+
+
+
+Step I-B．FedPACT 第 2 層及び第 3 層の最小実装
+従来計画の Step I-1〜I-6 を一つの実装ブロックとして扱い，各機能を単体確認しながら接続する．この段階では各
+候補方式を網羅比較せず，第 II 段階の比較実験を実行できる最小構成を優先する．
+
+1）client 側での適応出力取得
+                                          𝑞pre = 𝑝(𝑆 + 𝐴𝑡𝐺 ; 𝑥)
+                                                        (𝑡+1)
+                                         𝑞post = 𝑝(𝑆 + 𝐴𝑘       ; 𝑥)
+                                           𝛥𝑞 = 𝑞post − 𝑞pre
+client 内部では pre，post，delta を同一 private sample に対応付けて計算する．基本送信表現は post＋delta＋
+frequency とし，post only は第 II 段階で delta の効果を確認するための ablation として生成可能にする．pre は
+delta 計算に使用するが，server へ独立には送信しない．
+
+2）logit prototype 生成
+初期実装では class-wise averaging 又は K-means 等の単純な方法から開始し，prototype 数及び cluster feature は小
+規模 screening で決める．各 prototype には prototype ID，client ID，round，post prototype，必要に応じて delta
+prototype，frequency 及び class count を付与する．
+
+3）server seed retrieval
+更新後 global surrogate を用いて server seed 候補の出力を計算し，各 post prototype に近い seed を探索する．top-N
+候補及び nearest seed を保存し，retrieval のみで得られる post-logit KL を計測する．
+
+
+
+                                                   3
+                                                                                                                   2026.09.01 版
+
+4）proxy transformation
+変換候補は，動画区間又は frame 時刻を変更する temporal transformation と，crop，brightness，contrast，blur 等
+の単純な visual transformation から構成する．すべてを本実験で個別比較せず，小規模 screening で安定して改善す
+る変換群を選び，retrieval＋transformation の一方式として固定する．
+                   𝐿proxy = 𝐿match + 𝐿reg
+                                                      (𝑡+1)                         (𝑡+1)
+                   𝐿match = 𝜆post 𝐷KL (𝜇post ∥ 𝑝(𝑀𝐺           ; 𝑥̃)) + 𝜆𝛥 𝐷 (𝛥𝜇, 𝑝(𝑀𝐺       ; 𝑥̃) − 𝑝(𝑀𝐺𝑡 ; 𝑥̃))
+                   𝐿reg = 𝜆seed 𝐿seed + 𝜆real 𝐿real + 𝜆temporal 𝐿temporal + 𝜆div 𝐿diversity
+Lreg は seed からの過度な逸脱，不自然な画像又は動画，時間的不整合及び proxy の重複を抑えるために用い，必要
+ な項から段階的に実装する．また，delta prototype は client-specific local adaptation の出力変化である一方，proxy
+ 側の差分は更新前後の global surrogate の出力差であり，基本経路では連合集約後に保持された local adaptation を
+         再現対象とする．十分に再現できない prototype は第 III 段階で残差経路の導入要否を判断する．
+post-only 条件では𝜆𝛥 = 0とし，post＋delta 条件では𝜆𝛥 > 0とする．これにより delta 情報の利用効果を proxy
+objective と対応付けて評価できるようにする．
+
+5）proxy pair 及び foundation distillation
+                                                  𝑃𝑘,𝑟 = (𝑥̃𝑘,𝑟 , 𝜇post,𝑘,𝑟 )
+初期実装では prototype frequency を重みに保持した上で，proxy 品質による追加重みを付けずに foundation 側
+LoRA を更新する．Qinv-based selection は第 II 段階で追加する．Qcons 及び Qnovel は Qinv だけでは転移性能を十
+分説明できない場合に追加し，Qretain は継続学習及び replay を評価する第 III 段階で導入する．
+
+Step I-C．1 round 統合及び 3〜5 round 安定動作確認
+1．global surrogate LoRA を各 client へ配布する．
+2．各 client が private data で LoRA を局所学習し，pre，post 及び delta output を取得する．
+3．frequency を含む post only 又は post＋delta prototype と LoRA 更新を server へ送信する．
+4．server で global surrogate LoRA を FedAvg 集約する．
+5．server seed を retrieval し，必要に応じて transformation して proxy を生成する．
+6．proxy pair を構成し，post-logit KL 及び delta error を計測する．
+7．proxy pair を teacher として foundation LoRA を更新する．
+8．評価結果及び処理時間を保存し，更新後 global surrogate を次 round へ引き継ぐ．
+最初は 3 round 連続実行し，状態継承に問題がなければ 5 round まで延長する．ローカル PC 上で 10 round まで延
+長することは必須とせず，長い round 系列の確認は第 II 段階以降で行う．
+
+ 第 I 段階の完成条件
+ 3〜5 round 連続実行でき，global surrogate が各 round で更新されて次 round へ正しく配布される．
+ private data そのものが server へ送信又は保存されていないことを通信ログ及び server-side file audit で確認できる．
+ post-only 及び post＋delta prototype，seed retrieval，proxy transformation，proxy pair，foundation LoRA update が一
+ つの round 処理として接続される．
+ round，client，prototype 単位で中間結果を追跡でき，同一設定を再実行できる．
+
+
+
+
+4．第 II 段階．基本 FedPACT 予備実験
+4.1．目的と位置づけ
+FedPACT を GCP へ移行し，surrogate に Qwen2.5-VL-3B，foundation に Qwen2.5-VL-7B 以上を用いる異種モデル構
+成で第 1〜3 層を動作させる．この段階では，FedPACT 第 2 層及び第 3 層の基本設計条件を効率的に決定するとと
+もに，proxy-mediated transfer の中心仮説がどこまで支持されるかを予備評価する．
+実験数を抑えながら因果関係を読み取りやすくするため，各比較軸の全直積を試す factorial experiment は行わない．
+前段で選択した条件を後段では固定し，必要な比較だけを順に実施する．
+
+ 第 II 段階で確認する問い
+ P1．局所適応を表現する際，post 出力に delta 情報を明示的に加えることは proxy 再構成又は foundation transfer を
+ 改善するか．
+
+
+
+                                                                4
+                                                                                                    2026.09.01 版
+
+
+ P2．server-owned seed から private adaptation behavior をどこまで再現できるか．
+ P3．retrieval 後の transformation は retrieval alone より proxy fidelity を改善するか．
+ P4．proxy fidelity の改善は foundation model の性能改善につながるか．
+ P5．Qinv による quality-based selection は全 proxy の uniform use より有効か．
+ P6．IID から Non-IID へ変化したとき，どの層で性能低下が生じるか．
+ P7．FedPACT に必要な追加通信量と server-side computation cost はどの程度か．
+
+
+
+4.2．screening と confirmation
+第 II 段階は screening と confirmation の二つの pass に分ける．screening では縮小データと少数 run を用い，
+prototype 生成法と prototype 数，transformation set，Qinv 規則等の実装パラメータを固定する．confirmation では，
+論文化又は後続の本実験に利用する比較条件だけを full evaluation data で複数 run 実行し，平均と標準偏差を報告で
+きる形にする．random seed 数は利用可能計算資源を踏まえて confirmation 開始前に固定する．
+
+4.3．共通基準条件
+         項目                                                      基準条件
+
+       surrogate        Qwen2.5-VL-3B-Instruct．
+
+      foundation        Qwen2.5-VL-7B-Instruct 又はそれ以上．
+
+      第 1 層集約           FedAvg を標準とする．Non-IID で不安定な場合のみ診断目的で FedProx を追加する．
+
+       client 数                                        一つの基準 client 数に固定する．
+
+     client data 量                                      原則として等量に固定する．
+
+     prototype 生成       screening で一方式を選び，confirmation では固定する．
+
+       主タスク                                                 normal／risk 二値分類．
+
+        主指標             F1，AUC，post-logit KL，delta error，foundation ΔF1，通信量，処理時間．
+
+
+
+
+4.4．Experiment II-1．Adaptation representation
+目的は，private 局所適応を表すために delta 情報を明示的に使用する価値を確認することである．client 内部では
+pre，post，delta を計算し，基本方式の Post＋delta と，その ablation である Post only の二条件を比較する．
+
+       条件                            送信 prototype                                 proxy objective
+
+
+     Post only                      𝜇post ，frequency                                 𝜆𝛥 = 0．
+
+    Post＋delta       𝜇post ，𝛥𝜇，frequency                                             𝜆𝛥 > 0．
+
+
+その他の条件は固定し，proxy generation には retrieval＋transformation，proxy selection には uniform use を使用す
+る．比較指標は post-logit KL，delta error，foundation F1，foundation ΔF1 及び prototype 通信量とする．pre＋post
+を独立条件とした三条件比較は行わない．
+
+4.5．Experiment II-2．Proxy generation
+Experiment II-1 で採用する adaptation representation を固定し，proxy generation の次の三条件を比較する．
+
+           条件                                     内容                                   主な目的
+
+                                                                          prototype に応じた retrieval や
+        Fixed seed        固定 server seed を使用する．
+                                                                          transformation を行わない基準．
+
+
+
+
+                                                        5
+                                                                                                     2026.09.01 版
+
+
+               条件                                    内容                                      主な目的
+
+                               post prototype に最も近い seed を検索して使用す                server seed coverage と検索だけの効果を
+           Retrieval only
+                               る．                                                確認する．
+
+                               retrieval seed へ screening で選んだ temporal／visual
+    Retrieval＋Transformation                                                     proxy fidelity の追加改善を確認する．
+                               transformation を適用する．
+
+
+
+temporal-only を独立条件とした四段階比較は必須としない．変換候補ごとの詳細は screening で確認し，
+confirmation では一つの transformation pipeline として固定する．
+
+4.6．Experiment II-3．Proxy fidelity と transfer performance の関係
+追加の学習実験を増やさず，Experiment II-1 及び II-2 で得た結果を再利用して解析する．post-logit KL，delta error
+及び foundation ΔF1 の関係を条件別，round 別，client 別に整理する．観測点数が十分な場合は Spearman 相関等を
+用いる．個々の proxy を 1 件ずつ除外して foundation を再学習する leave-one-proxy-out 評価は今回の必須実験には
+含めず，必要に応じて Qinv で proxy を品質帯に分けた group 比較を行う．
+
+4.7．Experiment II-4．Proxy selection
+proxy selection は Uniform と Qinv-based selection の二条件に限定する．両条件とも prototype frequency を保持し，
+Uniform では frequency 以外の proxy 品質重みを付けず，Qinv-based では Qinv を追加して選択又は重み付けする．
+Qcons 及び Qnovel は Qinv だけでは転移性能を十分説明できない場合に追加し，Qretain は第 III 段階の継続学習及
+び replay 評価で導入する．Qinv の具体式と threshold は screening で決定し，confirmation 前に固定する．
+
+                条件                                                        内容
+
+                                 prototype frequency を重みとし，proxy 品質による追加重みを付けずに foundation
+               Uniform
+                                 distillation へ使用する．
+
+                                 prototype frequency に加え，proxy が private output prototype をどの程度再現できたかを
+             Qinv-based
+                                 表す Qinv に基づき選択又は重み付けする．
+
+
+
+
+4.8．Experiment II-5．Non-IID robustness
+Experiment II-1，II-2 及び II-4 で選択した FedPACT 構成を固定し，IID と 1 種類の Non-IID 条件を比較する．client
+数及び client data volume は固定し，分布条件だけを変更する．Non-IID は class skew 又は Dirichlet split 等から一方
+式を選び，定義を実験開始前に固定する．
+global surrogate だけでは一部 prototype を再現できない場合でも，第 II 段階では残差経路を直ちに追加せず，
+threshold failure rate，client 別 proxy KL，global surrogate F1 及び foundation ΔF1 として記録する．残差経路は第 III
+段階で導入要否を判断する．
+
+4.9．Communication and computation cost
+通信量及び計算時間のための独立した大規模 sweep は行わず，Experiment II-1，II-2，II-4 及び II-5 の実行時に自動
+記録する．
+•     client LoRA training time．
+•     LoRA upload volume．
+•     prototype construction time 及び prototype upload volume．
+•     seed retrieval time．
+•     proxy transformation time 及び proxy storage size．
+•     foundation LoRA update time．
+•     total time per round．
+prototype 数を段階的に増やす scaling experiment は必須とせず，採用した prototype 数における実測コストを報告
+する．計算資源に余裕がある場合のみ，小規模な prototype count sensitivity を追加する．
+
+4.10．第 II 段階の実施順序
+1．GCP 上で第 I 段階の統合実装を再現する．
+2．screening により prototype method／count，transformation set，Qinv rule を固定する．
+
+
+                                                            6
+                                                                                                  2026.09.01 版
+
+3．Experiment II-1．Post only と Post＋delta を比較する．
+4．Experiment II-2．Fixed seed，Retrieval only，Retrieval＋Transformation を比較する．
+5．Experiment II-3．既存結果を用いて fidelity-transfer relationship を解析する．
+6．Experiment II-4．Uniform と Qinv-based selection を比較する．
+7．Experiment II-5．IID と 1 種類の Non-IID を比較する．
+8．全主要実験の通信量及び処理時間を集計する．
+
+ 第 II 段階の完成条件
+ 3B surrogate から 7B 以上の foundation への FedPACT が複数 round 安定して動作する．
+ Post only と Post＋delta，Fixed seed と Retrieval と Retrieval＋Transformation，Uniform と Qinv-based selection，IID
+ と Non-IID の比較結果が揃う．
+ proxy fidelity と foundation ΔF1 の関係を解析できる．
+ 通信量及び処理時間を round 単位で報告できる．
+ private raw data が server へ直接送信されないことをログで確認できる．
+
+
+
+4.11．予備実験終了段階で論文化する際の整理ポイント
+第 II 段階終了時点で得られた結果が FedPACT の中心的な学術的問いに対する十分な証拠となっている場合は，その
+時点で論文化を検討する．ただし，特定の会議への投稿を前提とせず，結果の強さ，追加実験に必要な時間，投稿
+時期及び適合分野を踏まえて投稿先を決める．
+
+           整理項目                                                  確認内容
+
+                             private 局所適応を proxy-logit pair として server 側に顕在化し，異種 foundation model へ転移でき
+          中心的主張
+                             ることをどこまで示せたか．
+
+                             Post＋delta が Post only より proxy fidelity 又は foundation transfer を改善したか．改善しない場
+ Adaptation representation
+                             合，delta の役割をどこまで主張できるか．
+
+       Proxy generation      Retrieval 及び Transformation が Fixed seed に対して一貫した改善を示したか．
+
+                             低い proxy reconstruction error が foundation 改善とどの程度関係したか．Qinv を主要品質指標とし
+ Fidelity-transfer 関係
+                             て妥当といえるか．
+
+        Proxy selection      Qinv-based selection が Uniform use より性能又は計算効率を改善したか．
+
+            Non-IID          IID から Non-IID への性能低下を三層のどこに帰属できるか．
+
+             効率              LoRA と prototype の通信量，proxy 生成時間，foundation update 時間が実用上どの程度か．
+
+                             第 II 段階までの基本 FedPACT を主対象とする場合は，replay，残差経路，高度な Qcons／Qnovel／
+     論文化時に残す範囲
+                             Qretain，formal privacy 評価を今後の拡張として分離する．
+
+                             三層構造図，proxy 生成例，fidelity と foundation ΔF1 の関係図，representation 比較表，proxy
+           候補図表
+                             generation 比較表，transfer 性能表，Non-IID 表，per-round cost 表を候補として整理する．
+
+        追加実験の判断              主張を支える結果が不足する場合は，無理に論文化せず，第 III 段階又は必要な追加実験へ進む．
+
+
+
+
+5．第 III 段階．連合継続学習予備実験
+5.1．目的
+第 II 段階で基本 FedPACT の構成を固定した後，時間変化するデータ系列を導入し，surrogate 側及び foundation 側
+における知識保持方法を決定する．例えば，NEXAR データを昼，夜，雨天，その他の走行条件等の系列として順次
+与える．
+
+
+
+
+                                                       7
+

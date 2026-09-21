@@ -1,0 +1,142 @@
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"FedPACTの全体処理フロー","textShapes":4}
+{"kind":"textbox","id":"sh/547294r6","slide":1,"name":"タイトル 1","placeholder":"title","text":"FedPACTの全体処理フロー\n代理データを介した異種モデル間知識転移","textPreview":"FedPACTの全体処理フロー | 代理データを介した異種モデル間知識転移","textChars":35,"textLines":2,"bbox":[27.92,206.1,1223.12,153.9]}
+{"kind":"textbox","id":"sh/k3yl0zql","slide":1,"name":"字幕 2","placeholder":"subtitle","text":"名古屋大学\n情報学研究科\n知能システム学専攻　1年","textPreview":"名古屋大学 | 情報学研究科 | 知能システム学専攻　1年","textChars":25,"textLines":3,"bbox":[323.22,540.74,911.46,153.9]}
+{"kind":"textbox","id":"sh/7qp4be9c","slide":1,"name":"タイトル 1","text":"吉村　有生","textPreview":"吉村　有生","textChars":5,"textLines":1,"bbox":[205.18,411.89,868.61,153.9]}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"name":"タイトル 1","text":"9月4日研究会","textPreview":"9月4日研究会","textChars":7,"textLines":1,"bbox":[194.46,343.67,890.03,153.9]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":"[Sources]\n- 進捗会0731_吉村有生.pptx（視覚テンプレート）\n- FedPACT手法提案260901.pdf\n- FedPACT実験計画260901.pdf\n[/Sources]"}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"private適応知識を異種基盤モデルへ転移する","textShapes":3}
+{"kind":"textbox","id":"sh/9072xkry","slide":2,"name":"タイトル 1","placeholder":"title","text":"private適応知識を異種基盤モデルへ転移する","textPreview":"private適応知識を異種基盤モデルへ転移する","textChars":24,"textLines":1,"bbox":[97,10,1070,62]}
+{"kind":"textbox","id":"sh/ozy1ofad","slide":2,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/b29kza94","slide":2,"name":"コンテンツ プレースホルダー 3","text":"目的：生データを送らず，局所適応知識を基盤モデルへ転移する\n3B surrogateのLoRAは，7B基盤へ直接統合できない\nprivate入力が異なるため，client logitsを直接対応付けられない\nserver seed上のproxy pairで二つの壁を接続する","textPreview":"目的：生データを送らず，局所適応知識を基盤モデルへ転移する | 3B surrogateのLoRAは，7B基盤へ直接統合できない | private入力が異なるため，client logitsを直接対応付けられない | server seed上のproxy pairで二つの...","textChars":137,"textLines":4,"bbox":[32,105,1120,500]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":"[Sources]\n- FedPACT手法提案260901.pdf p.3\n- FedPACT実験計画260901.pdf p.1-p.2\n[/Sources]"}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"三層でprivate適応を基盤モデルへ接続する","textShapes":19}
+{"kind":"textbox","id":"sh/cza94vmx","slide":3,"name":"タイトル 1","placeholder":"title","text":"三層でprivate適応を基盤モデルへ接続する","textPreview":"三層でprivate適応を基盤モデルへ接続する","textChars":23,"textLines":1,"bbox":[97,10,1070,62]}
+{"kind":"textbox","id":"sh/d0jax03i","slide":3,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/298ryl4v","slide":3,"name":"s3-cloud-lane-1","bbox":[58,96,1150,122]}
+{"kind":"textbox","id":"sh/3ah8rqlg","slide":3,"name":"s3-cloud-lane-1-label","text":"クラウド","textPreview":"クラウド","textChars":4,"textLines":1,"bbox":[68,100,115,27]}
+{"kind":"shape","id":"sh/obq90bml","slide":3,"name":"s3-client-lane","bbox":[58,224,1150,122]}
+{"kind":"textbox","id":"sh/pcjqtg36","slide":3,"name":"s3-client-lane-label","text":"クライアント","textPreview":"クライアント","textChars":6,"textLines":1,"bbox":[68,228,115,27]}
+{"kind":"shape","id":"sh/m5cra54z","slide":3,"name":"s3-cloud-lane-2","bbox":[58,352,1150,326]}
+{"kind":"textbox","id":"sh/n6ls3alk","slide":3,"name":"s3-cloud-lane-2-label","text":"クラウド","textPreview":"クラウド","textChars":4,"textLines":1,"bbox":[68,356,115,27]}
+{"kind":"textbox","id":"sh/n2l4fq98","slide":3,"name":"s3-start","text":"ラウンド t 開始","textPreview":"ラウンド t 開始","textChars":9,"textLines":1,"bbox":[505,101,270,34]}
+{"kind":"textbox","id":"sh/m1c3mlsn","slide":3,"name":"s3-distribute","text":"第1層：global surrogate LoRAを配布","textPreview":"第1層：global surrogate LoRAを配布","textChars":28,"textLines":1,"bbox":[392,151,496,54]}
+{"kind":"textbox","id":"sh/943mhgre","slide":3,"name":"s3-private","text":"private data\n端末外へ送信しない","textPreview":"private data | 端末外へ送信しない","textChars":22,"textLines":2,"bbox":[94,260,210,58]}
+{"kind":"textbox","id":"sh/83ulovat","slide":3,"name":"s3-local","text":"局所LoRA適応＋prototype化\nμpost・Δμ・frequencyを生成","textPreview":"局所LoRA適応＋prototype化 | μpost・Δμ・frequencyを生成","textChars":41,"textLines":2,"bbox":[340,244,600,84]}
+{"kind":"textbox","id":"sh/v6l4jq94","slide":3,"name":"s3-aggregate","text":"FedAvgでglobal surrogate LoRAを更新","textPreview":"FedAvgでglobal surrogate LoRAを更新","textChars":31,"textLines":1,"bbox":[340,374,600,58]}
+{"kind":"textbox","id":"sh/a5c3ql8z","slide":3,"name":"s3-seed","text":"server seed\nクラウドのみ保有","textPreview":"server seed | クラウドのみ保有","textChars":20,"textLines":2,"bbox":[94,475,210,62]}
+{"kind":"textbox","id":"sh/x8nml0ra","slide":3,"name":"s3-proxy","text":"第2層：proxy入力を探索・調整・検証\n更新前後surrogateでpost／deltaを評価","textPreview":"第2層：proxy入力を探索・調整・検証 | 更新前後surrogateでpost／deltaを評価","textChars":48,"textLines":2,"bbox":[340,464,600,84]}
+{"kind":"textbox","id":"sh/w7ulsvqp","slide":3,"name":"s3-distill","text":"第3層：選択した P=(x̃, μpost) で\nfoundation LoRAを知識蒸留","textPreview":"第3層：選択した P=(x̃, μpost) で | foundation LoRAを知識蒸留","textChars":45,"textLines":2,"bbox":[340,580,600,66]}
+{"kind":"textbox","id":"sh/ja54na9g","slide":3,"name":"s3-foundation","text":"更新済み\nfoundation LoRA","textPreview":"更新済み | foundation LoRA","textChars":20,"textLines":2,"bbox":[986,583,190,62]}
+{"kind":"shape","id":"sh/i9w3u58v","slide":3,"bbox":[640,135,0,16]}
+{"kind":"shape","id":"sh/e10f2twf","slide":3,"bbox":[640,205,0,39]}
+{"kind":"shape","id":"sh/f29gbyx0","slide":3,"bbox":[296.75,286,43.25,3]}
+{"kind":"shape","id":"sh/03ix43e5","slide":3,"bbox":[640,328,0,46]}
+{"kind":"shape","id":"sh/14ryd8fq","slide":3,"bbox":[640,432,0,32]}
+{"kind":"shape","id":"sh/6d0fytg3","slide":3,"bbox":[296.25,506,43.75,0]}
+{"kind":"shape","id":"sh/re9g7yxo","slide":3,"bbox":[640,548,0,32]}
+{"kind":"shape","id":"sh/sfix03y9","slide":3,"bbox":[940,613,53.75,1]}
+{"kind":"shape","id":"sh/tgry9ofu","slide":3,"bbox":[888,178,52,225]}
+{"kind":"textbox","id":"sh/a9kfadwn","slide":3,"name":"s3-label-distribute","text":"A_G^t・分類head","textPreview":"A_G^t・分類head","textChars":12,"textLines":1,"bbox":[735,203,235,28]}
+{"kind":"textbox","id":"sh/batgjixs","slide":3,"name":"s3-label-upload","text":"LoRA更新・μpost・Δμ・frequency","textPreview":"LoRA更新・μpost・Δμ・frequency","textChars":25,"textLines":1,"bbox":[764,328,380,31]}
+{"kind":"textbox","id":"sh/l4fi9cza","slide":3,"name":"s3-label-global","text":"A_G^t / A_G^(t+1)","textPreview":"A_G^t / A_G^(t+1)","textChars":17,"textLines":1,"bbox":[752,432,360,28]}
+{"kind":"textbox","id":"sh/k3m1g7yp","slide":3,"name":"s3-label-pair","text":"選択済みproxy pair","textPreview":"選択済みproxy pair","textChars":14,"textLines":1,"bbox":[700,548,330,29]}
+{"kind":"textbox","id":"sh/z2d07mh4","slide":3,"name":"s3-label-next","text":"A_G^(t+1)\n次ラウンドへ再配布","textPreview":"A_G^(t+1) | 次ラウンドへ再配布","textChars":19,"textLines":2,"bbox":[948,191,230,54]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":"[Sources]\n- FedPACT手法提案260901.pdf p.4-p.7\n- FedPACT実験計画260901.pdf p.3-p.4\n[/Sources]"}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"第1層：privateデータは端末内に保持","textShapes":19}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"name":"タイトル 1","placeholder":"title","text":"第1層：privateデータは端末内に保持","textPreview":"第1層：privateデータは端末内に保持","textChars":21,"textLines":1,"bbox":[97,10,1070,62]}
+{"kind":"textbox","id":"sh/0ba143al","slide":4,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/rm1k7yt4","slide":4,"name":"s4-cloud-lane","bbox":[58,98,1150,205]}
+{"kind":"textbox","id":"sh/ql8jytsj","slide":4,"name":"s4-cloud-lane-label","text":"クラウド","textPreview":"クラウド","textChars":4,"textLines":1,"bbox":[68,102,115,27]}
+{"kind":"shape","id":"sh/doj29oba","slide":4,"name":"s4-client-lane","bbox":[58,312,1150,366]}
+{"kind":"textbox","id":"sh/sna103ap","slide":4,"name":"s4-client-lane-label","text":"クライアント","textPreview":"クライアント","textChars":6,"textLines":1,"bbox":[68,316,115,27]}
+{"kind":"textbox","id":"sh/3ihk3et8","slide":4,"name":"s4-agt","text":"global surrogate\nLoRA  A_G^t","textPreview":"global surrogate | LoRA  A_G^t","textChars":28,"textLines":2,"bbox":[108,146,230,66]}
+{"kind":"textbox","id":"sh/ih8ju9sn","slide":4,"name":"s4-distribute","text":"クライアントへ\n配布","textPreview":"クライアントへ | 配布","textChars":10,"textLines":2,"bbox":[405,146,180,66]}
+{"kind":"textbox","id":"sh/kbm987y5","slide":4,"name":"s4-fedavg","text":"FedAvg集約","textPreview":"FedAvg集約","textChars":8,"textLines":1,"bbox":[750,125,220,66]}
+{"kind":"textbox","id":"sh/5cva1cfq","slide":4,"name":"s4-agnext","text":"A_G^(t+1)","textPreview":"A_G^(t+1)","textChars":9,"textLines":1,"bbox":[1010,125,170,66]}
+{"kind":"textbox","id":"sh/i94r6xgz","slide":4,"name":"s4-layer2","text":"第2層へ：A_G^t / A_G^(t+1) とprototype","textPreview":"第2層へ：A_G^t / A_G^(t+1) とprototype","textChars":33,"textLines":1,"bbox":[750,215,430,60]}
+{"kind":"textbox","id":"sh/jadsz2xk","slide":4,"name":"s4-private","text":"private data\nD_k^t","textPreview":"private data | D_k^t","textChars":18,"textLines":2,"bbox":[95,430,205,75]}
+{"kind":"textbox","id":"sh/w72947yt","slide":4,"name":"s4-pre","text":"学習前推論\nq_pre","textPreview":"学習前推論 | q_pre","textChars":11,"textLines":2,"bbox":[350,345,205,62]}
+{"kind":"textbox","id":"sh/x8vaxsfe","slide":4,"name":"s4-adapt","text":"LoRA局所適応","textPreview":"LoRA局所適応","textChars":8,"textLines":1,"bbox":[350,445,205,62]}
+{"kind":"textbox","id":"sh/a5kr2xg3","slide":4,"name":"s4-post","text":"学習後推論\nq_post","textPreview":"学習後推論 | q_post","textChars":12,"textLines":2,"bbox":[350,545,205,62]}
+{"kind":"textbox","id":"sh/v6tsv2xo","slide":4,"name":"s4-proto","text":"logit prototype化\nμpost\nΔμ=μpost−μpre\nfrequency","textPreview":"logit prototype化 | μpost | Δμ=μpost−μpre | frequency","textChars":46,"textLines":4,"bbox":[625,425,250,105]}
+{"kind":"textbox","id":"sh/g36tgryd","slide":4,"name":"s4-upload-lora","text":"送信①\nLoRA更新・head","textPreview":"送信① | LoRA更新・head","textChars":15,"textLines":2,"bbox":[940,343,235,70]}
+{"kind":"textbox","id":"sh/h4fa9wfy","slide":4,"name":"s4-upload-proto","text":"送信②\nμpost・Δμ・frequency","textPreview":"送信② | μpost・Δμ・frequency","textChars":22,"textLines":2,"bbox":[925,455,260,88]}
+{"kind":"textbox","id":"sh/p0batw72","slide":4,"name":"s4-no-pre","text":"μpreはdelta計算だけに使用\nサーバへ独立には送信しない","textPreview":"μpreはdelta計算だけに使用 | サーバへ独立には送信しない","textChars":31,"textLines":2,"bbox":[625,565,250,70]}
+{"kind":"shape","id":"sh/oz29krqh","slide":4,"bbox":[329.75,179,75.25,0]}
+{"kind":"shape","id":"sh/3ytsrmpw","slide":4,"bbox":[452.5,212,42.5,133]}
+{"kind":"shape","id":"sh/2xkrih8b","slide":4,"bbox":[452.5,212,42.5,233]}
+{"kind":"shape","id":"sh/1wbapc7q","slide":4,"bbox":[290.63,376,59.38,91.5]}
+{"kind":"shape","id":"sh/gv29g7q5","slide":4,"bbox":[290.63,467.5,59.38,8.5]}
+{"kind":"shape","id":"sh/fu9sn2p0","slide":4,"bbox":[290.63,467.5,59.38,108.5]}
+{"kind":"shape","id":"sh/et0reh8f","slide":4,"bbox":[452.5,407,0,38]}
+{"kind":"shape","id":"sh/tsrqlc7u","slide":4,"bbox":[452.5,507,0,38]}
+{"kind":"shape","id":"sh/sri9s7q9","slide":4,"bbox":[555,376,70,101.5]}
+{"kind":"shape","id":"sh/ilwf69kv","slide":4,"bbox":[555,477.5,70,98.5]}
+{"kind":"shape","id":"sh/jm5gze1g","slide":4,"bbox":[555,378,393.75,98]}
+{"kind":"shape","id":"sh/knex8j21","slide":4,"bbox":[875,477.5,61,21.5]}
+{"kind":"shape","id":"sh/5ony1oj6","slide":4,"bbox":[860,191,197.5,152]}
+{"kind":"shape","id":"sh/axcf29kj","slide":4,"bbox":[970,158,48.25,0]}
+{"kind":"shape","id":"sh/vy5gbe14","slide":4,"bbox":[223,212,534.5,33]}
+{"kind":"shape","id":"sh/wzex4z2p","slide":4,"bbox":[1095,191,77.5,54]}
+{"kind":"shape","id":"sh/xknyx4ja","slide":4,"bbox":[965,275,90,180]}
+{"kind":"shape","id":"sh/mtcfypkn","slide":4,"bbox":[495,125,600,21]}
+{"kind":"textbox","id":"sh/nulw7u18","slide":4,"name":"s4-next-label","text":"次ラウンドへ再配布","textPreview":"次ラウンドへ再配布","textChars":9,"textLines":1,"bbox":[1000,88,190,32]}
+{"kind":"textbox","id":"sh/fm5c3q54","slide":4,"name":"s4-private-label","text":"raw sampleは\n端末外へ出ない","textPreview":"raw sampleは | 端末外へ出ない","textChars":19,"textLines":2,"bbox":[92,514,220,56]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":"[Sources]\n- FedPACT手法提案260901.pdf p.4-p.5\n- FedPACT実験計画260901.pdf p.3-p.4\n[/Sources]"}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"第2層：proxyを反復的に探索・調整する","textShapes":15}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":5,"name":"タイトル 1","placeholder":"title","text":"第2層：proxyを反復的に探索・調整する","textPreview":"第2層：proxyを反復的に探索・調整する","textChars":21,"textLines":1,"bbox":[97,10,1070,62]}
+{"kind":"textbox","id":"sh/cf2tcr61","slide":5,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/z2tcnm5s","slide":5,"name":"s5-mgt","text":"更新前\nM_G^t","textPreview":"更新前 | M_G^t","textChars":9,"textLines":2,"bbox":[70,112,220,62]}
+{"kind":"textbox","id":"sh/yhkbe1o7","slide":5,"name":"s5-mgnext","text":"更新後\nM_G^(t+1)","textPreview":"更新後 | M_G^(t+1)","textChars":13,"textLines":2,"bbox":[330,112,220,62]}
+{"kind":"textbox","id":"sh/l4bupwny","slide":5,"name":"s5-prototypes","text":"μpost・Δμ・frequency","textPreview":"μpost・Δμ・frequency","textChars":18,"textLines":1,"bbox":[590,112,270,62]}
+{"kind":"textbox","id":"sh/032tgr6d","slide":5,"name":"s5-seed","text":"server seed候補","textPreview":"server seed候補","textChars":13,"textLines":1,"bbox":[910,112,250,62]}
+{"kind":"textbox","id":"sh/n6dcr65o","slide":5,"name":"s5-retrieve","text":"seed検索\npost prototypeに近い候補","textPreview":"seed検索 | post prototypeに近い候補","textChars":26,"textLines":2,"bbox":[100,255,225,74]}
+{"kind":"textbox","id":"sh/m5kbi1oj","slide":5,"name":"s5-transform","text":"変換 Tφ\n時刻・crop・明度・blur等","textPreview":"変換 Tφ | 時刻・crop・明度・blur等","textChars":22,"textLines":2,"bbox":[390,255,225,74]}
+{"kind":"textbox","id":"sh/w32dkbuh","slide":5,"name":"s5-evaluate","text":"global surrogateで再評価\npost一致：KL(μpost || p_G^(t+1)(x̃))\ndelta一致：D(Δμ, p_G^(t+1)(x̃)−p_G^t(x̃))","textPreview":"global surrogateで再評価 | post一致：KL(μpost || p_G^(t+1)(x̃)) | delta一致：D(Δμ, p_G^(t+1)(x̃)−p_G^t(x̃))","textChars":93,"textLines":3,"bbox":[680,225,330,136]}
+{"kind":"textbox","id":"sh/x4vedgvm","slide":5,"name":"s5-decision","text":"品質条件を\n満たす？","textPreview":"品質条件を | 満たす？","textChars":10,"textLines":2,"bbox":[1070,240,120,110]}
+{"kind":"textbox","id":"sh/ahkvi1cb","slide":5,"name":"s5-reg","text":"妥当性の制約 Lreg\nseedからの逸脱・自然性\n時間的一貫性・多様性","textPreview":"妥当性の制約 Lreg | seedからの逸脱・自然性 | 時間的一貫性・多様性","textChars":36,"textLines":3,"bbox":[390,445,330,100]}
+{"kind":"textbox","id":"sh/v2twb6dw","slide":5,"name":"s5-proxy-output","text":"代理入力 x̃\n次：proxy pairを構成","textPreview":"代理入力 x̃ | 次：proxy pairを構成","textChars":23,"textLines":2,"bbox":[930,475,250,80]}
+{"kind":"textbox","id":"sh/k7mxovud","slide":5,"name":"s5-note","text":"一度だけforwardする処理ではなく\n選択・調整・再評価を反復","textPreview":"一度だけforwardする処理ではなく | 選択・調整・再評価を反復","textChars":32,"textLines":2,"bbox":[100,458,225,82]}
+{"kind":"shape","id":"sh/58vehgvy","slide":5,"bbox":[212.5,174,822.5,81]}
+{"kind":"shape","id":"sh/i54fmlc7","slide":5,"bbox":[325,292,65,0]}
+{"kind":"shape","id":"sh/j6dwfqds","slide":5,"bbox":[615,292,65,1]}
+{"kind":"shape","id":"sh/sb6xsvu9","slide":5,"bbox":[180,174,665,51]}
+{"kind":"shape","id":"sh/tcfel0vu","slide":5,"bbox":[440,174,405,51]}
+{"kind":"shape","id":"sh/hgrmpwj2","slide":5,"bbox":[725,174,120,51]}
+{"kind":"shape","id":"sh/gfi5grih","slide":5,"bbox":[555,361,290,84]}
+{"kind":"shape","id":"sh/fe94nm1w","slide":5,"bbox":[1010,293,60,2]}
+{"kind":"shape","id":"sh/ud0ne10b","slide":5,"bbox":[1055,350,75,125]}
+{"kind":"shape","id":"sh/pkr6tgjy","slide":5,"bbox":[502.5,295,567.5,78]}
+{"kind":"textbox","id":"sh/4ji5kbid","slide":5,"name":"s5-yes","text":"Yes","textPreview":"Yes","textChars":3,"textLines":1,"bbox":[1080,390,100,30]}
+{"kind":"textbox","id":"sh/3i94r61s","slide":5,"name":"s5-no","text":"No：候補を再選択・再調整","textPreview":"No：候補を再選択・再調整","textChars":13,"textLines":1,"bbox":[735,377,270,45]}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":"[Sources]\n- FedPACT手法提案260901.pdf p.5-p.6\n- FedPACT実験計画260901.pdf p.3-p.4\n[/Sources]"}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"第3層：proxy pairで基盤LoRAを更新","textShapes":12}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"name":"タイトル 1","placeholder":"title","text":"第3層：proxy pairで基盤LoRAを更新","textPreview":"第3層：proxy pairで基盤LoRAを更新","textChars":24,"textLines":1,"bbox":[97,10,1070,62]}
+{"kind":"textbox","id":"sh/zi98nu94","slide":6,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/87ipkzal","slide":6,"name":"s6-proxy","text":"代理入力 x̃","textPreview":"代理入力 x̃","textChars":7,"textLines":1,"bbox":[70,155,210,70]}
+{"kind":"textbox","id":"sh/98rqt4r6","slide":6,"name":"s6-teacher","text":"teacher μpost","textPreview":"teacher μpost","textChars":13,"textLines":1,"bbox":[70,265,210,70]}
+{"kind":"textbox","id":"sh/ml07i9sv","slide":6,"name":"s6-pair","text":"proxy pair\nP=(x̃, μpost)","textPreview":"proxy pair | P=(x̃, μpost)","textChars":24,"textLines":2,"bbox":[340,190,250,105]}
+{"kind":"textbox","id":"sh/7m98ru9g","slide":6,"name":"s6-selection","text":"検証・選択・重み付け\n\n基本：ρ=frequency π\n第II段階：ρ=Qinv×π\n後段：Qcons・Qnovel・Qretain","textPreview":"検証・選択・重み付け |  | 基本：ρ=frequency π | 第II段階：ρ=Qinv×π | 後段：Qcons・Qnovel・Qretain","textChars":67,"textLines":5,"bbox":[650,135,290,205]}
+{"kind":"textbox","id":"sh/oryp8fah","slide":6,"name":"s6-distill","text":"知識蒸留\nLcurrent=Σρ・KL\n更新：foundation LoRAのみ","textPreview":"知識蒸留 | Lcurrent=Σρ・KL | 更新：foundation LoRAのみ","textChars":40,"textLines":3,"bbox":[995,180,220,115]}
+{"kind":"textbox","id":"sh/pc76hkr2","slide":6,"name":"s6-foundation","text":"更新済み\nfoundation LoRA","textPreview":"更新済み | foundation LoRA","textChars":20,"textLines":2,"bbox":[975,390,240,78]}
+{"kind":"textbox","id":"sh/h4bupgn6","slide":6,"name":"s6-future","text":"第III段階の拡張\nreplay memory・固定anchor・Qretain\n必要な場合のみclient固有LoRAの残差経路","textPreview":"第III段階の拡張 | replay memory・固定anchor・Qretain | 必要な場合のみclient固有LoRAの残差経路","textChars":65,"textLines":3,"bbox":[330,430,555,105]}
+{"kind":"textbox","id":"sh/w32twb6l","slide":6,"name":"s6-note","text":"global surrogateの出力を\nteacherにはしない","textPreview":"global surrogateの出力を | teacherにはしない","textChars":33,"textLines":2,"bbox":[70,455,210,75]}
+{"kind":"shape","id":"sh/v2tcn650","slide":6,"bbox":[271.25,190,68.75,52.5]}
+{"kind":"shape","id":"sh/u1kbu1ov","slide":6,"bbox":[271.25,242.5,68.75,57.5]}
+{"kind":"shape","id":"sh/5svutgni","slide":6,"bbox":[590,237.5,60,5]}
+{"kind":"shape","id":"sh/47mt0b6x","slide":6,"bbox":[940,237.5,55,0]}
+{"kind":"shape","id":"sh/j6dcr65c","slide":6,"bbox":[1095,295,10,95]}
+{"kind":"shape","id":"sh/i54bylor","slide":6,"bbox":[885,295,220,187.5]}
+{"kind":"textbox","id":"sh/twfux0ne","slide":6,"name":"s6-pair-label","text":"第2層の出力","textPreview":"第2層の出力","textChars":6,"textLines":1,"bbox":[420,145,205,32]}
+{"kind":"textbox","id":"sh/svmt4v6t","slide":6,"name":"s6-selected-label","text":"選択済みpair＋重みρ","textPreview":"選択済みpair＋重みρ","textChars":12,"textLines":1,"bbox":[875,105,300,32]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":6,"text":"[Sources]\n- FedPACT手法提案260901.pdf p.6-p.7\n- FedPACT実験計画260901.pdf p.4, p.6, p.8\n[/Sources]"}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"今後の予定","textShapes":3}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"name":"タイトル 1","placeholder":"title","text":"今後の予定","textPreview":"今後の予定","textChars":5,"textLines":1,"bbox":[97,10,1070,62]}
+{"kind":"textbox","id":"sh/dcbud0ra","slide":7,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/ydkbm5sv","slide":7,"name":"コンテンツ プレースホルダー 3","text":"第I段階　ローカル実装・3〜5 round確認（現在地）\n第II段階　3B→7B以上の基本FedPACT予備実験\n第III段階　継続学習・replay・anchor\n第IV段階　本実験・ablation","textPreview":"第I段階　ローカル実装・3〜5 round確認（現在地） | 第II段階　3B→7B以上の基本FedPACT予備実験 | 第III段階　継続学習・replay・anchor | 第IV段階　本実験・ablation","textChars":101,"textLines":4,"bbox":[32,105,1120,500]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":7,"text":"[Sources]\n- FedPACT実験計画260901.pdf p.1-p.10\n[/Sources]"}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"要点：private適応をproxy経由で転移する","textShapes":3}
+{"kind":"textbox","id":"sh/18byd4zy","slide":8,"name":"タイトル 1","placeholder":"title","text":"要点：private適応をproxy経由で転移する","textPreview":"要点：private適応をproxy経由で転移する","textChars":25,"textLines":1,"bbox":[97,10,1070,62]}
+{"kind":"textbox","id":"sh/g72x4zyd","slide":8,"name":"スライド番号プレースホルダー 2","placeholder":"slideNumber","text":"8","textPreview":"8","textChars":1,"textLines":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/ri9g7uhw","slide":8,"name":"コンテンツ プレースホルダー 3","text":"μpost・Δμ・frequencyでprivate適応を表現する\nglobal surrogateとserver seedからproxy入力を得る\n選択したpairを異種foundation LoRAへ蒸留する","textPreview":"μpost・Δμ・frequencyでprivate適応を表現する | global surrogateとserver seedからproxy入力を得る | 選択したpairを異種foundation LoRAへ蒸留する","textChars":106,"textLines":3,"bbox":[32,105,1120,500]}
+{"kind":"notes","id":"nt/fu1gfa1s","slide":8,"text":"[Sources]\n- FedPACT手法提案260901.pdf p.9-p.10\n- FedPACT実験計画260901.pdf p.10\n[/Sources]"}

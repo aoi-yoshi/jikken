@@ -8,6 +8,9 @@ Step 2: NEXAR Collision Prediction を読み込み、各動画から num_frames 
 - frame_sampling: "alert_event"
     positive: time_of_alert と time_of_event の 2 フレーム (metadata.csv から取得)
     negative: positive の平均 alert/event 時刻の 2 フレーム
+- frame_sampling: "paired_alert_event_quartiles"
+    positive: time_of_alert から time_of_event までを 0, 1/3, 2/3, 1 で 4 枚
+    negative: 対応する positive と同じ絶対秒を用いる
 - frame_sampling: "uniform"
     動画全体から等間隔に num_frames 枚
 
@@ -27,15 +30,14 @@ import csv
 import hashlib
 import json
 import random
-import uuid
 from statistics import mean
-from typing import Dict, List, Tuple
+from typing import Any, Dict, List, Tuple
 
 import cv2
 import numpy as np
 from tqdm import tqdm
 
-from src.config_loader import merged_config
+from src.config_loader import load_yaml, merged_config
 from src.dataset_manifest import write_manifest
 from src.paths import ensure_dirs
 from src.run_context import init_run
@@ -43,6 +45,7 @@ from src.video_frames import (
     clamp_times_to_duration,
     extract_frames,
     extract_frames_at_times,
+    video_frame_info,
     video_duration_sec,
 )
 
@@ -194,6 +197,72 @@ def rng_for_video(global_seed: int, video_path: Path) -> random.Random:
     return random.Random(int(digest[:8], 16))
 
 
+def alert_event_quartile_times(meta: Dict[str, Any]) -> List[float]:
+    alert = to_float(meta.get("time_of_alert"))
+    event = to_float(meta.get("time_of_event"))
+    if alert is None or event is None:
+        raise ValueError("paired sampling requires time_of_alert and time_of_event")
+    if alert < 0.0 or event <= alert:
+        raise ValueError(f"invalid alert/event interval: alert={alert}, event={event}")
+    return [alert + (event - alert) * fraction for fraction in (0.0, 1.0 / 3.0, 2.0 / 3.0, 1.0)]
+
+
+def deterministic_sample_id(split_tag: str, video_path: Path, times: List[float]) -> str:
+    raw = f"{split_tag}|{video_path.resolve()}|" + ",".join(f"{value:.6f}" for value in times)
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16]
+
+
+def sha256_path(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def build_paired_sampling_plan(
+    videos: List[Tuple[Path, int, Dict]],
+    *,
+    target_pairs: int,
+) -> Dict[str, Dict[str, Any]]:
+    positives = [(path, meta) for path, label, meta in videos if int(label) == 1]
+    negatives = [
+        (path, meta, video_duration_sec(path))
+        for path, label, meta in videos
+        if int(label) == 0
+    ]
+    plan: Dict[str, Dict[str, Any]] = {}
+    unused_negatives = list(negatives)
+    for positive_path, positive_meta in positives:
+        if len(plan) // 2 >= target_pairs:
+            break
+        times = alert_event_quartile_times(positive_meta)
+        eligible = [
+            (duration, index)
+            for index, (_, _, duration) in enumerate(unused_negatives)
+            if duration > max(times)
+        ]
+        chosen_index = min(eligible)[1] if eligible else None
+        if chosen_index is None:
+            continue
+        negative_path, _, _ = unused_negatives.pop(chosen_index)
+        pair_id = hashlib.sha256(
+            f"{positive_path.resolve()}|{negative_path.resolve()}".encode("utf-8")
+        ).hexdigest()[:16]
+        common = {
+            "pair_id": pair_id,
+            "paired_risk_times_sec": [float(value) for value in times],
+            "sampling_rule": "risk_alert_event_quartiles_shared_absolute_seconds",
+        }
+        plan[str(positive_path.resolve())] = {**common, "times": times, "pair_role": "risk"}
+        plan[str(negative_path.resolve())] = {**common, "times": times, "pair_role": "normal"}
+    if len(plan) != 2 * target_pairs:
+        raise RuntimeError(
+            f"paired sampling produced {len(plan) // 2}/{target_pairs} feasible pairs"
+        )
+    return plan
+
+
 def resolve_frame_times(
     *,
     vpath: Path,
@@ -260,20 +329,47 @@ def write_split(
     sampling = str(cfg_data.get("frame_sampling", "alert_event"))
     num_frames = int(cfg_data.get("num_frames", 2))
     max_side = int(cfg_data.get("frame_max_side", 720))
+    target_pairs = int(
+        cfg_data.get(
+            "max_test_videos_per_class" if split_tag == "test" else "max_videos_per_class",
+            0,
+        )
+    )
+    paired_plan = (
+        build_paired_sampling_plan(videos, target_pairs=target_pairs)
+        if sampling == "paired_alert_event_quartiles"
+        else {}
+    )
 
     for vpath, label, meta in tqdm(videos, desc=f"frames[{split_tag}]"):
+        if sampling == "paired_alert_event_quartiles" and str(vpath.resolve()) not in paired_plan:
+            continue
         try:
-            ts, time_meta = resolve_frame_times(
-                vpath=vpath,
-                label=label,
-                meta=meta,
-                cfg_data=cfg_data,
-                mean_alert=mean_alert,
-                mean_event=mean_event,
-                fallback_alert=fallback_alert,
-                fallback_event=fallback_event,
-                seed=seed,
-            )
+            if sampling == "paired_alert_event_quartiles":
+                pair = paired_plan[str(vpath.resolve())]
+                ts = list(pair["times"])
+                time_meta = {
+                    "frame_sampling": sampling,
+                    "frame_times_sec": ",".join(f"{t:.6f}" for t in ts),
+                    "pair_id": str(pair["pair_id"]),
+                    "pair_role": str(pair["pair_role"]),
+                    "sampling_rule": str(pair["sampling_rule"]),
+                    "paired_risk_times_sec": ",".join(
+                        f"{t:.6f}" for t in pair["paired_risk_times_sec"]
+                    ),
+                }
+            else:
+                ts, time_meta = resolve_frame_times(
+                    vpath=vpath,
+                    label=label,
+                    meta=meta,
+                    cfg_data=cfg_data,
+                    mean_alert=mean_alert,
+                    mean_event=mean_event,
+                    fallback_alert=fallback_alert,
+                    fallback_event=fallback_event,
+                    seed=seed,
+                )
             if sampling == "uniform":
                 frames = extract_frames(vpath, num_frames=num_frames, max_side=max_side)
             else:
@@ -282,7 +378,9 @@ def write_split(
             print(f"skip {vpath}: {e}")
             continue
 
-        sid = uuid.uuid4().hex[:10]
+        total_frames, fps, duration = video_frame_info(vpath)
+        frame_indices = [max(0, min(total_frames - 1, int(round(float(t) * fps)))) for t in ts]
+        sid = deterministic_sample_id(split_tag, vpath, ts)
         out_dir = frame_root / split_tag / sid
         out_dir.mkdir(parents=True, exist_ok=True)
         paths = []
@@ -290,6 +388,9 @@ def write_split(
             fp = out_dir / f"{i:03d}.jpg"
             im.save(fp, quality=88)
             paths.append(str(fp.resolve()))
+
+        if len(paths) != num_frames:
+            raise RuntimeError(f"expected {num_frames} frames, got {len(paths)} for {vpath}")
 
         rows.append(
             {
@@ -304,6 +405,12 @@ def write_split(
                 "light_conditions": meta.get("light_conditions", "") or "",
                 "weather": meta.get("weather", "") or "",
                 "scene": meta.get("scene", "") or "",
+                "source_video_sha256": sha256_path(vpath),
+                "source_video_frame_count": total_frames,
+                "source_video_fps": fps,
+                "source_video_duration_sec": duration,
+                "frame_indices": frame_indices,
+                "frame_sha256": [sha256_path(Path(path)) for path in paths],
                 **{k: v for k, v in time_meta.items() if isinstance(v, (str, int, float))},
             }
         )
@@ -313,10 +420,11 @@ def write_split(
 
 def main() -> None:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--config", default=None, help="default.yaml に重ねる設定ファイル")
     ap.add_argument("--run-id", default=None)
     ap.add_argument("--run-suffix", default="")
     args = ap.parse_args()
-    cfg = merged_config()
+    cfg = merged_config(load_yaml(args.config) if args.config else None)
     run_id, run_dir, log, env = init_run(
         cfg, step="2", step_dir="step02_data", log_name="prepare", run_id=args.run_id, run_suffix=args.run_suffix, cli=vars(args)
     )
@@ -338,10 +446,15 @@ def main() -> None:
         print(f"Using NEXAR at: {nexar_root}")
         if weather_filter:
             print(f"weather_filter={weather_filter!r}")
+        candidate_multiplier = (
+            int(dcfg.get("paired_candidate_multiplier", 3))
+            if str(dcfg.get("frame_sampling", "")) == "paired_alert_event_quartiles"
+            else 1
+        )
         train_videos, (mean_alert, mean_event) = collect_videos_with_meta(
             nexar_root,
             str(dcfg["nexar_train_subdir"]),
-            int(dcfg.get("max_videos_per_class", 40)),
+            int(dcfg.get("max_videos_per_class", 40)) * candidate_multiplier,
             seed,
             weather_filter=weather_filter,
         )
@@ -349,7 +462,7 @@ def main() -> None:
         test_videos, _ = collect_videos_with_meta(
             nexar_root,
             str(dcfg["nexar_test_subdir"]),
-            int(dcfg.get("max_test_videos_per_class", 20)),
+            int(dcfg.get("max_test_videos_per_class", 20)) * candidate_multiplier,
             seed + 1,
             weather_filter=weather_filter,
         )
@@ -360,11 +473,19 @@ def main() -> None:
             train_videos, frame_root, dcfg, train_manifest, "train",
             mean_alert, mean_event, seed,
         )
+        test_pairing_status: Dict[str, Any] = {"status": "not_requested"}
         if test_videos:
-            write_split(
-                test_videos, frame_root, dcfg, test_manifest, "test",
-                mean_alert, mean_event, seed + 1,
-            )
+            try:
+                write_split(
+                    test_videos, frame_root, dcfg, test_manifest, "test",
+                    mean_alert, mean_event, seed + 1,
+                )
+                test_pairing_status = {"status": "completed", "manifest": str(test_manifest)}
+            except RuntimeError as exc:
+                if str(dcfg.get("frame_sampling", "")) != "paired_alert_event_quartiles":
+                    raise
+                print(f"warning: paired public-test manifest unavailable: {exc}")
+                test_pairing_status = {"status": "unavailable", "reason": str(exc)}
         meta_summary = {
             "mean_alert_sec": mean_alert,
             "mean_event_sec": mean_event,
@@ -377,6 +498,7 @@ def main() -> None:
             "weather_filter": weather_filter,
             "max_videos_per_class": int(dcfg.get("max_videos_per_class", 0)),
             "num_classes": int(dcfg["num_classes"]),
+            "test_pairing": test_pairing_status,
         }
     else:
         print(f"NEXAR not found at {nexar_root}; falling back to synthetic videos.")

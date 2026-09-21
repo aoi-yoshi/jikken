@@ -39,6 +39,18 @@
 
 ---
 
+## Step 7（Adaptation Consistency）
+
+| ファイル | 何が書いてあるか | いつ読むか |
+|---------|-----------------|-----------|
+| **[step07_design.md](step07_design.md)** | 4 点整理・Stage 設計・関連研究 | Step 7 の設計方針を確認するとき |
+| **[step07_repertoires.md](step07_repertoires.md)** | 提案・比較レパートリー一覧 | `--repertoire` を選ぶとき |
+| **[step07_meeting_flow_draft.md](step07_meeting_flow_draft.md)** | **研究会用フローたたき台**（図1 共通骨格 / 図2 クラウド基盤更新 / 図3 Lpred・Lgrad・Lpost 分岐） | 研究会・先生共有の PPT 転記元 |
+| **[a.md](a.md)** / **[b.md](b.md)** / **[c.md](c.md)** / **[d.md](d.md)** | 全体・クラウド拡大の詳細 Mermaid | 実装に沿った詳細フローが欲しいとき |
+| **[step07_stage_compare_results.md](step07_stage_compare_results.md)** | Stage 0/1 比較結果 | 過去 run の数値を見るとき |
+
+---
+
 ## この目次以外の参照先
 
 | 場所 | 内容 |

@@ -1,0 +1,6 @@
+User-provided research direction, 2026-08-05.
+FedMD: https://arxiv.org/abs/1910.03581
+FedDF: https://proceedings.neurips.cc/paper/2020/hash/18df51b97ccd68128e994804f3eccc87-Abstract.html
+FedDGM: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09992.pdf
+Source deck supplies all visual formatting and inherited objects.
+No external visual assets are added.

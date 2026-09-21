@@ -1,0 +1,17 @@
+{
+  "mean_alert_sec": 17.841627777777777,
+  "mean_event_sec": 19.449633333333335,
+  "frames_per_sample": 4,
+  "use_num_frames": 4,
+  "use_frame_slice": "last",
+  "frame_interval_sec": 0.5,
+  "frame_max_side": 480,
+  "sampling": "paired_alert_event_quartiles",
+  "weather_filter": "",
+  "max_videos_per_class": 60,
+  "num_classes": 2,
+  "test_pairing": {
+    "status": "unavailable",
+    "reason": "paired sampling produced 3/20 feasible pairs"
+  }
+}

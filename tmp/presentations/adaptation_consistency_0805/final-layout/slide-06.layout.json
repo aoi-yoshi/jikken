@@ -1,0 +1,1241 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/x8f69ofe",
+    "id": "x8f69ofe",
+    "slide": 6,
+    "layoutId": "/ppt/slideLayouts/slideLayout2.xml",
+    "layoutName": "タイトルとコンテンツ",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office テーマ",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "fontScheme": {
+      "name": "ユーザー定義 1",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri"
+      }
+    },
+    "typefaces": [
+      "Arial",
+      "Calibri",
+      "Calibri Light"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout2.xml",
+      "name": "タイトルとコンテンツ",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/4",
+          "id": "4",
+          "name": "四角形: 角を丸くする 3",
+          "bbox": [
+            1192,
+            0,
+            34.98,
+            69.01
+          ],
+          "geometry": "roundRect",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "verticalAlignment": "middle"
+          },
+          "fillColor": "#203864",
+          "lineColor": "#203864",
+          "lineWidth": 1.33
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/2",
+          "id": "2",
+          "name": "Title 1",
+          "bbox": [
+            88,
+            9.25,
+            1104,
+            69.01
+          ],
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "autoFit": "shrinkText"
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/5",
+          "id": "5",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            798.17,
+            7.77,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/7",
+          "id": "7",
+          "name": "グラフィックス 6",
+          "bbox": [
+            5.82,
+            13.17,
+            61.09,
+            57.77
+          ],
+          "contentType": "image/svg+xml",
+          "asset": {
+            "assetId": "/ppt/media/image.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image.svg",
+            "contentType": "image/svg+xml",
+            "byteLength": 682
+          }
+        },
+        {
+          "order": 5,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout2.xml/6",
+          "id": "6",
+          "name": "Content Placeholder 2",
+          "bbox": [
+            0,
+            85.22,
+            1280,
+            634.78
+          ],
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            0,
+            141.12,
+            1280,
+            578.88
+          ],
+          "geometry": "rect",
+          "text": "マスター テキストの書式設定\n第 2 レベル\n第 3 レベル\n第 4 レベル\n第 5 レベル",
+          "textPreview": "マスター テキストの書式設定 | 第 2 レベル | 第 3 レベル | 第 4 レベル | 第 5 レベル",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター テキストの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター テキストの書式設定"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第 2 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "2 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第 3 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "3 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第 4 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "4 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第 5 レベル",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第 "
+                },
+                {
+                  "index": 2,
+                  "text": "5 "
+                },
+                {
+                  "index": 3,
+                  "text": "レベル"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            88,
+            19.95,
+            1104,
+            98.13
+          ],
+          "geometry": "rect",
+          "text": "マスター タイトルの書式設定",
+          "textPreview": "マスター タイトルの書式設定",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "マスター タイトルの書式設定",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "マスター タイトルの書式設定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/4",
+          "id": "4",
+          "name": "スライド番号プレースホルダー 3",
+          "bbox": [
+            755.43,
+            19.95,
+            436.57,
+            37.17
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 2,
+            "vertical": 1,
+            "verticalAlignment": "middle",
+            "insets": {
+              "top": 4.8,
+              "right": 9.6,
+              "bottom": 4.8,
+              "left": 9.6
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yhg7epsj",
+      "id": "2",
+      "name": "タイトル 1",
+      "bbox": [
+        88,
+        9.25,
+        1104,
+        69.01
+      ],
+      "text": "三層処理フロー：場所と受け渡し",
+      "textPreview": "三層処理フロー：場所と受け渡し",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 48,
+        "typeface": "Arial",
+        "color": "#203864",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "三層処理フロー：場所と受け渡し"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "三層処理フロー：場所と受け渡し",
+          "runs": [
+            {
+              "index": 1,
+              "text": "三層処理フロー：場所と受け渡し"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zi98nu94",
+      "id": "3",
+      "name": "スライド番号プレースホルダー 2",
+      "bbox": [
+        798.17,
+        7.77,
+        436.57,
+        37.17
+      ],
+      "text": "6",
+      "textPreview": "6",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "vertical": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": {
+          "type": "theme",
+          "value": "bg1",
+          "transform": {
+            "lighten": 0.25
+          }
+        },
+        "alignment": "right",
+        "verticalAlignment": "middle",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "6"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "6",
+          "runs": [
+            {
+              "index": 1,
+              "text": "6"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/5gzmp4vu",
+      "id": "4",
+      "name": "表 5",
+      "bbox": [
+        263.97,
+        270.94,
+        752.05,
+        345.86
+      ],
+      "text": "段階 | 場所 | 入力 → 処理 | 出力 → 次\n第1層① 局所適応 | client | global LoRA＋private data | ΔLoRA＋state\n第1層② 連合統合 | cloud | ΔLoRA → FL／FCL | global S LoRA\n第2層 ★ 代理pair | cloud | seed＋global S → 選択／生成 | S再forward →（x̃，z̃）\n第3層 異種蒸留 | cloud | pair → KD | foundation LoRA\n次round | cloud→client | global S LoRA配布 | 第1層①へ",
+      "textPreview": "段階 | 場所 | 入力 → 処理 | 出力 → 次 | 第1層① 局所適応 | client | global LoRA＋private data | ΔLoRA＋state | 第1層② 連合統合 | cloud | ΔLoRA → FL／FCL | global S ...",
+      "rows": 6,
+      "cols": 4,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            263.97,
+            270.94,
+            186.73,
+            37.06
+          ],
+          "text": "段階",
+          "textPreview": "段階",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "段階",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "段階",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            450.7,
+            270.94,
+            189.3,
+            37.06
+          ],
+          "text": "場所",
+          "textPreview": "場所",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "場所",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "場所",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            640,
+            270.94,
+            188.01,
+            37.06
+          ],
+          "text": "入力 → 処理",
+          "textPreview": "入力 → 処理",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "入力 → 処理",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "入力 → 処理",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            828.01,
+            270.94,
+            188.01,
+            37.06
+          ],
+          "text": "出力 → 次",
+          "textPreview": "出力 → 次",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "出力 → 次",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "出力 → 次",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            263.97,
+            307.99,
+            186.73,
+            61.76
+          ],
+          "text": "第1層① 局所適応",
+          "textPreview": "第1層① 局所適応",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "第1層① 局所適応",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第1層① 局所適応",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            450.7,
+            307.99,
+            189.3,
+            61.76
+          ],
+          "text": "client",
+          "textPreview": "client",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "client",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "client"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            640,
+            307.99,
+            188.01,
+            61.76
+          ],
+          "text": "global LoRA＋private data",
+          "textPreview": "global LoRA＋private data",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "global LoRA＋private data",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "global LoRA＋private data",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            828.01,
+            307.99,
+            188.01,
+            61.76
+          ],
+          "text": "ΔLoRA＋state",
+          "textPreview": "ΔLoRA＋state",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "ΔLoRA＋state",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "ΔLoRA＋state",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            263.97,
+            369.75,
+            186.73,
+            61.76
+          ],
+          "text": "第1層② 連合統合",
+          "textPreview": "第1層② 連合統合",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "第1層② 連合統合",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第1層② 連合統合",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            450.7,
+            369.75,
+            189.3,
+            61.76
+          ],
+          "text": "cloud",
+          "textPreview": "cloud",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "cloud",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "cloud"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            640,
+            369.75,
+            188.01,
+            61.76
+          ],
+          "text": "ΔLoRA → FL／FCL",
+          "textPreview": "ΔLoRA → FL／FCL",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "ΔLoRA → FL／FCL",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "ΔLoRA → FL／FCL",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            828.01,
+            369.75,
+            188.01,
+            61.76
+          ],
+          "text": "global S LoRA",
+          "textPreview": "global S LoRA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "global S LoRA",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "global S LoRA",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            263.97,
+            431.51,
+            186.73,
+            61.76
+          ],
+          "text": "第2層 ★ 代理pair",
+          "textPreview": "第2層 ★ 代理pair",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "第2層 ★ 代理pair",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第2層 ★ 代理pair",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            450.7,
+            431.51,
+            189.3,
+            61.76
+          ],
+          "text": "cloud",
+          "textPreview": "cloud",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "cloud",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "cloud",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            640,
+            431.51,
+            188.01,
+            61.76
+          ],
+          "text": "seed＋global S → 選択／生成",
+          "textPreview": "seed＋global S → 選択／生成",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "seed＋global S → 選択／生成",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "seed＋global S → 選択／生成",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            828.01,
+            431.51,
+            188.01,
+            61.76
+          ],
+          "text": "S再forward →（x̃，z̃）",
+          "textPreview": "S再forward →（x̃，z̃）",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S再forward →（x̃，z̃）",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S再forward →（x̃，z̃）",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            263.97,
+            493.27,
+            186.73,
+            61.76
+          ],
+          "text": "第3層 異種蒸留",
+          "textPreview": "第3層 異種蒸留",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "第3層 異種蒸留",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第3層 異種蒸留",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            450.7,
+            493.27,
+            189.3,
+            61.76
+          ],
+          "text": "cloud",
+          "textPreview": "cloud",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "cloud",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "cloud",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            640,
+            493.27,
+            188.01,
+            61.76
+          ],
+          "text": "pair → KD",
+          "textPreview": "pair → KD",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "pair → KD",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "pair → KD",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            828.01,
+            493.27,
+            188.01,
+            61.76
+          ],
+          "text": "foundation LoRA",
+          "textPreview": "foundation LoRA",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "foundation LoRA",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "foundation LoRA",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            263.97,
+            555.04,
+            186.73,
+            61.76
+          ],
+          "text": "次round",
+          "textPreview": "次round",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "次round",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "次round",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            450.7,
+            555.04,
+            189.3,
+            61.76
+          ],
+          "text": "cloud→client",
+          "textPreview": "cloud→client",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "cloud→client",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "cloud→client",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 6,
+          "column": 3,
+          "bbox": [
+            640,
+            555.04,
+            188.01,
+            61.76
+          ],
+          "text": "global S LoRA配布",
+          "textPreview": "global S LoRA配布",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "global S LoRA配布",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "global S LoRA配布",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 6,
+          "column": 4,
+          "bbox": [
+            828.01,
+            555.04,
+            188.01,
+            61.76
+          ],
+          "text": "第1層①へ",
+          "textPreview": "第1層①へ",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "第1層①へ",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第1層①へ",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

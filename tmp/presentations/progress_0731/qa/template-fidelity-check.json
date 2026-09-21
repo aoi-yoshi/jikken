@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-07-29T07:27:58.159Z",
+  "workspace": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731",
+  "finalPptx": "C:\\Python\\実験_修正\\output\\presentation\\進捗会0731_吉村有生.pptx",
+  "starterPptx": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-starter.pptx",
+  "mapPath": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-frame-map.json",
+  "starterLayoutDir": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\template-starter-layout",
+  "finalLayoutDir": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731\\final-layout",
+  "editDir": "C:\\Python\\実験_修正\\tmp\\presentations\\progress_0731",
+  "issueCount": 0,
+  "issues": []
+}

@@ -1,0 +1,115 @@
+{
+  "outputSlides": [
+    {
+      "outputSlide": 1,
+      "sourceSlide": 1,
+      "narrativeRole": "opening title",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/547294r6", "purpose": "new deck title" },
+        { "action": "rewrite", "sourceElementId": "sh/ts7md4r2", "purpose": "new meeting date" },
+        { "action": "keep", "sourceElementId": "sh/7qp4be9c", "purpose": "presenter name" },
+        { "action": "keep", "sourceElementId": "sh/k3yl0zql", "purpose": "affiliation" }
+      ]
+    },
+    {
+      "outputSlide": 2,
+      "sourceSlide": 10,
+      "narrativeRole": "opening thesis and correction of work order",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/xc3mho32", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/cbu58j2h", "purpose": "page marker" },
+        { "action": "rewrite", "sourceElementId": "sh/zelojyl8", "purpose": "thesis and three priorities" }
+      ]
+    },
+    {
+      "outputSlide": 3,
+      "sourceSlide": 11,
+      "narrativeRole": "closest prior work comparison",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/xcryxg7y", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/wbih4b6d", "purpose": "page marker" },
+        { "action": "delete", "sourceElementId": "sh/n69grmpw", "purpose": "remove empty inherited placeholder" },
+        { "action": "rewrite", "sourceElementId": "tb/vqd0fidw", "purpose": "rewrite comparison table" }
+      ]
+    },
+    {
+      "outputSlide": 4,
+      "sourceSlide": 10,
+      "narrativeRole": "provisional central research claim",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/xc3mho32", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/cbu58j2h", "purpose": "page marker" },
+        { "action": "rewrite", "sourceElementId": "sh/zelojyl8", "purpose": "central claim and scope" }
+      ]
+    },
+    {
+      "outputSlide": 5,
+      "sourceSlide": 9,
+      "narrativeRole": "success criteria and evaluation axes",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/1cfmhgne", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/0b65obm9", "purpose": "page marker" },
+        { "action": "rewrite", "sourceElementId": "tb/e5czal83", "purpose": "rewrite evaluation table" }
+      ]
+    },
+    {
+      "outputSlide": 6,
+      "sourceSlide": 11,
+      "narrativeRole": "bounded comparison conditions",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/xcryxg7y", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/wbih4b6d", "purpose": "page marker" },
+        { "action": "delete", "sourceElementId": "sh/n69grmpw", "purpose": "remove empty inherited placeholder" },
+        { "action": "rewrite", "sourceElementId": "tb/vqd0fidw", "purpose": "rewrite experiment conditions table" }
+      ]
+    },
+    {
+      "outputSlide": 7,
+      "sourceSlide": 10,
+      "narrativeRole": "ordered validation plan",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/xc3mho32", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/cbu58j2h", "purpose": "page marker" },
+        { "action": "rewrite", "sourceElementId": "sh/zelojyl8", "purpose": "three validation stages" }
+      ]
+    },
+    {
+      "outputSlide": 8,
+      "sourceSlide": 10,
+      "narrativeRole": "closing action and decision",
+      "reuseMode": "duplicate-slide",
+      "editTargets": [
+        { "action": "rewrite", "sourceElementId": "sh/xc3mho32", "purpose": "slide title" },
+        { "action": "rewrite", "sourceElementId": "sh/cbu58j2h", "purpose": "page marker" },
+        { "action": "rewrite", "sourceElementId": "sh/zelojyl8", "purpose": "immediate work items and decision point" }
+      ]
+    }
+  ],
+  "omittedSourceSlides": [
+    { "sourceSlide": 2, "reason": "sparse purpose slide replaced by a stronger thesis slide" },
+    { "sourceSlide": 3, "reason": "agenda is unnecessary for an eight-slide research update" },
+    { "sourceSlide": 4, "reason": "dense legacy workflow distracts from the central claim" },
+    { "sourceSlide": 5, "reason": "method detail is deliberately deferred" },
+    { "sourceSlide": 6, "reason": "method detail is deliberately deferred" },
+    { "sourceSlide": 7, "reason": "method detail is deliberately deferred" },
+    { "sourceSlide": 8, "reason": "method detail is deliberately deferred" },
+    { "sourceSlide": 12, "reason": "distillation implementation detail is deliberately deferred" },
+    { "sourceSlide": 13, "reason": "distillation implementation detail is deliberately deferred" },
+    { "sourceSlide": 14, "reason": "legacy process table is not needed" },
+    { "sourceSlide": 15, "reason": "empty process slide is not needed" },
+    { "sourceSlide": 16, "reason": "legacy proposal summary is too implementation-focused" },
+    { "sourceSlide": 17, "reason": "local update detail is out of scope" },
+    { "sourceSlide": 18, "reason": "server update detail is out of scope" },
+    { "sourceSlide": 19, "reason": "adaptation transmission detail is out of scope" },
+    { "sourceSlide": 20, "reason": "dense legacy flow is omitted from the main narrative" },
+    { "sourceSlide": 21, "reason": "aggregation formula detail is out of scope" }
+  ]
+}
+

@@ -1,0 +1,2 @@
+repertoire,run_id,server_rc,client_rc,status,kind,papers,consistency_mode,server_optimizer,distribution,server_eval_accuracy,server_eval_f1_macro,server_loss_pred,server_loss_grad,server_loss_post,server_loss_replay,server_train_sec,server_logits_bytes
+ac_lpred_fedopt,run_20260707_160102_cmp_ac_lpred_fedopt,0,1,failed,proposed,FedOpt [1]; FedDF [3],lpred,fedadam,distill,0.5666666666666667,0.5238095238095237,0.01601731777191162,0.0,0.0,0.0,1769.28700329992,2863

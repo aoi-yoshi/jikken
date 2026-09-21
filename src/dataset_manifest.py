@@ -16,6 +16,8 @@ class Sample:
     frames: List[Image.Image]
     label: int
     source: str
+    frame_times_sec: List[float] | None = None
+    temporal_fps: float | None = None
 
 
 def write_manifest(path: Path, rows: Sequence[Dict[str, Any]]) -> None:
@@ -53,18 +55,30 @@ def read_manifest_filtered(path: Path, dcfg: Mapping[str, Any]) -> List[Dict[str
     return filter_manifest(rows, dcfg)
 
 
-def frame_paths_for_model(row: Mapping[str, Any], dcfg: Mapping[str, Any]) -> List[str]:
-    """manifest の frame_paths からモデル入力用に末尾/先頭 N 枚を選ぶ。"""
+def frame_indices_for_model(row: Mapping[str, Any], dcfg: Mapping[str, Any]) -> List[int]:
+    """manifest の frame_paths からモデル入力に使う添字を返す。"""
     paths = list(row["frame_paths"])
+    explicit = dcfg.get("use_frame_indices")
+    if explicit not in (None, ""):
+        indices = [int(index) for index in explicit]
+        if not indices or min(indices) < 0 or max(indices) >= len(paths):
+            raise ValueError(f"Invalid use_frame_indices={indices!r} for {len(paths)} frames")
+        return indices
     use_n = int(dcfg.get("use_num_frames") or 0)
     if use_n <= 0 or use_n >= len(paths):
-        return paths
+        return list(range(len(paths)))
     mode = str(dcfg.get("use_frame_slice", "last")).strip().lower()
     if mode == "last":
-        return paths[-use_n:]
+        return list(range(len(paths) - use_n, len(paths)))
     if mode == "first":
-        return paths[:use_n]
+        return list(range(use_n))
     raise ValueError(f"Unknown use_frame_slice: {mode!r} (expected 'last' or 'first')")
+
+
+def frame_paths_for_model(row: Mapping[str, Any], dcfg: Mapping[str, Any]) -> List[str]:
+    """manifest の frame_paths からモデル入力用の画像pathを選ぶ。"""
+    paths = list(row["frame_paths"])
+    return [paths[index] for index in frame_indices_for_model(row, dcfg)]
 
 
 def split_clients(
@@ -81,13 +95,22 @@ def split_clients(
 
 def load_sample_row(row: Dict[str, Any], dcfg: Mapping[str, Any] | None = None) -> Sample:
     dcfg = dcfg or {}
-    paths = frame_paths_for_model(row, dcfg)
+    indices = frame_indices_for_model(row, dcfg)
+    all_paths = list(row["frame_paths"])
+    paths = [all_paths[index] for index in indices]
     frames = [Image.open(p).convert("RGB") for p in paths]
+    all_times = [float(value) for value in row.get("frame_times_sec", [])]
+    times = [all_times[index] for index in indices] if len(all_times) == len(all_paths) else []
+    temporal_fps: float | None = None
+    if len(times) >= 2 and times[-1] > times[0]:
+        temporal_fps = float((len(times) - 1) / (times[-1] - times[0]))
     return Sample(
         sample_id=str(row["id"]),
         frames=frames,
         label=int(row["label"]),
         source=str(row.get("source", "")),
+        frame_times_sec=times,
+        temporal_fps=temporal_fps,
     )
 
 
